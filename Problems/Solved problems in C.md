@@ -313,6 +313,83 @@ int main(){
 }
 ```
 
+### Reverse the words in the string:
 
+```
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str[255];
+    fgets(str, 255, stdin);
+    int l=strlen(str);
+    if(str[l-1]=='\n'){
+        str[l-1]='\0';
+        l--;
+    }
+    char reversed[255];
+    int m=0;
+    int end=l-1;
+    for(int i=l-1; i>0; i--){
+        if(str[i]==' ' || str[i]=='\t' || str[i]=='\n'){
+            int start=i+1;
+            for(int k=start; k<=end; k++){
+                reversed[m++]=str[k];
+            }
+            reversed[m++]=' ';
+            end=i-1;
+            
+        }
+    }
+    for(int i=0; i<=end; i++){
+        reversed[m++]=str[i];
+    }
+    reversed[m]='\0';
+    printf("%s", reversed);
+    return 0;
+}
+```
+
+### count characters of the words present in the string:
+
+```
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str[255];
+    fgets(str, 255, stdin);
+    int l=strlen(str);
+    if(str[l-1]=='\n'){
+        str[l-1]='\0';
+        l--;
+    }
+    char reversed[255];
+    int m=0;
+    int end=l-1;
+    for(int i=l-1; i>0; i--){
+        if(str[i]==' ' || str[i]=='\t' || str[i]=='\n'){
+            int start=i+1;
+            int count=0;
+            for(int k=start; k<=end; k++){
+                reversed[m++]=str[k];
+                count++;
+            }
+            printf("%d ", count);
+            reversed[m++]=' ';
+            end=i-1;
+        }
+    }
+    int count=0;
+    for(int i=0; i<=end; i++){
+        reversed[m++]=str[i];
+        count++;
+    }
+    printf("%d\n", count);
+    reversed[m]='\0';
+    printf("%s\n", reversed);
+    
+    
+    return 0;
+}
+```
 
 
