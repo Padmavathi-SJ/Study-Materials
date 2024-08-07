@@ -184,5 +184,135 @@ int main(){
 }
 ```
 
+### Remove dplicates:
+
+```
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str[255];
+    fgets(str, 255, stdin);
+    int l=strlen(str);
+    int i=0;
+    while(str[i]!='\0'){
+    for(int i=0; i<l; i++){
+        if(str[i]!='\0' && str[i]!=' '){
+        for(int j=i+1; j<l; j++){
+            if(str[i]==str[j]){
+                str[j]='\0';
+            }
+        }
+        }
+    }
+    i++;
+    }
+    for(int i=0; i<l; i++){
+        if(str[i]!='\0'){
+            printf("%c", str[i]);
+        }
+    }
+    return 0;
+}
+```
+
+### Print consecutive repeated characters:
+
+```
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[255];
+    fgets(str, 255, stdin);
+    int i=0;
+    int l=strlen(str);
+    if(str[l-1]=='\n'){
+        str[l-1]='\0';
+        l--;
+    }
+    
+    for(int i=0; i<l; i++){
+        if(str[i]==str[i-1]){
+            printf("%c", str[i]);
+        }
+    }
+
+    return 0;
+}
+```
+### Check the given strings are Isomorphic:
+```
+#include <stdio.h>
+#include <string.h>
+#include<stdbool.h>
+
+char areIsomorphic(char *str1, char *str2){
+    int l=strlen(str1);
+    if(strlen(str2)!=l){
+        return false;
+    }
+    int m1[256]={0};
+    int m2[256]={0};
+    
+    for(int i=0; i<l; i++){
+        if(m1[(unsigned char) str1[i]] != m2[(unsigned char) str2[i]]){
+            return false;
+        }
+        m1[(unsigned char) str1[i]] = i+1;
+        m2[(unsigned char) str2[i]] = i+1;
+    }
+    return true;
+}
+
+int main() {
+    char str1[255];
+    char str2[255];
+    fgets(str1, 255, stdin);
+    fgets(str2, 255, stdin);
+    int l=strlen(str1);
+    int m=strlen(str2);
+    if(str1[l-1]=='\n'){
+        str1[l-1]='\0';
+        l--;
+    }
+    if(str2[m-1]=='\n'){
+        str2[m-1]='\0';
+        m--;
+    }
+    if(areIsomorphic(str1, str2)){
+        printf("yes\n");
+    }
+    else{
+        printf("No");
+    }
+    return 0;
+}
+```
+
+### Print odd indexed characters in reverse order:
+
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+int main(){
+    char str[255];
+    fgets(str, 255, stdin);
+    int l=strlen(str);
+    if(str[l-1]=='\n'){
+        str[l-1]='\0';
+        l--;
+    }
+    for(int i=l-1; i>=0; i--){
+        if(i%2==0){
+            printf("%c ", str[i]);
+        }
+    }
+
+    return 0;
+}
+```
+
+
 
 
