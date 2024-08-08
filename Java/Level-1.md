@@ -377,3 +377,118 @@ public class Main{
     }
 }
 ```
+
+### alculate the Discount Based on Purchase Amount
+**Write a program that calculates the discount on a purchase based on the total amount spent. The discount rates are as follows:
+More than $500: 20% discount
+$200 to $500: 10% discount
+$100 to $200: 5% discount
+$100 or less: No discount.**
+
+```
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] arg){
+        Scanner input=new Scanner(System.in);
+        
+        int amount=input.nextInt();
+        double discount;
+        double discountedAmount=0;
+        if(amount>500){
+            discount=0.20;
+        }
+        else if(amount>=200 && amount<=500){
+            discount=0.10;
+        }
+        else if(amount>=100 && amount<=200){
+            discount=0.05;
+        }
+        else{
+            discount=0.00;
+        }
+        
+        discountedAmount= amount-(amount*discount);
+        System.out.println("%.2f",discountedAmount);
+        input.close();
+        
+    }
+}
+```
+output: 450
+        450.00
+
+
+```
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] arg){
+        Scanner input=new Scanner(System.in);
+        
+        int amount=input.nextInt();
+        double discount;
+        int discountedAmount=0;
+        if(amount>500){
+            discount=0.20;
+        }
+        else if(amount>=200 && amount<=500){
+            discount=0.10;
+        }
+        else if(amount>=100 && amount<=200){
+            discount=0.05;
+        }
+        else{
+            discount=0.00;
+        }
+        
+        discountedAmount=int (amount-(amount*discount));
+        System.out.println(discountedAmount);
+        input.close();
+        
+    }
+}
+```
+output: 450
+        450
+
+
+###  Find the Second Largest Number Among Four:
+
+```
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter four numbers: ");
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        int num3 = scanner.nextInt();
+        int num4 = scanner.nextInt();
+        
+        int largest=Math.max(Math.max(num1, num2), Math.max(num3, num4));
+        int secondLargest=Integer.MIN_VALUE;
+        if(num1!=largest){
+            secondLargest=Math.max(secondLargest, num1);
+            secondLargest=num1;
+        }
+        if(num2!=largest){
+            secondLargest=Math.max(secondLargest, num2);
+            secondLargest=num2;
+        }
+        if(num3!=largest){
+            secondLargest=Math.max(secondLargest, num3);
+            secondLargest=num3;
+        }
+        if(num4!=largest){
+            secondLargest=Math.max(secondLargest, num4);
+            secondLargest=num4;
+        }
+        System.out.print(secondLargest);
+
+        
+        scanner.close();
+    }
+}
+```
