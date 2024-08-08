@@ -1,0 +1,379 @@
+### print statement:
+```
+public class Hello {
+    public static void main(String[] arg){
+        System.out.println("Hello mummy");
+        System.out.println("Good morning");
+    }
+}
+```
+output: Hello mummy
+        Good morning
+
+### add two integers:
+```
+public class Hello {
+    public static void main(String[] arg){
+        int a=10;
+        int b=90;
+        int sum=a+b;
+        System.out.println("The sum is:" + sum);
+    }
+}
+```
+output: The sum is: 100
+
+### Getting input from user:
+```
+import java.util.Scanner;
+
+public class Hello{
+    public static void main(String[] args){
+        //creating a scanner object to read input
+        Scanner input = new Scanner(System.in);
+        //input=object name
+        //Scanner = class name
+        System.out.print("Enter the num1: ");
+        int num1=input.nextInt();
+      //nextInt(): This is a method of the Scanner class. When called, it waits for the user to enter an integer value,
+      reads that value, and then returns it as an int data type.
+        
+        System.out.print("Enter the num2: ");
+        int num2=input.nextInt();
+        
+        int sum=num1+num2;
+        
+        System.out.println("The sum is: " + sum);
+        
+       // input.close();
+    }
+}
+```
+
+### Check if a Number is Even or Odd
+```
+import java.util.Scanner;
+
+public class OddorEven{
+    public static void main(String[] arg){
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter a num: ");
+        int num=input.nextInt();
+        
+        if(num%2==0){
+            System.out.println(num + "is even");
+        }
+        else{
+            System.out.println(num + "is odd");
+        }
+        input.close();
+    }
+}
+```
+### Find the Largest of Three Numbers
+```
+import java.util.Scanner;
+
+public class largest{
+    public static void main(String[] arg){
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter a num1: ");
+        int num1=input.nextInt();
+        
+        System.out.print("Enter a num2: ");
+        int num2=input.nextInt();
+        
+        System.out.print("Enter a num3: ");
+        int num3=input.nextInt();
+        int maxnum;
+        if(num1>=num2 && num1>=num3){
+            maxnum=num1;
+        }
+        else if(num2>=num1 && num2>=num3){
+            maxnum=num2;
+        }
+        else{
+            maxnum=num3;
+        }
+        
+        System.out.println("The largest num: " + maxnum);
+        input.close();
+    }
+}
+```
+### Check if a Number is Positive, Negative, or Zero
+```
+import java.util.Scanner;
+
+public class find{
+    public static void main(String[] arg){
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter a num: ");
+        int num=input.nextInt();
+        
+        if(num>0){
+            System.out.println("The num is positive");
+        }
+        else if(num<0){
+            System.out.println("The num is negative");
+        }
+        else {
+            System.out.println("The num is zero");
+        }
+        input.close();
+    }
+}
+```
+### Check for Leap Year
+```
+import java.util.Scanner;
+
+public class find{
+    public static void main(String[] arg){
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("Enter a year: ");
+        int year=input.nextInt();
+        
+        if((year%4==0 && year%100!=0) || (year%400==0)) {
+            System.out.println("Leap year");
+        }
+        else{
+            System.out.println("Not");
+        }
+        input.close();
+    }
+}
+```
+### Get and Print Different Types of Data:
+```
+import java.util.Scanner;
+
+public class seperate{
+    public static void main(String[] arg){
+        Scanner input = new Scanner(System.in);
+        
+        System.out.print("enter a num: ");
+        int num=input.nextInt();
+        
+        System.out.print("enter a char: ");
+        char letter=input.next().charAt(0);
+        
+        input.nextLine();
+        
+        System.out.print("enter a string: ");
+        String word=input.nextLine();
+        
+        System.out.print("enter a size of array: ");
+        int arrSize=input.nextInt();
+        
+        System.out.print("enter tha array elements: ");
+        int[] arr=new int[arrSize];
+        
+        for(int i=0; i<arrSize; i++){
+            arr[i]=input.nextInt();
+        }
+        System.out.println("num is: " + num);
+        
+        System.out.println("char is: " + letter);
+        
+        System.out.println("string is: " + word);
+        
+        System.out.print("Array: ");
+        for(int i:arr) {
+            System.out.print(i + " ");
+        }
+        
+        System.out.println();
+        
+        input.close();
+    }
+}
+```
+
+### Get and Print Different Types of Data:
+```
+import java.util.Scanner;
+
+public class find{
+    public static void main(String[] arg){
+        Scanner input = new Scanner(System.in);
+        
+        int num=input.nextInt();
+        
+        char letter=input.next().charAt(0);
+        
+        String word=input.next();
+        
+        int arrSize=input.nextInt();
+        int[] arr=new int[arrSize];
+        for(int i=0; i<arrSize; i++){
+            arr[i]=input.nextInt();
+        }
+        
+        System.out.println("the nums is: " + num);
+        
+        System.out.println("the char is: " + letter);
+        
+        System.out.println("The word is: " + word);
+        
+        System.out.print("the array: ");
+        for(int i:arr){
+            System.out.print(i+" ");
+        }
+        
+        input.close();
+    }
+}
+```
+### Check Char is vowel or constant or invalid char:
+```
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] arg){
+        Scanner input = new Scanner(System.in);
+        
+        char letter=input.next().toLowerCase().charAt(0);
+        
+        if(letter=='a' || letter=='e' || letter=='i' || 
+        letter=='o' || letter=='u'){
+            System.out.println("vowel");
+        }
+        else if(letter>='a' && letter<='z'){
+            System.out.println("Constant");
+        }
+        
+        else{
+            System.out.println("Not valid");
+        }
+        input.close();
+    }
+}
+```
+
+### Grade allocation:
+```
+import java.util.Scanner;
+    public class Main{
+        public static void main(String[] arg){
+            Scanner input=new Scanner(System.in);
+            
+            System.out.print("Enter you mark: ");
+            int mark=input.nextInt();
+            
+            if(mark>=90){
+                System.out.println("A");
+            }
+            else if(mark>=80 && mark<=89){
+                System.out.println("B");
+            }
+            else if(mark>=70 && mark<=79){
+                System.out.println("C");
+            }
+            else if(mark>=60 && mark<=69){
+                System.out.println("D");
+            }
+            else {
+                System.out.print("F");
+            }
+        
+        input.close();
+        }
+    }
+```
+
+### Check for Voting Eligibility:
+```
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] arg){
+        Scanner input=new Scanner(System.in);
+        
+        System.out.print("Enter your age: ");
+        int age=input.nextInt();
+        
+        if(age>=18){
+            System.out.println("Eligible");
+        }
+        else{
+            System.out.print("Not eligible");
+        }
+        input.close();
+    }
+}
+```
+
+### Simple Calculator:
+```
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] arg){
+        Scanner input=new Scanner(System.in);
+        
+        double num1=input.nextDouble();
+        double num2=input.nextDouble();
+        
+        char operator= input.next().charAt(0);
+        
+        double result;
+        switch(operator) {
+            case '+':
+                result=num1+num2;
+                System.out.println(result);
+                break;
+                
+            case '-':
+                result=num1-num2;
+                System.out.println(result);
+                break;
+            
+            case '*':
+                result=num1*num2;
+                System.out.println(result);
+                break;
+                
+            case '/':
+                result=num1/num2;
+                System.out.println(result);
+                break;
+        }
+        input.close();
+        
+    }
+}
+```
+
+### CHeck less than 10 -> small, between 10 to 100 -> medium, above 100 -> large:
+```
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] arg){
+        Scanner input=new Scanner(System.in);
+        
+        int num = input.nextInt();
+        
+        if(num<=10){
+            System.out.println("Small");
+        }
+        else if(num>=10 && num<=100){
+            System.out.println("Medium");
+        }
+        else if(num>=100){
+            System.out.println("Large");
+        }
+        else{
+            System.out.print("Not valid");
+        }
+        
+        input.close();
+        
+    }
+}
+```
