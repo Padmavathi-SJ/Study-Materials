@@ -579,3 +579,46 @@ int main(){
 }
 ```
 
+### 20. Compare two string 
+```
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char s[]="padma";
+    char t[]="paadmaa";
+    int isequal=1;
+    for(int i=0; s[i]!='\0'; i++){
+    if(s[i]!=t[i]){
+        isequal=0;
+        break;
+    }
+        }
+        
+    if(isequal){
+        printf("yes equal\n");
+    }
+    else{
+        printf("not equal");
+    }
+    return 0;
+}
+
+(or)
+
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char s[]="padma";
+    char t[]="padma";
+    if(strcmp(s, t)==0){
+        printf("Yes equal\n");
+    }
+    else{
+        printf("not equal");
+    }
+    return 0;
+}
+```
+
+### 21. 
+
