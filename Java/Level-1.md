@@ -492,3 +492,34 @@ public class Main{
     }
 }
 ```
+
+### Check for traingle type:
+```
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] arg){
+        Scanner input=new Scanner(System.in);
+        
+        int side1=input.nextInt();
+        int side2=input.nextInt();
+        int side3=input.nextInt();
+        
+        if(side1+side2>side3 && side2+side3>side1 && side1+side3>side2){
+        if(side1==side2 && side2==side3){
+            System.out.println("Equilateral");
+        }
+        else if(side1==side2 || side2==side3 || side3==side1){
+            System.out.println("Isosceles");
+        }
+        else {
+            System.out.println("Scalene");
+        }
+        }
+        else{
+            System.out.println("Invalid data");
+        }
+        input.close();
+    }
+}
+```
