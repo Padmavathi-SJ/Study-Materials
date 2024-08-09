@@ -1,4 +1,4 @@
-### Print even indexed strings:
+### 01. Print even indexed strings:
 
 ```
 #include<stdio.h>
@@ -19,7 +19,7 @@ int main(){
 }
 ```
 
-### First repeating char with its frequency:
+### 02. First repeating char with its frequency:
 
 ```
 #include<stdio.h>
@@ -45,7 +45,7 @@ int main(){
 }
 ```
 
-### split and print the phone number, gender, age, seat:
+### 03. split and print the phone number, gender, age, seat:
 
 ```
 #include<stdio.h>
@@ -83,7 +83,7 @@ int main(){
 }
 ```
 
-### Find the maximum of a character in a given string .Igore the case(lower or upper case).Return the character in lower case Input:Test  Output:t
+### 04. Find the maximum of a character in a given string .Igore the case(lower or upper case).Return the character in lower case Input:Test  Output:t
 
 ```
 #include<stdio.h>
@@ -105,7 +105,7 @@ int main(){
 }
 ```
 
-### Print the given string without alphabets:
+### 05. Print the given string without alphabets:
 ```
 #include<stdio.h>
 #include<string.h>
@@ -125,7 +125,7 @@ int main(){
 }
 ```
 
-### Print the first non-repeating char in the string:
+### 06. Print the first non-repeating char in the string:
 
 ```
 #include<stdio.h>
@@ -154,7 +154,7 @@ int main(){
 }
 ```
 
-### Find the length between two words:
+### 07. Find the length between two words:
 
 ```
 #include<stdio.h>
@@ -184,7 +184,7 @@ int main(){
 }
 ```
 
-### Remove dplicates:
+### 08. Remove dplicates:
 
 ```
 #include<stdio.h>
@@ -215,7 +215,7 @@ int main(){
 }
 ```
 
-### Print consecutive repeated characters:
+### 09. Print consecutive repeated characters:
 
 ```
 #include <stdio.h>
@@ -240,7 +240,7 @@ int main() {
     return 0;
 }
 ```
-### Check the given strings are Isomorphic:
+### 10. Check the given strings are Isomorphic:
 ```
 #include <stdio.h>
 #include <string.h>
@@ -289,7 +289,7 @@ int main() {
 }
 ```
 
-### Print odd indexed characters in reverse order:
+### 11. Print odd indexed characters in reverse order:
 
 ```
 #include<stdio.h>
@@ -313,7 +313,7 @@ int main(){
 }
 ```
 
-### Reverse the words in the string:
+### 12. Reverse the words in the string:
 
 ```
 #include<stdio.h>
@@ -349,7 +349,7 @@ int main(){
 }
 ```
 
-### count characters of the words present in the string:
+### 13. count characters of the words present in the string:
 
 ```
 #include<stdio.h>
@@ -392,4 +392,190 @@ int main(){
 }
 ```
 
+### 14. check whether the word is present in the given string:
+```
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+    char str[255];
+    fgets(str, 255, stdin);
+    int l = strlen(str);
+    if(str[l-1] == '\n'){
+        str[l-1] = '\0';
+        l--;
+    }
+
+    char choice[255];
+    fgets(choice, 255, stdin);
+    int m = strlen(choice);
+    if(choice[m-1] == '\n'){
+        choice[m-1] = '\0';
+        m--;
+    }
+
+   int found=0;
+   
+   for(int i=0; i<=l-m; i++){
+       int j;
+       for(j=0; j<m; j++){
+           if(str[i+j]!=choice[j]){
+               break;
+           }
+       }
+       if(j==m){
+           found=1;
+           break;
+       }
+   }
+
+    if(found){
+        printf("Yes, the choice is a subword in the string!\n");
+    } else {
+        printf("No, the choice is not a subword in the string!\n");
+    }
+
+    return 0;
+}
+```
+
+### 15. Remove spaces:
+```
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str[255];
+    fgets(str, 255, stdin);
+    int l=strlen(str);
+    if(str[l-1]=='\n'){
+        str[l-1]='\0';
+        l--;
+    }
+    int i,j=0;
+    while(str[i]!='\0'){
+        if(str[i]!=' '){
+            str[j++]=str[i];
+        }
+        i++;
+    }
+    str[j]='\0';
+    printf("%s", str);
+    return 0;
+}
+```
+
+### 16. Remove duplicate characters
+```
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str[255];
+    fgets(str, 255, stdin);
+    int l=strlen(str);
+    if(str[l-1]=='\n'){
+        str[l-1]='\0';
+        l--;
+    }
+    char new[255];
+    int m=0;
+    for(int i=0; i<l; i++){
+        if(str[i]!='\0'){
+        for(int j=i+1; j<l; j++){
+            if(str[i]==str[j]){
+                str[j]='\0';
+            }
+        }
+        new[m++]=str[i];
+        }
+    }
+    new[m]='\0';
+    printf("%s", new);
+    return 0;
+}
+```
+
+### 17. count of words
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main(){
+    char str[255];
+    fgets(str, 255, stdin);
+    int l=strlen(str);
+    if(str[l-1]=='\n'){
+        str[l-1]='\0';
+        l--;
+    }
+   int in_wrd=0;
+   int count=0;
+   for(int i=0; i<l; i++){
+       if(isspace(str[i])){
+           in_wrd=0;
+       }
+       else if(!in_wrd){
+           count++;
+           in_wrd=1;
+       }
+   }
+    printf("%d", count);
+    return 0;
+}
+```
+
+### 18. Concatenate two strings without using 'strcat' function
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main(){
+    char str1[255];
+    fgets(str1, 255, stdin);
+    int l=strlen(str1);
+    char str2[255];
+    fgets(str2, 255, stdin);
+    int m=strlen(str2);
+    if(str1[l-1]=='\n'){
+        str1[l-1]='\0';
+        l--;
+    }
+    if(str2[m-1]=='\n'){
+        str2[m-1]='\0';
+        m--;
+    }
+    str1[l++]=' ';
+    for(int i=0; i<m; i++){
+        str1[l++]=str2[i];
+    }
+    str1[l]='\0';
+    printf("%s", str1);
+    return 0;
+}
+```
+### 19. concatenate two strings
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main(){
+    char str1[255];
+    fgets(str1, 255, stdin);
+    int l=strlen(str1);
+    char str2[255];
+    fgets(str2, 255, stdin);
+    int m=strlen(str2);
+    if(str1[l-1]=='\n'){
+        str1[l-1]='\0';
+        l--;
+    }
+    if(str2[m-1]=='\n'){
+        str2[m-1]='\0';
+        m--;
+    }
+
+    strcat(str1, str2);
+    printf("%s", str1);
+    return 0;
+}
+```
 
