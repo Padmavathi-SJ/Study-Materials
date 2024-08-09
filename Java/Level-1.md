@@ -523,3 +523,34 @@ public class Main{
     }
 }
 ```
+
+### Find second largest from among 3:
+```
+import java.util.Scanner;
+
+public class Main{
+    public static void main(String[] arg){
+        Scanner input=new Scanner(System.in);
+        
+        int num1=input.nextInt();
+        int num2=input.nextInt();
+        int num3=input.nextInt();
+        
+        int max=Math.max(num1, Math.max(num2, num3));
+        int max2=Integer.MIN_VALUE;
+        
+        if(num1!=max){
+            max2=Math.max(max2, num1);
+        }
+        if(num2!=max){
+            max2=Math.max(max2, num2);
+        }
+        if(num3!=max){
+            max2=Math.max(max2, num3);
+        }
+        
+        System.out.println(max2);
+        input.close();
+    }
+}
+```
