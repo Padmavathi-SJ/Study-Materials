@@ -620,5 +620,123 @@ int main(){
 }
 ```
 
-### 21. 
+### 21. Remove specific char from a string:
+```
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char s[]="padma";
+    char ch='d';
+    int j=0;
+    for(int i=0; s[i]!='\0'; i++){
+        if(s[i]!=ch){
+            s[j++]=s[i];
+        }
+    }
+    s[j]='\0';
+    printf("%s", s);
+    return 0;
+}
+```
 
+### 22. First non-repeating char
+```
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char s[100]="padmavathi";
+    int freq[255]={0};
+    for(int i=0; s[i]!='\0'; i++){
+        freq[s[i]]++;
+    }
+    
+    for(int i=0; s[i]!='\0'; i++){
+        if(freq[s[i]]==1){
+            printf("%c", s[i]);
+            break;
+        }
+    }
+    return 0;
+}
+```
+
+### 23. Finding substring
+```
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+    char s[100]="this is padma";
+    char t[100]="is";
+    if(strstr(s, t)){
+        printf("Yes\n");
+    }
+    else{
+        printf("No\n");
+    }
+    return 0;
+}
+
+(or)
+
+#include<stdio.h>
+#include<string.h>
+
+int substring(char s[], char t[]){
+    int j;
+    for(int i=0; s[i]!='\0'; i++){
+        for(j=0; t[j]!='\0'; j++){
+            if(s[i+j]!=t[j]){
+                break;
+            }
+        }
+        if(t[j]=='\0'){
+            return 1;
+        }
+    }
+    return 0;
+}
+
+int main(){
+    char s[100]="this is padma";
+    char t[100]="isd";
+    if(substring(s, t)){
+        printf("Yes\n");
+    }
+    else{
+        printf("No\n");
+    }
+    return 0;
+}
+```
+
+### 24. string to int
+
+```
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+    char s[]="1232";
+    int num=atoi(s);
+    printf("%d", num);
+    
+    return 0;
+}
+```
+
+### 25. int to string
+
+```
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+   int num=123;
+   char s[100];
+   sprintf(s, "%d", num);
+   printf("%s", s);
+    
+    return 0;
+}
+```
