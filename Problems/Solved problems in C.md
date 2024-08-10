@@ -938,5 +938,19 @@ int main(){
     return 0;
 }
 ```
+### 33. Reverse a string:
+```
+#include<stdio.h>
+#include<string.h>
 
+
+int main(){
+    char s[255]="This is Padma"; 
+    int l=strlen(s);
+    for(int i=l-1; i>=0; i--){
+        printf("%c", s[i]);
+    }
+    return 0;
+}
+```
 
