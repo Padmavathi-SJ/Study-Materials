@@ -740,3 +740,144 @@ int main(){
     return 0;
 }
 ```
+### 26. first non-repeating char
+```
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char s[255];
+    fgets(s, 255, stdin);
+    int l=strlen(s);
+    if(s[l-1]=='\n'){
+        s[l-1]='\0';
+        l--;
+    }
+    int count=0;
+    char new[255];
+    int m=0;
+    for(int i=0; i<l; i++){
+        count=1;
+        for(int j=i+1; j<l; j++){
+            if(s[i]==s[j]){
+                count++;
+            }
+        }
+        if(count==1){
+            new[m++]=s[i];
+        }
+    }
+    new[m]='\0';
+    printf("%c", new[0]);
+    //printf("%s", new);
+    // printf("%c", new[m-1]);
+    return 0;
+}
+```
+
+### 27. anagrams:
+
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+
+char isAnagram(char s[], char t[]){
+    if(strlen(s)!=strlen(t)){
+        return false;
+    }
+    int count1[256]={0};
+    int count2[256]={0};
+    
+    for(int i=0; s[i]!='\0'; i++){
+        count1[s[i]]++;
+    }
+    
+    for(int i=0; t[i]!='\0'; i++){
+        count2[t[i]]++;
+    }
+    
+    for(int i=0; i<256; i++){
+        if(count1[i]!=count2[i]){
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int main(){
+    char s[100]="god";
+    char t[100]="don";
+    if(isAnagram(s,t)){
+        printf("Yes\n");
+    }
+    else {
+        printf("No\n");
+    }
+    return 0;
+}
+```
+
+### 28. convert firts char of each word to uppercase
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+
+int main(){
+    char s[255]="this is padma";
+    int l=strlen(s);
+    if(s[l-1]=='\n'){
+        s[l-1]='\0';
+        l--;
+    }
+    
+    int in_wrd=1;
+    for(int i=0; i<l; i++){
+        if(isspace(s[i])){
+        in_wrd=1;
+        }
+        else if(in_wrd){
+            s[i]=toupper(s[i]);
+            in_wrd=0;
+        }
+    }
+    printf("%s", s);
+    return 0;
+}
+```
+
+### 29. covert the string to title/sentence case 
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+
+int main(){
+    char s[255]="tHIS iS pAdMa"; 
+    int l=strlen(s);
+    if(s[l-1]=='\n'){
+        s[l-1]='\0';
+        l--;
+    }
+    
+    int in_wrd=1;
+    for(int i=0; i<l; i++){
+        if(isspace(s[i])){
+            in_wrd=1;
+        }
+        else if(in_wrd){
+            s[i]=toupper(s[i]);
+            in_wrd=0;
+        }
+        else{
+            s[i]=tolower(s[i]);
+        }
+    }
+    printf("%s", s); //This is Padma
+    return 0;
+}
+```
+
+
+
+
