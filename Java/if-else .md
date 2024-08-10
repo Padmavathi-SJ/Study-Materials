@@ -665,4 +665,22 @@ public class Main{
 }
 ```
 
-### 
+### avg and sum
+```
+import java.util.Scanner;
+
+class Main{
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        int num=input.nextInt();
+        int sum=0;
+        for(int i=1;i<=num;i++){
+            System.out.println(i);
+            sum+=i;
+        }
+        float avg=sum/num;
+        System.out.println(sum);
+        System.out.println(avg);
+    }
+}
+```
