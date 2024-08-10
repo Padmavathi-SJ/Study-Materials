@@ -684,3 +684,28 @@ class Main{
     }
 }
 ```
+### print 2 decimal alone
+```
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] arg){
+        Scanner input=new Scanner(System.in);
+        float num=input.nextFloat();
+        System.out.printf("Value is %.2f\n", num);
+        input.close();
+    }
+}
+
+(or)
+
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] arg){
+        Scanner input=new Scanner(System.in);
+        double num=input.nextDouble();
+        System.out.printf("Value is %.2f\n", num);
+        input.close();
+    }
+}
+```
+
