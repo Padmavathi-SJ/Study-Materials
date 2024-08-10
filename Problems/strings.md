@@ -918,6 +918,7 @@ int main(){
 ```
 
 ### 32. Toggle case(convert upper-lower, lower-upper)
+**conver upper to lower : +32, convert lower to upper : -32**
 ```
 #include<stdio.h>
 #include<string.h>
@@ -932,6 +933,27 @@ int main(){
         }
         else if(s[i]>='A' && s[i]<='Z'){
             s[i]=s[i]+32;
+        }
+    }
+    printf("%s", s);
+    return 0;
+}
+
+(or)
+
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+
+int main(){
+    char s[255]="tHiS Is PaDmA"; 
+    int l=strlen(s);
+    for(int i=0; i<l; i++){
+        if(s[i]>='a' && s[i]<='z'){
+            s[i]=s[i]-('a'-'A');
+        }
+        else if(s[i]>='A' && s[i]<='Z'){
+            s[i]=s[i]+('a'-'A');
         }
     }
     printf("%s", s);
@@ -981,4 +1003,33 @@ int main() {
     return 0;
 }
 ```
+
+### 35. check palindrome or not
+```
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char s[255]="gog";
+    int l=strlen(s);
+    if(s[l-1]=='\n'){
+        s[l-1]='\0';
+        l--;
+    }
+    int found=1;
+    for(int i=0; i<l; i++){
+        if(s[i]!=s[l-1-i]){
+            found=0;
+            break;
+        }
+    }
+    if(found){
+        printf("Yes\n");
+    }
+    else {
+        printf("No\n");
+    }
+    return 0;
+}
+```
+
 
