@@ -889,13 +889,31 @@ int main(){
     char ch='a';
     for(int i=0; i<l; i++){
         if(s[i]==ch){
-            printf("%c is in %d index", ch, i);
+            printf("%c is in %dth index", ch, i);
             break;
         }
     }
     return 0;
 }
 
+### 31. Last occurance of a char
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
 
+int main(){
+    char s[255]="This is padma"; 
+    int l=strlen(s);
+    char ch='i';
+    for(int i=l-1; i>=0; i--){
+        if(s[i]==ch){
+            printf("%c is in %dth index", ch, i);
+            break;
+        }
+    }
+    return 0;
+}
+```
 
 
