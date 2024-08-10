@@ -554,3 +554,115 @@ public class Main{
     }
 }
 ```
+
+### get and print different types of data:
+```
+import java.util.Scanner;
+public class Main{
+    public static void main(String[] args){
+        Scanner num1=new Scanner(System.in);
+       
+        int i=num1.nextInt();
+        double d=num1.nextDouble();
+        float f=num1.nextFloat();
+        num1.nextLine();//to clear newline char left by nextFloat
+        char c=num1.next().charAt(2);
+        num1.nextLine();//to clear newline char left by charAt
+        String s=num1.nextLine();
+        boolean b=num1.nextBoolean();
+        long l=num1.nextLong();
+        short st=num1.nextShort();
+        
+        System.out.println("Integer"+" "+i);
+        System.out.println("double:"+d);
+        System.out.println("float"+f);
+        System.out.println("char"+c);
+        System.out.println("string"+s);
+        System.out.println("boolean"+b);
+        System.out.println("long"+l);
+        System.out.println("short"+st);
+        
+    }
+}
+```
+
+### positive & negative
+```
+import java.util.Scanner;
+import static java.lang.Math.sqrt;
+public class Main{
+    public static void main(String[] arg){
+        Scanner input=new Scanner(System.in);
+        
+        int num=input.nextInt();
+        
+        if(num<0){
+            if(Math.abs(num)<1){
+               System.out.println("num " + num + " is Negative & small");
+            }
+            else if(Math.abs(num)>1000000){
+               System.out.println("num " + num + " is Negative & greater");
+
+            }
+            else{
+                System.out.println("num " + num + " is Negative");
+            }
+        }
+        
+        else if(num>0){
+            if(num<1){
+                System.out.println("num " + num + " is Positive & small");
+            }
+            else if(num>1000000){
+                System.out.println("num " + num + " is Positive & greater");
+            }
+            else{
+                System.out.println("num " + num + " is Positive");
+            }
+        }
+        
+        else{
+            System.out.println("num " + " " + num  + "is zero");
+        }
+        
+       
+        input.close();
+    }
+}
+```
+
+### num of days in a month of year
+```
+import java.util.Scanner;
+import static java.lang.Math.sqrt;
+public class Main{
+    public static void main(String[] arg){
+        Scanner input=new Scanner(System.in);
+        
+        int m=input.nextInt();
+        int y=input.nextInt();
+        if(m>=1 && m<=12){
+            if(m==1 || m==3 || m==5 || m==7 || m==9 || m==11){
+                System.out.println("month " + m + " has 31 days");
+            }
+            else if(m==4 || m==6 || m==8 || m==10 || m==12){
+                System.out.println("month " + m + " has 30 days");
+            }
+            else if(m==2){
+                if((y%4==0 && y%100!=0) || (y%400==0)){
+                    System.out.println("month " + m + " has 29 days");
+                }
+                else{
+                    System.out.println("month " + m + " has 28 days");
+                }
+            }
+        }
+        else{
+            System.out.println("invalid month input");
+        }
+        input.close();
+    }
+}
+```
+
+### 
