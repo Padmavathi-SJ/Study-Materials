@@ -917,4 +917,26 @@ int main(){
 }
 ```
 
+### 32. Toggle case(convert upper-lower, lower-upper)
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+
+int main(){
+    char s[255]="tHiS Is PaDmA"; 
+    int l=strlen(s);
+    for(int i=0; i<l; i++){
+        if(s[i]>='a' && s[i]<='z'){
+            s[i]=s[i]-32;
+        }
+        else if(s[i]>='A' && s[i]<='Z'){
+            s[i]=s[i]+32;
+        }
+    }
+    printf("%s", s);
+    return 0;
+}
+```
+
 
