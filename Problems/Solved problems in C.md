@@ -895,6 +895,7 @@ int main(){
     }
     return 0;
 }
+```
 
 ### 31. Last occurance of a char
 ```
