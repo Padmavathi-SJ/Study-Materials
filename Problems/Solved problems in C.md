@@ -953,4 +953,32 @@ int main(){
     return 0;
 }
 ```
+### 34. copy one string to another string
+```
+#include <stdio.h>
+#include<string.h>
+int main() {
+    char str[100];
+    char temp[100];
+    fgets(str,sizeof(str),stdin);
+    strcpy(temp,str);
+    printf("%s",temp);
+    return 0;
+}
+(or)
+
+#include <stdio.h>
+int main() {
+    char str[100];
+    char temp[100];
+    fgets(str,sizeof(str),stdin);
+   // printf("%s",str);
+   int i=0;
+   for(int i=0;str[i]!='\0';i++){
+       temp[i]=str[i];
+   }
+    printf("%s",temp);
+    return 0;
+}
+```
 
