@@ -1031,5 +1031,186 @@ int main(){
     return 0;
 }
 ```
+### 36. Length of last word:
+```
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+    char s[255]="Hello magic mummy";
+    int l=strlen(s);
+    int i,count=0;
+    int end=l-1;
+    for(i=l-1; i>=0; i--){
+        if(s[i]==' ' || s[i]== '\t'){
+            int start=i+1;
+         for(int j=start; j<=end; j++){
+             count++;
+         }
+         break;
+        }
+    }
+    printf("%d", count);
+    return 0;
+}
+```
+
+### 37. Length of first word:
+```
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+    char s[255]="Hello magic mummy";
+    int l=strlen(s);
+    int i,count=0;
+    int start=0;
+    for(i=0; i<l; i++){
+        if(s[i]==' ' || s[i]== '\t'){
+            int end=i-1;
+         for(int j=start; j<=end; j++){
+             count++;
+         }
+         break;
+        }
+    }
+    printf("%d", count);
+    return 0;
+}
+```
+
+### 38. print even indexed words:
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main(){
+    char s[255]="Hi hello good morning";
+    int l=strlen(s);
+    int i,j;
+    char new[255];
+    int m=0;
+    int WordIndex=0;
+    for(int i=0; i<l; i++){
+        if(s[i]!=' ' && s[i]!='\t'){
+                if(i==0 || s[i-1]==' ' || s[i-1]=='\t'){
+                    if(WordIndex%2==0){
+                    j=i;
+                    while(j<l && s[j]!=' ' && s[j]!='\t'){
+                        new[m++]=s[j];
+                        j++;
+                    }
+                    new[m++]=' ';
+                }
+            WordIndex++;
+            }
+        }
+    }
+    new[m]='\0';
+    printf("%s", new);
+    return 0;
+}
+```
+
+### 39. print odd indexed words:
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main(){
+    char s[255]="Hi mummy how are you";
+    int l=strlen(s);
+    int i,j;
+    char new[255];
+    int m=0;
+    int wordIndex=0;
+    for(int i=0; i<l; i++){
+        if(s[i]!=' ' && s[i]!='\t'){
+            if(i==0 || s[i-1]==' ' || s[i-1]=='\t'){
+                if(wordIndex%2!=0){
+                    j=i;
+                    while(j<l && s[j]!=' ' && s[j]!='\t'){
+                        new[m++]=s[j];
+                        j++;
+                    }
+                    new[m++]=' ';
+                }
+                wordIndex++;
+            }
+        }
+    }
+    new[m]='\0';
+    printf("%s", new);
+    return 0;
+}
+```
+### 40. count of even indexed words
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main(){
+    char s[255]="Hi mummy how are you love you mummy bye";
+    int l=strlen(s);
+    int i, j;
+    char new[255];
+    int m=0,count=0;
+    int wordIndex=0;
+    for(int i=0; i<l; i++){
+        if(s[i]!=' ' && s[i]!='\t'){
+            if(i==0 || s[i-1]==' ' || s[i-1]=='\t'){
+                if(wordIndex%2==0){
+                    j=i; 
+                    while(j<l && s[j]!=' ' && s[j]!='\t'){
+                        new[m++]=s[j];
+                        j++;
+                    }
+                    new[m++]=' ';
+                    count++;
+                }
+                wordIndex++;
+            }
+        }
+    }
+
+    printf("%d", count);
+    return 0;
+}
+```
+
+### 41. count of odd indexed words:
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main(){
+    char s[255]="Hi mummy how are you love you mummy bye";
+    int l=strlen(s);
+    int i, j;
+    char new[255];
+    int m=0,count=0;
+    int wordIndex=0;
+    for(int i=0; i<l; i++){
+        if(s[i]!=' ' && s[i]!='\t'){
+            if(i==0 || s[i-1]==' ' || s[i-1]=='\t'){
+                if(wordIndex%2!=0){
+                    j=i; 
+                    while(j<l && s[j]!=' ' && s[j]!='\t'){
+                        new[m++]=s[j];
+                        j++;
+                    }
+                    new[m++]=' ';
+                    count++;
+                }
+                wordIndex++;
+            }
+        }
+    }
+
+    printf("%d", count);
+    return 0;
+}
+```
+
 
 
