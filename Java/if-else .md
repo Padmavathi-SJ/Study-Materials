@@ -709,3 +709,36 @@ public class Main{
 }
 ```
 
+### find slope 
+```
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] arg) {
+        Scanner input = new Scanner(System.in);
+
+        float x1 = input.nextFloat();
+        float x2 = input.nextFloat();
+        float y1 = input.nextFloat();
+        float y2 = input.nextFloat();
+
+        // Check if the denominator is 0, indicating a vertical line
+        if (x2 - x1 == 0) {
+            System.out.println("Vertical Line");
+        } else {
+            float slope = (y2 - y1) / (x2 - x1);
+
+            if (slope > 0) {
+                System.out.println("Positive Line");
+            } else if (slope < 0) {
+                System.out.println("Negative Line");
+            } else {
+                System.out.println("Horizontal Line");
+            }
+        }
+        
+        input.close();
+    }
+}
+```
+
