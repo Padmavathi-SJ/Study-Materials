@@ -1211,6 +1211,37 @@ int main(){
     return 0;
 }
 ```
+### 42. check whether a string is subsequence of another string:
 
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+
+bool isSubsequence(char s[], char t[]){
+    int l=strlen(s);
+    int m=strlen(t);
+    int j=0;
+    for(int i=0; i<l && j<m; i++){
+        if(s[i]==t[j]){
+            j++;
+        }
+    }
+    return j==m;
+}
+
+int main(){
+    char s[100]="adbec";
+    char t[100]="abc";
+    
+    if(isSubsequence(s,t)){
+        printf("Yes\n");
+    }
+    else {
+        printf("No\n");
+    }
+    return 0;
+}
+```
 
 
