@@ -1305,8 +1305,6 @@ int main() {
 ```
 #include<stdio.h>
 #include<string.h>
-
-
 int main() {
     char str[100][100];
     int n;
@@ -1329,3 +1327,33 @@ int main() {
     return 0;
 }
 ```
+
+### 46. print the words between a range given by user
+
+```
+#include<stdio.h>
+#include<string.h>
+
+
+int main() {
+    char str[100][100];
+    int n;
+    scanf("%d", &n);
+    for(int i = 0; i < n; i++) {
+        scanf("%s", str[i]);
+    }
+    int start=2;
+    int end=5;
+    int len = strlen(str);
+    for(int i=start; i<end; i++){
+
+            printf("%s ", str[i]);
+
+    }
+    return 0;
+}
+```
+
+**output: 7
+          Hi I am cs student from BIT
+          am cs student**
