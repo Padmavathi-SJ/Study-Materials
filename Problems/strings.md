@@ -1267,3 +1267,36 @@ bool isSubsequence(char* s, char* t) {
     return c == length;
 }
 ```
+### 44. print odd postion words
+**using c**
+
+```
+#include<stdio.h>
+#include<string.h>
+
+
+int main() {
+    char str[100][100];
+    int n;
+    
+    // Input number of words
+    scanf("%d", &n);
+    
+    // Input words
+    for(int i = 0; i < n; i++) {
+        scanf("%s", str[i]);
+    }
+    
+    // Process and print words at odd indices
+    for(int i = 0; i < n; i++) {
+        if(i % 2 == 0) { // check if index is even
+            printf("%s ", str[i]);
+        }
+    }
+    
+    return 0;
+}
+```
+
+### 45.  print odd postion words
+**using c**
