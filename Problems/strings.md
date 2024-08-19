@@ -1357,3 +1357,7 @@ int main() {
 **output: 7
           Hi I am cs student from BIT
           am cs student**
+
+### 47. 
+
+```
