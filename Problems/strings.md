@@ -1358,6 +1358,43 @@ int main() {
           Hi I am cs student from BIT
           am cs student**
 
-### 47. 
+### 47. check whether the given string is pangram or not?
+**Pangram - every alphabet must present in the string atleaset for one time**
 
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+#include<stdbool.h>
+bool isPangram(char str[]){
+    bool alphabet[26]={false};
+    int index;
+    
+    for(int i=0; str[i]!='\0'; i++){
+        if(isalpha(str[i])){
+            index=tolower(str[i]) - 'a';
+            alphabet[index]=true;
+        }
+    }
+    
+    for(int i=0; i<26; i++){
+        if(alphabet[i]==false){
+            return false;
+            break;
+            
+        }
+    }
+    return true;
+}
+int main(){
+    char str[255];
+    fgets(str, 255, stdin);
+    if(isPangram(str)){
+        printf("Yes\n");
+    }
+    else {
+        printf("No");
+    }
+    return 0;
+}
 ```
