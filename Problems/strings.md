@@ -1398,7 +1398,21 @@ int main(){
     return 0;
 }
 ```
-### 48.
+### 48. 
+
+**input:
+3
+ABCDE
+EDCBA
+ROUND
+RINGS
+START
+STUNT**
+
+**output:
+BBGBB
+GBBBB
+GGBBG**
 
 ```
 #include <stdio.h>
