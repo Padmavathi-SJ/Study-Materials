@@ -1398,3 +1398,44 @@ int main(){
     return 0;
 }
 ```
+### 48.
+
+```
+#include <stdio.h>
+#include<string.h>
+
+int main(void) {
+	int t;
+	scanf("%d", &t);
+	getchar();
+	while(t>0){
+	char s[100], t[100];
+	fgets(s, 100, stdin);
+	fgets(t, 100, stdin);
+	int l=strlen(s);
+	int n=strlen(t);
+	if(s[l-1]=='\n'){
+	    s[l-1]='\0';
+	    l--;
+	}
+	if(t[n-1]=='\n'){
+	    t[n-1]='\0';
+	    n--;
+	}
+	char m[100];
+	int x=0;
+	for(int i=0; s[i]!='\0'; i++){
+	    if(s[i]==t[i]){
+	        m[x++]='G';
+	    }
+	    else{
+	        m[x++]='B';
+	    }
+	}
+	m[x]='\0';
+	printf("%s\n", m);
+	t--;
+	}
+	return 0;
+}
+```
