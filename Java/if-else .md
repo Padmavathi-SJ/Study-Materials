@@ -761,4 +761,22 @@ class Main{
     }
 }
 ```
+### Temperature conversion:
+```
+import java.util.*;
 
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        double F=input.nextDouble();
+        double C=input.nextDouble();
+        double Faren=((9.0/5.0)*C) + 32.0;
+        double Celcius=(5.0/9.0) * (F - 32.0);
+        
+        System.out.printf("%.2f\n", Faren);
+        System.out.printf("%.2f", Celcius);
+        input.close();
+    }
+}
+```
