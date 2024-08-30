@@ -780,3 +780,35 @@ class Main{
     }
 }
 ```
+### finding the quadrtic Equation:
+```
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int a=input.nextInt();
+        int b=input.nextInt();
+        int c=input.nextInt();
+        if(a==0){
+            System.out.println("This equation has no roots");
+        }
+        else {
+        double x=(b*b) - (4*a*c);
+        if(x<0){
+            System.out.println("this equation has complex roots");
+        }
+        else {
+            double y=Math.sqrt(x);
+        double root1= (-b + y) / (2*a);
+        double root2= (-b - y) / (2*a);
+        
+        System.out.printf("%.2f\n", root1);
+        System.out.printf("%.2f", root2);
+        }
+        }
+        input.close();
+    }
+}
+```
