@@ -742,3 +742,23 @@ public class Main {
 }
 ```
 
+### Find compound interest:
+```
+import java.util.*;
+
+class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int p=input.nextInt();
+        double r=input.nextDouble();
+        int t=input.nextInt();
+        int n=input.nextInt();
+        double m1= Math.pow(1+ (r/n), n*t);
+        double A=p * m1;
+        System.out.printf("%.2f", A);
+        input.close();
+    }
+}
+```
+
