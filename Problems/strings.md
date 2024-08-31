@@ -1543,3 +1543,27 @@ int main() {
     return 0;
 }
 ```
+### Find frequency of each word present in the given string
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main() {
+    int n;
+    scanf("%d", &n);
+    char str[n][100];
+    for(int i=0; i<n; i++){
+        scanf("%s", str[i]);
+    }
+    int freqOfWrd[n];
+    int index=0;
+    for(int i=0; i<n; i++){
+        int len=strlen(str[i]);
+       freqOfWrd[index++]=len;
+    }
+    for(int i=0; i<index; i++){
+        printf("%d ", freqOfWrd[i]);
+    }
+    return 0;
+}
+```
