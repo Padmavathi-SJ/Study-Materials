@@ -1567,3 +1567,32 @@ int main() {
     return 0;
 }
 ```
+### remove all occurance of word
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main() {
+    int n;
+    scanf("%d", &n);
+    char str[n][100];
+    for(int i=0; i<n; i++){
+        scanf("%s", str[i]);
+    }
+    getchar();
+    char choice[100];
+    fgets(choice, 100, stdin);
+    choice[strcspn(choice, "\n")]='\0';
+    int m=strlen(choice);
+    for(int i=0; i<n; i++){
+        int len=strlen(str[i]);
+        if(len!=m){
+            //if(!strcmp(str[i], choice)==0){
+                printf("%s ", str[i]);
+            }
+            
+        }
+    
+    return 0;
+}
+```
