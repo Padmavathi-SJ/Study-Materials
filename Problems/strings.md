@@ -1596,3 +1596,30 @@ int main() {
     return 0;
 }
 ```
+
+### spliting words from a string using "strtoken"
+```
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    char *words[100];
+    char *word;
+    int i=0;
+    
+    word=strtok(str, " ");
+    
+    while(word !=NULL){
+        words[i]=word;
+        i++;
+        word=strtok(NULL, " ");
+    }
+    for(int j=0; j<i; j++){
+        if(j%2!=0){
+        printf("%s\n", words[j]);
+    }
+    }
+    return 0;
+}
+```
