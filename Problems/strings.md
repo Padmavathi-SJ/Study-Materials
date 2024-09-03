@@ -1911,3 +1911,37 @@ int main(){
     return 0;
 }
 ```
+### 62. reverse the words without changing their positions:
+```
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    
+    char *words[100];
+    char *word;
+   // char *temp="dummy";
+    
+    word=strtok(str, " ");
+    int n=0;
+    while(word!=NULL){
+        words[n]=word;
+        n++;
+    word=strtok(NULL, " ");
+    }
+    
+    for(int i=0; i<n; i++){
+        int len=strlen(words[i]);
+    for(int j=len-1; j>=0; j--){
+        printf("%c", words[i][j]);
+    }
+    if(i < n-1){
+    printf(" ");
+    }
+    }
+    
+    return 0;
+}
+```
