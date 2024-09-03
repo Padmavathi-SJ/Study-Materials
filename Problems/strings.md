@@ -1453,7 +1453,7 @@ int main(void) {
 	return 0;
 }
 ```
-### Find all occurances of word:
+### 49. Find all occurances of word:
 ```
 #include<stdio.h>
 #include<string.h>
@@ -1482,7 +1482,7 @@ int main() {
     return 0;
 }
 ```
-### Find 1st occurance of word
+### 50. Find 1st occurance of word
 ```
 #include<stdio.h>
 #include<string.h>
@@ -1513,7 +1513,7 @@ int main() {
 }
 ```
 
-### Find last occurance of word:
+### 51. Find last occurance of word:
 ```
 #include<stdio.h>
 #include<string.h>
@@ -1543,7 +1543,7 @@ int main() {
     return 0;
 }
 ```
-### Find frequency of each word present in the given string
+### 52. Find frequency of each word present in the given string
 ```
 #include<stdio.h>
 #include<string.h>
@@ -1567,7 +1567,7 @@ int main() {
     return 0;
 }
 ```
-### remove all occurance of word
+### 53. remove all occurance of word
 ```
 #include<stdio.h>
 #include<string.h>
@@ -1597,7 +1597,7 @@ int main() {
 }
 ```
 
-### spliting words from a string using "strtoken"
+### 54. spliting words from a string using "strtoken"
 ```
 #include<stdio.h>
 #include<string.h>
@@ -1623,7 +1623,7 @@ int main(){
     return 0;
 }
 ```
-### length of each word in given string
+### 55. length of each word in given string
 ```
 #include<stdio.h>
 #include<string.h>
@@ -1643,6 +1643,36 @@ int main(){
     for(int i=0; i<ind; i++){
         int len=strlen(words[i]);
         printf("%d ", len);
+    }
+    return 0;
+}
+```
+### 56. spliting wordsaccording to "#"
+```
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    
+    char *words[100];
+    char *word;
+    int index=0;
+    
+    word=strtok(str, "#");
+    while(word!=NULL){
+        words[index]=word;
+        index++;
+    word=strtok(NULL, "#");
+    }
+    // int space=1;
+    for(int i=0; i<index; i++){
+       // if(!space){
+        //printf(" ")}
+        
+        printf("%s\n", words[i]);
+        //space=0;
     }
     return 0;
 }
