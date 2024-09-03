@@ -1768,3 +1768,49 @@ int main(){
     return 0;
 }
 ```
+### 58. Remove last occurance of word
+```
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    
+    char choice[100];
+    scanf("%s", choice);
+    
+    char *words[100];
+    char *word;
+    char *temp="dummy";
+    
+    word=strtok(str, " ");
+    int index=0;
+    while(word!=NULL){
+        words[index]=word;
+        index++;
+    word=strtok(NULL, " ");
+    }
+    
+    for(int i=index-1; i>=0; i--){
+        if(strcmp(words[i], choice)==0){
+            words[i]="dummy";
+            break;
+        }
+    }
+    
+    int space=1;
+    for(int i=0; i<index; i++){
+        if(strcmp(words[i], temp)!=0){
+            if(!space){
+                printf(" ");
+            }
+            printf("%s", words[i]);
+            space=0;
+        }
+    }
+    
+    
+    return 0;
+}
+```
