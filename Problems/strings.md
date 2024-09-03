@@ -1945,3 +1945,31 @@ int main(){
     return 0;
 }
 ```
+### 63. check whether the string is palindrome or not:
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+bool check(char str[]){
+    int len=strlen(str);
+    for(int i=0; i<len/2; i++){
+        if(str[i]!=str[len-1-i]){
+            return false;
+        }
+    }
+    return true;
+}
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    
+    if(check(str)){
+        printf("Yes\n");
+    }
+    else{
+        printf("No\n");
+    }
+    return 0;
+}
+```
