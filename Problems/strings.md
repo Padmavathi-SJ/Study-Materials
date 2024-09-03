@@ -1876,3 +1876,38 @@ int main(){
     return 0;
 }
 ```
+### 61. print even indexed words from a string:
+```
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    
+    char *words[100];
+    char *word;
+   // char *temp="dummy";
+    
+    word=strtok(str, " ");
+    int index=0;
+    while(word!=NULL){
+        words[index]=word;
+        index++;
+    word=strtok(NULL, " ");
+    }
+    
+    int space=1;
+    for(int i=0; i<index; i++){
+        if(i%2!=0){
+            if(!space){
+                printf(" ");
+            }
+            printf("%s", words[i]);
+            space=0;
+        }
+    }
+    
+    return 0;
+}
+```
