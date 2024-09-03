@@ -1623,3 +1623,27 @@ int main(){
     return 0;
 }
 ```
+### length of each word in given string
+```
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    //str[strcspn(str, "\n")]='\0';
+    char *words[100];
+    char *word;
+    int ind=0;
+    word=strtok(str, " ");
+    while(word!=NULL){
+        words[ind]=word;
+        ind++;
+        word=strtok(NULL, " ");
+    }
+    for(int i=0; i<ind; i++){
+        int len=strlen(words[i]);
+        printf("%d ", len);
+    }
+    return 0;
+}
+```
