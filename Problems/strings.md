@@ -1973,3 +1973,48 @@ int main(){
     return 0;
 }
 ```
+### print the words between a range
+```
+#include<stdio.h>
+#include<string.h>
+int main(){
+    char s[100];
+    fgets(s, 100, stdin);
+    s[strcspn(s, "\n")]='\0';
+    
+    char start[100];
+    scanf("%s", start);
+    char end[100];
+    scanf("%s", end);
+    
+    char *words[100];
+    char *word;
+    int index=0;
+    
+    word=strtok(s, " ");
+    while(word!=NULL){
+        words[index]=word;
+        index++;
+    word=strtok(NULL, " ");
+    }
+    
+    int m=0,n=0;
+    for(int i=0; i<index; i++){
+        if(strcmp(words[i], start)==0){
+        m=i;
+        }
+        if(strcmp(words[i],end)==0){
+        n=i;
+        }
+    }
+    int count=0;
+    //char *new[100];
+    for(int i=m+1; i<n; i++){
+        //new[count]=words[i];
+        printf("%s ", words[i]);
+        count++;
+    }
+    printf("\n%d", count);
+    return 0;
+}
+```
