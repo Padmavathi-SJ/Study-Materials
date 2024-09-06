@@ -2061,3 +2061,53 @@ int main() {
     return 0;
 }
 ```
+### Compare versions 
+```
+#include<stdio.h>
+#include<string.h>
+int compare(char *v1, char *v2){
+    int num1=0;
+    int num2=0;
+    while(*v1!='\0' || *v2!='\0'){
+        
+        while(*v1!='\0' && *v1!='.'){
+            num1=num1*10+(*v1-'0');
+            v1++;
+        }
+        
+        while(*v2!='\0' && *v2!='.'){
+            num2=num2*10+(*v2-'0');
+                v2++;
+            }
+            
+        if(num1>num2) return 1;
+        if(num1<num2) return -1;
+        
+        if(*v1=='.') v1++;
+        if(*v2=='.') v2++;
+        
+        num1=0;
+        num2=0;
+    
+    }
+    return 0;
+    }
+
+int main() {
+    char v1[100];
+    char v2[100];
+    scanf("%s", v1);
+    scanf("%s", v2);
+    int result=compare(v1, v2);
+    if(result==0){
+        printf("both are equal\n");
+    }
+    else if(result > 0){
+        printf("v1 is greater than v2\n");
+    }
+    else {
+        printf("v1 is less than v2\n");
+    }
+    return 0;
+}
+```
