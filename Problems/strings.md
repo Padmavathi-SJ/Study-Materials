@@ -2018,3 +2018,46 @@ int main(){
     return 0;
 }
 ```
+### rotate matrix 90 degree:
+```
+#include<stdio.h>
+#include<string.h>
+int rotate(int matrix[100][100], int r, int c){
+    
+    for(int i=0; i<r; i++){
+        for(int j=i+1; j<c; j++){
+            int temp=matrix[i][j];
+            matrix[i][j]=matrix[j][i];
+            matrix[j][i]=temp;
+        }
+    }
+    for(int i=0; i<r; i++){
+        for(int k=c-1, j=0; j<k; k--, j++){
+            int temp=matrix[i][j];
+            matrix[i][j]=matrix[i][k];
+            matrix[i][k]=temp;
+        }
+    }
+    
+}
+int main() {
+    int r;
+    scanf("%d", &r);
+    int c;
+    scanf("%d", &c);
+    int matrix[100][100];
+    for(int i=0; i<r; i++){
+        for(int j=0; j<c; j++){
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    rotate(matrix, r, c);
+    for(int i=0; i<r; i++){
+        for(int j=0; j<c; j++){
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+```
