@@ -2191,3 +2191,5 @@ int main() {
 }
 ```
 ### Reverse the words without changing their positions:
+
+### Check anagram or not:
