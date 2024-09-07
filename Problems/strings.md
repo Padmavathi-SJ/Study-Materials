@@ -2191,6 +2191,39 @@ int main() {
 }
 ```
 ### Reverse the words without changing their positions:
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+int main() {
+    char str[256];
+    fgets(str, 256, stdin);
+    int len=strlen(str);
+    char reversed[100];
+    int m=0;
+    int start=0;
+    for(int i=0; i<len; i++){
+        if(str[i]==' ' || str[i]=='\t' || str[i]=='\n'){
+            int end=i-1;
+            for(int j=end; j>=start; j--){
+                reversed[m++]=str[j];
+            }
+            reversed[m++]=' ';
+            start=i+1;
+        }
+    }
+    
+    for(int i=len-1; i>=start; i--){
+        reversed[m++]=str[i];
+    }
+    reversed[m++]='\0';
+    //int l2=strlen(reversed);
+    printf("%s\n", reversed);
+   // printf("%d\n", len);
+    //printf("%d", l2);
+    return 0;
+}
+```
 
 ### Check anagram or not:
 ```
