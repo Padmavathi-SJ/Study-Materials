@@ -2193,3 +2193,45 @@ int main() {
 ### Reverse the words without changing their positions:
 
 ### Check anagram or not:
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+bool isAnagram(char s1[], char s2[]){
+    if(strlen(s1)!=strlen(s2)){
+        return false;
+    }
+    
+    bool count1[256]={false};
+    bool count2[256]={false};
+    
+    for(int i=0; s1[i]!='\0'; i++){
+        count1[(unsigned char)s1[i]]++;
+    }
+    for(int i=0; s2[i]!='\0'; i++){
+        count2[(unsigned char)s2[i]]++;
+    }
+    for(int i=0; i<256; i++){
+        if(count1[i]!=count2[i]){
+            return false;
+        }
+    }
+    return true;
+}
+int main() {
+    char s1[256];
+    fgets(s1, 256, stdin);
+    char s2[256];
+    fgets(s2, 256, stdin);
+    s1[strcspn(s1, "\n")]='\0';
+    s2[strcspn(s2, "\n")]='\0';
+    
+    if(isAnagram(s1, s2)){
+        printf("Yes\n");
+    }
+    else {
+        printf("No\n");
+    }
+    return 0;
+}
+```
