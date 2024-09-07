@@ -2112,3 +2112,46 @@ int main() {
 }
 ```
 ### Reverse first and last words:
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main() {
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    int len=strlen(str);
+    char fi[100];
+    int x=0;
+    int start=0;
+    for(int i=0; i<len; i++){
+        if(str[i]==' ' || str[i]=='\t' || str[i]=='\n'){
+            int start=0;
+            int end=i-1;
+            for(int j=end; j>=start; j--){
+                fi[x++]=str[j];
+            }
+            break;
+        }
+    }
+    fi[x++]='\0';
+    
+    char la[100];
+    int y=0;
+    for(int i=len-1; i>=0; i--){
+        if(str[i]==' ' || str[i]=='\t' || str[i]=='\n'){
+            int start=i+1;
+            int end=len-1;
+            for(int j=end; j>=start; j--){
+                la[y++]=str[j];
+            }
+            break;
+        }
+    }
+    la[y++]='\0';
+    printf("%s\n", fi);
+    printf("%s", la);
+    
+    return 0;
+}
+```
