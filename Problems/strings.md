@@ -2474,3 +2474,26 @@ int main(){
 }
 ```
 ### Rotate string:
+```
+#include<stdio.h>
+#include<string.h>
+int rotate(char str[]){
+    int len=strlen(str);
+    for(int i=0; i<len; i++){
+        int temp=str[i];
+        str[i]=str[len-1];
+        str[len-1]=temp;
+    }
+}
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    int k=2;
+    for(int i=0; i<k; i++){
+        rotate(str);
+    }
+    printf("%s", str);
+    return 0;
+}
+```
