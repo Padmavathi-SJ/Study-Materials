@@ -2473,3 +2473,4 @@ int main(){
     return 0;
 }
 ```
+### Rotate string:
