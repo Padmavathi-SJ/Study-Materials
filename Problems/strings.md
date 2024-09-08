@@ -2611,3 +2611,27 @@ int main(){
 }
 ```
 ### Find Substring in a String:
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    
+    char sub[100];
+    fgets(sub, 100, stdin);
+    sub[strcspn(sub, "\n")]='\0';
+    
+    if(strstr(str, sub)!=NULL){
+        printf("Yes\n");
+    }
+    else {
+        printf("No\n");
+    }
+    
+    return 0;
+    
+}
+```
