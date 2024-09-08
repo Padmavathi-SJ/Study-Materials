@@ -2674,7 +2674,7 @@ int main(){
     
 }
 ```
-###
+### Remove Duplicate Characters:
 ```
 #include<stdio.h>
 #include<string.h>
