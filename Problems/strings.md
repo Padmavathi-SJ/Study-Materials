@@ -2526,3 +2526,45 @@ int main(){
     
 }
 ```
+### print the words in lexicographical order(alphabetic order or ascending order):
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    int len=strlen(str);
+    for(int i=0; i<len; i++){
+        if(isupper(str[i])){
+            str[i]=tolower(str[i]);
+        }
+    }
+    
+    char *words[100];
+    char *word;
+    int index=0;
+    word=strtok(str, " ");
+    while(word!=NULL){
+        words[index]=word;
+        index++;
+    word=strtok(NULL, " ");
+    }
+    
+    for(int i=0; i<index; i++){
+        for(int j=i+1; j<index; j++){
+            if(strcmp(words[i], words[j]) > 0){
+                char *temp=words[i];
+                words[i]=words[j];
+                words[j]=temp;
+            }
+        }
+    }
+    for(int i=0; i<index; i++){
+    printf("%s ", words[i]);
+    }
+    return 0;
+    
+}
+```
