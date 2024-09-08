@@ -2398,3 +2398,36 @@ int main() {
 }
 ```
 ### Check if Strings are Rotations 
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+#include<ctype.h>
+bool isRotation(char s1[], char s2[]){
+    if(strlen(s1)!=strlen(s2)){
+        return false;
+    }
+    char temp[512];
+    strcpy(temp, s1);
+    strcat(temp, s1);
+    if(strstr(temp, s2)!=NULL){
+        return true;
+    }
+    return false;
+}
+int main() {
+    char s1[256];
+    fgets(s1, 256, stdin);
+    s1[strcspn(s1, "\n")]='\0';
+    char s2[256];
+    fgets(s2, 256, stdin);
+    s2[strcspn(s2, "\n")]='\0';
+    if(isRotation(s1, s2)){
+        printf("Yes\n");
+    }
+    else {
+        printf("Not a Rotation\n");
+    }
+    return 0;
+}
+```
