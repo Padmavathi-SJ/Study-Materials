@@ -2708,3 +2708,49 @@ int main(){
     
 }
 ```
+### Number of words between a range:
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    char start[100];
+    scanf("%s", start);
+    char end[100];
+    scanf("%s", end);
+    
+    char *words[100];
+    char *word;
+    int index=0;
+    word=strtok(str, " ");
+    while(word!=NULL){
+        words[index]=word;
+        index++;
+    word=strtok(NULL, " ");
+    }
+    int startIndex=0;
+    int endIndex=0;
+    for(int i=0; i<index; i++){
+        if(strcmp(words[i], start)==0){
+            startIndex=i;
+        }
+        else if(strcmp(words[i], end)==0){
+            endIndex=i;
+        }
+    }
+    int count=0;
+    char *new[100];
+    int m=0;
+    for(int i=startIndex; i<endIndex-1; i++){
+        new[m++]=words[i];
+    }
+    
+    printf("%d", m);
+    
+    return 0;
+    
+}
+```
