@@ -2674,3 +2674,37 @@ int main(){
     
 }
 ```
+###
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    int len=strlen(str);
+    for(int i=0; i<len; i++){
+        if(isupper(str[i])){
+            str[i]=tolower(str[i]);
+        }
+    }
+    char NonDup[100];
+    int m=0;
+    for(int i=0; i<len; i++){
+        if(str[i]!='\0' && str[i]!=' '){
+            int count=1;
+        for(int j=i+1; j<len; j++){
+            if(str[i]==str[j]){
+                str[j]='\0';
+                count++;
+            }
+        }
+            NonDup[m++]=str[i];
+        }
+    }
+    printf("%s", NonDup);
+    return 0;
+    
+}
+```
