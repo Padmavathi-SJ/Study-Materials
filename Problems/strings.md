@@ -2311,3 +2311,29 @@ int main(){
 }
 ```
 ### print the frequencies of characters in the given string
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+#include<ctype.h>
+int main() {
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    int len=strlen(str);
+    int freq=0;
+    for(int i=0; i<len; i++){
+        if(str[i]!='\0' && str[i]!=' '){
+        freq=1;
+    for(int j=i+1; j<len; j++){
+        if(str[i]==str[j]){
+            freq++;
+            str[j]='\0';
+        }
+    }
+    printf("%c : %d\n", str[i], freq);
+        }
+    }
+    return 0;
+}
+```
