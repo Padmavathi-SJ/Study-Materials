@@ -2269,3 +2269,44 @@ int main() {
 }
 ```
 ### Check whether the string is Palindrome or not
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+#include<ctype.h>
+bool isPalin(char str[]){
+    int len=strlen(str);
+    for(int i=0; i<len/2; i++){
+        if(str[i]!=str[len-1-i]){
+            return false;
+            break;
+        }
+    }
+    return true;
+}
+void preprocess(char str[]){
+    char temp[256];
+    int j=0;
+    int len=strlen(str);
+    for(int i=0; i<len; i++){
+        if(isalnum(str[i])){
+            temp[j++]=tolower(str[i]);
+        }
+    }
+    temp[j]='\0';
+    strcpy(str, temp);
+}
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    preprocess(str);
+    if(isPalin(str)){
+        printf("Yes\n");
+    }
+    else {
+        printf("No\n");
+    }
+    return 0;
+}
+```
