@@ -2432,3 +2432,44 @@ int main() {
 }
 ```
 ### Replace Substring
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+#include<ctype.h>
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    char choice[100];
+    fgets(choice, 100, stdin);
+    choice[strcspn(choice, "\n")]='\0';
+    
+    char *words[100];
+    char *word;
+    int index=0;
+    word=strtok(str, " ");
+    while(word!=NULL){
+        words[index]=word;
+        index++;
+    word=strtok(NULL, " ");
+    }
+    
+    char *temp="there";
+    for(int i=0; i<index; i++){
+        if(strcmp(words[i], choice)==0){
+            words[i]=temp;
+        }
+    }
+    int space=0;
+    for(int i=0; i<index; i++){
+        if(space){
+            printf(" ");
+        }
+        printf("%s",words[i]);
+        space=1;
+    }
+
+    return 0;
+}
+```
