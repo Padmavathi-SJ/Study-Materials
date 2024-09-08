@@ -2310,3 +2310,4 @@ int main(){
     return 0;
 }
 ```
+### print the frequencies of characters in the given string
