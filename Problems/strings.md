@@ -2498,3 +2498,31 @@ int main(){
 }
 ```
 ### Count Words Starting with a Vowel:
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    int len=strlen(str);
+    int count=0;
+    int in_word=0;
+    for(int i=0; i<len; i++){
+        if(isspace(str[i])){
+            in_word=0;
+        }
+        else if(!in_word){
+            str[i]=tolower(str[i]);
+            if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u'){
+            count++;
+            }
+            in_word=1;
+        }
+    }
+    printf("%d", count);
+    return 0;
+    
+}
+```
