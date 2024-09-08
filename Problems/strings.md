@@ -2268,3 +2268,4 @@ int main() {
     return 0;
 }
 ```
+### Check whether the string is Palindrome or not
