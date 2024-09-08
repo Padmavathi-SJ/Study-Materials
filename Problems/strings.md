@@ -2635,7 +2635,7 @@ int main(){
     
 }
 ```
-###
+### First Non-Repeated Character:
 ```
 #include<stdio.h>
 #include<string.h>
