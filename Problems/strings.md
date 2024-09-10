@@ -2797,3 +2797,6 @@ int main(){
     return 0;
 }
 ```
+
+### print the char, which is occuring maximum time in the string
+
