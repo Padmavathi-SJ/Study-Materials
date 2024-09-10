@@ -2863,3 +2863,4 @@ int main(){
 return 0;
 }
 ```
+### Count the number of alphabets in the string. Then find the count is prime number or even or odd
