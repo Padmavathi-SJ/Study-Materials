@@ -2830,3 +2830,36 @@ int main(){
 return 0;
 }
 ```
+### print the char, which is occuring for minimum time(1 time only):
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+int main(){
+    char str[100];
+    fgets(str, 100, stdin);
+    str[strcspn(str, "\n")]='\0';
+    int l=strlen(str);
+    int count=0;
+    int minCount=0;
+    char element;
+    for(int i=0; i<l; i++){
+        count=1;
+        if(str[i]!='\0' && str[i]!=' '){
+        for(int j=i+1; j<l; j++){
+            if(str[i]==str[j]){
+                str[j]='\0';
+                count++;
+            }
+        }
+        if(count==1){
+            minCount=count;
+            element=str[i];
+            break;
+        }
+        }
+    }
+    printf("%c", element);
+return 0;
+}
+```
