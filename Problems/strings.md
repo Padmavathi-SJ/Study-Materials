@@ -2755,3 +2755,45 @@ int main(){
 }
 ```
 ### Longest Palindromic substring
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+bool isPalindrome(char str[], int start, int end){
+    while(start<end){
+        if(str[start]!=str[end]){
+            return false;
+        }
+        start++;
+        end--;
+    }
+    return true;
+}
+int check(char str[]){
+    int n=strlen(str);
+    int maxLength=1;
+    int start=0;
+    for(int i=0; i<n; i++){
+        for(int j=i; j<n; j++){
+            if(isPalindrome(str, i, j)){
+                int length=j-i+1;
+                if(length>maxLength){
+                    maxLength=length;
+                    start=i;
+                }
+            }
+        }
+    }
+    for(int i=start; i<start+maxLength; i++){
+        printf("%c", str[i]);
+    }
+    printf("\n");
+}
+int main(){
+    char str[100];
+    fgets(str, 100, stdin);
+    str[strcspn(str, "\n")]='\0';
+    check(str);
+    return 0;
+}
+```
