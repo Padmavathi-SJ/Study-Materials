@@ -2902,3 +2902,32 @@ int main(){
 }
 ```
 ### Check the given time is valid time or not:
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+#include<ctype.h>
+void check(char * str){
+    int hrs;
+    int mins;
+    int sec;
+    
+    if(sscanf(str, "%d:%d:%d", &hrs, &mins, &sec)!=3){
+        printf("Invalid time format\n");
+    }
+    if(hrs>=0 && hrs<=23 && mins>=0 && mins<=59 && sec>=0 && sec<=59){
+        printf("%d : %d : %d is a valid time", hrs, mins, sec);
+    }
+    else {
+        printf("Invalid time\n");
+    }
+}
+int main(){
+    char str[100];
+    fgets(str, 100, stdin);
+    str[strcspn(str, "\n")]='\0';
+    int l=strlen(str);
+    check(str);
+    return 0;
+}
+```
