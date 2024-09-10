@@ -2799,4 +2799,34 @@ int main(){
 ```
 
 ### print the char, which is occuring maximum time in the string
-
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+int main(){
+    char str[100];
+    fgets(str, 100, stdin);
+    str[strcspn(str, "\n")]='\0';
+    int l=strlen(str);
+    int count=0;
+    int maxCount=0;
+    char element;
+    for(int i=0; i<l; i++){
+        count=1;
+        if(str[i]!='\0' && str[i]!=' '){
+        for(int j=i+1; j<l; j++){
+            if(str[i]==str[j]){
+                str[j]='\0';
+                count++;
+            }
+        }
+        if(count>maxCount){
+            maxCount=count;
+            element=str[i];
+        }
+        }
+    }
+    printf("%c", element);
+return 0;
+}
+```
