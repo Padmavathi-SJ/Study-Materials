@@ -2864,3 +2864,40 @@ return 0;
 }
 ```
 ### Count the number of alphabets in the string. Then find the count is prime number or even or odd
+```
+bool isPrime(int n){
+    if(n<=1){
+        return false;
+    }
+    else {
+    for(int i=2; i<n/2; i++){
+        if(n%i==0){
+            return false;
+        }
+    }
+    }
+    return true;
+}
+int main(){
+    char str[100];
+    fgets(str, 100, stdin);
+    str[strcspn(str, "\n")]='\0';
+    int l=strlen(str);
+    int alphaCount=0;
+    for(int i=0; i<l; i++){
+        if(isalpha(str[i])){
+            alphaCount++;
+        }
+    }
+    if(isPrime(alphaCount)){
+        printf("prime\n");
+    }
+    else if(alphaCount%2==0){
+        printf("even\n");
+    }
+    else if(alphaCount%2!=0){
+        printf("no\n");
+    }
+    return 0;
+}
+```
