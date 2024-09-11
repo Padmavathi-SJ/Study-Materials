@@ -114,6 +114,7 @@ print(type(z)) # <class 'float'>
 ```
 
 ### complex
+* complex numbers are written with "j" as the imaginary part
 ```
 x=3+5j
 y=5j
