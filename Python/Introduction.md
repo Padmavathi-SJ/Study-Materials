@@ -198,4 +198,15 @@ a="Hello Mummy"
 print(a[1]) # e
 print(a[2]) # l
 print(a[3]) # l
-``
+```
+### Looping through a string:
+```
+for x in "banana":
+    print(x)
+```
+* output: b
+          a
+          n
+          a
+          n
+          a
