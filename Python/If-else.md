@@ -152,3 +152,14 @@ import random
 print(random.randrange(1,20))
 ```
 * it will print a random number from 1 to 20.
+
+### Casting
+```
+x=str("s1");
+y=str(2)
+z=str(3.0)
+
+print(x) # s1
+print(y) # 2
+print(z) # 3.0
+```
