@@ -67,3 +67,17 @@ A="Padma"
 print(a) # 4
 print(A) # Padma # A will not override a
 ```
+## Data types:
+```
+x=50 # <class 'int'>
+x=20.5 # <class 'float'>
+x="Padma" # <class 'str'>
+x=1j # <class 'complex'>
+x=["apple", "banana", "cherry"] # <class 'list'>
+x=("apple", "banana", "cherry") # <class 'tuple'>
+x={"apple", "banana", "cherry"} # <class 'set'>
+x={"name" : "padma", "age": 19} # <class 'dict'>
+x=range(5) # <class 'range'>
+x=True # <class 'bool'>
+x=False # <class 'bool'>
+```
