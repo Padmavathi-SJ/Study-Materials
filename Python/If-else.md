@@ -123,3 +123,23 @@ print(type(x)) # <class 'complex'>
 print(type(y)) # <class 'complex'>
 print(type(z)) # <class 'complex'>
 ```
+### Type Comversion:
+```
+x=1
+y=5.2
+z=5j
+
+# convert to other datatypes
+
+a=int(y)
+b=float(x)
+c=complex(x)
+
+print(a) # 5
+print(b) # 1.0
+print(c) # 1+0j 
+
+print(type(a)) # <class 'int'>
+print(type(b)) # <class 'float'>
+print(type(c)) # <class 'complex'>
+```
