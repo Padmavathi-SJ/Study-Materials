@@ -51,6 +51,17 @@ if a>b or a>c:
     print("Atlease one is true")
 ```
 
+### Nested if:
+```
+a=41
+
+if a>10:
+    print("yes above 10")
+if a>20:
+    print("yes above 20 also")
+else:
+    print("but not above 20")
+```
 ### NOT operator:
 ```
 a=100
