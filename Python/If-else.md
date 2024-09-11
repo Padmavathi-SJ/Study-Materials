@@ -111,3 +111,14 @@ z=-87.7e100
 print(type(x)) # <class 'float'>
 print(type(y)) # <class 'float'>
 print(type(z)) # <class 'float'>
+```
+
+### complex
+```
+x=3+5j
+y=5j
+z=-6j
+print(type(x)) # <class 'complex'>
+print(type(y)) # <class 'complex'>
+print(type(z)) # <class 'complex'>
+```
