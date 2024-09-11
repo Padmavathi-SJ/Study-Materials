@@ -41,3 +41,12 @@ a=10
 b=10
 print("A") if a>b else print("equal") if a==b else print("B")
 ```
+
+### OR operator
+```
+a=100
+b=50
+c=200
+if a>b or a>c:
+    print("Atlease one is true")
+```
