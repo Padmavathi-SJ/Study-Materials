@@ -60,3 +60,10 @@ y='mummy'
 print(x) # Padma
 print(y) # Mummy
 ```
+* Variables names are case-sensitive
+```
+a=4
+A="Padma"
+print(a) # 4
+print(A) # Padma # A will not override a
+```
