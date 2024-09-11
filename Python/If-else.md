@@ -169,3 +169,12 @@ print("Hi mummy") # Hi mummy
 print("Hi 'mom' how are you!") # Hi 'mom' how are you! ("  ' '  ")
 print('Hello mom, I "love" you!') # Hello mom, I "love" you! ('  " "  ')
 ```
+### Multiline string("""   """):
+```
+a="""Hi mummy, I have  
+lot of love with you mummy
+dnt feel mummy, however I 
+will make you happy mummy!"""
+
+print(a)
+```
