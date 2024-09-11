@@ -50,3 +50,11 @@ c=200
 if a>b or a>c:
     print("Atlease one is true")
 ```
+
+### NOT operator:
+```
+a=100
+b=50
+if not b>a:
+    print("b is NOT greater than a")
+```
