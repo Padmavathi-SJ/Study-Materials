@@ -189,3 +189,7 @@ will make you happy mummy!'''
 print(a)
 ```
 ## Strings are arrays:
+* Strings in python are arrays of bytes representing unicode characters
+* Python does not have a character data type, a single character is simply a string with a length of 1.
+* Square brackets can be used to access elements of string.
+```
