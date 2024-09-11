@@ -229,3 +229,19 @@ for y in "Apple":
           l
           e 
 ```
+### length of string:
+```
+a="Padma"
+print(len(a))
+
+output: 5
+
+(or)
+
+a="padma"
+b=len(a)
+print(b)
+
+output: 5
+
+```
