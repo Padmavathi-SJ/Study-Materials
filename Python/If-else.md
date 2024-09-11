@@ -81,3 +81,15 @@ x=range(5) # <class 'range'>
 x=True # <class 'bool'>
 x=False # <class 'bool'>
 ```
+```
+x=int(20);
+x=str("Padma")
+x=float(20.5)
+x=complex(1j);
+x=list(("apple", "banana", "cherry"))
+x=tuple(("apple", "banana", "cherry"))
+x=set(("spple", "banana", "cherry"))
+x=dict(name="Padma", age=19)
+x=range(6)
+x=bool(5)
+```
