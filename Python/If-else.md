@@ -21,3 +21,10 @@ if 2<5:
 x=5
 y="Hello, Mummy!"
 ```
+## Variables:
+```
+x=100
+y="Kavi"
+print(x)
+print(y)
+```
