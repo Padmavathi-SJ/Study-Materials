@@ -276,3 +276,13 @@ print(bool(x)) # true
 print(bool(y)) # False
 print(bool(z) # False
 ```
+
+```
+print(bool(False)) # False
+print(bool(None)) # False
+print(bool(0)) # False
+print(bool("")) # False
+print(bool(())) # False
+print(bool({})) # False
+print(bool([])) # False
+```
