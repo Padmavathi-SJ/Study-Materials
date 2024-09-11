@@ -84,7 +84,9 @@ if b>a:
 ```
 
 ## List:
-```myList=["a", "b", "c"]
+
+```
+myList=["a", "b", "c"]
 print(myList)
 print(len(myList))
 list1=["apple", "banana", "cherry"]
@@ -93,6 +95,13 @@ list3=[True, False, True]
 print(list1)
 print(list2)
 print(list3)
+
 list4=[True, 10,"Kavi", 20, "Padma"]
 print(list4)
+
+print(type(list1)) # <class 'list'>
+
+thisList=list(("Apple", "banana", "cherry"))
+print(thisList)
+
 ```
