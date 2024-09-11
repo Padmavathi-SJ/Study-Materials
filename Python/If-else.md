@@ -163,3 +163,9 @@ print(x) # s1
 print(y) # 2
 print(z) # 3.0
 ```
+### Strings
+```
+print("Hi mummy") # Hi mummy
+print("Hi 'mom' how are you!") # Hi 'mom' how are you!
+print('Hello mom, I "love" you!') # Hello mom, I "love" you!
+```
