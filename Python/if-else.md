@@ -68,4 +68,8 @@ a=100
 b=50
 if not b>a:
     print("b is NOT greater than a")
+
+output:
+* yes above 10
+* yes above 20 also
 ```
