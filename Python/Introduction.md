@@ -211,3 +211,21 @@ for x in "banana":
           n
           a
 ```
+```
+for x in "banana":
+    print(x)
+for y in "Apple":
+    print(y)
+
+ output:  b
+          a
+          n
+          a
+          n
+          a
+          A
+          p
+          p
+          l
+          e 
+```
