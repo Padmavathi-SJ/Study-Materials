@@ -111,4 +111,5 @@ myList=("Apple", "banana", "cherry")
 print(myList[1]) # banana
 print(myList[-1]) # cherry , -1 refers to the last item
 print(myList[-2]) # banana, -2 refers to the last second item
+print(myList[-3]) # Apple
 ```
