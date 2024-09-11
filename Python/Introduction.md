@@ -245,3 +245,10 @@ print(b)
 output: 5
 
 ```
+
+### Boolean types:
+```
+print(10>9) # True
+print(10==10) # True
+print(10<9) # False
+```
