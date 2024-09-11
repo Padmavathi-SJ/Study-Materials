@@ -82,3 +82,15 @@ b=200
 if b>a:
     pass
 ```
+
+## List:
+```myList=["a", "b", "c"]
+print(myList)
+print(len(myList))
+list1=["apple", "banana", "cherry"]
+list2=[1,2,3,4,5]
+list3=[True, False, True]
+print(list1)
+print(list2)
+print(list3)
+```
