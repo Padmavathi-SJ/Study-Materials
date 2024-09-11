@@ -258,6 +258,7 @@ print(bool("Hello")) # True
 print(bool(True)) # True
 print(bool(10)) # True
 ```
+
 ```
 x=10
 y="hello"
@@ -265,3 +266,11 @@ y="hello"
 print(bool(x)) # true
 print(bool(y)) # True
 ```
+
+```
+x=10
+y=""
+
+print(bool(x)) # true
+print(bool(y)) # False
+````
