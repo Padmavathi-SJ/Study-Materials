@@ -288,6 +288,10 @@ print(bool([])) # False
 ```
 
 ## Operators:
+* According to Operator Precedence
 ```
 print((6+5) - (2+3)) #6
+```
+```
+print(100 + 5 * 3) # 115
 ```
