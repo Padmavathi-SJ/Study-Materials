@@ -143,3 +143,12 @@ print(type(a)) # <class 'int'>
 print(type(b)) # <class 'float'>
 print(type(c)) # <class 'complex'>
 ```
+
+### Random Number:
+* Python does not have a random() function to make random number, but python has a built-in module calles "random" that can be used to make random numbers:
+```
+import random
+
+print(random.randrange(1,20))
+```
+* it will print a random number from 1 to 20.
