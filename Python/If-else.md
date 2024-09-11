@@ -8,3 +8,10 @@ print("Hello Mummy!")
 if 5>2:
     print("Five is greater than two!")
 ```
+### 03. two if conditions:
+```
+if 5>2:
+    print("Five is greater than two!")
+if 2<5:
+    print("two is less than five!")
+```
