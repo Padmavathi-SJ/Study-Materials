@@ -286,3 +286,8 @@ print(bool(())) # False
 print(bool({})) # False
 print(bool([])) # False
 ```
+
+## Operators:
+```
+print((6+5) - (2+3)) #6
+```
