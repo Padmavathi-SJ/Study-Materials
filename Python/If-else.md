@@ -188,3 +188,4 @@ will make you happy mummy!'''
 
 print(a)
 ```
+## Strings are arrays:
