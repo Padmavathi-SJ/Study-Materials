@@ -26,6 +26,15 @@ b=5
 print("A") if a>b else print("B")
 ```
 
+###  AND operator
+```
+a=100
+b=50
+c=200
+if a>b and c>a:
+    print("Both conditions are equal")
+```
+
 * We can also have multiple else statements on the same line
 ```
 a=10
