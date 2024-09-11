@@ -93,3 +93,12 @@ x=dict(name="Padma", age=19)
 x=range(6)
 x=bool(5)
 ```
+## Numbers:
+```
+x=1
+y=123456789456321
+z=-12345678
+print(type(x)) # <class 'int'>
+print(type(y)) # <class 'int'>
+print(type(z)) # <class 'int'>
+```
