@@ -93,7 +93,7 @@ x=dict(name="Padma", age=19)
 x=range(6)
 x=bool(5)
 ```
-## Numbers:
+### Numbers:
 ```
 x=1
 y=123456789456321
@@ -102,3 +102,12 @@ print(type(x)) # <class 'int'>
 print(type(y)) # <class 'int'>
 print(type(z)) # <class 'int'>
 ```
+### Float:
+* Float can be scientific numbers with an 'e' to indicate the power of 10.
+```
+x=35e3
+y=12E4
+z=-87.7e100
+print(type(x)) # <class 'float'>
+print(type(y)) # <class 'float'>
+print(type(z)) # <class 'float'>
