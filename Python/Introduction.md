@@ -252,3 +252,9 @@ print(10>9) # True
 print(10==10) # True
 print(10<9) # False
 ```
+
+```
+print(bool("Hello")) # True
+print(bool(True)) # True
+print(bool(10)) # True
+```
