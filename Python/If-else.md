@@ -44,3 +44,12 @@ x=str(3) # x will be 3
 x=int(3) # x will be 3
 x=float(3) # x wil be 3.0
 ```
+* We can get the data type of a varibale with the "type()" function
+```
+x=5
+y="Padma"
+z=3.0
+print(type(x)) # <class 'int'>
+print(type(y)) # <class 'str'>
+print(type(z)) # <class 'float'>
+```
