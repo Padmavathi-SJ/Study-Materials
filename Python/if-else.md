@@ -93,4 +93,6 @@ list3=[True, False, True]
 print(list1)
 print(list2)
 print(list3)
+list4=[True, 10,"Kavi", 20, "Padma"]
+print(list4)
 ```
