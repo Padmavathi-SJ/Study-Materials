@@ -178,3 +178,13 @@ will make you happy mummy!"""
 
 print(a)
 ```
+* In python, single and double quotes are equal
+### Multiline string('''    '''):
+```
+a='''Hi mummy, I have  
+lot of love with you mummy
+dnt feel mummy, however I 
+will make you happy mummy!'''
+
+print(a)
+```
