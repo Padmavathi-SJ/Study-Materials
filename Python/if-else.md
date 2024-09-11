@@ -73,3 +73,12 @@ output:
 * yes above 10
 * yes above 20 also
 ```
+
+* if statement cannot be empty, but if you for some reason have an if statement with no content, put in the "pass" statement to avoid getting an error
+```
+a=10
+b=200
+
+if b>a:
+    pass
+```
