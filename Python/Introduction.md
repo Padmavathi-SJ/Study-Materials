@@ -270,7 +270,9 @@ print(bool(y)) # True
 ```
 x=10
 y=""
+z=0;
 
 print(bool(x)) # true
 print(bool(y)) # False
-````
+print(bool(z) # False
+```
