@@ -203,10 +203,11 @@ print(a[3]) # l
 ```
 for x in "banana":
     print(x)
+
+ output: b
+          a
+          n
+          a
+          n
+          a
 ```
-* output: b
-          a
-          n
-          a
-          n
-          a
