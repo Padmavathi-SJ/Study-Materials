@@ -53,3 +53,10 @@ print(type(x)) # <class 'int'>
 print(type(y)) # <class 'str'>
 print(type(z)) # <class 'float'>
 ```
+* String variables can be declared either by using single or double quotes
+```
+x="padma"
+y='mummy'
+print(x) # Padma
+print(y) # Mummy
+```
