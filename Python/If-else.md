@@ -15,3 +15,9 @@ if 5>2:
 if 2<5:
     print("two is less than five!")
 ```
+### 04. 
+**In python no need to declare a variable**
+```
+x=5
+y="Hello, Mummy!"
+```
