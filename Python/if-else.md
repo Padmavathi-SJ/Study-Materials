@@ -25,3 +25,10 @@ a=10
 b=5
 print("A") if a>b else print("B")
 ```
+
+* We can also have multiple else statements on the same line
+```
+a=10
+b=10
+print("A") if a>b else print("equal") if a==b else print("B")
+```
