@@ -11,3 +11,9 @@ elif a<b:
 else:
     print("nothing")
 ```
+* if we have only one statement to execute, we can put it on the same line as the if statement:
+```
+a=10
+b=5
+if a>b: print("a is greater than b")
+```
