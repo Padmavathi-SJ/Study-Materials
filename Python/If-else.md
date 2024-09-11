@@ -36,3 +36,11 @@ x=500
 print(x)
 ```
 * output: 500
+
+**If we want to specify the data type of a variabke, this can be done with typecasting**
+
+```
+x=str(3) # x will be 3
+x=int(3) # x will be 3
+x=float(3) # x wil be 3.0
+```
