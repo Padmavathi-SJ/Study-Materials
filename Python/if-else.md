@@ -194,3 +194,12 @@ print("%.2f" %num) # 12.37
 print("%.3f" %num) # 12.365
 
 ```
+* using formatr() method:
+```
+  num=float(input())
+print(num) #12.32456987
+print("{:.2f}".format(num))
+print("{:.3f}".format(num))
+print("{:.1f}".format(num))
+```
+###
