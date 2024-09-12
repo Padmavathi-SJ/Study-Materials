@@ -369,3 +369,11 @@ for num in c:
 10
 """
 ```
+
+```
+num=int(input())
+if num%2==0:
+    print(f"{num} is even")
+else:
+    print(f"{num} is odd")
+```
