@@ -317,4 +317,10 @@ thisSet=set(input().split())
 print(thisList) 
 print(thisTuple)
 print(thisSet)
+
+"""
+['2', '3', '4']
+('2', '3', '4')
+{'sky', 'kavi'}
+"""
 ```
