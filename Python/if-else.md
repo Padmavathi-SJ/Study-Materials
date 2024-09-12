@@ -414,3 +414,10 @@ ticketPrice=50
 totalPrice=ticketPrice * (1-discount)
 print(totalPrice)
 ```
+
+### power of (**):
+```
+num=int(input()) # 2
+power=num ** 2 + num ** 2
+print(power) # 8
+```
