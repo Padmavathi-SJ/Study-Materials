@@ -324,3 +324,18 @@ print(thisSet)
 {'sky', 'kavi'}
 """
 ```
+### dict:
+```
+a=input()
+pairs=a.split(',')
+mydict={}
+for pair in pairs:
+    key, value=pair.split(':')
+    mydict[key.strip()]=int(value.strip())
+print(mydict)
+
+"""
+a:2,b:45
+{'a': 2, 'b': 45}
+"""
+```
