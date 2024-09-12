@@ -339,3 +339,33 @@ a:2,b:45
 {'a': 2, 'b': 45}
 """
 ```
+
+```
+a=range(1,10)
+print(list(a))
+print(tuple(a))
+print(set(a))
+
+b=range(1,10,2)
+for num in b:
+    print(num)
+
+c=range(1,10,3)
+for num in c:
+    print(num)
+
+"""
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+(1, 2, 3, 4, 5, 6, 7, 8, 9)
+{1, 2, 3, 4, 5, 6, 7, 8, 9}
+1
+3
+5
+7
+9
+1
+4
+7
+10
+"""
+```
