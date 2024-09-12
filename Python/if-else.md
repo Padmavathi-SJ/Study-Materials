@@ -307,3 +307,14 @@ result=interest(p,r,t)
 print("%.2f" %result)
 
 ```
+
+### getting inputs as list, tuple, set
+```
+thisList=list(input().split())
+thisTuple=tuple(input().split())
+thisSet=set(input().split())
+
+print(thisList) 
+print(thisTuple)
+print(thisSet)
+```
