@@ -503,3 +503,13 @@ or
 1.5 2.5
 """
 ```
+
+```
+t=int(input())
+for i in range(t):
+    x,h=map(int,input().split())
+    if(x>=h):
+        print("Yes")
+    else:
+        print("No")
+```
