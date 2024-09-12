@@ -113,3 +113,14 @@ print(myList[-1]) # cherry , -1 refers to the last item
 print(myList[-2]) # banana, -2 refers to the last second item
 print(myList[-3]) # Apple
 ```
+
+### age is odd or even
+```
+age=int(input())
+if age%2==0:
+    print("even")
+elif age%2!=0:
+    print("odd")
+else:
+    print("zero")
+```
