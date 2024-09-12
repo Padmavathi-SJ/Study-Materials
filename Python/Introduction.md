@@ -298,3 +298,10 @@ print(100 + 5 * 3) # 115
 ```
 print(5 + 4 - 7 +3) # 5
 ```
+
+## List:
+* using list operator we can create a list
+```
+thislist=list(("apple", "mango", "banana"))
+print(thislist)
+```
