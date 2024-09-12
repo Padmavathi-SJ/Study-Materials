@@ -386,3 +386,14 @@ if num%2==0:
 else:
     print(f"{num} is odd")
 ```
+
+### alpha or digit or spl char:
+```
+a=input()
+if a.isalpha():
+    print(f"{a} is alpha")
+elif a.isdigit():
+    print(f"{a} is digit")
+else:
+    print(f"{a} is spl char")
+```
