@@ -243,3 +243,14 @@ num3=int(input())
 print(largest(num1, num2, num3))
 ```
 
+### Vowel or Consonant
+```
+def check(char):
+    if char.lower() in 'aeiou':
+        return "vowel"
+    else:
+        return "consonant"
+
+char=input()
+print(check(char))
+```
