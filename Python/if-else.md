@@ -369,7 +369,16 @@ for num in c:
 10
 """
 ```
-
+### char is vow or consonant
+```
+a=input()
+if len(a)!=1:
+    print("enter only one character")
+elif a in 'aeiouAEIOU':
+    print(f"{a} is vowel")
+else:
+    print(f"{a} is consonant")
+```
 ```
 num=int(input())
 if num%2==0:
