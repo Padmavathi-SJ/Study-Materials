@@ -289,3 +289,21 @@ m=int(input())
 y=int(input())
 print(check(m,y))
 ```
+### simple interest:
+```
+def interest(p,r,t):
+    r=r*100
+    if p>0 and r>0 and t>0:
+        interest=p * r * t /100
+        return interest
+    else:
+        return "Invalid input"
+
+p=int(input())
+r=float(input())
+t=int(input())
+
+result=interest(p,r,t)
+print("%.2f" %result)
+
+```
