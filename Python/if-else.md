@@ -443,3 +443,9 @@ print(num, end=' ')
 print("is %.2f" %result, end=' ') 
 print("that's it") # 2.2 is 4.40 that's it
 ```
+### divide by "//"
+```
+num=int(input())
+divide=num//5
+print(divide) # 10//5=2
+```
