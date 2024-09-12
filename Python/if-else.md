@@ -273,3 +273,19 @@ c=int(input())
 
 print(check(a,b,c))
 ```
+###  Month Days
+```
+def check(m,y):
+    if m in [1,3,5,7,8,10,12]:
+        return "31 days"
+    elif m in [4,6,9,11]:
+        return "30 days"
+    elif m==2 and ((y%4==0 and y%100!=0) or (y%400==0)):
+        return "29 days"
+    else:
+        return "28 days"
+
+m=int(input())
+y=int(input())
+print(check(m,y))
+```
