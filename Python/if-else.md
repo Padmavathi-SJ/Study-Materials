@@ -486,3 +486,15 @@ print(f"is %.4f" %result)
 result of 2.5 is 5.0000
 """
 ```
+
+### getting inputs in a same line
+```
+temp1,temp2=input().split()
+print(temp1, end=' ')
+print(temp2)
+
+"""
+115 225
+115 225
+"""
+```
