@@ -433,5 +433,13 @@ r=r/100
 amount=p*(1+r/t) ** (t*y)
 compoundInterest=amount-p
 print("%.2f" %compoundInterest)
+```
 
+### print in the same line
+```
+num=float(input())
+result=num*2.0
+print(num, end=' ') 
+print("is %.2f" %result, end=' ') 
+print("that's it") # 2.2 is 4.40 that's it
 ```
