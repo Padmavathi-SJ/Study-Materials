@@ -397,3 +397,20 @@ elif a.isdigit():
 else:
     print(f"{a} is spl char")
 ```
+
+### discount
+```
+age=int(input())
+if age<=12:
+    discount=0.50
+elif age >=13 and age<=19:
+    discount=0.30
+elif age>=20 and age<=65:
+    discount=0.1
+else:
+    discount=0.0
+
+ticketPrice=50
+totalPrice=ticketPrice * (1-discount)
+print(totalPrice)
+```
