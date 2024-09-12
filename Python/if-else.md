@@ -176,3 +176,12 @@ print(f" {celcius}")
 ```
 print("padma\nkavi\namma")
 ```
+
+### printing 2 or 3 decimal points
+```
+num=float(input())
+print(num) #12.32456987
+print(f"{num:.2f}") #12.32
+print(f"{num:.4f}") #12.3246
+print(f"{num:.1f}") #12.3
+```
