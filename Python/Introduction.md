@@ -305,3 +305,20 @@ print(5 + 4 - 7 +3) # 5
 thislist=list(("apple", "mango", "banana"))
 print(thislist)
 ```
+
+
+```
+thislist=list(("a", "b", "c", "d", "e", "f", "g"))
+print(thislist) # ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+print(thislist[1]) # b
+print(thislist[-1]) # g
+print(thislist[2:5]) # ['c', 'd', 'e']
+print(thislist[:3]) # ['a', 'b', 'c']
+print(thislist[2:]) # ['c', 'd', 'e', 'f', 'g']
+print(thislist[-4:-1]) #['d', 'e', 'f']
+
+if "z" in thislist:
+    print("yes")
+else:
+    print("no") # no
+```
