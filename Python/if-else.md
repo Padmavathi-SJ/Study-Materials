@@ -185,3 +185,12 @@ print(f"{num:.2f}") #12.32
 print(f"{num:.4f}") #12.3246
 print(f"{num:.1f}") #12.3
 ```
+
+###
+```
+num=float(input())
+print(num) #12.32456987
+print("%.2f" %num) # 12.37
+print("%.3f" %num) # 12.365
+
+```
