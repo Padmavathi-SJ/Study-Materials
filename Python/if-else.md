@@ -211,3 +211,17 @@ print("{:.3f}".format(num)) # 12.325
 print("{:.1f}".format(num)) # 12.3
 print("%.2f is the result" %num) # 12.33 is the result
 ```
+
+### Divisibility Check
+```
+def check(num):
+    if num%5==0 and num%3==0:
+        return "Yes both"
+    elif num%5==0 or num%3!=0:
+        return "only by 5"
+    else:
+        return "not both"
+
+num=int(input());
+print(check(num))
+```
