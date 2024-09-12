@@ -157,3 +157,18 @@ if isLeapYear(year):
 else:
     print("no")
 ```
+### temperature converter:
+```
+def converted(temp, scale):
+    if scale=="C":
+        return (temp * 5/9) + 32
+    elif scale=="F":
+        return (temp - 32) * 5/9
+    else:
+        return "Invalid scale"
+
+temp=float(input())
+scale=input().upper()
+celcius=converted(temp, scale)
+print(f" {celcius}")
+```
