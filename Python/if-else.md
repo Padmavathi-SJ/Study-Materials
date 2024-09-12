@@ -172,3 +172,7 @@ scale=input().upper()
 celcius=converted(temp, scale)
 print(f" {celcius}")
 ```
+### printing in new line
+```
+print("padma\nkavi\namma")
+```
