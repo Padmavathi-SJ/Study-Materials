@@ -254,3 +254,22 @@ def check(char):
 char=input()
 print(check(char))
 ```
+### Triangle Type
+```
+def check(a,b,c):
+    if a+b > c and a+c>b and b+c>a:
+        if a==b==c:
+            return "Equilateral"
+        elif a==b or b==c or a==c:
+            return "Isosceles"
+        else:
+            return "Scalene"
+    else:
+        return "Not a traingle"
+
+a=int(input())
+b=int(input())
+c=int(input())
+
+print(check(a,b,c))
+```
