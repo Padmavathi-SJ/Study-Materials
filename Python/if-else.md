@@ -421,3 +421,17 @@ num=int(input()) # 2
 power=num ** 2 + num ** 2
 print(power) # 8
 ```
+
+### Compound interest:
+```
+p=float(input())
+r=float(input())
+t=int(input())
+y=float(input())
+
+r=r/100
+amount=p*(1+r/t) ** (t*y)
+compoundInterest=amount-p
+print("%.2f" %compoundInterest)
+
+```
