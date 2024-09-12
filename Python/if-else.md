@@ -202,4 +202,12 @@ print("{:.2f}".format(num))
 print("{:.3f}".format(num))
 print("{:.1f}".format(num))
 ```
-###
+
+```
+num=float(input())
+print(num) #12.32456987
+print("{:.2f}".format(num)) # 12.33
+print("{:.3f}".format(num)) # 12.325
+print("{:.1f}".format(num)) # 12.3
+print("%.2f is the result" %num) # 12.33 is the result
+```
