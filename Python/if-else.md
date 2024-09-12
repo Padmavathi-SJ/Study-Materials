@@ -441,11 +441,35 @@ num=float(input())
 result=num*2.0
 print(num, end=' ') 
 print("is %.2f" %result, end=' ') 
-print("that's it") # 2.2 is 4.40 that's it
+print("that's it")
+
+"""
+2.2
+2.2 is 4.40 that's it
+"""
 ```
+
 ### divide by "//"
 ```
 num=int(input())
 divide=num//5
-print(divide) # 10//5=2
+print(divide)
+
+"""
+10
+2
+"""
+```
+
+### n+nn+nnn series
+```
+n=int(input())
+nn=2*n
+nnn=3*n
+print(n+nn+nnn)
+
+"""
+2
+12
+"""
 ```
