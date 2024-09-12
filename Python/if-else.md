@@ -473,3 +473,16 @@ print(n+nn+nnn)
 12
 """
 ```
+###
+```
+num=float(input())
+result=2*num
+print("result of", end=' ')
+print(num, end=' ')
+print(f"is %.4f" %result)
+
+"""
+2.5
+result of 2.5 is 5.0000
+"""
+```
