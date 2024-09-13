@@ -52,3 +52,38 @@ public class Main{
 120
 """
 ```
+
+### Reverse a Number: 
+```
+import java.util.*;
+public class Main{
+    
+    public int reverse(int n){
+        int rev=0;
+        
+        while(n!=0){
+        int digit=n%10;
+        rev=rev*10+digit;
+        n=n/10;
+        }
+        return rev;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        
+        Main obj=new Main();
+        int reversed=obj.reverse(n);
+        
+        System.out.println(reversed);
+        
+        input.close();
+    }
+}
+
+"""
+12345
+54321
+"""
+```
