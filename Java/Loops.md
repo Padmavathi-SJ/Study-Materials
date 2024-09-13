@@ -225,3 +225,46 @@ public class Main{
 2, 3, 5, 7, 11, 13, 17, 19, 23
 """
 ```
+
+### Armstrong Number:
+```
+import java.util.*;
+public class Main{
+    
+    public boolean isAmstrong(int n){
+        int org=n;
+        int sum=0;
+        while(n!=0){
+            int d=n%10;
+            sum=sum+(d*d*d);
+            n=n/10;
+        }
+        if(sum==org){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        
+        Main obj=new Main();
+        if(obj.isAmstrong(n)){
+            System.out.println("Yes " + n + " is Amstrong");
+        }
+        else{
+        System.out.println("No");
+        }
+
+        input.close();
+    }
+}
+"""
+153
+Yes 153 is Amstrong
+"""
+```
