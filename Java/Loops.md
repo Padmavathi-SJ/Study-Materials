@@ -87,3 +87,37 @@ public class Main{
 54321
 """
 ```
+
+### Sum of digits:
+```
+import java.util.*;
+public class Main{
+    
+    public int sumOfDigit(int n){
+        int sum=0;
+        while(n!=0){
+            int digit=n%10;
+            sum+=digit;
+            n=n/10;
+        }
+        return sum;
+    }
+
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        
+        Main obj=new Main();
+        int sum=obj.sumOfDigit(n);
+        
+        System.out.println(sum);
+        input.close();
+    }
+}
+
+"""
+12345
+15
+"""
+```
