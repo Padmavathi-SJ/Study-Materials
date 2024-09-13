@@ -185,3 +185,43 @@ public class Main{
 0 1 2 3 5 8 13
 """
 ```
+
+### Prime Numbers: 
+```
+import java.util.*;
+public class Main{
+    
+    public boolean isPrime(int n){
+        if(n<=0){
+            return false;
+        }
+        for(int i=2; i<=n/2; i++){
+            if(n%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        
+        Main obj=new Main();
+        
+        for(int i=2; i<n; i++){
+            if(obj.isPrime(i)){
+                System.out.print(i + " ");
+            }
+        }
+
+        input.close();
+    }
+}
+"""
+25
+2, 3, 5, 7, 11, 13, 17, 19, 23
+"""
+```
