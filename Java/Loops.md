@@ -121,3 +121,36 @@ public class Main{
 15
 """
 ```
+
+### Count Digits in a Number:
+```
+import java.util.*;
+public class Main{
+    
+    public int countOfDigit(int n){
+        int count=0;
+        while(n!=0){
+            int digit=n%10;
+            count++;
+            n=n/10;
+        }
+        return count;
+    }
+
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        
+        Main obj=new Main();
+        int count=obj.countOfDigit(n);
+        
+        System.out.println(count);
+        input.close();
+    }
+}
+"""
+12345
+5
+"""
+```
