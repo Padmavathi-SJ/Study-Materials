@@ -154,3 +154,34 @@ public class Main{
 5
 """
 ```
+
+### Fibonacci Sequence
+```
+import java.util.*;
+public class Main{
+
+
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        
+        int prev=0;
+        System.out.print(prev + " ");
+        int curr=1;
+        int next;
+        for(int i=0; i<n; i++){
+            next=prev+curr;
+            System.out.print(next + " ");
+            prev=curr;
+            curr=next;
+        }
+
+        input.close();
+    }
+}
+"""
+6
+0 1 2 3 5 8 13
+"""
+```
