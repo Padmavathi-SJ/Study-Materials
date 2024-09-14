@@ -562,3 +562,27 @@ public class Main{
 145 is a strong number
 """
 ```
+
+###  Perfect Square Check
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+       int n=input.nextInt();
+       int sqrt=(int) Math.sqrt(n);
+       if((sqrt * sqrt)==n){
+        System.out.println(n + " is a perfect square");   
+       }
+       else{
+           System.out.println(n + " is not a perfect square");
+       }
+        input.close();
+    }
+}
+"""
+16
+16 is a perfect square
+"""
+```
