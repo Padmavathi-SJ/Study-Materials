@@ -812,3 +812,38 @@ class Main{
     }
 }
 ```
+### Prime Numbers Between Two Intervals
+```
+import java.util.*;
+public class Main{
+    public static boolean isPrime(int n){
+        if(n<=1){
+            return false;
+        }
+        for(int i=2; i<=n/2; i++){
+            if(n%i==0){
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void  main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int start=input.nextInt();
+        int end=input.nextInt();
+        
+        for(int i=start; i<=end; i++){
+            if(isPrime(i)){
+                System.out.print(i + " ");
+            }
+        }
+    input.close();
+    }
+}
+"""
+5
+13
+5 7 11 13
+"""
+```
