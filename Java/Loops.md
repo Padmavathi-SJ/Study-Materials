@@ -783,3 +783,22 @@ public class Main{
 4
 """
 ```
+### Find Cube of a Number
+```
+import java.util.*;
+public class Main{
+    public static void  main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+       int num=input.nextInt();
+       int cube=(int) Math.pow(num, 3);
+       System.out.println(cube);
+        
+    input.close();
+    }
+}
+"""
+2
+8
+"""
+```
