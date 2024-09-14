@@ -1203,3 +1203,33 @@ public class Main{
 5 10 15 20 25
 """
 ```
+
+### pattern -05
+```
+import java.util.*;
+public class Main{
+    public static void  main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int r=input.nextInt();
+        
+        for(int i=r; i>=0; i--){
+            for(int j=1; j<=i; j++){
+                System.out.printf("%d ", j*1);
+            }
+            System.out.printf("\n");
+        }
+        
+    input.close();
+    }
+}
+
+"""
+5
+1 2 3 4 5
+1 2 3 4
+1 2 3
+1 2
+1
+"""
+```
