@@ -438,3 +438,27 @@ HCF of 10 and 5 is 5
 LCM of 10 and 5 is 10
 """
 ```
+
+###  Sum of Series (1 + 1/2 + 1/3 + … + 1/N)
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+       int n=input.nextInt();
+       
+       double sum=0.0;
+       for(int i=1; i<=n; i++){
+           sum+=1.0/i;
+       }
+       
+       System.out.println(sum);
+        input.close();
+    }
+}
+"""
+5
+2.83333333333
+"""
+```
