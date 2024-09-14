@@ -1117,3 +1117,33 @@ public class Main{
 5 6 7 8 9
 """
 ```
+
+### pattern -02(reverse of pattern 1):
+```
+import java.util.*;
+public class Main{
+    public static void  main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int r=input.nextInt();
+       // int c=input.nextInt();
+        
+        for(int i=r; i>=1; i--){
+            for(int j=0; j<i; j++){
+                System.out.printf("%d ", i+j);
+            }
+            System.out.printf("\n");
+        }
+        
+    input.close();
+    }
+}
+"""
+5
+5 6 7 8 9
+4 5 6 7
+3 4 5
+2 3
+1
+"""
+```
