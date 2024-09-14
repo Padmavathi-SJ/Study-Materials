@@ -1096,7 +1096,6 @@ public class Main{
         Scanner input=new Scanner(System.in);
         
         int r=input.nextInt();
-       // int c=input.nextInt();
         
         for(int i=1; i<=r; i++){
             for(int j=0; j<i; j++){
@@ -1126,7 +1125,6 @@ public class Main{
         Scanner input=new Scanner(System.in);
         
         int r=input.nextInt();
-       // int c=input.nextInt();
         
         for(int i=r; i>=1; i--){
             for(int j=0; j<i; j++){
@@ -1156,7 +1154,6 @@ public class Main{
         Scanner input=new Scanner(System.in);
         
         int r=input.nextInt();
-       // int c=input.nextInt();
         
         for(int i=1; i<=r; i++){
             for(int j=1; j<=i; j++){
@@ -1186,7 +1183,6 @@ public class Main{
         Scanner input=new Scanner(System.in);
         
         int r=input.nextInt();
-       // int c=input.nextInt();
         
         for(int i=1; i<=r; i++){
             for(int j=1; j<=i; j++){
