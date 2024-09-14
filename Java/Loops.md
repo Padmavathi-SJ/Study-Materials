@@ -630,3 +630,29 @@ public class Main{
 6
 """
 ```
+
+### Check for Automorphic Number
+* Automorphic number is a number whose square ends in the same digits as the number itself.
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+       int num=input.nextInt();
+       int square=num*num;
+       if(String.valueOf(square).endsWith(String.valueOf(num))){
+           System.out.println(num + " is an automorphic number");
+       }
+       else{
+           System.out.println(num + " is not an automorphic number");
+       }
+       input.close();
+       }
+    }
+
+"""
+25
+25 is an automorphic number
+"""
+```
