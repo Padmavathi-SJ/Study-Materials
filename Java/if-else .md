@@ -881,3 +881,36 @@ public class Main{
 28
 """
 ```
+
+### Sum of Digits Until Single Digit
+```
+import java.util.*;
+public class Main{
+    public static int sumOfDigits(int n){
+        int sum=0;
+        while(n!=0){
+            int digit=n%10;
+            sum+=digit;
+            n/=10;
+        }
+        return sum;
+    }
+    public static void  main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int num=input.nextInt();
+        
+        while(num>=10){
+            num=sumOfDigits(num);
+        }
+        
+        System.out.println(num);
+        
+    input.close();
+    }
+}
+"""
+499
+4
+"""
+```
