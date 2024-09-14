@@ -841,3 +841,27 @@ public class Main{
     }
 }
 ```
+### find first and last digit of a number.
+```
+import java.util.*;
+public class Main{
+    public static void  main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+       int num=input.nextInt();
+       int last=num%10;
+       int first=num;
+       while(first>=10){
+               first=first/10;
+           }
+           
+           System.out.printf("first and last are: %d %d", first, last);
+        
+    input.close();
+    }
+}
+"""
+1254
+first and last are 1 4
+"""
+```
