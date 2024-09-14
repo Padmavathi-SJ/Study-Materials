@@ -1147,3 +1147,33 @@ public class Main{
 1
 """
 ```
+
+### pattern-03
+```
+import java.util.*;
+public class Main{
+    public static void  main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int r=input.nextInt();
+       // int c=input.nextInt();
+        
+        for(int i=1; i<=r; i++){
+            for(int j=1; j<=i; j++){
+                System.out.printf("%d ", j*5);
+            }
+            System.out.printf("\n");
+        }
+        
+    input.close();
+    }
+}
+"""
+5
+5
+5 10
+5 10 15
+5 10 15 20
+5 10 15 20 25
+"""
+```
