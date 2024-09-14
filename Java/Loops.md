@@ -913,3 +913,63 @@ public class Main{
 4321
 """
 ```
+
+### enter a number and print it in words.
+```
+import java.util.*;
+public class Main{
+    public static void  main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+       int num=input.nextInt();
+       int rev=0;
+       while(num!=0){
+           int digit=num%10;
+           rev=rev*10+digit;
+           num/=10;
+       }
+      while(rev!=0){
+          switch(rev%10){
+            case 0:
+                  System.out.printf("zero ");
+                  break;
+            case 1:
+                  System.out.printf("one ");
+                  break;
+            case 2:
+                System.out.printf("two ");
+                break;
+            case 3:
+                System.out.printf("three ");
+                break;
+            case 4:
+                System.out.printf("four ");
+                break;
+            case 5:
+                System.out.printf("five ");
+                break;
+            case 6:
+                System.out.printf("six ");
+                break;
+            case 7:
+                System.out.printf("seven ");
+                break;
+            case 8:
+               System.out.printf("eight ");
+               break;
+            case 9:
+                System.out.printf("nine ");
+                break;
+             
+          }
+          rev/=10;  
+      }
+        
+    input.close();
+    }
+}
+"""
+1234
+one two three four
+"""
+```
