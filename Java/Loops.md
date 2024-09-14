@@ -889,3 +889,27 @@ public class Main{
 12
 """
 ```
+### reverse of a number:
+```
+import java.util.*;
+public class Main{
+    public static void  main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+       int num=input.nextInt();
+       int rev=0;
+       while(num!=0){
+           int digit=num%10;
+           rev=rev*10+digit;
+           num/=10;
+       }
+      System.out.printf("%d", rev);
+        
+    input.close();
+    }
+}
+"""
+1234
+4321
+"""
+```
