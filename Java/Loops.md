@@ -973,3 +973,24 @@ public class Main{
 one two three four
 """
 ```
+### find power of a number
+```
+import java.util.*;
+public class Main{
+    public static void  main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+       int base=input.nextInt();
+       int exponent=input.nextInt();
+       
+       int power=(int) Math.pow(base, exponent);
+       System.out.printf("%d ^ %d = %d", base, exponent, power);
+    input.close();
+    }
+}
+"""
+2
+5
+2 ^ 5 = 32
+"""
+```
