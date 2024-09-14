@@ -482,3 +482,22 @@ public class Main{
 10
 """
 ```
+### Decimal to Binary Conversion
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+       int decimal=input.nextInt();
+       String binary=Integer.toBinaryString(decimal);
+       
+       System.out.println(binary);
+        input.close();
+    }
+}
+"""
+1010
+10
+"""
+```
