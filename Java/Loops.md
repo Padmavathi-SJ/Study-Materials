@@ -396,3 +396,45 @@ public class Main{
 4
 """
 ```
+### find hcf and lcm of 2 numbers:
+```
+import java.util.*;
+public class Main{
+    
+    public int findHcf(int n1, int n2){
+        while(n2!=0){
+            int temp=n2;
+            n2=n1%n2;
+            n1=temp;
+        }
+        return n1;
+    }
+    
+    public int findLcm(int n1, int n2, int hcf){
+        return (n1*n2)/hcf;
+    }
+    
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n1=input.nextInt();
+        int n2=input.nextInt();
+        
+        Main obj=new Main();
+        
+        int hcf=obj.findHcf(n1, n2);
+        int lcm=obj.findLcm(n1, n2, hcf);
+        
+        System.out.println("HCF of " + n1 + " and " + n2 + " is " + hcf);
+        System.out.println("LCM of " + n1 + " and " + n2 + " is " + lcm);
+        
+        input.close();
+    }
+}
+"""
+10
+5
+HCF of 10 and 5 is 5
+LCM of 10 and 5 is 10
+"""
+```
