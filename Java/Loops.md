@@ -524,3 +524,41 @@ public class Main{
 5
 """
 ```
+### Check for Strong Number
+```
+import java.util.*;
+public class Main{
+    
+    public static int factorial(int n){
+        int fact=1;
+        for(int i=1; i<=n; i++){
+            fact=fact*i;
+        }
+        return fact;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+       int n=input.nextInt();
+       int sum=0;
+       int orgNum=n;
+       while(n!=0){
+           int digit=n%10;
+           sum+=factorial(digit);
+           n/=10;
+       }
+       
+       if(sum==orgNum){
+           System.out.println(orgNum + " is a strong number");
+       }
+       else{
+           System.out.println(orgNum + " is not a strong number");
+       }
+        input.close();
+    }
+}
+"""
+145
+145 is a strong number
+"""
+```
