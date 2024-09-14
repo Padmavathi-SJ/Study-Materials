@@ -462,3 +462,23 @@ public class Main{
 2.83333333333
 """
 ```
+
+### Binary to Decimal Conversion
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+       String binary=input.next();
+       
+       int decimal=Integer.parseInt(binary,2);
+       System.out.println(decimal);
+        input.close();
+    }
+}
+"""
+1010
+10
+"""
+```
