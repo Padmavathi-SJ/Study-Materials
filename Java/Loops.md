@@ -994,3 +994,28 @@ public class Main{
 2 ^ 5 = 32
 """
 ```
+
+### find power of a number using for loop.(without using Math.pow function)
+```
+import java.util.*;
+public class Main{
+    public static void  main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+       int base=input.nextInt();
+       int exponent=input.nextInt();
+       
+       int power=1;
+       for(int i=1; i<=exponent; i++){
+           power=power*base;
+       }
+       System.out.printf("%d",power);
+    input.close();
+    }
+}
+"""
+2
+5
+32
+"""
+```
