@@ -1043,3 +1043,47 @@ public class Main{
 1 2 3 4 6 12
 """
 ```
+### print all Strong numbers between 1 to n.
+```
+import java.util.*;
+public class Main{
+    public static int factorial(int n){
+        int fact=1;
+        for(int i=2; i<=n; i++){
+            fact=fact*i;
+        }
+        return fact;
+    }
+    public static boolean isStrong(int n){
+        int orgNum=n;
+        int sum=0;
+        while(n!=0){
+            int digit=n%10;
+            sum+=factorial(digit);
+            n/=10;
+        }
+        if(sum==orgNum){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    
+    public static void  main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        for(int i=0; i<n; i++){
+            if(isStrong(i)){
+                System.out.printf("%d ", i);
+            }
+        }
+    input.close();
+    }
+}
+"""
+15
+0 1 2
+"""
+```
