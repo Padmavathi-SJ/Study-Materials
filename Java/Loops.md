@@ -1087,3 +1087,33 @@ public class Main{
 0 1 2
 """
 ```
+## Patterns
+### pattern - 01
+```
+import java.util.*;
+public class Main{
+    public static void  main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int r=input.nextInt();
+       // int c=input.nextInt();
+        
+        for(int i=1; i<=r; i++){
+            for(int j=0; j<i; j++){
+                System.out.printf("%d ", i+j);
+            }
+            System.out.printf("\n");
+        }
+        
+    input.close();
+    }
+}
+"""
+5
+1
+2 3
+3 4 5
+4 5 6 7
+5 6 7 8 9
+"""
+```
