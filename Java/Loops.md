@@ -269,6 +269,7 @@ Yes 153 is Amstrong
 """
 ```
 ### perfect number:
+* if the sum of factors of a num is equal to that num itself, that num is a perfect number
 ```
 import java.util.*;
 public class Main{
