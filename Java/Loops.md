@@ -1316,3 +1316,32 @@ public class Main{
 12345
 """
 ```
+
+### Inverted Left-Angle Triangle
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int r=5;
+        for(int i=r; i>=1; i--){
+            for(int j=i; j<r; j++){
+                System.out.printf(" ");
+            }
+            for(int j=1; j<=i; j++){
+                System.out.printf("%d", j);
+            }
+            System.out.printf("\n");
+        }
+        input.close();
+    }
+}
+"""
+12345
+ 1234
+  123
+   12
+    1
+"""
+```
