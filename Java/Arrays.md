@@ -187,3 +187,77 @@ odd numbers: 4
 even numbers: 2
 """
 ```
+
+### left rotate an array (left to right):
+```
+import java.util.*;
+public class Main{
+    
+    public static void rotateArr(int[] arr, int n){
+        int temp=arr[0];
+        for(int i=0; i<n-1; i++){
+           arr[i]=arr[i+1];
+        }
+        arr[n-1]=temp;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+    int n=input.nextInt();
+    int[] arr=new int[n];
+    for(int i=0; i<n; i++){
+        arr[i]=input.nextInt();
+    }
+    int k=3;
+    for(int i=0; i<k; i++){
+        rotateArr(arr,n);
+    }
+    for(int i=0; i<n; i++){
+        System.out.printf("%d ", arr[i]);
+    }
+    input.close();
+}
+}
+"""
+10
+1 2 3 4 5 6 7 8 9 10
+4 5 6 7 8 9 10 1 2 3
+"""
+```
+
+### right rotate an array (right to left):
+```
+import java.util.*;
+public class Main{
+    
+    public static void rotateArr(int[] arr, int n){
+        for(int i=0; i<n-1; i++){
+         int temp=arr[i];
+         arr[i]=arr[n-1];
+         arr[n-1]=temp;
+        }
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+    int n=input.nextInt();
+    int[] arr=new int[n];
+    for(int i=0; i<n; i++){
+        arr[i]=input.nextInt();
+    }
+    int k=3;
+    for(int i=0; i<k; i++){
+        rotateArr(arr,n);
+    }
+    for(int i=0; i<n; i++){
+        System.out.printf("%d ", arr[i]);
+    }
+    input.close();
+}
+}
+"""
+10
+1 2 3 4 5 6 7 8 9 10
+8 9 10 1 2 3 4 5 6 7
+"""
+```
