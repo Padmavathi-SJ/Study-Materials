@@ -1345,3 +1345,29 @@ public class Main{
     1
 """
 ```
+
+### 04
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int r=5;
+        for(int i=1; i<=r; i++){
+            for(int j=1; j<=i; j++){
+                System.out.printf("%d ", i*5);
+            }
+            System.out.printf("\n");
+        }
+        input.close();
+    }
+}
+"""
+5
+10 10
+15 15 15
+20 20 20 20
+25 25 25 25 25
+"""
+```
