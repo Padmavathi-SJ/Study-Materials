@@ -1448,3 +1448,29 @@ public class Main{
 54321
 """
 ```
+
+### 09
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int r=5;
+        for(int i=1; i<=r; i++){
+            for(int j=r; j>=i; j--){
+                System.out.printf("%d ", j);
+            }
+            System.out.printf("\n");
+        }
+        input.close();
+    }
+}
+"""
+54321
+5432
+543
+54
+5
+"""
+```
