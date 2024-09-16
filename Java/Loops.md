@@ -1422,3 +1422,29 @@ public class Main{
 1
 """
 ```
+
+### 08
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int r=5;
+        for(int i=r; i>=1; i--){
+            for(int j=r; j>=i; j--){
+                System.out.printf("%d ", j);
+            }
+            System.out.printf("\n");
+        }
+        input.close();
+    }
+}
+"""
+5
+54
+543
+5432
+54321
+"""
+```
