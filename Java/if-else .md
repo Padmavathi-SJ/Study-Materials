@@ -858,3 +858,22 @@ public class Main{
 5.0
 """
 ```
+
+### Math.floor function:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+    double a=2.645235;
+    System.out.println((int) Math.floor(a));
+
+        input.close();
+    }
+}
+"""
+2.645235
+2
+"""
+```
