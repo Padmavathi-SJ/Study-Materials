@@ -261,3 +261,42 @@ public class Main{
 8 9 10 1 2 3 4 5 6 7
 """
 ```
+
+## MATRIX(2D array):
+
+### print a matrix:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+    int r=3;
+    int c=3;
+    int[][] m1=new int[r][c];
+    for(int i=0; i<r; i++){
+        for(int j=0; j<c; j++){
+            m1[i][j]=input.nextInt();
+        }
+    }
+    
+    for(int i=0; i<r; i++){
+        for(int j=0; j<c; j++){
+            System.out.printf("%d ", m1[i][j]);
+        }
+        System.out.printf("\n");
+    }
+    
+    input.close();
+}
+}
+"""
+1 2 3
+4 5 6
+7 8 9
+
+1 2 3
+4 5 6
+7 8 9
+"""
+```
