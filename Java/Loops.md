@@ -1499,3 +1499,29 @@ public class Main{
 12345
 """
 ```
+
+### 11
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int r=5;
+        for(int i=1; i<=r; i++){
+            for(int j=i; j<=r; j++){
+                System.out.printf("%d ", j);
+            }
+            System.out.printf("\n");
+        }
+        input.close();
+    }
+}
+"""
+12345
+1234
+123
+12
+1
+"""
+```
