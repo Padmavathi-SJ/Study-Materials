@@ -149,3 +149,41 @@ public class Main{
 second largest is: 7
 """
 ```
+### count total number of even and odd elements in an array.
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+    int n=input.nextInt();
+    int[] arr=new int[n];
+    for(int i=0; i<n; i++){
+        arr[i]=input.nextInt();
+    }
+    
+   int oddCount=0;
+   int evenCount=0;
+   
+   for(int i=0; i<n; i++){
+       if(arr[i]%2==0){
+           evenCount++;
+       }
+       else if(arr[i]%2!=0){
+           oddCount++;
+       }
+   }
+   
+   System.out.println("odd numbers: " + oddCount);
+   System.out.println("even numbers: " + evenCount);
+    
+    input.close();
+}
+}
+"""
+6
+1 3 4 5 6 7
+odd numbers: 4
+even numbers: 2
+"""
+```
