@@ -1525,3 +1525,29 @@ public class Main{
 1
 """
 ```
+### 12
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int r=5;
+        for(int i=1; i<=r; i++){
+            int k=i;
+            for(int j=1; j<=i; j++, k++){
+                System.out.printf("%d ", k);
+            }
+            System.out.printf("\n");
+        }
+        input.close();
+    }
+}
+"""
+1
+23
+345
+4567
+56789
+"""
+```
