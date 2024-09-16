@@ -895,3 +895,21 @@ public class Main{
 3
 """
 ```
+
+### Math.round function:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+    double a=2.145235;
+    System.out.println((int)Math.round(a));
+
+        input.close();
+    }
+}
+"""
+2
+"""
+```
