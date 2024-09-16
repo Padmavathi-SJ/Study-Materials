@@ -1371,3 +1371,29 @@ public class Main{
 25 25 25 25 25
 """
 ```
+
+### 05
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int r=5;
+        for(int i=1; i<=r; i++){
+            for(int j=i; j>=1; j--){
+                System.out.printf("%d ", j);
+            }
+            System.out.printf("\n");
+        }
+        input.close();
+    }
+}
+"""
+1
+21
+321
+4321
+54321
+"""
+```
