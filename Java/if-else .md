@@ -812,4 +812,27 @@ class Main{
     }
 }
 ```
+## Math functions:
+### Math.floor function -- to rounding down the floating-point values in a loop:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+    for (double i = 1.5; i <= 5.5; i += 1.0) {
+    System.out.println(Math.floor(i));  
+}
+
+        input.close();
+    }
+}
+"""
+1.0
+2.0
+3.0
+4.0
+5.0
+"""
+```
 
