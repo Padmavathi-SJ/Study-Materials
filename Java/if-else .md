@@ -877,3 +877,21 @@ public class Main{
 2
 """
 ```
+
+### Math.ceil function:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+    double a=2.145235;
+    System.out.println((int)Math.ceil(a));
+
+        input.close();
+    }
+}
+"""
+3
+"""
+```
