@@ -1288,3 +1288,31 @@ public class Main{
 1
 """
 ```
+### Left-Angle Triangle Pattern
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int r=5;
+        for(int i=1; i<=r; i++){
+            for(int j=i; j<r; j++){
+                System.out.printf(" ");
+            }
+            for(int j=1; j<=i; j++){
+                System.out.printf("%d", j);
+            }
+            System.out.printf("\n");
+        }
+        input.close();
+    }
+}
+"""
+    1
+   12
+  123
+ 1234
+12345
+"""
+```
