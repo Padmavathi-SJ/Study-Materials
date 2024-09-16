@@ -1551,3 +1551,30 @@ public class Main{
 56789
 """
 ```
+
+### 13
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int r=5;
+        for(int i=r; i>=1; i--){
+            int k=i;
+            for(int j=1; j<=i; j++, k++){
+                System.out.printf("%d ", k);
+            }
+            System.out.printf("\n");
+        }
+        input.close();
+    }
+}
+"""
+56789
+4567
+345
+23
+1
+"""
+```
