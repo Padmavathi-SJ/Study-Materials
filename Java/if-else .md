@@ -836,3 +836,25 @@ public class Main{
 """
 ```
 
+### Math.ceil function --- rounding down the floating point value:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+    for (double i = 1; i <= 5; i += 1) {
+    System.out.println(Math.ceil(i));  
+}
+
+        input.close();
+    }
+}
+"""
+1.0
+2.0
+3.0
+4.0
+5.0
+"""
+```
