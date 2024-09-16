@@ -77,3 +77,40 @@ public class Main{
 15
 """
 ```
+
+### find maximum and minimum element in an array
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+    int n=input.nextInt();
+    int[] arr=new int[n];
+    for(int i=0; i<n; i++){
+        arr[i]=input.nextInt();
+    }
+    
+    for(int i=0; i<n; i++){
+        for(int j=i+1; j<n; j++){
+        if(arr[i]>arr[j]){
+      int temp=arr[i];
+      arr[i]=arr[j];
+      arr[j]=temp;
+    }
+   }
+    }
+    
+    System.out.println("min is: " + arr[0]);
+    System.out.println("max is: " + arr[n-1]);
+    
+    input.close();
+}
+}
+"""
+5
+4 6 8 1 6
+mis is 1
+max is 8
+"""
+```
