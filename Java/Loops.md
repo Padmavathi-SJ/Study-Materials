@@ -1578,3 +1578,25 @@ public class Main{
 1
 """
 ```
+### fill the coins in row by row, and return the value as completed row count:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=5;
+        for(int i = 1; i <= n; i++) {
+            n = n - i;
+            if(i >= n) {
+                System.out.println(i);;
+            }
+        }
+        input.close();
+    }
+}
+"""
+5 //no of coins
+2
+"""
+```
