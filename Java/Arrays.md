@@ -896,3 +896,47 @@ public class  Main{
 1 3 5
 """
 ```
+
+### check our arrayis palindromic array or not:
+```
+import java.util.*;
+public class  Main{
+    public static boolean isPalindrome(int n){
+        int orgNum=n;
+        int rev=0;
+        while(n!=0){
+            int digit=n%10;
+            rev=rev*10+digit;
+            n/=10;
+        }
+        return orgNum==rev;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr=new int[n];
+        for(int i=0; i<n; i++){
+            arr[i]=input.nextInt();
+        }
+        boolean flag=true;
+        for(int i=0; i<n; i++){
+           if(!isPalindrome(arr[i])){
+               flag=false;
+               break;
+           }
+           }
+        if(flag){
+            System.out.printf("array is a palindromic array\n");
+        }
+        else{
+            System.out.printf("array is not  palindromic arrar.\n");
+        }
+        input.close();
+    }
+}
+"""
+3
+111 2222 333
+"""
+```
