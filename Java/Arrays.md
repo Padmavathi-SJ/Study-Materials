@@ -504,3 +504,38 @@ public class Main{
 3
 """
 ```
+
+### maximum sum of subarray:
+```
+import java.util.*;
+public class Main{
+    public static int maxSubArrSum(int[] arr, int n){
+        int maxSum=arr[0];
+        int currSum=arr[0];
+        for(int i=1; i<n; i++){
+            currSum=Math.max(arr[i], currSum+arr[i]);
+            maxSum=Math.max(maxSum, currSum);
+        }
+        return maxSum;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr=new int[n];
+        
+        for(int i=0; i<n; i++){
+            arr[i]=input.nextInt();
+        }
+        
+        int maxSum=maxSubArrSum(arr, n);
+        System.out.printf("%d", maxSum);
+    input.close();
+}
+}
+"""
+4
+-2 1 -3 4
+4
+"""
+```
