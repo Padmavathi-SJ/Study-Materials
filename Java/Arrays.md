@@ -778,3 +778,38 @@ public class  Main{
 24 12 8 6
 """
 ```
+
+### Find the Duplicate Number
+```
+import java.util.*;
+public class  Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr=new int[n];
+        for(int i=0; i<n; i++){
+            arr[i]=input.nextInt();
+        }
+        int found=0;
+     for(int i=0; i<n; i++){
+         for(int j=i+1; j<n; j++){
+             if(arr[i]==arr[j]){
+                 found=1;
+                 System.out.println(arr[i]);
+                 input.close();
+             }
+         }
+     }
+     if(found==0){
+     System.out.println("No duplicates are found");
+     }
+        input.close();
+    }
+}
+"""
+5
+1 3 4 2 2
+2
+"""
+```
