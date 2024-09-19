@@ -969,3 +969,41 @@ public class  Main{
 10 1 2 8 4 5
 9 //max
 5 //count of smaller elements
+"""
+```
+
+### Swap kth elements
+```
+import java.util.*;
+public class  Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr=new int[n];
+        for(int i=0; i<n; i++){
+            arr[i]=input.nextInt();
+        }
+        int k=3;
+        if(k<=0 || k>n){
+            System.out.printf("invalid k position");
+        }
+        else{
+        int temp=arr[k-1]; //kth element from start
+        arr[k-1]=arr[n-k]; //kth element from end
+        arr[n-k]=temp;
+        }
+        
+        for(int i=0; i<n; i++){
+           System.out.printf("%d ", arr[i]);
+        }
+        input.close();
+    }
+}
+"""
+8
+1 2 3 4 5 6 7 8
+1 2 6 4 5 3 7 8 swapped 3 and 6
+"""
+```
+
