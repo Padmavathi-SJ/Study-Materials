@@ -569,3 +569,41 @@ public class Main{
 9
 """
 ```
+### Check if Array is Sorted
+```
+import java.util.*;
+public class Main{
+    public static boolean isSorted(int[] arr){
+        int n=arr.length;
+        for(int i=0; i<n-1; i++){
+            if(arr[i]>arr[i+1]){
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr=new int[n];
+        
+        for(int i=0; i<n; i++){
+            arr[i]=input.nextInt();
+        }
+       
+       if(isSorted(arr)){
+           System.out.printf("yes\n");
+       }
+       else{
+            System.out.printf("No\n");
+       }
+    input.close();
+}
+}
+"""
+5
+8 9 5 4 6
+No
+"""
+```
