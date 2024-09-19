@@ -698,3 +698,45 @@ public class Main{
 1 2 3 4 5 6
 """
 ```
+
+### Move Zeros to End
+``` 
+import java.util.*;
+public class  Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr=new int[n];
+        for(int i=0; i<n; i++){
+            arr[i]=input.nextInt();
+        }
+        int nonZeroCount=0;
+        for(int i=0; i<n; i++){
+            if(arr[i]!=0){
+                nonZeroCount++;
+            }
+        }
+        int nonZeroIndex=0;
+        int[] nonZeroArr=new int[n];
+        
+        for(int i=0; i<n; i++){
+            if(arr[i]!=0){
+                nonZeroArr[nonZeroIndex++]=arr[i];
+            }
+        }
+        for(int i=nonZeroCount; i<n; i++){
+            nonZeroArr[i]=0;
+        }
+        for(int i=0; i<n; i++){
+            System.out.printf("%d ", nonZeroArr[i]);
+        }
+        input.close();
+    }
+}
+"""
+5
+0 1 0 3 12
+1 3 12 0 0
+"""
+```
