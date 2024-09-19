@@ -539,3 +539,33 @@ public class Main{
 4
 """
 ```
+### Find the Largest Element in an Array
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr=new int[n];
+        
+        for(int i=0; i<n; i++){
+            arr[i]=input.nextInt();
+        }
+       
+       int max=arr[0];
+       for(int i=1; i<n; i++){
+           if(arr[i]>max){
+               max=arr[i];
+           }
+       }
+       System.out.printf("%d", max);
+    input.close();
+}
+}
+"""
+5
+8 9 4 7 5
+9
+"""
+```
