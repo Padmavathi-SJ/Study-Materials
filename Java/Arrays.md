@@ -383,3 +383,51 @@ public class Main{
 1 2 3 4 5 6 7 8 9 10
 1 3 5 7 9 2 4 6 8 10
 """
+```
+
+### merge two arrays:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr1=new int[n];
+        
+        for(int i=0; i<n; i++){
+            arr1[i]=input.nextInt();
+        }
+        
+        int m=input.nextInt();
+        int[] arr2=new int[m];
+        for(int i=0; i<m; i++){
+            arr2[i]=input.nextInt();
+        }
+        
+        int l=n+m;
+        int[] merged=new int[l];
+        int index=0;
+        for(int i=0; i<n; i++){
+            merged[index++]=arr1[i];
+        }
+        for(int i=0; i<m; i++){
+            merged[n+i]=arr2[i];
+        }
+        
+        for(int i=0; i<l; i++){
+            System.out.printf("%d ", merged[i]);
+        }
+        
+        
+    input.close();
+}
+}
+"""
+5
+1 2 3 4 5
+5
+6 7 8 9 10
+1 2 3 4 5 6 7 8 9 10
+"""
+```
