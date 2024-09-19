@@ -871,3 +871,28 @@ public class  Main{
 """
 ```
 * if our array is 1 based index means, take the size+1.
+
+### print Alternates in an Array
+```
+import java.util.*;
+public class  Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr=new int[n+1];
+        for(int i=1; i<=n; i++){
+            arr[i]=input.nextInt();
+        }
+        for(int i=1; i<=n; i+=2){
+           System.out.printf("%d ", arr[i]);
+        }
+        input.close();
+    }
+}
+"""
+5
+1 2 3 4 5
+1 3 5
+"""
+```
