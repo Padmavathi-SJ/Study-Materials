@@ -740,3 +740,41 @@ public class  Main{
 1 3 12 0 0
 """
 ```
+
+### Product of Array Except Self
+```
+import java.util.*;
+public class  Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr=new int[n];
+        for(int i=0; i<n; i++){
+            arr[i]=input.nextInt();
+        }
+      int[] productArr=new int[n];
+      int product=1;
+      int index=0;
+      for(int i=0; i<n; i++){
+          for(int j=0; j<n; j++){
+              if(i!=j){
+                  product=product*arr[j];
+              }
+          }
+          productArr[index++]=product;
+          product=1;
+      }
+      
+      for(int i=0; i<n; i++){
+          System.out.printf("%d ", productArr[i]);
+      }
+        input.close();
+    }
+}
+"""
+4
+1 2 3 4
+24 12 8 6
+"""
+```
