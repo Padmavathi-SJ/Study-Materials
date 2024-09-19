@@ -838,3 +838,36 @@ public class  Main{
 0 0 1 1 2 2
 """
 ```
+
+### print Values equal to index value
+```
+import java.util.*;
+public class  Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr=new int[n+1];
+        for(int i=1; i<=n; i++){
+            arr[i]=input.nextInt();
+        }
+        for(int i=1; i<=n; i++){
+            if(arr[i]==i){
+            System.out.printf("%d ", arr[i]);
+        }
+        }
+        input.close();
+    }
+}
+"""
+5
+15 2 45 4 7
+2 4
+"""
+"""
+1
+1
+1
+"""
+```
+* if our array is 1 based index means, take the size+1.
