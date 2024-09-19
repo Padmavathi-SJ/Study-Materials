@@ -644,3 +644,57 @@ public class Main{
 1 2 3 4
 """
 ```
+
+### Merge Two Sorted Arrays
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr1=new int[n];
+        for(int i=0; i<n; i++){
+            arr1[i]=input.nextInt();
+        }
+        
+        int m=input.nextInt();
+        int[] arr2=new int[m];
+        for(int i=0; i<m; i++){
+            arr2[i]=input.nextInt();
+        }
+        
+        int l=n+m;
+        int index=0;
+        int[] merged=new int[l];
+        
+        for(int i=0; i<n; i++){
+            merged[index++]=arr1[i];
+        }
+        for(int i=0; i<m; i++){
+            merged[index+i]=arr2[i];
+        }
+       for(int i=0; i<l; i++){
+           for(int j=i+1; j<l; j++){
+               if(merged[i]>merged[j]){
+                   int temp=merged[i];
+                   merged[i]=merged[j];
+                   merged[j]=temp;
+               }
+           }
+       }
+       
+       for(int i=0; i<l; i++){
+           System.out.printf("%d ", merged[i]);
+       }
+    input.close();
+}
+}
+"""
+3
+1 3 5
+3
+2 4 6
+1 2 3 4 5 6
+"""
+```
