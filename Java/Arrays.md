@@ -325,3 +325,61 @@ A B C D E
 A B C D E
 """
 ```
+### sort an array as odd elements and even elements:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr=new int[n];
+        
+        for(int i=0; i<n; i++){
+            arr[i]=input.nextInt();
+        }
+        
+        int oddCount=0,evenCount=0;
+        for(int i=0; i<n; i++){
+            if(arr[i]%2!=0){
+                oddCount++;
+            }
+            else{
+            evenCount++;
+            }
+        }
+        
+        int[] oddArr=new int[oddCount];
+        int[] evenArr=new int[evenCount];
+        
+        int oddIndex=0,evenIndex=0;
+        
+        for(int i=0; i<n; i++){
+            if(arr[i]%2!=0){
+                oddArr[oddIndex++]=arr[i];
+            }
+            else{
+                evenArr[evenIndex++]=arr[i];
+            }
+        }
+        
+        int l=evenCount+oddCount;
+        int[] combined=new int[l];
+        
+        for(int i=0; i<oddCount; i++){
+            combined[i]=oddArr[i];
+        }
+        for(int i=0; i<evenCount; i++){
+            combined[oddCount+i]=evenArr[i];
+    }
+    for(int i=0; i<l; i++){
+        System.out.printf("%d ", combined[i]);
+    }
+    input.close();
+}
+}
+"""
+10
+1 2 3 4 5 6 7 8 9 10
+1 3 5 7 9 2 4 6 8 10
+"""
