@@ -431,3 +431,39 @@ public class Main{
 1 2 3 4 5 6 7 8 9 10
 """
 ```
+###
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr=new int[n];
+        
+        for(int i=0; i<n; i++){
+            arr[i]=input.nextInt();
+        }
+        
+        int dupCount=0;
+        for(int i=0; i<n; i++){
+            if(arr[i]!='\0'){
+            for(int j=i+1; j<n; j++){
+                if(arr[i]==arr[j]){
+                    dupCount++;
+                    arr[j]='\0';
+                }
+            }
+            }
+        }
+        
+        System.out.printf("%d", dupCount);
+    input.close();
+}
+}
+"""
+6
+1 2 2 4 4 5
+2
+"""
+```
