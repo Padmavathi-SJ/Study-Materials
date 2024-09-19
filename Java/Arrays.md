@@ -1007,3 +1007,32 @@ public class  Main{
 """
 ```
 
+### Display longest name
+```
+import java.util.*;
+public class  Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        String[] names=new String[n];
+        for(int i=0; i<n; i++){
+            names[i]=input.next();
+        }
+        
+        String maxLengthName=names[0];
+        for(int i=1; i<n; i++){
+            if(names[i].length()>maxLengthName.length()){
+                maxLengthName=names[i];
+            }
+        }
+        System.out.println(maxLengthName);
+        input.close();
+    }
+}
+"""
+5
+Geek geeks geeksfor geeksfor geeksforgeeks
+geeksforgeeks
+"""
+```
