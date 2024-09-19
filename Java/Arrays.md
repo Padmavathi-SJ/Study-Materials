@@ -467,3 +467,40 @@ public class Main{
 2
 """
 ```
+
+### find subarrays of an array:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr=new int[n];
+        
+        for(int i=0; i<n; i++){
+            arr[i]=input.nextInt();
+        }
+        
+        for(int start=0; start<n; start++){
+            for(int end=start; end<n; end++){
+                for(int k=start; k<=end; k++){
+                    System.out.printf("%d ", arr[k]);
+                }
+                System.out.printf("\n");
+            }
+        }
+    input.close();
+}
+}
+"""
+3
+1 2 3
+1
+1 2
+1 2 3
+2
+2 3
+3
+"""
+```
