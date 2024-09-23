@@ -1170,3 +1170,35 @@ public class Main{
 """
 No
 """
+```
+
+### check equal or not for two multi-dimentional arrays using "Arrays.deepEquals(arr1, arr2)":
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[][] arr1={ {1,2,3},
+                       {4,5,6},
+                       {7,8,9} 
+                       };
+        int[][] arr2={ {1,2,3},
+                       {4,5,6},
+                       {7,8,9}
+                       };
+        
+        if(Arrays.deepEquals(arr1, arr2)){
+            System.out.printf("Yes\n");
+        }
+        else{
+             System.out.printf("No");
+        }
+        
+        input.close();
+    }
+}
+"""
+Yes
+"""
+```
