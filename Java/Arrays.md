@@ -1147,7 +1147,7 @@ public class Main{
 """
 ```
 
-### check whether the 2 arrays are equal or not using "Arrays.equals(arr1, arr2)":
+### check whether the 2 one-dimentional arrays are equal or not using "Arrays.equals(arr1, arr2)":
 ```
 import java.util.*;
 public class Main{
@@ -1203,7 +1203,7 @@ Yes
 """
 ```
 
-### convert an array to string representation using "Arrays.toString(arrayName)":
+### convert an one-dimentional array to string representation using "Arrays.toString(arrayName)":
 ```
 import java.util.*;
 public class Main{
@@ -1218,5 +1218,27 @@ public class Main{
 }
 """
 [1,2,3,4,5,6]
+"""
+```
+
+### covert an multi-dimentional array to string representation using "Arrays.deepToString(arrayName)":
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[][] arr={ {1,2,3},
+                      {4,5,6},
+                      {7,8,9}
+                     };
+                     
+        String word=Arrays.deepToString(arr);
+        System.out.printf("%s", word);
+        input.close();
+    }
+}
+"""
+[ [1,2,3], [4,5,6], [7,8,9] ]
 """
 ```
