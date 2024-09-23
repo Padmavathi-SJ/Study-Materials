@@ -1036,3 +1036,23 @@ Geek geeks geeksfor geeksfor geeksforgeeks
 geeksforgeeks
 """
 ```
+
+### sort an array using "Arrays.sort()"
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={5,4,8,1,6,9};
+        Arrays.sort(arr);
+        for(int i=0; i<arr.length; i++){
+            System.out.printf("%d ", arr[i]);
+        }
+        input.close();
+    }
+}
+"""
+1 4 5 6 8 9
+"""
+```
