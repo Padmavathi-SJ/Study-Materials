@@ -1146,3 +1146,27 @@ public class Main{
 5 5 5 4 5 9
 """
 ```
+
+### check whether the 2 arrays are equal or not using "Arrays.equals(arr1, arr2)":
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr1={1,2,3,4,5,6};
+        int[] arr2={1,-2,4,5};
+        
+        if(Arrays.equals(arr1, arr2)){
+            System.out.printf("Yes\n");
+        }
+        else{
+             System.out.printf("No");
+        }
+        
+        input.close();
+    }
+}
+"""
+No
+"""
