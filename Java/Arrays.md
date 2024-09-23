@@ -1037,7 +1037,7 @@ geeksforgeeks
 """
 ```
 
-### sort an array using "Arrays.sort()"
+### sort an array using "Arrays.sort(ArrayName)"
 ```
 import java.util.*;
 public class Main{
@@ -1057,7 +1057,7 @@ public class Main{
 """
 ```
 
-### copy the array elements to the new array using "Arrays.copyOf"
+### copy the array elements to the new array using "Arrays.copyOf(OldArrayName, OldArrayLength)"
 ```
 import java.util.*;
 public class Main{
@@ -1076,3 +1076,28 @@ public class Main{
 1 2 3 4 5 6
 """
 ```
+
+### Search an element in the array usin g"Arrays.binarySearch(arrayName, key)"
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={1,2,3,4,5};
+        System.out.println(Arrays.binarySearch(arr, 1)); // 0
+        System.out.println(Arrays.binarySearch(arr, 2)); // 1
+        System.out.println(Arrays.binarySearch(arr, 3)); // 2
+        System.out.println(Arrays.binarySearch(arr, 4)); // 3
+        System.out.println(Arrays.binarySearch(arr, 5)); // 4
+        input.close();
+    }
+}
+"""
+0
+1
+2
+3
+4
+"""
+* Arrays.binarySearch will return the "index" of the key value.
