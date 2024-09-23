@@ -1125,3 +1125,24 @@ public class Main{
 """
 ```
 
+### fill with a specific value for a sepecfic range alone using "Arrays.fill(arrayName, fromIndex(inclusive), toIndex(exclusive), value)"
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={1,2,3,4,5,9};
+        
+        Arrays.fill(arr, 0, 3, 5);
+        for(int i=0; i<arr.length; i++){
+            System.out.printf("%d ", arr[i]);
+        }
+        
+        input.close();
+    }
+}
+"""
+5 5 5 4 5 9
+"""
+```
