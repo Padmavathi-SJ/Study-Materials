@@ -1077,6 +1077,27 @@ public class Main{
 """
 ```
 
+
+### Copy an array elements between a range  using Arrays.copyOfRange(arrayName, fromIndex(inclusive), toIndex(exclusive))":
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={1,2,3,4,5,6,7};
+        int[] newArr=Arrays.copyOfRange(arr, 0, 3);
+        for(int i=0; i<newArr.length; i++){
+            System.out.printf("%d ", newArr[i]);
+        }
+        input.close();
+    }
+}
+"""
+1 2 3
+"""
+```
+
 ### Search an element in the array usin g"Arrays.binarySearch(arrayName, key)"
 ```
 import java.util.*;
