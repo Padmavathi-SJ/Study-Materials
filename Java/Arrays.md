@@ -1202,3 +1202,21 @@ public class Main{
 Yes
 """
 ```
+
+### convert an array to string representation using "Arrays.toString(arrayName)":
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={1,2,3,4,5,6};
+        String word=Arrays.toString(arr);
+        System.out.printf("%s", word);
+        input.close();
+    }
+}
+"""
+[1,2,3,4,5,6]
+"""
+```
