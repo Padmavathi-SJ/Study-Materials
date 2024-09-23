@@ -1100,4 +1100,28 @@ public class Main{
 3
 4
 """
+```
 * Arrays.binarySearch will return the "index" of the key value.
+
+### fill an array with a specific value using "Arrays.fill(arrayName, value)";
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={1,2,3,4,5,9};
+        
+        Arrays.fill(arr, -1);
+        for(int i=0; i<arr.length; i++){
+            System.out.printf("%d ", arr[i]);
+        }
+        
+        input.close();
+    }
+}
+"""
+-1 -1 -1 -1 -1 -1
+"""
+```
+
