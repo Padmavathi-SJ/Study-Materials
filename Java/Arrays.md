@@ -1056,3 +1056,23 @@ public class Main{
 1 4 5 6 8 9
 """
 ```
+
+### copy the array elements to the new array using "Arrays.copyOf"
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={1,2,3,4,5,6};
+        int[] newArr=Arrays.copyOf(arr, arr.length);
+        for(int i=0; i<arr.length; i++){
+            System.out.printf("%d ", newArr[i]);
+        }
+        input.close();
+    }
+}
+"""
+1 2 3 4 5 6
+"""
+```
