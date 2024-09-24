@@ -1263,3 +1263,33 @@ public class Main{
 [ [1,2,3], [4,5,6], [7,8,9] ]
 """
 ```
+
+### print all subarrays of an array:
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={1,2,3};
+        int n=arr.length;
+        for(int i=0; i<n; i++){
+            for(int j=i; j<n; j++){
+                for(int k=i; k<=j; k++){
+                    System.out.printf("%d ", arr[k]);
+                }
+                 System.out.printf("\n");
+            }
+        }
+        input.close();
+    }
+}
+"""
+1
+1 2
+1 2 3
+2
+2 3
+3
+"""
+```
