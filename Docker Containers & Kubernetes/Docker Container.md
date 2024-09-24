@@ -92,3 +92,15 @@
 7. docker stop [containerName] ---> Stop containers
 8. docker kill [containerName] ---> kill containers
 9. docker image inspect [imageName] ---> Get image info
+
+
+### Docker CLI Cheat Sheet - Limits
+1. docker run --memory="256m" nginx ---> Max memory
+2. docker run --cpus=".5" nginx ---> Max CPU
+
+### Docker CLI Cheat Sheet - Cleaning up
+1. docker rm [containerName] --> removes stopped containers
+2. docker rm $(docker ps -a -q) ---> Removes all stoped containers
+3. docker images ---> Lists images
+4. docker rmi [imageName] --> Delete the image
+5. docker system prune -a ---> Removes all images not in use by any containers
