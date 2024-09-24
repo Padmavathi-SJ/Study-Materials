@@ -55,3 +55,29 @@
      * Kubernetes, Swarm, Service Fabric
 3. Orchestrators as a service
      * Azure Kubernees Service, Service Fabric, Google cloud, AWS
+
+## Docker:
+### what is docker?
+* The company
+* the platform
+* the container runtime
+* Runtime & image specs
+* Acquired Docker Enterprise in 2019 in MIRANTIS
+
+* Docker provides.
+* An open source container runtime
+* Mac, Windows & Linux support
+* Command line tool
+* "Dockerfile" --> file format for building container
+* Windows let your run Windows and Linux containers
+
+* download/install docker desktop.
+* and create an account in dockerhub.com
+
+### Docker CLI(Command Line Interface) Cheat Sheet-Management:
+1. docker info
+     -- Display system information
+2. docker version
+     -- Display the system's version
+3. docker login
+     -- Log in to a Docker registry
