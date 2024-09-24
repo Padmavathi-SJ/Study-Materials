@@ -27,4 +27,22 @@
      * Portable
      * Ideal for short lived taskes
 * Our containers replacing Virtual Machines.
-  
+
+* Containers are made of layers
+    1. Application               ^
+         |                       |
+         |                       |
+    2. Customization             |
+         |                       |
+         |                       |
+    3. Base OS(windows or linux) |
+
+       
+## Container Registry:
+* Centralized container repository
+* Think Github for container
+* Docker Hub
+    -- https://hub.docker.com/
+* Cloud providers
+    -- AWS, Azure, Google cloud
+     
