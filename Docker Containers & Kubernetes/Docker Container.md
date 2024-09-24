@@ -41,4 +41,17 @@
     -- https://hub.docker.com/
 * Cloud providers
     -- AWS, Azure, Google cloud
-     
+
+## Orchestrator:
+1. Manage
+     * Infrastructure
+     * Containers
+     * Deployment
+     * Scaling
+     * Failover
+     * Health monitoring
+     * App upgrades, Zero-Downtime deployments
+2. Install you own
+     * Kubernetes, Swarm, Service Fabric
+3. Orchestrators as a service
+     * Azure Kubernees Service, Service Fabric, Google cloud, AWS
