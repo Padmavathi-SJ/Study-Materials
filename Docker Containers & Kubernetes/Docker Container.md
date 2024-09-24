@@ -81,3 +81,14 @@
      -- Display the system's version
 3. docker login
      -- Log in to a Docker registry
+
+### Docker CLI Cheat Sheet - Running and Stopping for containers:
+1. docker pull [imageName] ---> Pull an image from a registry
+2. docker run [imageName] ---> Run containers
+3. docker run -d [imageName] ---> Detached mode
+4. docker start [containerName] ---> start stopped containers
+5. docker ps ---> List running containers
+6. docker ps -a ---> List running and stopped containers
+7. docker stop [containerName] ---> Stop containers
+8. docker kill [containerName] ---> kill containers
+9. docker image inspect [imageName] ---> Get image info
