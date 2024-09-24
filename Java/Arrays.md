@@ -1293,3 +1293,39 @@ public class Main {
 3
 """
 ```
+
+### Check if subarray with given product exists in an array
+```
+import java.util.*;
+public class Main {
+    public static boolean checkProduct(int[] arr, int n, int target){
+        for(int i=0; i<n;i++){
+            int product=1;
+            for(int j=i; j<n; j++){
+                product=product*arr[j];
+                if(product==target){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={1,2,3,4};
+        int n=arr.length;
+        int target=12;
+        if(checkProduct(arr,n, target)){
+            System.out.printf("yes\n");
+        }
+        else {
+             System.out.printf("No\n");
+        }
+        input.close();
+    }
+}
+"""
+yes
+"""
+```
