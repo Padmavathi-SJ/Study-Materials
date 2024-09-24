@@ -103,4 +103,10 @@
 2. docker rm $(docker ps -a -q) ---> Removes all stoped containers
 3. docker images ---> Lists images
 4. docker rmi [imageName] --> Delete the image
-5. docker system prune -a ---> Removes all images not in use by any containers
+5. docker system prune -a ---> Removes all images not in use by any containers.
+
+### Docker CLI Cheat Sheet - Building
+1. docker build -t [name:tag] .  ---> Builds an image using a Dockerfile located in 
+                                      the same folder
+2. docker build -t [name:tag] -f [fileName] ---> Builds an image using a Dockerfile  located in a different folder
+3. docker tag [imageName] [name:tag]  ---> Tag an existing image
