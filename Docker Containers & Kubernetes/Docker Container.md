@@ -15,4 +15,16 @@
 * when using CI/CD techniques they are a lot faster to deploy.
 * we can run hte anywhere.
 * They are isolated each other, meaning that if one fails, it will not take the whole system down with it.
-* 
+
+### What is virtualized?
+1. Virtual Machines:
+     * Large footprint
+     * Slow to boot
+     * Ideal for long running tasks
+2. Container
+     * Lightweight
+     * Quick to start(it does not have to boot)
+     * Portable
+     * Ideal for short lived taskes
+* Our containers replacing Virtual Machines.
+  
