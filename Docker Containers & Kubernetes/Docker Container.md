@@ -29,13 +29,9 @@
 * Our containers replacing Virtual Machines.
 
 * Containers are made of layers
-    1. Application               ^
-         |                       |
-         |                       |
-    2. Customization             |
-         |                       |
-         |                       |
-    3. Base OS(windows or linux) |
+    1. Application   
+    2. Customization                                   
+    3. Base OS(windows or linux) 
 
        
 ## Container Registry:
