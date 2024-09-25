@@ -1502,3 +1502,33 @@ public class Main{
 0 1 2 3 4 5 7 8 10 11
 """
 ```
+
+### Sort Array of 0s, 1s, and 2s:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+    
+       int n=input.nextInt();
+       int[] arr=new int[n];
+       
+       for(int i=0; i<n; i++){
+           arr[i]=input.nextInt();
+       }
+       
+       Arrays.sort(arr);
+       
+       for(int i=0; i<n; i++){
+           System.out.printf("%d ", arr[i]);
+       }
+        input.close();
+        
+    }
+}
+"""
+6
+2 1 0 1 0 2
+0 0 1 1 2 2
+"""
+```
