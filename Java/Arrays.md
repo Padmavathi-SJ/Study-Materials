@@ -1639,3 +1639,41 @@ public class Main{
 -6 -4 -3 -1 2 5 7
 """
 ```
+
+### To insert the values in the array (sorted list)
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+    
+       
+       int n=input.nextInt();
+       
+       List<Integer> arr=new ArrayList<>();
+       for (int i=0; i<n; i++){
+           arr.add(input.nextInt());
+       } 
+       
+       int t=input.nextInt();
+       
+       arr.add(t);
+       
+       Collections.sort(arr);
+       
+       for(int i:arr){
+           System.out.printf("%d ", i);
+       }
+      
+        input.close();
+        
+    }
+}
+"""
+5 //n
+2 3 4 7 8 //arr
+5 //t
+2 3 4 5 7 8
+"""
+```
+
