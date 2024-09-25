@@ -1677,3 +1677,42 @@ public class Main{
 """
 ```
 
+### to insert values in the array (unsorted list)
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+    
+       
+       int n=input.nextInt();
+       
+       int[] arr=new int[n+1];
+       for(int i=0; i<n; i++){
+           arr[i]=input.nextInt();
+       }
+       
+       int t=input.nextInt();
+       int pos=input.nextInt();
+       
+       for(int i=n; i>=pos; i--){
+           arr[i]=arr[i-1];
+       }
+       
+       arr[pos-1]=t;
+       
+       for(int i:arr){
+           System.out.printf("%d ", i);
+       }
+        input.close();
+        
+    }
+}
+"""
+4 //n
+1 8 7 10 //arr
+5 //t
+2 //pos
+1 5 8 7 10 //result
+"""
+```
