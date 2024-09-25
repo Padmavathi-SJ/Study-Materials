@@ -1752,3 +1752,45 @@ public class Main{
 1 2 4 5
 """
 ```
+
+###  find the majority element of an array.
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+    
+       
+       int n=input.nextInt();
+       
+       int[] arr=new int[n];
+       for(int i=0; i<n; i++){
+           arr[i]=input.nextInt();
+       }
+       
+       int freq=0;
+       for(int i=0; i<n; i++){
+           if(arr[i]!='\0'){
+           freq=1;
+           for(int j=i+1; j<n; j++){
+               if(arr[i]==arr[j]){
+                   freq++;
+                   arr[j]='\0';
+               }
+           }
+           if(freq >= n/2){
+               System.out.printf("%d", arr[i]);
+               break;
+           }
+           }
+       }
+        input.close();
+        
+    }
+}
+"""
+5 //n
+1 2 2 2 3 //ar
+2 //result
+"""
+```
