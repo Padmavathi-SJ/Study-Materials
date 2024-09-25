@@ -1413,3 +1413,92 @@ public class Main{
 2
 """
 ```
+
+### merge and sort k sorted arrays
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int a=input.nextInt();
+        int[] arr1=new int[a];
+        
+        for(int i=0; i<a; i++){
+            arr1[i]=input.nextInt();
+        }
+        
+        int b=input.nextInt();
+        int[] arr2=new int[b];
+        
+        for(int i=0; i<b; i++){
+            arr2[i]=input.nextInt();
+        }
+        
+        int c=input.nextInt();
+        int[] arr3=new int[c];
+        
+        for(int i=0; i<a; i++){
+            arr3[i]=input.nextInt();
+        }
+        
+        int d=input.nextInt();
+        int[] arr4=new int[d];
+        
+        for(int i=0; i<a; i++){
+            arr4[i]=input.nextInt();
+        }
+        
+        int e=input.nextInt();
+        int[] arr5=new int[e];
+        
+        for(int i=0; i<a; i++){
+            arr5[i]=input.nextInt();
+        }
+        
+        int x=0;
+        int[] merged=new int[a+b+c+d+e];
+        
+        for(int i=0; i<a; i++){
+            merged[x++]=arr1[i];
+        }
+        
+        for(int i=0; i<b; i++){
+            merged[x++]=arr2[i];
+        }
+        
+        for(int i=0; i<c; i++){
+            merged[x++]=arr3[i];
+        }
+        
+        for(int i=0; i<d; i++){
+            merged[x++]=arr4[i];
+        }
+        
+        for(int i=0; i<e; i++){
+            merged[x++]=arr5[i];
+        }
+        
+        Arrays.sort(merged);
+        
+        for(int i=0; i<x; i++){
+            System.out.printf("%d ", merged[i]);
+        }
+        input.close();
+        
+    }
+}
+"""
+2
+4 5
+2
+7 8
+2
+1 2
+2
+0 3
+2
+10 11
+0 1 2 3 4 5 7 8 10 11
+"""
+```
