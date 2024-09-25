@@ -1376,3 +1376,40 @@ public class Main{
 1 3 4 5 7 7 8 9 9
 """
 ```
+
+### print first duplicate 
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr=new int[n];
+        
+        for(int i=0; i<n; i++){
+            arr[i]=input.nextInt();
+        }
+        boolean found=false;
+        for(int i=0; i<n; i++){
+            for(int j=i+1; j<n; j++){
+                if(arr[i]==arr[j]){
+                    found=true;
+                    break;
+                }
+            }
+            if(found){
+                System.out.printf("%d", arr[i]);
+               break;
+            }
+        }
+        
+        input.close();
+    }
+}
+"""
+6
+1 2 3 2 3 4
+2
+"""
+```
