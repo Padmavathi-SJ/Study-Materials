@@ -1570,3 +1570,40 @@ public class Main{
 """
 ```
 
+### Sort an Array of Strings by Length:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+    
+       
+       int n=input.nextInt();
+       String[] arr=new String[n];
+       
+       for(int i=0; i<n; i++){
+           arr[i]=input.next();
+       }
+       
+       for(int i=0; i<n; i++){
+           for(int j=i+1; j<n; j++){
+               if(arr[i].length() > arr[j].length()){
+                   String temp=arr[i];
+                   arr[i]=arr[j];
+                   arr[j]=temp;
+               }
+           }
+       }
+       
+       for(int i=0; i<n; i++){
+           System.out.printf("%s ", arr[i]);
+       }
+        input.close();
+        
+    }
+}
+"""
+4
+Hi I am Padma
+I Hi am Padma
+"""
