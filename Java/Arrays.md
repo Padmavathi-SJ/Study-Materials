@@ -1329,3 +1329,50 @@ public class Main {
 yes
 """
 ```
+
+### merge and sort two arrays
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr1=new int[n];
+        
+        for(int i=0; i<n; i++){
+            arr1[i]=input.nextInt();
+        }
+        
+        int m=input.nextInt();
+        int[] arr2=new int[m];
+        
+        for(int i=0; i<m; i++){
+            arr2[i]=input.nextInt();
+        }
+        
+        int x=0;
+        int[] merged=new int[n+m];
+        for(int i=0; i<n; i++){
+            merged[x++]=arr1[i];
+        }
+        for(int i=0; i<m; i++){
+            merged[x++]=arr2[i];
+        }
+    
+        Arrays.sort(merged);
+        
+        for(int i=0; i<x; i++){
+            System.out.printf("%d ", merged[i]);
+        }
+        input.close();
+    }
+}
+"""
+4
+8 7 9 5
+5
+3 4 9 7 1
+1 3 4 5 7 7 8 9 9
+"""
+```
