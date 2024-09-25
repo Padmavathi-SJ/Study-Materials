@@ -1532,3 +1532,41 @@ public class Main{
 0 0 1 1 2 2
 """
 ```
+
+### Find Kth Largest Element in an Array:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+    
+       int k=input.nextInt();
+       int n=input.nextInt();
+       int[] arr=new int[n];
+       
+       for(int i=0; i<n; i++){
+           arr[i]=input.nextInt();
+       }
+       
+       Arrays.sort(arr);
+       
+       int count=0;
+       for(int i=n-1; i>=0; i--){
+           count++;
+           if(count==k){
+               System.out.printf("%d", arr[i]);
+               break;
+           }
+       }
+        input.close();
+        
+    }
+}
+"""
+4 //k
+8 //n
+9 7 6 4 8 1 3 4
+6 //4th largest element
+"""
+```
+
