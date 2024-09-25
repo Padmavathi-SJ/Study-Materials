@@ -1607,3 +1607,35 @@ public class Main{
 Hi I am Padma
 I Hi am Padma
 """
+```
+
+### Sort an Array of Positive and Negative Numbers:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+    
+       
+       int n=input.nextInt();
+       int[] arr=new int[n];
+       
+       for(int i=0; i<n; i++){
+           arr[i]=input.nextInt();
+       }
+       
+      Arrays.sort(arr);
+      
+      for(int i=0; i<n; i++){
+          System.out.printf("%d ", arr[i]);
+          }
+        input.close();
+        
+    }
+}
+"""
+7
+2 -4 5 -6 7 -1 -3
+-6 -4 -3 -1 2 5 7
+"""
+```
