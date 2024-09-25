@@ -1716,3 +1716,39 @@ public class Main{
 1 5 8 7 10 //result
 """
 ```
+
+###  to delete an element at a desired position from an array.
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+    
+       
+       int n=input.nextInt();
+       
+       int[] arr=new int[n+1];
+       for(int i=0; i<n; i++){
+           arr[i]=input.nextInt();
+       }
+       
+       int pos=input.nextInt();
+       
+       arr[pos-1]='\0';
+       
+       for(int i:arr){
+           if(i!='\0'){
+           System.out.printf("%d ", i);
+       }
+       }
+        input.close();
+        
+    }
+}
+"""
+5 //n
+1 2 3 4 5 //arr
+3 //pos to delete
+1 2 4 5
+"""
+```
