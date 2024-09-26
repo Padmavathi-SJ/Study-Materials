@@ -127,3 +127,12 @@
 7. docker compose down ---> Stop and remove
 8. docker compose logs ---> Get the logs
 9. docker compose exec [container] bash ---> Run a command in a container
+
+### Compose V2 - NewCommands
+1. docker compose --project-name test1 up -d ---> Run an instance as a project
+2. docker compose -p test2 up -d ---> Shortcut
+3. docker compose ls ---> Lists running projects
+4. docker compose cp ---> Copy files from the container
+   [containerID] : [SRC_PATH] [DEST_PATH]
+5. docker compose cp ---> Copy files to the container
+   [SRC_PATH] [containerID] : [DEST_PATH]
