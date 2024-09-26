@@ -1835,3 +1835,44 @@ public class Main{
 2 //gcd
 """
 ```
+
+### Find the maxGCD of an array elements
+```
+import java.util.*;
+public class Main{
+    public static int gcd(int a, int b){
+        if(b==0){
+            return a;
+        }
+        return gcd(b, a%b);
+    }
+    public static int findMaxGCD(int[] arr){
+        int maxGCD=0;
+        int n=arr.length;
+        for(int i=0; i<n; i++){
+            for(int j=i+1; j<n; j++){
+                int currGCD=gcd(arr[i], arr[j]);
+            maxGCD=Math.max(maxGCD, currGCD);
+            }
+        }
+        return maxGCD;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr=new int[n];
+        for(int i=0; i<n; i++){
+            arr[i]=input.nextInt();
+        }
+        
+        int result=findMaxGCD(arr);
+        System.out.printf("%d", result);
+        input.close();
+    }
+}
+"""
+4 //n
+8 12 16 24 //arr
+12 //maxGCD
+"""
