@@ -110,3 +110,9 @@
                                       the same folder
 2. docker build -t [name:tag] -f [fileName] ---> Builds an image using a Dockerfile  located in a different folder
 3. docker tag [imageName] [name:tag]  ---> Tag an existing image
+
+### Docker Compose:
+* The below services can run Docker Compose files:
+    1. Azure App Services
+    2. AWS ECS
+    3. Virtual Machines
