@@ -116,3 +116,14 @@
     1. Azure App Services
     2. AWS ECS
     3. Virtual Machines
+ 
+### Docker Compose Cheat Sheet:
+1. docker compose build ---> Build the image
+2. docker compose start ---> Start the containers
+3. docker compose stop  ---> Stop the containers(but still in memory)
+4. docker compose u -d ---> Build and start
+5. docker compose ps ---> List what's running
+6. docker compose rm ---> Remove from memory
+7. docker compose down ---> Stop and remove
+8. docker compose logs ---> Get the logs
+9. docker compose exec [container] bash ---> Run a command in a container
