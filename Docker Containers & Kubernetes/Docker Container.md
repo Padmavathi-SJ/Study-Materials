@@ -141,4 +141,5 @@
 ### Importance of Dockers:
 * We can run on any machine or OS.
 * docker containers are immutable
-
+* We can scla easily
+* 
