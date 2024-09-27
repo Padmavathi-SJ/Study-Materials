@@ -136,3 +136,9 @@
    [containerID] : [SRC_PATH] [DEST_PATH]
 5. docker compose cp ---> Copy files to the container
    [SRC_PATH] [containerID] : [DEST_PATH]
+
+   
+### Importance of Dockers:
+* We can run on any machine or OS.
+* docker containers are immutable
+
