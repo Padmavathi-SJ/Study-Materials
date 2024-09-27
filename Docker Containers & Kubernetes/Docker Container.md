@@ -142,4 +142,4 @@
 * We can run on any machine or OS.
 * docker containers are immutable
 * We can scla easily
-* 
+* they are highly portable
