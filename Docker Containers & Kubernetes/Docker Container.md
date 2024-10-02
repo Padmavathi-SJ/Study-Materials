@@ -1,5 +1,10 @@
 # Docker Containers:
 
+## Difference between docker containers and Kubernetes:
+### In our application, for each and every component we can make a container.
+### so to manage our containers, we want a "Container Orchestrator Tool" such as "Kubernetes"
+### so kubernetes is "Container Orchestrator Tool"
+
 ## What is container:
 * A unit of software and deployment[code, Runtime, System tools, System libraries].
 
