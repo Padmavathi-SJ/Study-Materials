@@ -1876,3 +1876,38 @@ public class Main{
 8 12 16 24 //arr
 12 //maxGCD
 """
+```
+
+### Two Sum
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] nums=new int[n];
+        for(int i=0; i<n; i++){
+            nums[i]=input.nextInt();
+        }
+        int target=input.nextInt();
+        for(int i=0; i<n; i++){
+            for(int j=i+1; j<n; j++){
+                if(nums[i]+nums[j]==target){
+                    System.out.printf("[%d, %d]",i,j);
+                    break;
+                }
+            }
+        }
+        
+        input.close();
+    }
+}
+"""
+4
+2 7 11 15
+9
+[0,1] //indices
+"""
+```
+
