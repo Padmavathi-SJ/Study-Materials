@@ -1,5 +1,6 @@
 ### Introduction to Cloud Computing
 ### Why we moved to cloud
+* what is cloud---> A collection of servers, It will place and maintain our data in their data centers or on servers.
 ### Cloud Service Models
 * Iaas
 * Paas
