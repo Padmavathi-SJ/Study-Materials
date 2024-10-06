@@ -62,3 +62,13 @@
 1. On Premise --> Heavy up-front cost, Hight maintenance Cost
 2. Cloud --> Cheaper up-front cost, It is easy to predict consts over time
 
+
+### Security
+1. On Premise:
+  * Owner manages security
+  * Quality boils down to owner experience
+
+2. Cloud:
+   * Vendor Dependence
+   * Owners are expected to give up control
+
