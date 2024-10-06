@@ -24,3 +24,15 @@
     * Example: Heroku, is a popular PaaS provider that enables developers to deploy, manage, and scale applications iwthout worrying about the underlying infrastructure.
     * Developers push their code to Heroku via Git. Heroku handles the rest, such as setting up the environment, managing database, scaling, and monitoring the app.
     * Our work is focusing on development alone, the rest will be focused and handled by Heroku.
+  
+  ### SaaS:
+  * we manage: Data
+  * Managed by vendor: Applications, Runtime, Middleware, O/S, Virtualization, Servers, Storage, Networking
+
+  ### PaaS:
+  * We manage: Data, Applications
+  * Managed by Vendor: Runtime, Middleware, O/S, Virtualization, Servers, Storage, Networking
+
+  ### IaaS:
+  * We manage: Data , Applications, Runtime, Middleware, O/S.
+  * Managed by vendor: Virtualization, Servers, Storage, Networking
