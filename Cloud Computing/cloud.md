@@ -72,3 +72,12 @@
    * Vendor Dependence
    * Owners are expected to give up control
 
+ ### Control
+ 1. On Premise:
+    * More control implementation
+    * More time to set up
+
+ 2. Cloud:
+    * Easy to implementation
+    * Less time to set up 
+
