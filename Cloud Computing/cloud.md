@@ -90,3 +90,8 @@
 2. Cloud:
    * Less Customization and flexibility
    * More stability and consistency
+
+### Some more factors:
+1. Getting Your Data Back
+2. Deployment & Outages
+3. Country Regulations
