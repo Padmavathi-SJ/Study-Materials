@@ -57,7 +57,7 @@
 
 ### In Cloud Computing:
 * Why cloud ---> Huge Space Online --> Collection of servers --> Orchestration
-* pay for what you use
+* Pay As you Go model --> you pay only for the resources you used, and only for time duration you used.
 
 1. On Premise --> Heavy up-front cost, Hight maintenance Cost
 2. Cloud --> Cheaper up-front cost, It is easy to predict consts over time
