@@ -41,3 +41,11 @@
 1. Public cloud
 2. Private cloud
 3. Hybrid cloud
+
+## Cloud Providers:
+1. AWS
+2. Google Cloud Platform
+3. Microsoft Azure
+4. DigitalOcean
+5. IM=BM Cloud
+6. terremark
