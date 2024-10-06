@@ -36,3 +36,8 @@
   ### IaaS:
   * We manage: Data , Applications, Runtime, Middleware, O/S.
   * Managed by vendor: Virtualization, Servers, Storage, Networking
+
+## Deployment Models:
+1. Public cloud
+2. Private cloud
+3. Hybrid cloud
