@@ -43,7 +43,7 @@
 3. Hybrid cloud
 
 ## Cloud Providers:
-1. AWS
+1. AWS -standing at the top , and a Global Leader
 2. Google Cloud Platform
 3. Microsoft Azure
 4. DigitalOcean
