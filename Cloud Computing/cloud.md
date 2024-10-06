@@ -50,3 +50,15 @@
 4. DigitalOcean
 5. IM=BM Cloud
 6. terremark
+
+
+## On Premise VS Cloud:
+* In One Premise, we only responsible to develop, deploy and maintain, for that we want more servers(high cost), every time have to monitor and all those things should be handled by us only.
+
+### In Cloud Computing:
+* Why cloud ---> Huge Space Online --> Collection of servers --> Orchestration
+* pay for what you use
+
+1. On Premise --> Heavy up-front cost, Hight maintenance Cost
+2. Cloud --> Cheaper up-front cost, It is easy to predict consts over time
+
