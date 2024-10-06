@@ -53,6 +53,7 @@
 
 
 ## On Premise VS Cloud:
+* On Premise means all will be done by our own only.
 * In One Premise, we only responsible to develop, deploy and maintain, for that we want more servers(high cost), every time have to monitor and all those things should be handled by us only.
 
 ### In Cloud Computing:
@@ -81,3 +82,11 @@
     * Easy to implementation
     * Less time to set up 
 
+### Flexibility:
+1. On Premise:
+   *  More customization and flexibility
+   *  Less Updation issues
+
+2. Cloud:
+   * Less Customization and flexibility
+   * More stability and consistency
