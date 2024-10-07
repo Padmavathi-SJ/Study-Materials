@@ -2279,3 +2279,29 @@ public class Main{
 true //because (7+2=9) appeared
 """
 ```
+
+### Find Intersection of Two Arrays
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr1={1,2,2,1};
+        int n=arr1.length;
+        int[] arr2={2,2};
+        int m=arr2.length;
+        int intersectingElement=arr1[0];
+        for(int i=0; i<n-m; i++){
+            if(arr1[i]==arr2[i]){
+                intersectingElement=arr1[i];
+            }
+        }
+        System.out.printf("%d", intersectingElement);
+        input.close();
+    }
+}
+"""
+2 //intersecting element
+"""
+````
