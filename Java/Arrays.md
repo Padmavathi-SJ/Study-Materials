@@ -2212,3 +2212,36 @@ public class Main{
 3 //majority element
 """
 ```
+
+### Find the First Missing Positive Integer
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={3,4,-1,1};
+        int n=arr.length;
+        int[] positiveArr=new int[n];
+        int j=0;
+        for(int i=0; i<n; i++){
+            if(arr[i]>=0){
+                positiveArr[j++]=arr[i];
+            }
+        }
+        
+        int totalsum=((j+1)*(j+2))/2;
+        int actualSum=0;
+        for(int i=0; i<j; i++){
+            actualSum+=positiveArr[i];
+        }
+        
+        int result=totalsum-actualSum;
+        System.out.printf("%d", result);
+        input.close();
+    }
+}
+"""
+2 //missed ositive number
+"""
+```
