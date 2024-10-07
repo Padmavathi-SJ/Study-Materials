@@ -2477,3 +2477,34 @@ public class Main{
 192456895
 """
 ```
+
+### check whether the given num is having all digits from 1 to 9:
+```
+import java.util.*;
+public class Main{
+    public static boolean isContains(String str){
+        for(char digit='1'; digit<='9'; digit++){
+            if(!str.contains(String.valueOf(digit))){
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=123456789;
+        String str=Integer.toString(n);
+        if(isContains(str)){
+            System.out.printf("true\n");
+        }
+        else{
+            System.out.printf("false");
+        }
+        input.close();
+    }
+}
+"""
+true
+"""
+```
