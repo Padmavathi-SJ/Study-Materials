@@ -2245,3 +2245,37 @@ public class Main{
 2 //missed ositive number
 """
 ```
+
+### Find Pair with a Given Sum
+```
+import java.util.*;
+public class Main{
+    public static boolean foundPair(int[] arr, int n, int k){
+        for(int i=0; i<n; i++){
+            for(int j=i+1; j<n; j++){
+                if(arr[i]+arr[j]==k){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={7,1,2,5,6};
+        int n=arr.length;
+        int t=9;
+        if(foundPair(arr, n, t)){
+            System.out.println(true);
+        }
+        else{
+            System.out.println(false);
+        }
+        input.close();
+    }
+}
+"""
+true //because (7+2=9) appeared
+"""
+```
