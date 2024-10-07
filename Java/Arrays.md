@@ -2399,3 +2399,24 @@ public class Main{
 0,7
 """
 ```
+
+### At least two greater elements:
+* Given an array arr of distinct elements, the task is to return an array of all elements except the two greatest elements in sorted order.
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int n=5;
+        int[] arr={2,8,7,1,5};
+        Arrays.sort(arr);
+        for(int i=0; i<n-2; i++){
+            System.out.printf("%d ", arr[i]);
+        }
+        
+        input.close();
+    }
+}
+"""
+1 2 5 //except 7,8
+"""
