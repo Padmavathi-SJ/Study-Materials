@@ -2456,3 +2456,24 @@ public class Main{
 5 //remaining element
 """
 ```
+
+### Concatenate more numbers:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=192;
+        int n1=456;
+        int n2=895;
+        String result=String.valueOf(n)+String.valueOf(n1)+String.valueOf(n2);
+        
+        System.out.printf("%s", result);
+        input.close();
+    }
+}
+"""
+192456895
+"""
+```
