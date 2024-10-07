@@ -2067,3 +2067,25 @@ public class Main{
 24 12 8 6
 """
 ```
+
+### Kth Largest Element in an Array
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={8,7,6,9,5};
+        int n=arr.length;
+        int k=4;
+        Arrays.sort(arr);
+        int result=n-k;
+        System.out.println(arr[result]);
+      
+        input.close();
+    }
+}
+"""
+6 //4th largest number
+"""
+```
