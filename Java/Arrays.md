@@ -2089,3 +2089,42 @@ public class Main{
 6 //4th largest number
 """
 ```
+
+### Longest Consecutive Sequence
+```
+import java.util.*;
+public class Main{
+    public static int longestSequence(int[] arr, int n){
+        
+        Arrays.sort(arr);
+        int longestStreak=1;
+        int currentStreak=1;
+        
+        for(int i=1; i<n; i++){
+            if(arr[i]!=arr[i-1]){
+                if(arr[i]==arr[i-1]+1){
+                    currentStreak++;
+                }
+                else{
+                    longestStreak=Math.max(longestStreak, currentStreak);
+                    currentStreak=1;
+                }
+            }
+        }
+        return Math.max(longestStreak, currentStreak);
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={100,1,200,3,4,2};
+        int n=arr.length;
+        System.out.println(longestSequence(arr, n));
+        
+      
+        input.close();
+    }
+}
+"""
+4 //length of longest consecutive sequence
+"""
+```
