@@ -2034,3 +2034,36 @@ public class Main{
 3 //missing number
 """
 ```
+
+###  Product of Array Except Self
+```
+import java.util.*;
+public class Main{
+
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={1,2,3,4};
+        int n=arr.length;
+        int[] productArr=new int[n];
+        for(int i=0; i<n; i++){
+            int product=1;
+            for(int j=0; j<n; j++){
+                if(i!=j){
+                    product = product*arr[j];
+                }
+            }
+            productArr[i]=product;
+        }
+        
+        for(int i=0; i<n; i++){
+            System.out.printf("%d ", productArr[i]);
+        }
+      
+        input.close();
+    }
+}
+"""
+24 12 8 6
+"""
+```
