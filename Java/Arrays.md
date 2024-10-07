@@ -2182,3 +2182,33 @@ public class Main{
 1 3 12 0 0
 """
 ```
+
+### Find the Majority Element
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={2,3,1,2,3,3};
+        int n=arr.length;
+        int majorityElement=arr[0];
+        for(int i=0; i<n; i++){
+           int count=1;
+        for(int j=i+1; j<n; j++){
+            if(arr[i]==arr[j]){
+                count++;
+        }
+        }
+        if(count>=n/2){
+            majorityElement=arr[i];
+        }
+        }
+        System.out.printf("%d", majorityElement);
+        input.close();
+    }
+}
+"""
+3 //majority element
+"""
+```
