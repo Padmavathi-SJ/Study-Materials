@@ -2508,3 +2508,41 @@ public class Main{
 true
 """
 ```
+
+### Fascinating Number
+* Given a number n. Your task is to check whether it is fascinating or not.
+Fascinating Number: A number with 3 or more digits is considered fascinating if, when it is multiplied by 2 and 3, and the resulting products are concatenated with the original number, the final sequence contains all the digits from 1 to 9 exactly once. Note:  If a number is fascinating, return true. Otherwise, return false.
+
+```
+import java.util.*;
+public class Main{
+    public static boolean check(String str){
+        for(char digit='1'; digit<='9'; digit++){
+            if(!str.contains(String.valueOf(digit))){
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=192;
+        int n1=n*2;
+        int n2=n*3;
+        String str=String.valueOf(n) + String.valueOf(n1) + String.valueOf(n2);
+        
+        if(check(str)){
+            System.out.printf("true\n");
+        }
+        else{
+            System.out.printf("false\n");
+        }
+        
+        input.close();
+    }
+}
+"""
+true
+"""
+```
