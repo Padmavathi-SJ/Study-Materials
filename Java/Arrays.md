@@ -1977,3 +1977,32 @@ public class Main{
 20
 """
 ```
+
+###  Maximum Subarray Sum
+```
+import java.util.*;
+public class Main{
+    public static int maxSumOfsubArr(int[] arr){
+        int n=arr.length;
+        int maxSum=arr[0];
+        int result=arr[0];
+        
+        for(int i=1; i<n; i++){
+            maxSum=Math.max(arr[i], maxSum + arr[i]);
+            result=Math.max(result, maxSum);
+        }
+        return result;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={1,2,3,4,5};
+        
+        System.out.println(maxSumOfsubArr(arr));
+        input.close();
+    }
+}
+"""
+15 //maxSum
+"""
+```
