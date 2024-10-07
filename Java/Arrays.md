@@ -2006,3 +2006,31 @@ public class Main{
 15 //maxSum
 """
 ```
+
+### find missing number
+```
+import java.util.*;
+public class Main{
+    public static int missingNum(int[] arr){
+        int n=arr.length;
+        int totalSum=((n+1)*(n+2)) / 2;
+        int actualSum=0;
+        for(int i=0; i<n; i++){
+            actualSum+=arr[i];
+        }
+        return totalSum-actualSum;
+        
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={1,2,4,5};
+        
+        System.out.println(missingNum(arr));
+        input.close();
+    }
+}
+"""
+3 //missing number
+"""
+```
