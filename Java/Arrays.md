@@ -2334,3 +2334,39 @@ hi amma love you
 amma //longestWord
 """
 ```
+
+### Perfect Arrays(palindrome):
+```
+import java.util.*;
+public class Main{
+    public static boolean isPalindrome(int[] arr){
+        int n=arr.length;
+        int left=0;
+        int right=n-1;
+        while(left<right){
+            if(arr[left]!=arr[right]){
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=5;
+        int[] arr={1,2,3,2,1};
+        if(isPalindrome(arr)){
+            System.out.printf("true\n");
+        }
+        else{
+            System.out.printf("false");
+        }
+        input.close();
+    }
+}
+"""
+true //because 12321 is a palindrome
+"""
+```
