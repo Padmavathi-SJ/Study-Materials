@@ -2128,3 +2128,28 @@ public class Main{
 4 //length of longest consecutive sequence
 """
 ```
+
+### find peak element in an array
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={20,8,25,15};
+        int n=arr.length;
+        int peakElement=arr[0];
+        for(int i=1; i<n-1; i++){
+            if(arr[i]>=arr[i-1] && arr[i]>=arr[i+1]){
+                peakElement=arr[i];
+            }
+        }
+        System.out.println(peakElement);
+      
+        input.close();
+    }
+}
+"""
+25 //peak element
+"""
+```
