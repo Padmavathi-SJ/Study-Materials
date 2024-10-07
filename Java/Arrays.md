@@ -2305,3 +2305,32 @@ public class Main{
 2 //intersecting element
 """
 ````
+
+### Display longest name
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=4;
+        String[] arr=new String[n];
+        for(int i=0; i<n; i++){
+            arr[i]=input.next();
+        }
+        
+        String longestWord=arr[0];
+        for(int i=1; i<n; i++){
+            if(longestWord.length() < arr[i].length()){
+                longestWord=arr[i];
+            }
+        }
+        System.out.printf("%s", longestWord);
+        input.close();
+    }
+}
+"""
+hi amma love you
+amma //longestWord
+"""
+```
