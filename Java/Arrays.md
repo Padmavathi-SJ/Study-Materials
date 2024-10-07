@@ -2420,3 +2420,39 @@ public class Main{
 """
 1 2 5 //except 7,8
 """
+```
+
+### Find the left over element:
+* Given an array arr, the size is reduced by 1 element at each step. In the first step, the maximum element would be removed, while in the second step, the minimum element of the remaining array would be removed, in the third step again the maximum, and so on. Continue this till the array contains only one element. And find the final element remaining in the array.
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int n=7;
+        int[] arr={8,1,2,9,4,3,7,5};
+        Arrays.sort(arr);
+        int m=0;
+        for(int i=1; i<=n; i++){
+            if(i!=n){
+                if(i%2!=0){
+                arr[n-i+m]='\0';
+            }
+            else if(i%2==0){
+                arr[m]='\0';
+                m++;
+            }
+        }
+        }
+        for(int i=0; i<n; i++){
+            if(arr[i]!='\0'){
+            System.out.printf("%d", arr[i]);
+        }
+        }
+        input.close();
+    }
+}
+"""
+5 //remaining element
+"""
+```
