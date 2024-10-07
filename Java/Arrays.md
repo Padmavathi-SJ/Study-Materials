@@ -1911,3 +1911,33 @@ public class Main{
 """
 ```
 
+### Subarray Sum Equals K
+```
+import java.util.*;
+public class Main{
+    public static int subArrCount(int[] arr, int k){
+        int n=arr.length;
+        int count=0;
+        for(int start=0; start<n; start++){
+            int sum=0;
+            for(int end=start; end<n; end++){
+                sum+=arr[end];
+                if(sum==k){
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={1,2,3,4,5};
+        int k=4;
+        System.out.println(subArrCount(arr, k));
+        input.close();
+    }
+}
+"""
+1 //count
+"""
