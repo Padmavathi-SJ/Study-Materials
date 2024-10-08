@@ -2695,3 +2695,32 @@ public class Main{
 madam mom dad
 """
 ```
+
+### Concatenate strings  using  "string.join()" method:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        String[] words=new String[n];
+        for(int i=0;i<n; i++){
+            words[i]=input.next();
+        }
+        words[0]=words[0].substring(0,1).toUpperCase()+words[0].substring(1);
+        String result=String.join(" ", words);
+        System.out.printf("%s", result);
+        input.close();
+    }
+}
+"""
+5 //n
+hi
+hello
+how
+are
+you
+Hi hello how are you //result
+"""
+```
