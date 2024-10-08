@@ -3005,3 +3005,32 @@ public class Main{
 -1 2 -1 1 -1 -1
 """
 ```
+
+### Last index of One
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        String s=input.next();
+        int lastIndex=-1;
+        int l=s.length();
+        for(int i=l-1; i>=0; i--){
+            if(s.charAt(i) == '1'){
+                lastIndex=i;
+                break;
+            }
+        }
+        System.out.printf("%d", lastIndex);
+        input.close();
+    }
+}
+"""
+00001
+4 //last index of 1
+
+0
+-1 //if 1 is not present return -1
+"""
+```
