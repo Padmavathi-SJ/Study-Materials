@@ -2907,3 +2907,28 @@ public class Main{
 3
 """
 ```
+
+### Check Equal Arrays
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr1={1,2,3,4,5};
+        int[] arr2={2,1,5,4,3};
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+        if(Arrays.equals(arr1, arr2)){
+            System.out.printf("true\n");
+        }
+        else{
+            System.out.printf("false\n");
+        }
+        input.close();
+    }
+}
+"""
+true
+"""
+```
