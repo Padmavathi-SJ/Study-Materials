@@ -2724,3 +2724,38 @@ you
 Hi hello how are you //result
 """
 ```
+
+### Sort Strings Based on Length
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        String[] words=new String[n];
+        for(int i=0;i<n; i++){
+            words[i]=input.next();
+        }
+        for(int i=0; i<n; i++){
+           for(int j=i+1; j<n; j++){
+               if(words[i].length() > words[j].length()){
+                   String temp=words[i];
+                   words[i]=words[j];
+                   words[j]=temp;
+               }
+           }
+        }
+        
+        for(int i=0; i<n; i++){
+            System.out.printf("%s ", words[i]);
+        }
+        input.close();
+    }
+}
+"""
+5
+hi mom I love you
+I hi mom you love
+"""
+```
