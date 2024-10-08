@@ -2971,3 +2971,37 @@ public class Main{
 3 2 1 5 4
 """
 ```
+
+### Immediate Smaller Element:
+* Given an integer array arr of size n. For each element in the array, check whether the right adjacent element (on the next immediate position) of the array is smaller. If next element is smaller, update the current index to that element. If not, then  -1.
+Note : You need to make changes in the array itself.
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={5,6,2,3,1,7};
+        int n=6;
+        int[] result=new int[n];
+        int index=0;
+        for(int i=0; i<n-1; i++){
+            if(arr[i] > arr[i+1]){
+                result[index++]=arr[i+1];
+            }
+            else{
+                result[index++]=-1;
+            }
+        }
+        result[index++]=-1;
+        
+        for(int i=0; i<index; i++){
+            System.out.printf("%d ", result[i]);
+        }
+        input.close();
+    }
+}
+"""
+-1 2 -1 1 -1 -1
+"""
+```
