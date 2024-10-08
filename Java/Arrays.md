@@ -2798,3 +2798,41 @@ Hey mummy how are you
 1 1 1 2 2 //vowels count in each word
 """
 ```
+
+### Average of Prefix
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr=new int[n+1];
+        for(int i=1; i<=n; i++){
+            arr[i]=input.nextInt();
+        }
+        int[] result=new int[n];
+        int r=0;
+        int index=0;
+        for(int i=1; i<=n; i++){
+            for(int j=1; j<=i; j++){
+                r+=arr[j];
+                if(i==j){
+                    r=r/i;
+                result[index++]=r;
+                r=0;
+                }
+            }
+        }
+        for(int i=0; i<index; i++){
+            System.out.printf("%d ", result[i]);
+        }
+        input.close();
+    }
+}
+"""
+5
+10 20 30 40 50
+10 15 20 25 30
+"""
+```
