@@ -2696,7 +2696,7 @@ madam mom dad
 """
 ```
 
-### Concatenate strings  using  "string.join()" method:
+### Concatenate strings  using  "String.join()" method:
 ```
 import java.util.*;
 public class Main{
