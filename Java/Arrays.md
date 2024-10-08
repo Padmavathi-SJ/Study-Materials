@@ -2932,3 +2932,42 @@ public class Main{
 true
 """
 ```
+
+### Reverse array in groups
+```
+import java.util.*;
+public class Main{
+    public static void reverse(int[] arr, int start, int end){
+        while(start<end){
+            int temp=arr[start];
+            arr[start]=arr[end];
+            arr[end]=temp;
+            
+            start++;
+            end--;
+        }
+    }
+    public static void reverseInGroups(int[] arr, int n, int k){
+        for(int i=0; i<n; i+=k){
+            int end=Math.min(i+k-1, n-1);
+            reverse(arr, i, end);
+        }
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int[] arr={1,2,3,4,5};
+        int n=5;
+        int k=3;
+        reverseInGroups(arr, n, k);
+        
+        for(int i=0; i<n; i++){
+            System.out.printf("%d ", arr[i]);
+        }
+        input.close();
+    }
+}
+"""
+3 2 1 5 4
+"""
+```
