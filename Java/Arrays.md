@@ -2546,3 +2546,36 @@ public class Main{
 true
 """
 ```
+
+### convert the 1st letter of all wors should be upper and print in a single line:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=6;
+        String[] arr=new String[n];
+        for(int i=0; i<n; i++){
+            arr[i]=input.nextLine();
+        }
+        
+    for(int i=0; i<n; i++){
+        arr[i]=arr[i].substring(0,1).toUpperCase()+arr[i].substring(1);
+    }
+    for(String i:arr){
+        System.out.printf("%s ", i);
+    }
+        input.close();
+    }
+}
+"""
+hello
+world
+here
+is
+the
+test
+Hello World Here Is The Test
+"""
+```
