@@ -2647,3 +2647,51 @@ hi how are you
 you are how hi
 """
 ```
+
+### Check if a String Array is Palindromic
+```
+import java.util.*;
+public class Main{
+    public static boolean isPalindrome(String word){
+        int left=0;
+        int right=word.length()-1;
+        while(left<right){
+            if(word.charAt(left)!=word.charAt(right)){
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+       int n=input.nextInt();
+       String[] words=new String[n];
+       for(int i=0; i<n; i++){
+           words[i]=input.next();
+       }
+       Boolean flag=false;
+       for(int i=0; i<n; i++){
+           if(!isPalindrome(words[i])){
+               flag=false;
+           }
+           else{
+               flag=true;
+           }
+       }
+       if(flag){
+           System.out.printf("true");
+       }
+       else{
+           System.out.printf("false");
+       }
+        input.close();
+    }
+}
+"""
+3
+madam mom dad
+"""
+```
