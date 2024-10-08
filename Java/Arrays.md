@@ -2598,3 +2598,28 @@ padma
 Padma //1st letter changed as capital
 """
 ```
+
+### covert alnernate letter to upperCase:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+       String word="padmavathi";
+       StringBuilder modifiedwrd=new StringBuilder(word);
+       
+       for(int i=0; i<word.length(); i++){
+           if(i%2!=0){
+               char ch=Character.toUpperCase(word.charAt(i));
+               modifiedwrd.setCharAt(i, ch);
+           }
+       }
+       System.out.printf("%s", modifiedwrd.toString());
+        input.close();
+    }
+}
+"""
+pAdMaVaThI
+"""
+```
