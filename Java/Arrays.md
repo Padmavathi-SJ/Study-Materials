@@ -2862,3 +2862,48 @@ public class Main{
 3 //index of key value
 """
 ```
+
+### Binary Search without using "Arrays.binarySearch()" method:
+```
+import java.util.*;
+public class Main{
+    public static int binarySearch(int[] arr, int n, int k){
+        int left=0;
+        int right=n-1;
+        while(left<right){
+            int mid=left+(right-left)/2;
+            
+            if(arr[mid]==k){
+                return mid;
+            }
+            
+            if(arr[mid] < k){
+                left=mid+1;
+            }
+            else{
+                right=mid-1;
+            }
+        }
+        return -1;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr=new int[n];
+        for(int i=0; i<n; i++){
+            arr[i]=input.nextInt();
+        }
+        int k=input.nextInt();
+        int result=binarySearch(arr, n, k);
+        System.out.printf("%d", result);
+        input.close();
+    }
+}
+"""
+5
+1 2 3 4 5
+4
+3
+"""
+```
