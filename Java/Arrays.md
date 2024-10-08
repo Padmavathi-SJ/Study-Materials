@@ -2759,3 +2759,42 @@ hi mom I love you
 I hi mom you love
 """
 ```
+
+### Count the Number of Vowels in Each String
+```
+import java.util.*;
+public class Main{
+    public static int countOfVowels(String word){
+        int count=0;
+        for(char ch: word.toCharArray()){
+            if("[AEIOUaeiou]".indexOf(ch)!=-1){
+                count++;
+            }
+        }
+        return count;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        String[] words=new String[n];
+        for(int i=0;i<n; i++){
+            words[i]=input.next();
+        }
+        int[] vowelCount=new int[n];
+        for(int i=0; i<n; i++){
+            vowelCount[i]=countOfVowels(words[i]);
+        }
+        
+        for(int i=0; i<n; i++){
+            System.out.printf("%d ", vowelCount[i]);
+        }
+        input.close();
+    }
+}
+"""
+5 //n
+Hey mummy how are you
+1 1 1 2 2 //vowels count in each word
+"""
+```
