@@ -2836,3 +2836,29 @@ public class Main{
 10 15 20 25 30
 """
 ```
+
+### Binary Search using "Arrays.binarySearch(arrName, key)":
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        int[] arr=new int[n];
+        for(int i=0; i<n; i++){
+            arr[i]=input.nextInt();
+        }
+        int k=input.nextInt();
+        int result=Arrays.binarySearch(arr, k);
+        System.out.printf("%d", result);
+        input.close();
+    }
+}
+"""
+5 //n
+1 2 3 4 5 //array elements
+4 //key
+3 //index of key value
+"""
+```
