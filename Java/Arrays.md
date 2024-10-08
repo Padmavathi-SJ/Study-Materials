@@ -2579,3 +2579,22 @@ test
 Hello World Here Is The Test
 """
 ```
+
+### convert 1st letter alone uppercase:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+       String word="padmavathi";
+       word=word.substring(0,1).toUpperCase()+word.substring(1);
+       System.out.printf("%s", word);
+        input.close();
+    }
+}
+"""
+padma
+Padma //1st letter changed as capital
+"""
+```
