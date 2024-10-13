@@ -3034,3 +3034,40 @@ public class Main{
 -1 //if 1 is not present return -1
 """
 ```
+
+### Given an array of n elements, write a code to replace every element with sum of its right side elements
+
+```
+#include<stdio.h>
+int main(){
+    int n;
+    scanf("%d", &n);
+    int arr[n];
+    for(int i=0; i<n; i++){
+        scanf("%d", &arr[i]);
+    }
+    int new[n];
+    int index=0;
+    for(int i=0; i<n; i++){
+        int sum=0;
+        for(int j=i+1; j<n; j++){
+            if(i==n-1){
+                new[index++]=0;
+            }
+            else{
+                sum+=arr[j];
+            }
+        }
+        new[index++]=sum;
+    }
+    for(int i=0; i<n; i++){
+        printf("%d ", new[i]);
+    }
+    return 0;
+}
+"""
+5 //n
+10 20 30 40 50 //arr
+140 120 90 50 0 //new arr
+"""
+```
