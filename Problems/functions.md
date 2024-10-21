@@ -1,7 +1,7 @@
 ## Recursion:
 * A function is calling itself directly or indirectly called as "Recursion".
 
-### Leetcode_5 - 5. Longest Palindromic Substring:
+### 1. Leetcode_5 - 5. Longest Palindromic Substring:
 - using c
 ```
 bool isPalindrome(char str[], int start, int end){
@@ -43,7 +43,7 @@ bab // output
 ```
 
 
-### Sum of odd numbers using recursion
+### 2. Sum of odd numbers using recursion
 ```
 #include<stdio.h>
 int sumOfOdd(int n){
@@ -71,7 +71,7 @@ int main(){
 """
 ```
 
-### Sum of even number using recursion
+### 3. Sum of even number using recursion
 ```
 #include<stdio.h>
 int sumOfEven(int n){
@@ -99,7 +99,7 @@ int main(){
 """
 ```
 
-### factorial of a number
+### 4. factorial of a number
 ```
 #include<stdio.h>
 int factOfNum(int n){
@@ -123,7 +123,7 @@ int main(){
 """
 ```
 
-### Fibonacci Series using Recursion
+### 5. Fibonacci Series using Recursion
 ```
 #include<stdio.h>
 int fibonacci(int n){
@@ -147,5 +147,29 @@ int main(){
 """
 6 //n
 8 //fib of 6 is 8
+"""
+```
+
+### 6. Sum of digits using Recursion
+```
+#include<stdio.h>
+int sumOfDigits(int n){
+    if(n==0){
+        return 0;
+    }
+    else{
+        return (n%10) + sumOfDigits(n/10);
+    }
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    int res=sumOfDigits(n);
+    printf("%d", res);
+    return 0;
+}
+"""
+123 //n
+6 //sum of 123
 """
 ```
