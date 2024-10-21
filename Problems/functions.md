@@ -122,3 +122,30 @@ int main(){
 120
 """
 ```
+
+### Fibonacci Series using Recursion
+```
+#include<stdio.h>
+int fibonacci(int n){
+    if(n==0){
+        return 0;
+    }
+    else if(n==1){
+        return 1;
+    }
+    else{
+        return fibonacci(n-1) + fibonacci(n-2);
+    }
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    int res=fibonacci(n);
+    printf("%d", res);
+    return 0;
+}
+"""
+6 //n
+8 //fib of 6 is 8
+"""
+```
