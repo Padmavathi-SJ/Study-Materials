@@ -70,3 +70,31 @@ int main(){
 25 //sum of odd
 """
 ```
+
+### Sum of even number using recursion
+```
+#include<stdio.h>
+int sumOfEven(int n){
+    if(n<=0){
+        return 0;
+    }
+    else if(n%2==0){
+        return n + sumOfEven(n-2);
+    }
+    else{
+        return sumOfEven(n-1);
+    }
+    
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    int res=sumOfEven(n);
+    printf("%d", res);
+    return 0;
+}
+"""
+10 //n
+30 //sum of even
+"""
+```
