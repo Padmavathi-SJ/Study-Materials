@@ -173,3 +173,76 @@ int main(){
 6 //sum of 123
 """
 ```
+
+### 7. Check if the num is circular Prime or not
+```
+#include<stdio.h>
+#include<stdbool.h>
+#include<math.h>
+bool isPrime(int num){
+    if(num<=1){
+        return false;
+    }
+    for(int i=2; i<num; i++){
+        if(num%i==0){
+            return false;
+        }
+    }
+    return true;
+}
+int numOfDigits(int num){
+    int n=0;
+    while(num!=0){
+        int rem=num%10;
+        n++;
+        num /=10;
+    }
+    return n;
+}
+int rotateNum(int num, int digits){
+    int rem=num%10;
+    int quo=num/10;
+    int shift=pow(10, digits-1);
+    
+    return rem * shift + quo;
+}
+bool isCircularPrimeHelper(int currNum, int org, int digits){
+    if(currNum == org){
+        return true;
+    }
+    if(!isPrime(currNum)){
+        return false;
+    }
+    int rotated = rotateNum(currNum, digits);
+    
+    return isCircularPrimeHelper(rotated, org, digits);
+}
+bool isCircularPrime(int num){
+    if(!isPrime(num)){
+        return false;
+    }
+    
+    int digits = numOfDigits(num);
+    int rotated = rotateNum(num, digits);
+    
+    return isCircularPrimeHelper(rotated, num, digits);
+}
+int main(){
+    int num;
+    scanf("%d", &num);
+    if(isCircularPrime(num)){
+        printf("Yes\n");
+    }
+    else{
+        printf("No\n");
+    }
+    return 0;
+}
+"""
+197
+yes
+
+123
+No
+"""
+```
