@@ -321,3 +321,74 @@ ate eat
 apple
 """
 ```
+
+### 9. Find the first occurance of each anagram
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+#include<math.h>
+#include<stdlib.h>
+int areAnagrams(char *str1, char *str2){
+    if(strlen(str1) != strlen(str2)){
+        return 0;
+    }
+    int count1[26]={0};
+    int count2[26]={0};
+    
+    for(int i=0; str1[i]!='\0'; i++){
+        count1[str1[i] - 'a']++;
+        count2[str2[i] - 'a']++;
+    }
+    for(int i=0; i<26; i++){
+        if(count1[i] != count2[i]){
+            return 0;
+        }
+    }
+    return 1;
+}
+void firstOccurAnagram(int i, char *str[], int n){
+    if(i>=n){
+        return;
+    }
+    printf("%s\n", str[i]);
+    
+    for(int j=i+1; j<n; j++){
+        if(areAnagrams(str[i], str[j])){
+            for(int k=j; k<n-1; k++){
+                strcpy(str[k], str[k+1]);
+            }
+            n--;
+            j--;
+        }
+    }
+    firstOccurAnagram(i+1, str, n);
+}
+void main(){
+    int n;
+    scanf("%d", &n);
+    char *str[n];
+    for(int i=0; i<n; i++){
+        str[i]=(char *)malloc(100 * sizeof(char));
+        scanf("%s", str[i]);
+    }
+    firstOccurAnagram(0, str, n);
+    for(int i=0; i<n; i++){
+        free(str[i]);
+    }
+    
+}
+"""
+5
+listen
+silent
+man
+eat
+ate
+
+"""
+listen
+man
+eat
+"""
+```
