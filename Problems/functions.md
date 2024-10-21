@@ -42,3 +42,31 @@ bab // output
 """
 ```
 
+
+### Sum of odd numbers using recursion
+```
+#include<stdio.h>
+int sumOfOdd(int n){
+    if(n<=0){
+        return 0;
+    }
+    else if(n%2!=0){
+        return n + sumOfOdd(n-2);
+    }
+    else{
+        return sumOfOdd(n-1);
+    }
+    
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    int res=sumOfOdd(n);
+    printf("%d", res);
+    return 0;
+}
+"""
+10 //n
+25 //sum of odd
+"""
+```
