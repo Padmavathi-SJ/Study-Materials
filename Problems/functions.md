@@ -98,3 +98,27 @@ int main(){
 30 //sum of even
 """
 ```
+
+### factorial of a number
+```
+#include<stdio.h>
+int factOfNum(int n){
+    if(n==0 || n==1){
+        return 1;
+    }
+    else{
+        return n * factOfNum(n-1);
+    }
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    int res=factOfNum(n);
+    printf("%d", res);
+    return 0;
+}
+"""
+5 //5!
+120
+"""
+```
