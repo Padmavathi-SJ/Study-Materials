@@ -3108,7 +3108,7 @@ int main(){
 
 # Strings
 
-### Reverse String:
+### Reverse Words: GFG
 ```
 class Solution {
     // Function to reverse words in a given string.
@@ -3127,5 +3127,26 @@ class Solution {
 """
 Input: str = i.like.this.program.very.much
 Output: much.very.program.this.like.i
+"""
+```
+
+### Reverse String: Leetcode - prob no: 344
+```
+class Solution {
+    public void reverseString(char[] s) {
+       int left=0;
+       int right=s.length-1;
+       while(left < right){
+        char temp=s[left];
+        s[left]=s[right];
+        s[right]=temp;
+        left++;
+        right--;
+       }
+    }
+}
+"""
+Input: s = ["h","e","l","l","o"]
+Output: ["o","l","l","e","h"]
 """
 ```
