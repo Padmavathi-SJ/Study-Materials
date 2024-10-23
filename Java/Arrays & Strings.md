@@ -3105,3 +3105,27 @@ int main(){
 3 6
 """
 ```
+
+# Strings
+
+### Reverse String:
+```
+class Solution {
+    // Function to reverse words in a given string.
+    String reverseWords(String str) {
+        String[] words=str.split("\\.");
+        StringBuilder newStr=new StringBuilder();
+        for(int i=words.length-1; i>=0; i--){
+            newStr.append(words[i]);
+            if(i>0){
+                newStr.append('.');
+            }
+        }
+        return newStr.toString();
+    }
+}
+"""
+Input: str = i.like.this.program.very.much
+Output: much.very.program.this.like.i
+"""
+```
