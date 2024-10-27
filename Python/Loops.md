@@ -75,7 +75,11 @@ print(sum)
 1. if, elif, else
 
 ### Iterative and transfer keywords:
-for, while, break, continue, else
+1. for
+2. while
+3. break
+4. continue
+5. else
 
 ### Structure keywords:
 1. def
