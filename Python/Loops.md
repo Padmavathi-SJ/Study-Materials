@@ -55,3 +55,35 @@ print(sum)
 * keyword.kwlist: It return a sequence containing all the keywords defined for the interpreter.
 * keyword.issoftkeyword(s): Return True if s is a Python soft keyword. New in version 3.9
 * keyword.softkwlist: Sequence containing all the soft keywords defined for the interpreter. New in version 3.9
+
+## Types of keywords:
+* Python h\has 36 keywords
+
+### Value keywords
+1. True
+2. False
+3. None
+
+```
+x = 10
+y = 11 
+z = 10
+print(x is y) 
+print(x is z)
+"""
+False
+False
+"""
+```
+
+```
+list=[1,2,3,4,5,6]
+num=40
+if num in list:
+    print("Yes")
+else:
+    print("No")
+"""
+No
+"""
+```
