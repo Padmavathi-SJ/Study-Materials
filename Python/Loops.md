@@ -497,3 +497,39 @@ happy
 mummy!
 """
 ```
+
+### Iterate through dictionary using for loop
+```
+dict1={1: "apple", 2: "banana", 3: "cherry"}
+for key in dict1:
+    print(key)
+"""
+1
+2
+3
+"""
+```
+
+### print key with values:
+```
+dict1={1: "apple", 2: "banana", 3: "cherry"}
+for key in dict1:
+    print(key, "-->", dict1[key])
+"""
+1 --> apple
+2 --> banana
+3 --> cherry
+"""
+```
+
+### print values only
+```
+dict1={1: "apple", 2: "banana", 3: "cherry"}
+for value in dict1.values():
+    print(value)
+"""
+apple
+banana
+cherry
+"""
+```
