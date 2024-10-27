@@ -428,3 +428,39 @@ for i in range(1, row+1):
 * * * * *
 """
 ```
+
+```
+nums=[1,2,3,4,5]
+size=len(nums)
+for i in range(size):
+    print("index:", i, " ", "value:", nums[i])
+"""
+index: 0   value: 1
+index: 1   value: 2
+index: 2   value: 3
+index: 3   value: 4
+index: 4   value: 5
+"""
+```
+### seperate characters of a word
+```
+name="Padma"
+name=name.upper()
+for i in name:
+    print(i, end=' ')
+"""
+P A D M A
+"""
+```
+
+### reverse letters of the word
+```
+name="Padma"
+name=name.upper()
+size=len(name)
+for i in range(size, 0, -1):
+    print(name[i-1], end=' ')
+"""
+A M D A P
+"""
+```
