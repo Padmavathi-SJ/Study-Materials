@@ -756,3 +756,18 @@ for i in first:
 6 * 4 = 24
 """
 ```
+
+### merge two lists
+```
+first=[1,2,3,4,5]
+second=[10,20,30,40,50]
+final=[]
+for i in first:
+    for j in second:
+        final.append(i+j)
+print(final)
+
+"""
+[11, 21, 31, 41, 51, 12, 22, 32, 42, 52, 13, 23, 33, 43, 53, 14, 24, 34, 44, 54, 15, 25, 35, 45, 55]
+"""
+```
