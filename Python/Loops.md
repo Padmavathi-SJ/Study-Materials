@@ -458,9 +458,25 @@ P A D M A
 name="Padma"
 name=name.upper()
 size=len(name)
-for i in range(size, 0, -1):
+for i in range(size, 0, -1): //size=start, 0=end, -1=decrement
     print(name[i-1], end=' ')
 """
 A M D A P
+"""
+```
+### sepeate words from a sentence by using split by *
+```
+sentence="Hi*mummy*I*will*make*you*happy*mummy!"
+for word in sentence.split('*'):
+    print(word)
+"""
+Hi
+mummy
+I
+will
+make
+you
+happy
+mummy!
 """
 ```
