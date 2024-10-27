@@ -250,3 +250,41 @@ print(type(word).__name__)
 str
 """
 ```
+
+### Controll Flow Statements
+```
+num=6
+if num > 5:
+    print(num * num)
+print("no")
+"""
+36
+no
+"""
+```
+
+```
+password=input('enter password: ')
+if password == "padma":
+    print("correct")
+else:
+    print("incorrect")
+"""
+enter password: padma
+correct
+"""
+```
+
+```
+l=input('enter a char: ')
+if l.isdigit():
+    print("yes")
+elif l.isalpha():
+    print("alphabet")
+else:
+    print("spl char")
+"""
+k
+alphabet
+"""
+```
