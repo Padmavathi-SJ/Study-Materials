@@ -211,6 +211,7 @@ True
 ```
 
 ### Type casting
+* int to complex
 ```
 num=10;
 print(type(num).__name__)
@@ -222,5 +223,18 @@ print(type(complexNum).__name__)
 int
 10+0j
 complex
+"""
+```
+
+* boolean to complex
+```
+boolT, boolF=True, False
+print(type(boolT).__name__, type(boolF).__name__)
+ComplexT, ComplexF = complex(boolT), complex(boolF)
+print(type(ComplexT).__name__, type(ComplexF).__name__)
+
+"""
+bool bool
+complex complex
 """
 ```
