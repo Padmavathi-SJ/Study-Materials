@@ -480,3 +480,20 @@ happy
 mummy!
 """
 ```
+
+### sepeate words from a sentence by using split by space
+```
+sentence="Hi mummy I will make you happy mummy!"
+for word in sentence.split():
+    print(word)
+"""
+Hi
+mummy
+I
+will
+make
+you
+happy
+mummy!
+"""
+```
