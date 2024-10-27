@@ -605,3 +605,54 @@ while i<6:
 * * * * *
 """
 ```
+
+### break statement
+```
+nums=[10,20,30,140,150]
+for i in nums:
+    if i>100:
+        break;
+    print(i)
+"""
+10
+20
+30
+"""
+```
+
+### if space encountered break
+```
+name="Padma vathi"
+size=len(name)
+i=0
+while i<size:
+    if name[i].isspace():
+        break;
+    print(name[i], end=' ')
+    i=i+1
+"""
+p  a d m a
+"""
+```
+
+### Multiplication table
+```
+num=int(input())
+i=1;
+while i<11:
+    print(i,"x",num,"=", num*i)
+    i=i+1
+"""
+5 //num of table
+1 x 5 = 5
+2 x 5 = 10
+3 x 5 = 15
+4 x 5 = 20
+5 x 5 = 25
+6 x 5 = 30
+7 x 5 = 35
+8 x 5 = 40
+9 x 5 = 45
+10 x 5 = 50
+"""
+```
