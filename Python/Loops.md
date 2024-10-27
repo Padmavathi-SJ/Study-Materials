@@ -150,3 +150,77 @@ print('sum:', add(10,20))
 sum: 30
 """
 ```
+
+```
+name = "padma "
+print(name*3)
+"""
+padma padma padma
+"""
+```
+
+### floor division to get output as integer:
+```
+a=5;
+b=2;
+print(a/b)
+print(a//b)
+"""
+2.5
+2
+"""
+```
+
+### Exponentiation
+```
+a=2
+print(a**3)
+print(a**4)
+
+"""
+8
+16
+"""
+---> ais base 3, 4 are exponents
+```
+
+```
+a=True
+if not a:
+    print(a)
+else:
+    print("do nothing")
+"""
+do nothing
+"""
+```
+
+### "is not" operator
+```
+x=10
+y=20
+z=20
+print(x is not y)
+print(y is not z)
+print(z is not x)
+"""
+True
+False
+True
+"""
+```
+
+### Type casting
+```
+num=10;
+print(type(num).__name__)
+complexNum=complex(num)
+print(complexNum)
+print(type(complexNum).__name__)
+
+"""
+int
+10+0j
+complex
+"""
+```
