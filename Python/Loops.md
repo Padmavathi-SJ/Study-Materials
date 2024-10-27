@@ -533,3 +533,28 @@ banana
 cherry
 """
 ```
+
+
+## while loop
+```
+c=0
+num=int(input())
+while num>10:
+    num=num/3
+    c=c+1
+print(c)
+"""
+180 //num
+3 //diving time
+"""
+```
+
+```
+while True:
+    print("Hello")
+"""
+Hello
+Hello
+....infinity times
+"""
+```
