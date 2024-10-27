@@ -558,3 +558,50 @@ Hello
 ....infinity times
 """
 ```
+### break if char is digit
+```
+name="Padma253vathi"
+size=len(name)
+i=0
+while i<size:
+    if name[i].isdecimal(): //we can use "char.isdigit()" also
+        break
+    print(name[i], end=' ')
+    i=i+1
+"""
+p a d m a
+"""
+```
+
+### print only if character
+```
+name="Padma253vathi"
+size=len(name)
+i=0
+while i<size:
+    if name[i].isalpha():
+        print(name[i], end=' ')
+    i=i+1
+"""
+p a d m a v a t h i
+"""
+```
+
+### Pattern printing
+```
+i=1
+while i<6:
+    j=0
+    while j<i:
+        print("*", end=' ')
+        j=j+1
+    print('')
+    i=i+1
+"""
+*
+* *
+* * *
+* * * *
+* * * * *
+"""
+```
