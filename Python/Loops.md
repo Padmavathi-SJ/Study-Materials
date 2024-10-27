@@ -807,3 +807,134 @@ while i<=5:
 12345678910
 """
 ```
+
+```
+a, b, c=input().split()
+print(a)
+print(b)
+print(c)
+print(b, "", c)
+"""
+hi padma how
+hi
+padma
+how
+padma  how
+"""
+```
+
+
+## range() function
+* range(start, stop[, step)
+```
+print(type(range(10)))
+"""
+<class 'range'>
+"""
+```
+* examples:
+
+```
+for i in range(10):
+    print(i, end=' ')
+print()  
+
+for i in range(10,16):
+    print(i, end=' ')
+print()  
+
+for i in range(10,50,5):
+    print(i,end=' ')
+print() 
+
+for i in range(1,10,2):
+    print(i, end=' ')
+print()
+
+list1=['padma', 'kavi', 10,20,30]
+for i in range(len(list1)):
+    print(list1[i], end=' ')
+
+"""
+[?2004l
+0 1 2 3 4 5 6 7 8 9 
+10 11 12 13 14 15 
+10 15 20 25 30 35 40 45 
+1 3 5 7 9 
+padma kavi 10 20 30 [?2004h
+"""
+```
+
+```
+for num in range(4):
+    for i in range(num):
+        print(num, end=' ')
+    print()
+"""
+1
+2 2
+3 3 3
+"""
+```
+### reverse the sequence using "reversed() function" by passing the range"
+```
+for i in reversed(range(10, 21)):
+    print(i, end=' ')
+"""
+20 19 18 17 16 15 14 13 12 11 10
+"""
+```
+
+```
+for i in reversed(range(10, 21, 2)):
+    print(i, end=' ')
+print()
+
+print(type(reversed(range(0,5))))
+
+"""
+20 18 16 14 12 10 
+<class 'range_iterator'>
+"""
+```
+
+```
+list1=[10,20,30,40,50]
+for i in range(len(list1) -1, -1, -1):
+    print(list1[i], end=' ')
+print()
+
+for i in range(30,20, -2):
+    print(i,end=' ')
+print()
+
+for i in range(-1, -11, -1):
+    print(i, end=' ')
+print()
+
+for i in range(2 ,-5, -1):
+    print(i, end=', ')
+
+"""
+50 40 30 20 10 
+30 28 26 24 22 
+-1 -2 -3 -4 -5 -6 -7 -8 -9 -10 
+2, 1, 0, -1, -2, -3, -4, 
+"""
+```
+
+### Convert range() to list
+```
+list1=list(range(2,10,2))
+print(type(list1))
+
+print(list1)
+
+for item in list1:
+    print(item, end=', ')
+"""
+<class 'list'>
+[2, 4, 6, 8]
+2, 4, 6, 8, 
+"""
+```
