@@ -238,3 +238,15 @@ bool bool
 complex complex
 """
 ```
+
+### complex num to string
+```
+complexNum=5+5j
+word=str(complexNum)
+print(word)
+print(type(word).__name__)
+"""
+(5+5j)
+str
+"""
+```
