@@ -64,6 +64,26 @@ print(sum)
 2. False
 3. None
 
+### Operator keywords:
+1. and
+2. or
+3. not
+4. is (compare as equal or not)
+5. in
+
+### Conditional keywords:
+1. if, elif, else
+
+### Iterative and transfer keywords:
+for, while, break, continue, else
+
+### Structure keywords:
+1. def
+2. pass
+
+
+
+
 ```
 x = 10
 y = 11 
@@ -105,5 +125,15 @@ while n<5:
     n+=1
 """
 0 1 2 3 4
+"""
+```
+### pass keyword
+* pass keyword: create syntactically empty function
+```
+def add(n1, n2):
+    pass
+add(10,20)
+"""
+
 """
 ```
