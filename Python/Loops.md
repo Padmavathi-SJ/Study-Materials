@@ -52,3 +52,6 @@ print(sum)
    print(keyword.iskeyword('if'))
    output: True
 ```
+* keyword.kwlist: It return a sequence containing all the keywords defined for the interpreter.
+* keyword.issoftkeyword(s): Return True if s is a Python soft keyword. New in version 3.9
+* keyword.softkwlist: Sequence containing all the soft keywords defined for the interpreter. New in version 3.9
