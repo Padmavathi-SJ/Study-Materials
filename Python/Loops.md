@@ -288,3 +288,85 @@ k
 alphabet
 """
 ```
+
+```
+name=input().upper();
+print(name)
+print(name[1])
+"""
+padma
+PADMA
+A
+"""
+```
+
+```
+for i in range(1, 11):
+    print(i, end=' ')
+"""
+1,2,3,4,5,6,7,8,9,10
+"""
+```
+
+```
+for i in range(1,10):
+    print(i, end=' ')
+    if i==5:
+        print("\nloop stopped")
+        break;
+
+"""
+1 2 3 4 5
+loop stopped
+"""
+```
+
+```
+for i in range(3,8):
+    if i==5:
+        continue
+    else:
+        print(i)
+"""
+3
+4
+6
+7
+"""
+```
+
+```
+months = ['Jan', 'feb', 'mar', 'apr']
+for mon in months:
+    pass
+print(months)
+"""
+['Jan', 'feb', 'mar', 'apr']
+"""
+```
+
+```
+start=int(input())
+end=int(input())
+for i in range(start, end+1):
+    square=i ** 2
+    print("square of", i, "is:", square)
+"""
+1
+5
+square of 1 is: 1
+square of 2 is: 4
+square of 3 is: 9
+square of 4 is: 16
+square of 5 is: 25
+"""
+```
+
+```
+nums=list(input());
+print(nums)
+"""
+12345
+['1', '2', '3', '4', '5']
+"""
+```
