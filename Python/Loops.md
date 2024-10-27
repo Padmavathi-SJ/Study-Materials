@@ -370,3 +370,61 @@ print(nums)
 ['1', '2', '3', '4', '5']
 """
 ```
+
+```
+nums=tuple(input().split())
+print(nums)
+"""
+Hi I am padma
+('Hi', 'I', 'am', 'padma')
+"""
+```
+
+```
+start,end=map(int, input().split())
+evenCount,oddCount=0,0
+for i in range(start, end+1):
+    if i%2==0:
+        evenCount +=1
+    else:
+        oddCount +=1
+print("evenCount:",evenCount)
+print("oddCount:",oddCount)
+"""
+1 10
+evenCount: 5
+oddCount: 5
+"""
+```
+
+```
+num=int(input())
+for i in range(num, 0, -1): //num=start, 0=end, -1=increment/decrement part
+    print(i)
+
+"""
+5
+5
+4
+3
+2
+1
+"""
+```
+
+### pattern printing
+```
+row=int(input())
+for i in range(1, row+1):
+    for j in range(1, i+1):
+        print("*", end=' ')
+    print('')
+"""
+5 //row
+*
+* *
+* * *
+* * * *
+* * * * *
+"""
+```
