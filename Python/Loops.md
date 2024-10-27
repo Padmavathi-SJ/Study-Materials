@@ -942,3 +942,46 @@ for item in list1:
 2, 4, 6, 8, 
 """
 ```
+
+### access and modify list items list items using range:
+```
+list1=list(range(10,100,10))
+
+for i in range(0, len(list1), 1):
+    list1[i] = list1[i] * 2
+    
+print(list1)
+
+"""
+[20, 40, 60, 80, 100, 120, 140, 160, 180]
+"""
+```
+
+### Inclusive range
+```
+start=1
+stop=5
+step=1
+
+stop += step
+
+for i in range(start, stop, step):
+    print(i, end=' ')
+"""
+1 2 3 4 5
+"""
+```
+
+ ### Concatenate two range() functions using "chain(range1(), range2()) method from itertools:
+ 
+```
+from itertools import chain
+
+newRange=chain(range(5), range(5, 10))
+for num in newRange:
+    print(num, end=' ')
+
+"""
+0 1 2 3 4 5 6 7 8 9
+"""
+```
