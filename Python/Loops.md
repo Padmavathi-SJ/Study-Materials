@@ -83,6 +83,9 @@ for, while, break, continue, else
 
 
 
+### Returning keyword:
+1. return
+2. yeild
 
 ```
 x = 10
@@ -135,5 +138,15 @@ def add(n1, n2):
 add(10,20)
 """
 
+"""
+```
+
+### return keyword
+```
+def add(n1, n2):
+    return n1+n2
+print('sum:', add(10,20))
+"""
+sum: 30
 """
 ```
