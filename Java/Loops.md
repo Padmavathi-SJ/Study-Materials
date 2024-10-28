@@ -1600,3 +1600,43 @@ public class Main{
 2
 """
 ```
+
+### check whether the number is happy number or not:
+* Happy number: if sum of digits of squares of a number ended up as 1, then that num is a happy number or else not a happy number
+```
+import java.util.*;
+public class Main{
+public static int sumOfSquares(int num){
+    int sum=0;
+    while(num!=0){
+        int rem=num%10;
+        sum += rem*rem;
+        num /= 10;
+    }
+    return sum;
+}
+public static void main(String[] args){
+    Scanner input=new Scanner(System.in);
+    
+    int num=input.nextInt();
+    int iterations=0;
+    while(num!=1 && iterations<Integer.MAX_VALUE){
+        num=sumOfSquares(num);
+        iterations++;
+    }
+        if(num==1){
+            System.out.print("yes happy number");
+        }
+        else{
+            System.out.print("Not a  happy number");
+        }
+}
+}
+"""
+19
+Yes happy number
+
+1
+Yes happy number
+"""
+```
