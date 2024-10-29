@@ -1,5 +1,8 @@
 ## String problems:
 
+1. input.nextLine() ---> it will read entire line as a sigle input
+
+
 
 ## built-in function for strings:
 1. str.length()
@@ -270,5 +273,33 @@ public class Main{
 """
 padmavah thi
 a
+"""
+```
+
+### 11. Reverse the words in a string array:
+```
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        
+        int n=input.nextInt();
+        String[] arr=new String[n];
+        for(int i=0; i<n; i++){
+            arr[i]=input.next();
+        }
+        
+        Arrays.sort(arr, Collections.reverseOrder());
+        
+        for(int i=0; i<n; i++){
+            System.out.printf("%s ", arr[i]);
+        }
+        input.close();
+    }
+}
+"""
+5
+Hi padma how are you
+you padma how are Hi
 """
 ```
