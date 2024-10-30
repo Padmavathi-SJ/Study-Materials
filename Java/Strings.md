@@ -303,3 +303,28 @@ Hi padma how are you
 you padma how are Hi
 """
 ```
+
+### 12. program to sort a string array in ascending order.
+```
+import java.util.*;
+
+public class string {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        char[] letters=new char[str.length()];
+        letters=str.toCharArray();
+        Arrays.sort(letters);
+        for(int i=0; i<letters.length; i++){
+            if(letters[i]!=' '){
+            System.out.printf("%c", letters[i]);
+        }
+    }
+    }
+}
+"""
+hi padm ahow are you
+aaadehhimoopruwy
+"""
+```
