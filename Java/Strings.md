@@ -328,3 +328,43 @@ hi padm ahow are you
 aaadehhimoopruwy
 """
 ```
+
+### 13.read a string from the keyboard and sort it using bubble sort.
+```
+import java.util.*;
+
+public class string {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+       int n=input.nextInt(); 
+    String[] words=new String[n];
+    for(int i=0; i<n; i++){
+        words[i]=input.next().toLowerCase();
+    }
+
+    for(int i=0; i<n-1; i++){
+        for(int j=0; j<n-i-1; j++){
+            if(words[j].compareTo(words[j+1]) > 0){
+                String temp=words[j];
+                words[j]=words[j+1];
+                words[j+1]=temp;
+            }
+        }
+    }
+    for(int i=0; i<n; i++){
+        System.out.println(words[i]);
+    }
+    }
+}
+"""
+3
+zero
+two
+one
+
+one
+two
+zero
+"""
+```
