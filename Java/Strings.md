@@ -12,6 +12,7 @@
 5. str1.equals(str2) --> compare two string as equal or not?
 6. "aeiou".indexOf(ch)!= -1 ---> char is vowel or else consonant
 7. str.toCharArray() -- to convert a string to char array
+8. str1.compareTo(str2) --> to compare two strings to find str1 is greater or lesser than str2
 
 
 
