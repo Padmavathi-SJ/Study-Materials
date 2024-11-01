@@ -1,4 +1,6 @@
 ### methods:
+1. str1.contentEquals(str2) ---> it will consider case also and compare , like equals() method only
+2. String.copyValueOf(arr_nums, 1, 3); --> from which arr, startIndex, endIndex
 
 ### missed problmes nums: 2
 ### 1. Get the character at the given index within the string.
@@ -139,5 +141,107 @@ public class Main {
 This is exercise 1
 This is Exercise 1
 equal
+"""
+```
+
+### 7. concatenate a given string to the end of another string.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str1=input.nextLine();
+        String str2=input.nextLine();
+        System.out.println(str1 + " " + str2);
+        
+    }
+}
+"""
+PHP Exercises and
+Python Exercises
+PHP Exercises and Python Exercises
+"""
+```
+
+### 8. test if a given string contains the specified sequence of char values.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        String search=input.nextLine();
+        boolean result=str.contains(search);
+        System.out.println(result);
+        
+    }
+}
+"""
+PHP Exercises and Python Exercises //str
+and //search
+true
+"""
+```
+
+### 9. compare a given string to the specified character sequence.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str1=input.nextLine();
+        String str2=input.nextLine();
+        boolean result=str1.contentEquals(str2); //str1.equals(str2)
+        System.out.println(result);
+        
+    }
+}
+"""
+example.com
+Example.com
+false
+"""
+```
+
+### 10. compare a given string to a specified string buffer.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str1=input.nextLine();
+        String str2=input.nextLine();
+        StringBuffer strbuff=new StringBuffer(str1);
+        System.out.println(str1.contentEquals(strbuff));
+        System.out.println(str2.contentEquals(strbuff));
+        
+    }
+}
+"""
+example.com
+Example.com
+true
+false
+"""
+```
+
+### 11. create a String object with a character array.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        char[] arr_nums={'1', '2', '3', '4'};
+        String str=String.copyValueOf(arr_nums, 1, 3);
+        System.out.println("The book contains " + str + " pages");        
+    }
+}
+"""
+The book contains 234 pages
 """
 ```
