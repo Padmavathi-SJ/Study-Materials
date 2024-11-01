@@ -25,7 +25,9 @@
 17. !Character.isLetterOrDigit(ch) && !Character.isWhitespace(ch) --> to check a char as is it punctuation char or not?
 18. String result = str.replaceAll("\\s+", "");
 19. Character.isDigit(ch) --> to check a digit
-20. String[] words = str.split("\\s+") --> to split a string into words by using space("\\s+") or split(" ") or anything we want
+20. String[] words = str.split("\\s+") --> to split a string into words by using space("\\s+") or split(" ") or anything we want.
+21. Integer.parseInt(str) --> to convert a String to int.
+22. Integer.toString(num) --> to convert a int to string
 
 
 
@@ -976,3 +978,27 @@ abcddeffd
 4
 """
 ```
+
+### 35. multiply two positive numbers as strings. Return a string representation of the product.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str1=input.nextLine();
+        String str2=input.nextLine();
+        int num1=Integer.parseInt(str1);
+        int num2=Integer.parseInt(str2);
+        int result=num1*num2;
+        str1=new String(Integer.toString(result));
+        System.out.println(str1);
+    }
+}
+"""
+100 //str1
+15 //str2
+1500 //result
+"""
+```
+
