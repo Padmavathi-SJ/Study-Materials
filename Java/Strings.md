@@ -24,7 +24,8 @@
 16. str=new String(letters) --> convert a array back to a string .
 17. !Character.isLetterOrDigit(ch) && !Character.isWhitespace(ch) --> to check a char as is it punctuation char or not?
 18. String result = str.replaceAll("\\s+", "");
-
+19. Character.isDigit(ch) --> to check a digit
+20. String[] words = str.split("\\s+") --> to split a string into words by using space("\\s+") or split(" ") or anything we want
 
 
 
@@ -788,5 +789,53 @@ public class Main {
 """
 Hi padma how dare you to do this
 Hipadmahowdareyoutodothis
+"""
+```
+
+### 29. check whether a character is a digit or not.
+```
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    char ch=input.next().charAt(0);
+    if(Character.isDigit(ch)){
+        System.out.println("yes");
+    }
+    else{
+        System.out.println("No");
+    }
+    }
+}
+"""
+8
+yes
+"""
+```
+
+### 30. split strings by space into words.
+```
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    String str=input.nextLine();
+    String[] words=str.split("\\s+"); // split(" ") also can use
+    for(int i=0; i<words.length; i++){
+        System.out.println(words[i]);
+    }
+    }
+}
+"""
+This is a test string
+This
+is
+a
+test
+string
 """
 ```
