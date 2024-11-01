@@ -369,3 +369,65 @@ two
 zero
 """
 ```
+
+### 14. extract a substring from a given string.
+```
+import java.util.*;
+
+public class string {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    String str=input.nextLine();
+    int pos=input.nextInt();
+    int len=input.nextInt();
+    char[] arr=new char[str.length()];
+    arr=str.toCharArray();
+    char[] result=new char[len];
+    int index=0, limit=0;
+    for(int i=pos-1; i<arr.length; i++){
+        result[index++]=arr[i];
+        limit++;
+        if(limit==len){
+            break;
+        }
+    }
+    for(int i=0; i<index; i++){
+        System.out.printf("%c", result[i]);
+    }
+    }
+}
+
+"""
+this is test string
+14
+6
+string
+"""
+```
+
+### 15. check whether a substring is present in a string.
+```
+import java.util.*;
+
+public class string {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    String str=input.nextLine();
+    String search=input.nextLine();
+    boolean result=str.contains(search);
+    if(result){
+        System.out.println("The substring is exists in the string");
+    }
+    else{
+        System.out.println("The substring is not exists in the string");
+    }
+    }
+}
+"""
+this is a test string
+test
+The substring is exists in the string
+"""
+```
