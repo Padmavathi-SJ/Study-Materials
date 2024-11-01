@@ -936,3 +936,43 @@ w3resources
 w3rEsOUrcEs
 """
 ```
+
+### 34. find the length of the longest substring of a given string without repeating characters.
+```
+import java.util.*;
+public class Main {
+    public static boolean hasAllUniqueChar(String str, int start, int end){
+        boolean[] charSet=new boolean[256];
+        for(int i=start; i<=end; i++){
+            char currChar=str.charAt(i);
+            if(charSet[currChar]){
+             return false;
+            }
+            charSet[currChar]=true;
+        }
+        return true;
+    }
+    public static int findLongestSubStringlength(String str){
+        int maxLength=0;
+        for(int i=0; i<str.length(); i++){
+            for(int j=i; j<str.length(); j++){
+                if(hasAllUniqueChar(str, i, j)){
+                    maxLength=Math.max(maxLength, j-i+1);
+                }
+            }
+        }
+        return maxLength;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        int maxLength=findLongestSubStringlength(str);
+        System.out.println(maxLength);
+    }
+}
+"""
+abcddeffd
+4
+"""
+```
