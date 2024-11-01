@@ -28,6 +28,8 @@
 20. String[] words = str.split("\\s+") --> to split a string into words by using space("\\s+") or split(" ") or anything we want.
 21. Integer.parseInt(str) --> to convert a String to int.
 22. Integer.toString(num) --> to convert a int to string
+23. StringBuilder str=new StringBuilder(str) --> we can modify stringbuilder, but cannot String directly, String --> immutable, StringBuilder ---> mutable
+24. str.setCharAt(i, ch) --> replacing char at sepecific position
 
 
 
@@ -1063,5 +1065,30 @@ public class Main {
 """
 AEiou
 uoiEA
+"""
+```
+
+### 38.  replace each lowercase letter with the same uppercase letter of a given string. Return the newly created string.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        StringBuilder result=new StringBuilder(str);
+        for(int i=0; i<result.length(); i++){
+            char ch=result.charAt(i);
+            if(Character.isLowerCase(ch)){
+                ch=Character.toUpperCase(ch);
+                result.setCharAt(i, ch);
+            }
+        }
+        System.out.println(result.toString());
+    }
+}
+"""
+Python
+PYTHON
 """
 ```
