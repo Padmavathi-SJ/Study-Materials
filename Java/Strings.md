@@ -21,7 +21,9 @@
 13. ch1==ch2 --> to compare two characters
 14. str1 + " " + str2 ---> to combine two strings
 15. Arrays.sort(words, Comparator.comparingInt(String::length)); --> sort as array of strings
-16. str=new String(letters) --> convert a array back to a string 
+16. str=new String(letters) --> convert a array back to a string .
+17. !Character.isLetterOrDigit(ch) && !Character.isWhitespace(ch) --> to check a char as is it punctuation char or not?
+18. 
 
 
 
@@ -719,5 +721,31 @@ public class Main {
 I am padma //str
 - //replacing character
 I-am-padma
+"""
+```
+
+### 27. count the number of punctuation characters present in a string.
+```
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    String str=input.nextLine();
+    char[] letters=str.toCharArray();
+    int count=0;
+    for(int i=0; i<letters.length; i++){
+        char ch=letters[i];
+        if(!Character.isLetterOrDigit(ch) && !Character.isWhitespace(ch)){
+            count++;
+        }
+    }
+    System.out.println(count);
+    }
+}
+"""
+Hi! amma, How are you?
+3
 """
 ```
