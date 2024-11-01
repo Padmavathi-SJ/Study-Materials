@@ -839,3 +839,72 @@ test
 string
 """
 ```
+
+### 31. find the repeated character in a string.
+```
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    String str=input.nextLine();
+    char[] letters = str.toCharArray();
+    boolean found=false;
+    for(int i=0; i<letters.length; i++){
+        for(int j=i+1; j<letters.length; j++){
+            if(letters[i] == letters[j]){
+                System.out.println(letters[i]);
+                found=true;
+                break;
+            }
+        }
+        if(found){
+            break;
+        }
+    }
+    }
+}
+"""
+w3resources
+r
+"""
+```
+
+### 32. count each character in a given string.
+```
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    String str=input.nextLine();
+    char[] letters = str.toCharArray();
+    for(int i=0; i<letters.length; i++){
+        if(letters[i]!='\0'){
+        int count=1;
+        for(int j=i+1; j<letters.length; j++){
+            if(letters[i] == letters[j]){
+                count++;
+                letters[j]='\0';
+            }
+        }
+        System.out.printf("%c  %d", letters[i], count);
+    }
+}
+    }
+}
+
+"""
+w3resources
+w  1
+3  1
+r  2
+e  2
+s  2
+o  1
+u  1
+c  1
+"""
+```
