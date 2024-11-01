@@ -642,3 +642,28 @@ THE DOG IS VERY SMART
 the dog is very smart
 """
 ```
+
+### 24. check whether a character is a Hexadecimal Digit or not.
+```
+import java.util.*;
+
+public class string {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    char ch=input.next().charAt(0);
+    if((ch >= '0' && ch<= '9') || (ch >= 'A' && ch <= 'F') || (ch >= 'a' && ch <= 'f')){
+        System.out.println("yes");
+    }
+    else{
+        System.out.println("No");
+    }
+
+    }
+}
+
+"""
+H
+No
+"""
+```
