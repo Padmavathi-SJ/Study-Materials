@@ -1,8 +1,16 @@
 ### methods:
 1. str1.contentEquals(str2) ---> it will consider case also and compare , like equals() method only
 2. String.copyValueOf(arr_nums, 1, 3); --> from which arr, startIndex, endIndex
+3. str.endsWith(end_str) --> To check the string is ending with given end string
+4. str.startsWith(start_str) --> To check the string is starting with given start string.
+5. byte[] byte_arr=str.getBytes(); ---> convert and store a string into bytes array
+
+
 
 ### missed problmes nums: 2
+
+
+
 ### 1. Get the character at the given index within the string.
 ```
 import java.util.*;
@@ -243,5 +251,100 @@ public class Main {
 }
 """
 The book contains 234 pages
+"""
+```
+
+### 12. check whether a given string ends with another string.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine() ;
+        String end_str=input.nextLine();
+        boolean result=str.endsWith(end_str);
+        System.out.println(result);       
+    }
+}
+"""
+Python Exercises //str
+se //end_str
+false
+"""
+```
+
+### as well as starting string also
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine() ;
+        String start_str=input.nextLine();
+        boolean result=str.startsWith(start_str);
+        System.out.println(result);       
+    }
+}
+"""
+Python Exercises!
+Py
+true
+"""
+```
+
+### 13. check whether two String objects contain the same data.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine() ;
+        String str2=input.nextLine();
+        boolean result=str.equals(str2);
+        System.out.println(result);       
+    }
+}
+"""
+Hi amma how are you
+Hi amma how are you
+true
+"""
+```
+### 14. print the current date and time in the specified format.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        Calendar c=Calendar.getInstance();   
+        System.out.printf("%tB %te, %tY\n", c, c, c);
+        System.out.printf("%tl:%tM %tp\n", c, c, c);   
+    }
+}
+"""
+November 1, 2024
+10:30 pm //according to our system time
+"""
+```
+
+### 15.get the contents of a given string as a byte array.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str="This is a sample string";
+        byte[] byte_arr=str.getBytes();
+        String newStr=new String(byte_arr);
+        System.out.println(newStr);
+    }
+}
+"""
+This is a sample string //byte string
 """
 ```
