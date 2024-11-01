@@ -21,6 +21,7 @@
 13. ch1==ch2 --> to compare two characters
 14. str1 + " " + str2 ---> to combine two strings
 15. Arrays.sort(words, Comparator.comparingInt(String::length)); --> sort as array of strings
+16. str=new String(letters) --> convert a array back to a string 
 
 
 
@@ -690,5 +691,33 @@ public class string {
 """
 P
 Yes
+"""
+```
+
+### 26. replace the spaces in a string with a specific character.
+```
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    String str=input.nextLine();
+    char[] letters=str.toCharArray();
+    char replace=input.next().charAt(0);
+    for(int i=0; i<letters.length; i++){
+        if(letters[i] == ' '){
+            letters[i]=replace;
+        }
+    }
+    
+   str=new String(letters);
+   System.out.println(str);
+    }
+}
+"""
+I am padma //str
+- //replacing character
+I-am-padma
 """
 ```
