@@ -3,7 +3,8 @@
 2. String.copyValueOf(arr_nums, 1, 3); --> from which arr, startIndex, endIndex
 3. str.endsWith(end_str) --> To check the string is ending with given end string
 4. str.startsWith(start_str) --> To check the string is starting with given start string.
-5. byte[] byte_arr=str.getBytes(); ---> convert and store a string into bytes array
+5. byte[] byte_arr=str.getBytes(); ---> convert and store a string into bytes array.
+6. int hash_code = str.hashCode(); --> to get a hash code of a string
 
 
 
@@ -348,3 +349,21 @@ public class Main {
 This is a sample string //byte string
 """
 ```
+
+### 16. create a distinct identifier for a given string.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str="This is a sample string";
+        int hash_code=str.hashCode();
+        System.out.println(hash_code);
+    }
+}
+"""
+-2020443276 //hash code of our string
+"""
+```
+
