@@ -23,7 +23,7 @@
 15. Arrays.sort(words, Comparator.comparingInt(String::length)); --> sort as array of strings
 16. str=new String(letters) --> convert a array back to a string .
 17. !Character.isLetterOrDigit(ch) && !Character.isWhitespace(ch) --> to check a char as is it punctuation char or not?
-18. 
+18. String result = str.replaceAll("\\s+", "");
 
 
 
@@ -747,5 +747,46 @@ public class Main {
 """
 Hi! amma, How are you?
 3
+"""
+```
+
+### 28. read a file and remove the spaces between two words of its content.
+```
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    String str=input.nextLine();
+    String[] words=str.split(" ");
+    for(int i=0; i<words.length; i++){
+        System.out.print(words[i]);
+    }
+    }
+}
+"""
+Hi padma how dare you to do this
+Hipadmahowdareyoutodothis
+"""
+```
+
+* another way
+
+```
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    String str=input.nextLine();
+    String result=str.replaceAll("\\s+", "");
+    System.out.println(result);
+    }
+}
+"""
+Hi padma how dare you to do this
+Hipadmahowdareyoutodothis
 """
 ```
