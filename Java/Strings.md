@@ -17,6 +17,8 @@
 10. Character.isUpperCase(ch){ --- }
 11. ch=Character.toLowerCase(ch);
 12. ch=Character.toUpperCase(ch);
+13. ch1==ch2 --> to compare two characters
+14. str1 + " " + str2 ---> to combine two strings
 
 
 
@@ -518,5 +520,57 @@ public class string {
 """
 w3resources.com
 wresourcescom
+"""
+```
+
+### 19.  find the frequency of characters.
+```
+import java.util.*;
+
+public class string {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    String str=input.nextLine();
+    char[] letters=new char[str.length()];
+    letters=str.toCharArray();
+    char search = input.next().charAt(0);
+    int count=0;
+    for(int i=0; i<letters.length; i++){
+        char ch=letters[i];
+        if(ch==search){
+            count++;
+        }
+    }
+    System.out.println(count);
+    }
+}
+"""
+this is test string
+i
+3
+"""
+```
+
+### 20. combine two strings manually.
+```
+import java.util.*;
+
+public class string {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    String str1=input.nextLine();
+    String str2=input.nextLine();
+    String result=str1+ " " +str2;
+    System.out.println(result);
+
+    }
+}
+
+"""
+this is string one
+this is string two
+this is string one this is string two
 """
 ```
