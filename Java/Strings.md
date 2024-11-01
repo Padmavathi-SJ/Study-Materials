@@ -1002,3 +1002,48 @@ public class Main {
 """
 ```
 
+### 36. Valid Paranthesis
+```
+import java.util.*;
+public class Main {
+public static boolean isValid(String str){
+    Stack<Character> stack = new Stack<>();
+
+    Map<Character, Character> bracketMap = new HashMap<>();
+
+    bracketMap.put(')', '(');
+    bracketMap.put('}', '{');
+    bracketMap.put(']', '[');
+    bracketMap.put('>', '<');
+
+    for(int i=0; i<str.length(); i++){
+        char currChar=str.charAt(i);
+        if(bracketMap.containsValue(currChar)){
+            stack.push(currChar);
+        }
+        else if(bracketMap.containsKey(currChar)){
+            if(stack.isEmpty() || stack.pop() != bracketMap.get(currChar)){
+                return false;
+            }
+        }
+    }
+    return stack.isEmpty();
+}
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        if(isValid(str)){
+            System.out.println("yes");
+        }
+        else{
+            System.out.println("No");
+        }
+    }
+}
+"""
+<>{}()[]
+Yes //valid
+"""
+```
+
