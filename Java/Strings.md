@@ -1047,3 +1047,21 @@ Yes //valid
 """
 ```
 
+### 37. reverse all the vowels present in a given string. Return the newly created string.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        for(int i=str.length()-1; i>=0; i--){
+            System.out.printf("%s", str.charAt(i));
+        }
+    }
+}
+"""
+AEiou
+uoiEA
+"""
+```
