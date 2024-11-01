@@ -11,25 +11,26 @@
 3. Character.isDigit(ch) -- to check a char digit or not
 4. Character.isLetter(ch) --> to check a char is alpha or not
 5. str1.equals(str2) --> compare two string as equal or not?
-6. "aeiou".indexOf(ch)!= -1 ---> char is vowel or else consonant
-7. str.toCharArray() -- to convert a string to char array
-8. str1.compareTo(str2) --> to compare two strings to find str1 is greater or lesser than str2
-9. Character.isLowerCase(ch){ --- }
-10. Character.isUpperCase(ch){ --- }
-11. ch=Character.toLowerCase(ch);
-12. ch=Character.toUpperCase(ch);
-13. ch1==ch2 --> to compare two characters
-14. str1 + " " + str2 ---> to combine two strings
-15. Arrays.sort(words, Comparator.comparingInt(String::length)); --> sort as array of strings
-16. str=new String(letters) --> convert a array back to a string .
-17. !Character.isLetterOrDigit(ch) && !Character.isWhitespace(ch) --> to check a char as is it punctuation char or not?
-18. String result = str.replaceAll("\\s+", "");
-19. Character.isDigit(ch) --> to check a digit
-20. String[] words = str.split("\\s+") --> to split a string into words by using space("\\s+") or split(" ") or anything we want.
-21. Integer.parseInt(str) --> to convert a String to int.
-22. Integer.toString(num) --> to convert a int to string
-23. StringBuilder str=new StringBuilder(str) --> we can modify stringbuilder, but cannot String directly, String --> immutable, StringBuilder ---> mutable
-24. str.setCharAt(i, ch) --> replacing char at sepecific position
+6. str1.equalsIgnoreCase(str2) --> it will ignore case and compare
+7. "aeiou".indexOf(ch)!= -1 ---> char is vowel or else consonant
+8. str.toCharArray() -- to convert a string to char array
+9. str1.compareTo(str2) --> to compare two strings to find str1 is greater or lesser than str2
+10. Character.isLowerCase(ch){ --- }
+11. Character.isUpperCase(ch){ --- }
+12. ch=Character.toLowerCase(ch);
+13. ch=Character.toUpperCase(ch);
+14. ch1==ch2 --> to compare two characters
+15. str1 + " " + str2 ---> to combine two strings
+16. Arrays.sort(words, Comparator.comparingInt(String::length)); --> sort as array of strings
+17. str=new String(letters) --> convert a array back to a string .
+18. !Character.isLetterOrDigit(ch) && !Character.isWhitespace(ch) --> to check a char as is it punctuation char or not?
+19. String result = str.replaceAll("\\s+", "");
+20. Character.isDigit(ch) --> to check a digit
+21. String[] words = str.split("\\s+") --> to split a string into words by using space("\\s+") or split(" ") or anything we want.
+22. Integer.parseInt(str) --> to convert a String to int.
+23. Integer.toString(num) --> to convert a int to string
+24. StringBuilder str=new StringBuilder(str) --> we can modify stringbuilder, but cannot String directly, String --> immutable, StringBuilder ---> mutable
+25. str.setCharAt(i, ch) --> replacing char at sepecific position
 
 
 
