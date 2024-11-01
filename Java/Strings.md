@@ -13,6 +13,10 @@
 6. "aeiou".indexOf(ch)!= -1 ---> char is vowel or else consonant
 7. str.toCharArray() -- to convert a string to char array
 8. str1.compareTo(str2) --> to compare two strings to find str1 is greater or lesser than str2
+9. Character.isLowerCase(ch){ --- }
+10. Character.isUpperCase(ch){ --- }
+11. ch=Character.toLowerCase(ch);
+12. ch=Character.toUpperCase(ch);
 
 
 
@@ -429,5 +433,64 @@ public class string {
 this is a test string
 test
 The substring is exists in the string
+"""
+```
+
+### 16.  find the number of times a given word 'the' appears in the given string.
+```
+import java.util.*;
+
+public class string {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    String[] words=input.nextLine().split(" ");
+    String search=input.nextLine();
+    int count=0;
+    for(int i=0; i<words.length; i++){
+        if(words[i].equals(search)){ //if(words[i].compareTo(search))
+            count++;
+        }
+    }
+    System.out.println(count);
+    }
+}
+
+"""
+this is the is the is string
+is
+3
+"""
+```
+
+### 17. read a sentence and replace lowercase characters with uppercase and vice versa.
+```
+import java.util.*;
+
+public class string {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    String str=input.nextLine();
+    char[] result=new char[str.length()];
+    result=str.toCharArray();
+    for(int i=0; i<result.length; i++){
+        char ch=result[i];
+        if(Character.isLowerCase(ch)){
+            ch=Character.toUpperCase(ch);
+        }
+        else{
+            ch=Character.toLowerCase(ch);
+        }
+    }
+    for(int i=0; i<result.length; i++){
+        System.out.printf("%c", result[i]);
+    }
+    }
+}
+
+"""
+This Is A String
+tHIS iS a sTRING
 """
 ```
