@@ -662,8 +662,33 @@ public class string {
     }
 }
 
+
 """
 H
 No
+"""
+```
+
+### 25. check whether a letter is uppercase or not.
+```
+import java.util.*;
+
+public class string {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    char ch=input.next().charAt(0);
+    if(Character.isUpperCase(ch)){
+        System.out.println("yes");
+    }
+    else{
+        System.out.println("No");
+    }
+
+    }
+}
+"""
+P
+Yes
 """
 ```
