@@ -1,6 +1,7 @@
 ## String problems:
 
 1. input.nextLine() ---> it will read entire line as a sigle input
+2. 
 
 
 
@@ -19,6 +20,7 @@
 12. ch=Character.toUpperCase(ch);
 13. ch1==ch2 --> to compare two characters
 14. str1 + " " + str2 ---> to combine two strings
+15. Arrays.sort(words, Comparator.comparingInt(String::length)); --> sort as array of strings
 
 
 
@@ -572,5 +574,29 @@ public class string {
 this is string one
 this is string two
 this is string one this is string two
+"""
+```
+
+### 21. find the largest and smallest words in a string.
+```
+import java.util.*;
+
+public class string {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    String str=input.nextLine();
+    String[] words=str.split(" ");
+    Arrays.sort(words, Comparator.comparingInt(String::length));
+    int n=words.length;
+    System.out.printf("Largest word is: %s\n", words[n-1]);
+    System.out.printf("Smallest word is: %s\n", words[0]);
+
+    }
+}
+"""
+This is a string with smallest and largest words
+Largest word is: smallest
+Smallest word is: a
 """
 ```
