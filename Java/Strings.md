@@ -494,3 +494,29 @@ This Is A String
 tHIS iS a sTRING
 """
 ```
+
+### 18. remove characters from a string except alphabets.
+```
+import java.util.*;
+
+public class string {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    String str=input.nextLine();
+    char[] letters=new char[str.length()];
+    letters=str.toCharArray();
+    for(int i=0; i<letters.length; i++){
+        char ch=letters[i];
+        if(Character.isLetter(ch)){
+            System.out.printf("%c", letters[i]);
+        }
+    }
+    }
+}
+
+"""
+w3resources.com
+wresourcescom
+"""
+```
