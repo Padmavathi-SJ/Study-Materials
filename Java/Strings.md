@@ -908,3 +908,31 @@ u  1
 c  1
 """
 ```
+
+### 33. convert vowels into uppercase characters in a string.
+```
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    String str=input.nextLine();
+    str=str.toLowerCase();
+    char[] letters = str.toCharArray();
+    for(int i=0; i<letters.length; i++){
+        char ch=letters[i];
+        if("aeiou".indexOf(ch) != -1){
+            ch=Character.toUpperCase(ch);
+            letters[i]=ch;
+        }
+    }
+    str=new String(letters);
+    System.out.println(str);
+    }
+}
+"""
+w3resources
+w3rEsOUrcEs
+"""
+```
