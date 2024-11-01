@@ -600,3 +600,45 @@ Largest word is: smallest
 Smallest word is: a
 """
 ```
+
+### 22. convert a string to uppercase.
+```
+import java.util.*;
+
+public class string {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    String str=input.nextLine();
+    str=str.toUpperCase();
+    System.out.println(str);
+
+    }
+}
+
+"""
+The quick brown for jumps over the lazy dog
+THE QUICK BROWN FOR JUMPS OVER THE LAZY DOG
+"""
+```
+
+### 23. convert a string to lowercase.
+```
+import java.util.*;
+
+public class string {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    String str=input.nextLine();
+    str=str.toLowerCase();
+    System.out.println(str);
+
+    }
+}
+
+"""
+THE DOG IS VERY SMART
+the dog is very smart
+"""
+```
