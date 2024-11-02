@@ -460,3 +460,71 @@ successes
 c
 """
 ```
+### 21. find the length of the longest substring of a given string without repeating characters.
+```
+import java.util.*;
+public class Main {
+    public static boolean allUniqueChar(String str, int start, int end){
+        boolean[] charSet=new boolean[256];
+        for(int i=start; i<=end; i++){
+            char ch=str.charAt(i);
+            if(charSet[ch]){
+                return false;
+            }
+            charSet[ch]=true;
+        }
+        return true;
+    }
+    public static int findLongSubString(String str){
+        int maxLength=0;
+        for(int i=0; i<str.length(); i++){
+            for(int j=i; j<str.length(); j++){
+                if(allUniqueChar(str, i, j)){
+                    maxLength=Math.max(maxLength, j-i+1);
+                }
+            }
+        }
+        return maxLength;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        int maxLength=findLongSubString(str);
+        System.out.println(maxLength);
+    }
+}
+"""
+pickoutthelongestsubstring
+8
+"""
+```
+
+### 22. print the result of removing duplicates from a given string.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        char[] letters=str.toCharArray();
+        for(int i=0; i<letters.length; i++){
+            if(letters[i]!='\0'){
+            for(int j=i+1; j<letters.length; j++){
+                if(letters[i] == letters[j]){
+                    letters[j]='\0';
+                }
+            }
+        }
+        }
+        for(int i=0; i<letters.length; i++){
+            System.out.printf("%c", letters[i]);
+        }
+    }
+}
+"""
+w3resources
+w3resouc
+"""
+```
