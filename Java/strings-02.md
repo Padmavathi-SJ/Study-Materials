@@ -528,3 +528,35 @@ w3resources
 w3resouc
 """
 ```
+
+### 23. find the first non-repeating character in a string.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        char[] letters=str.toCharArray();
+        for(int i=0; i<letters.length; i++){
+            boolean flag=true;
+            for(int j=i+1; j<letters.length; j++){
+                if(letters[i] == letters[j]){
+                    flag=false;
+                }
+            }
+            if(flag){
+                System.out.println(letters[i]);
+                break;
+            }
+        }
+        }
+    }
+"""
+gibblegabbler
+i
+"""
+```
+
+### 24.
+
