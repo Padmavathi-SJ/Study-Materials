@@ -5,6 +5,8 @@
 4. str.startsWith(start_str) --> To check the string is starting with given start string.
 5. byte[] byte_arr=str.getBytes(); ---> convert and store a string into bytes array.
 6. int hash_code = str.hashCode(); --> to get a hash code of a string
+7. str.substring(10(startIndex), 26(endIndex))--> to extract a substring from a substring
+8. str.trim() --> to remove leading and trailing spaces
 
 
 
@@ -367,3 +369,94 @@ public class Main {
 """
 ```
 
+
+### 17. replace each substring of a given string that matches the given regular expression with the given replacement.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        String new_str=str.replaceAll("fox", "cat");
+        System.out.println(str);
+        System.out.println("modifies string: " + new_str);
+    }
+}
+"""
+The quick brown fox jumps overthe lazy dog
+modifies string: The quick brown cat jumps overthe lazy dog
+"""
+```
+### 18.check whether a given string starts with another string.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        String start_str=input.nextLine();
+        boolean result=str.startsWith(start_str);
+        System.out.println(result);
+    }
+}
+"""
+Orange is my favorite color
+Red
+false
+"""
+```
+### 19.  trim leading or trailing whitespace from a given string.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        str=str.trim();
+        System.out.println(str);
+    }
+}
+"""
+   hi di mamma  
+hi di mamma
+"""
+```
+
+### 20.  find the second most frequent character in a given string.
+```
+import java.util.*;
+public class Main {
+    public static char findSecChar(String str){
+        int[] count=new int[256];
+        for(int i=0; i<str.length(); i++){
+            (count[str.charAt(i)])++;
+        }
+        int charFirst=0;
+        int charSec=0;
+        for(int i=0; i<256; i++){
+            if(count[i] > count[charFirst]){
+                charSec=charFirst;
+                charFirst=i;
+            }
+            else if(count[i] > count[charSec] && count[i]!=count[charFirst]){
+                charSec=i;
+            }
+        }
+        return (char) charSec;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        char result=findSecChar(str);
+        System.out.println(result);
+    }
+}
+"""
+successes
+c
+"""
+```
