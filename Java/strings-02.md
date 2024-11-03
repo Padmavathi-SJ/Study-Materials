@@ -784,3 +784,27 @@ door
 foodoor
 """
 ```
+
+### 32. create a string from a given string by swapping the last two characters of the given string. The string length must be two or more.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        StringBuilder result=new StringBuilder(str);
+        if(result.length() >= 2){
+            char lastChar=result.charAt(result.length()-1);
+            result.setCharAt(result.length()-1, result.charAt(result.length()-2));
+            result.setCharAt(result.length()-2, lastChar);
+        }
+        str=new String(result);
+        System.out.println(str);
+        }
+    }
+"""
+string
+strign
+"""
+```
