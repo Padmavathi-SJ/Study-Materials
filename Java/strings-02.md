@@ -808,3 +808,32 @@ string
 strign
 """
 ```
+
+### 33.reverses all odd-length words in a string.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        String[] words=str.split("\\s+");
+        for(int i=0; i<words.length; i++){
+            if((words[i].length()-1) % 2 != 0){
+                String currStr=words[i];
+                for(int j=currStr.length()-1; j>=0; j--){
+                    System.out.printf("%c", currStr.charAt(j));
+                }
+                System.out.printf(" ");
+            }
+            else{
+                System.out.printf("%s ", words[i]);
+            }
+        }
+            }
+    }
+"""
+Create a Date object using the Calendar class
+etaerC a etaD tcejbo using the radnelaC class
+"""
+```
