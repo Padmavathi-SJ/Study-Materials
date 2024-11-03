@@ -890,3 +890,25 @@ PHP
 PHPPHPPHPPHPPHPPHPPHP
 """
 ```
+
+### 36. sort the string by length
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        String[] words=str.split("\\s+");
+        Arrays.sort(words, Comparator.comparingInt(String::length));
+        for(int i=0; i<words.length; i++){
+            System.out.printf("%s ", words[i]);
+        }
+        
+            }
+    }
+"""
+love you I
+I you love
+"""
+```
