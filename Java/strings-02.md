@@ -711,6 +711,46 @@ public class Main {
         }
     }
 """
+```
+
+### 29. remove all adjacent duplicates recursively from a given string.
+```
+import java.util.*;
+public class Main {
+    public static String removeDuplicates(String str){
+     if(str.length() <= 1){
+        return str;
+     }
+     StringBuilder result=new StringBuilder();
+     boolean hasDuplicates=false;
+     for(int i=0; i<str.length(); i++){
+        if(i < str.length()-1 && (str.charAt(i) == str.charAt(i+1))){
+            hasDuplicates=true;
+            i++;
+        }
+        else{
+            result.append(str.charAt(i));
+        }
+    }
+        if(!hasDuplicates){
+            return result.toString();
+        }
+        return removeDuplicates(result.toString());
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        String result = removeDuplicates(str);
+        System.out.println(result);
+        }
+    }
+"""
+aabaarbarccrabmq
+brmq
+"""
+```
+
 ABACD
 CDABA
 The 2nd string CDABA exists in the new string.
