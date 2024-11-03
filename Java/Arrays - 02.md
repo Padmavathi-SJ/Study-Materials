@@ -160,3 +160,75 @@ public class Main {
 4
 """
 ```
+
+### 6.find common elements in three sorted (in non-decreasing order) arrays.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        int[] arr1={2,4,8};
+        int[] arr2={2,3,4,8,10,16};
+        int[] arr3={4,8,14,40};
+        int[] commonElements=new int[arr1.length + arr2.length + arr3.length];
+        int index=0;
+        for(int i=0; i<arr1.length; i++){
+            for(int j=0; j<arr2.length; j++){
+                if(arr1[i] == arr2[j]){
+                    commonElements[index++] =arr1[i]; 
+                }
+            }
+        }
+        for(int i=0; i<index; i++){
+            for(int j=0; j<arr3.length; j++){
+                if(commonElements[i] == arr3[j]){
+                    System.out.printf("%d ", commonElements[i]);
+                }
+            }
+        }
+       
+    }
+}
+"""
+4 8
+"""
+```
+
+### 7.arrange the elements of an array of integers so that all positive integers appear before all negative integers.  
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    
+        int[] arr={-4,8,6,-5,6,-2,1,2,3,-11};
+        int[] negativeArr=new int[arr.length];
+        int[] positiveArr=new int[arr.length];
+        int ni=0, pi=0;
+        for(int i=0; i<arr.length; i++){
+            if(arr[i] < 0){
+                negativeArr[ni++]=arr[i];
+            }
+            else{
+                positiveArr[pi++]=arr[i];
+            }
+        }
+        int[] result=new int[ni+pi];
+        int index=0;
+        for(int i=0; i<pi; i++){
+            result[index++]=positiveArr[i];
+        }
+        for(int i=0; i<ni; i++){
+            result[index++]=negativeArr[i];
+        }
+        for(int i=0; i<arr.length; i++){
+            System.out.printf("%d ", result[i]);
+        }
+    }
+}
+"""
+8 6 6 1 2 3 -4 -5 -2 -11
+"""
+```
