@@ -7,6 +7,7 @@
 6. int hash_code = str.hashCode(); --> to get a hash code of a string
 7. str.substring(10(startIndex), 26(endIndex))--> to extract a substring from a substring
 8. str.trim() --> to remove leading and trailing spaces
+9. str.setCharAt(index, value) --> to assign value to stringBuilder
 
 
 
@@ -651,5 +652,68 @@ public class Main {
 """
 This is a string
 sihT si a gnirts
+"""
+```
+
+### 27. count and print all duplicates in the input string.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        char[] letters=str.toCharArray();
+        for(int i=0; i<letters.length; i++){
+            if(letters[i]!='\0'){
+            int count=1;
+            for(int j=i+1; j<letters.length; j++){
+                if(letters[i] == letters[j]){
+                    count++;
+                    letters[j]='\0';
+                }
+            }
+            if(count >= 2){
+            System.out.printf("%c appears %d times\n", letters[i], count);
+        }}
+    }
+        }
+    }
+"""
+w3resources
+r appears 2 times
+e appears 2 times
+s appears 2 times
+"""
+```
+
+### 28. check if two given strings are rotations of each other.
+```
+import java.util.*;
+public class Main {
+    public static boolean rotationsOfStrings(String str1, String str2){
+        if((str1.length() == str2.length()) && (str1 + str2).indexOf(str2) != -1){
+            return true;
+        }
+        return false;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str1=input.nextLine();
+        String str2=input.nextLine();
+        if(rotationsOfStrings(str1, str2)){
+            System.out.printf("The 2nd string %s exists in the new string.\n Strings are rotations of each other", str2);
+        }
+        else{
+            System.out.printf("The 2nd string %s does not exists in the new string.\n Strings are rotations of each other", str2);
+        }
+        }
+    }
+"""
+ABACD
+CDABA
+The 2nd string CDABA exists in the new string.
+ Strings are rotations of each other.
 """
 ```
