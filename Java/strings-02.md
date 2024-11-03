@@ -750,10 +750,37 @@ aabaarbarccrabmq
 brmq
 """
 ```
+```
 
 ABACD
 CDABA
 The 2nd string CDABA exists in the new string.
  Strings are rotations of each other.
+"""
+```
+
+### 31. appends two strings, omitting one character if the concatenation creates double characters.
+```
+import java.util.*;
+public class Main {
+    public static String concat(String str1, String str2){
+        if(str1.length() != 0 && str2.length() != 0 && (str1.charAt(str1.length()-1) == str2.charAt(0))){
+            return str1 + str2.substring(1);
+        }
+        return str1+str2;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str1=input.nextLine();
+        String str2=input.nextLine();
+        String result=concat(str1, str2);
+        System.out.println(result);
+        }
+    }
+"""
+food
+door
+foodoor
 """
 ```
