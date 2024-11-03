@@ -558,5 +558,98 @@ i
 """
 ```
 
-### 24.
+### 24. print a list of items containing all characters of a given word.
+```
+import java.util.*;
+public class Main {
+    public static boolean containsAllCharacters(String str, String search){
+        char[] letters=search.toCharArray();
+        for(int i=0; i<letters.length; i++){
+            char ch=letters[i];
+            if(str.indexOf(ch) == -1){
+                return false;
+            }
+        }
+        return true;
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
 
+        String str=input.nextLine();
+        String[] words=str.split("\\s+");
+        String search=input.nextLine();
+        for(int i=0; i<words.length; i++){
+            if(containsAllCharacters(words[i], search)){
+                System.out.println(words[i]);
+            }
+        }
+        }
+    }
+"""
+rabbit bribe dog
+bib
+rabbit
+bribe
+"""
+```
+
+### 25.  find the character in a string that occurs the most frequently.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String string=input.nextLine();
+        StringBuilder str=new StringBuilder(string);
+        int maxCount=1;
+        int maxIndex=0;
+        char maxChar = str.charAt(0);
+        for(int i=0; i<str.length(); i++){
+            if(str.charAt(i) != '\0'){
+            int count=1;
+            for(int j=i+1; j<str.length(); j++){
+                if(str.charAt(i) ==  str.charAt(j)){
+                    count++;
+                    str.setCharAt(j, '\0');
+                }
+            }
+            if(count > maxCount){
+                maxCount=count;
+                maxIndex=i;
+                maxChar=str.charAt(maxIndex);
+            }
+        }
+    }
+        System.out.println(maxChar);
+        }
+    }
+"""
+test string
+t
+"""
+```
+
+### 26. reverse every word in a string using methods.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        String[] words=str.split("\\s+");
+        for(int i=0; i<words.length; i++){
+            String currStr=words[i];
+            for(int j=currStr.length()-1; j>=0; j--){
+                System.out.printf("%c", currStr.charAt(j));
+            }
+            System.out.printf(" ");
+        }
+        }
+    }
+"""
+This is a string
+sihT si a gnirts
+"""
+```
