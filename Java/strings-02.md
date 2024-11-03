@@ -837,3 +837,31 @@ Create a Date object using the Calendar class
 etaerC a etaD tcejbo using the radnelaC class
 """
 ```
+
+### 34.check whether there are two consecutive (following each other continuously), identical letters in a given string.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        boolean flag=false;
+        for(int i=0; i<str.length()-1; i++){
+            if(str.charAt(i) == str.charAt(i+1)){
+                flag=true;
+            }
+        }
+        if(flag){
+            System.out.println("true");
+        }
+        else{
+            System.out.println("false");
+        }
+            }
+    }
+"""
+Yellow
+true
+"""
+```
