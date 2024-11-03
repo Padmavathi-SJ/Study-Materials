@@ -865,3 +865,28 @@ Yellow
 true
 """
 ```
+
+### 35. concatenate a given string with itself a given number of times.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        String str=input.nextLine();
+        int num_of_time=input.nextInt();
+        StringBuilder result=new StringBuilder();
+        int i=0;
+        while(i<num_of_time){
+            result.append(str);
+            i++;
+        }
+        System.out.println(result);
+            }
+    }
+"""
+PHP
+7
+PHPPHPPHPPHPPHPPHPPHP
+"""
+```
