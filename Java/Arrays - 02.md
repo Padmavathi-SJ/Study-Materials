@@ -1,6 +1,6 @@
 ### methods
 1. int[] newArr=Arrays.copyOf(arr, arr.length) --> copy a array for new array
-2. 
+2. Arrays.equals(arr1, arr2) ---> to check two arrays are equal or not
 
 ### 1. sort a numeric array and a string array.
 ```
@@ -106,5 +106,57 @@ public class Main {
     }
 """
 77 56 56 49 36 29 25 18 15 14
+"""
+```
+
+### 4. swap elements
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+        int[] arr={5,1,3,4,6,2};
+        Arrays.sort(arr);
+        int temp1=arr[0];
+        arr[0]=arr[arr.length-1];
+        arr[arr.length-1]=temp1;
+
+        int temp2=arr[1];
+        arr[1]=arr[arr.length-2];
+        arr[arr.length-2]=temp2;
+
+        for(int i=0; i<arr.length; i++){
+            System.out.printf("%d ", arr[i]);
+        }
+        
+        
+    }
+    }
+"""
+6 5 3 4 2 1
+"""
+```
+
+### 5.  find a missing number in an array.
+```
+import java.util.*;
+public class Main {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int[] arr={1,2,3, 5,6};
+        int n=arr.length+1;
+        int actualSum=n*(n+1) / 2;
+        int currSum=0;
+        for(int i=0; i<arr.length; i++){
+            currSum += arr[i];
+        }
+        int missingElement = actualSum - currSum;
+        System.out.println(missingElement);
+       
+    }
+}
+"""
+4
 """
 ```
