@@ -996,3 +996,41 @@ madam
 true
 """
 ```
+
+### 39. check whether the two strings are anagrams or not
+```
+import java.util.*;
+public class Main {
+    public static boolean areAnagrams(String str1, String str2){
+        int[] count1=new int[256];
+        int[] count2=new int[256];
+
+        for(int i=0; i<str1.length(); i++){
+            count1[str1.charAt(i)]++;
+        }
+        for(int i=0; i<str2.length(); i++){
+            count2[str2.charAt(i)]++;
+        }
+        for(int i=0; i<256; i++){
+            if(count1[i] != count2[i]){
+                return false;
+            }
+        }
+        return true;
+    }
+        public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    
+       String str1=input.nextLine();
+       String str2=input.nextLine();
+       boolean result=areAnagrams(str1, str2);
+       System.out.println(result);
+    }
+}
+"""
+dog
+god
+true
+"""
+```
