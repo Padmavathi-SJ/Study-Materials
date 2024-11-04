@@ -1119,3 +1119,34 @@ public class Main {
 [17, 5, 5, 5, 2, -1]
 """
 ```
+
+### 43. find the maximum product of two integers in a given array of integers.  
+```
+import java.util.*;
+public class Main {
+        public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+           int[] arr={2,3,5,7,-7,5,8,-5};
+           int n=arr.length;
+           int maxProduct=1;
+           int index1=-1, index2=-1;
+           for(int i=0; i<n; i++){
+            for(int j=i+1; j<n; j++){
+                int currPro=arr[i] * arr[j];
+                if(currPro > maxProduct){
+                    maxProduct=currPro;
+                    index1=i;
+                    index2=j;
+                }
+            }
+           }
+           System.out.printf("%d %d\n", arr[index1], arr[index2]);
+           System.out.printf("%d", maxProduct);
+    }
+}
+"""
+7 8
+56
+"""
+```
