@@ -1150,3 +1150,40 @@ public class Main {
 56
 """
 ```
+
+### 44. rearrange a given array of unique elements such that every second element of the array is greater than its left and right elements.  
+```
+import java.util.*;
+public class Main {
+    public static void swap(int[] arr, int i, int j){
+        int temp=arr[i];
+        arr[i]=arr[j];
+        arr[j]=temp;
+    }
+    public static void reArrangeArr(int[] arr){
+        int n=arr.length;
+        for(int i=1; i<n; i+=2){
+
+            if(arr[i-1] > arr[i]){
+                swap(arr, i-1, i);
+            }
+
+            if(arr[i+1] > arr[i] && i+1 < n){
+                swap(arr, i+1, i);
+            }
+        }
+    }
+        public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+           int[] arr={1,2,4,9,5,3,8,7,10,12,14};
+           reArrangeArr(arr);
+           for(int i=0; i<arr.length; i++){
+            System.out.printf("%d ", arr[i]);
+           }
+    }
+}
+"""
+1 4 2 9 3 8 5 10 7 14 12
+"""
+```
