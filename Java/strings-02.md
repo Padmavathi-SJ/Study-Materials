@@ -1187,3 +1187,156 @@ public class Main {
 1 4 2 9 3 8 5 10 7 14 12
 """
 ```
+
+### 45. replace each element of the array with the product of every other element in a given array of integers.  
+
+```
+import java.util.*;
+public class Main {
+        public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+           int[] arr={1,2,3,4,5,6,7};
+           int[] result=new int[arr.length];
+           for(int i=0; i<arr.length; i++){
+            int product=1;
+            for(int j=0; j<arr.length; j++){
+                if(i!=j){
+                product *= arr[j];
+            }
+        }
+            result[i]=product;
+           }
+           for(int i=0; i<result.length; i++){
+            System.out.printf("%d ", result[i]);
+           }
+    }
+}
+"""
+5040 2520 1680 1260 1008 840 720
+"""
+```
+
+### 46.  find the maximum difference between two elements in a given array of integers such that the smaller element appears before the larger element. 
+```
+import java.util.*;
+public class Main {
+        public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+           int[] arr={2,3,1,7,9,5,11,3,5};
+           int maxDifference=0;
+           int currDifference=0;
+           for(int i=0; i<arr.length; i++){
+            for(int j=i+1; j<arr.length; j++){
+                if(arr[i] > arr[j]){
+                currDifference=arr[i]-arr[j];
+                }
+                if(arr[j] > arr[i]){
+                    currDifference=arr[j]-arr[i];
+                }
+                if(currDifference > maxDifference){
+                    maxDifference=currDifference;
+                }
+        }
+    }
+        System.out.println(maxDifference);
+    }
+}
+"""
+10 // max difference between two elements
+"""
+```
+
+### 47. calculate the largest gap between sorted elements of an array of integers.  
+```
+import java.util.*;
+public class Main {
+    public static int findLargestGap(int[] arr){
+        int n=arr.length;
+        if(n < 2){
+            return 0;
+        }
+        int largestGap=0;
+        for(int i=1; i<n; i++){
+            int gap=arr[i]-arr[i-1];
+            if(gap >  largestGap){
+                largestGap=gap;
+            }
+        }
+        return largestGap;
+    }
+        public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+           int[] arr={23,-2,45,38,12,4,6};
+           Arrays.sort(arr);
+           int result=findLargestGap(arr);
+           System.out.println(result);
+    }
+}
+"""
+15
+"""
+```
+
+
+### 48. determine whether numbers in an array can be rearranged so that each number appears exactly once in a consecutive list of numbers. Return true otherwise false.  
+```
+import java.util.*;
+public class Main {
+    public static boolean check(int[] arr){
+        Arrays.sort(arr);
+        int n=arr.length;
+        for(int i=0; i<n-1; i++){
+            if(arr[i] + 1 !=arr[i+1]){
+                return false;
+            }
+        }
+        return true;
+        
+    }
+        public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+           int[] arr={1,2,5,0,4,3,6};
+           boolean result=check(arr);
+           System.out.println(result);
+    }
+}
+"""
+true
+"""
+```
+
+### 49. checks whether an array is negative dominant or not. If the array is negative dominant return true otherwise false
+```
+import java.util.*;
+public class Main {
+        public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+           int[] arr={1,-2,-5,-4,3,-6};
+           int n=arr.length;
+           int positiveCount=0;
+           int negativeCount=0;
+           for(int i=0; i<n; i++){
+            if(arr[i]< 0){
+                negativeCount++;
+            }
+            if(arr[i] > 0){
+                positiveCount++;
+            }
+           }
+           if(positiveCount > negativeCount){
+            System.out.printf("positive Dominance\n");
+           }
+           else{
+            System.out.printf("Negative Dominance\n");
+        }
+    }
+}
+"""
+Negative Dominance
+"""
+```
