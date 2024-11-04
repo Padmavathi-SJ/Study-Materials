@@ -1074,3 +1074,24 @@ padma
 false
 """
 ```
+
+### 41. remove extra spaces between words of strings
+```
+import java.util.*;
+public class Main {
+        public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    
+            String str=input.nextLine();
+            String[] words=str.split("\\s+");
+            for(int i=0; i<words.length; i++){
+                System.out.printf("%s ", words[i]);
+            }
+    }
+}
+"""
+Hi    padma   how  are   you
+Hi padma how are you
+"""
+```
