@@ -1034,3 +1034,43 @@ god
 true
 """
 ```
+
+### 40. check whether the given string is pangram or not?
+```
+import java.util.*;
+public class Main {
+    public static boolean isPangram(String str){
+        boolean[] alphabet=new boolean[26];
+        for(int i=0; i<26; i++){
+            alphabet[i]=false;
+        }
+        for(int i=0; i<str.length(); i++){
+            char ch=str.charAt(i);
+            int index=ch - 'a';
+            alphabet[index]=true;
+        }
+        for(int i=0; i<26; i++){
+            if(alphabet[i]==false){
+                return false;
+            }
+        }
+        return true;
+
+    }
+        public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    
+            String str=input.nextLine();
+            boolean result=isPangram(str);
+            System.out.println(result);
+    }
+}
+"""
+qwertyuiopasdfghjklzxcvbnm
+true
+
+padma
+false
+"""
+```
