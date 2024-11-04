@@ -912,3 +912,87 @@ love you I
 I you love
 """
 ```
+
+### 37. print longest palindromic substring from a given string
+```
+import java.util.*;
+public class Main {
+    public static boolean checkPalindrome(String str, int start, int end){
+        while(start < end){
+            if(str.charAt(start) != str.charAt(end)){
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+    }
+    public static String longPalinSubstring(String str){
+        int maxLength=1;
+        int n=str.length();
+        int start=0;
+        for(int i=0; i<n; i++){
+            for(int j=i+1; j<n; j++){
+                if(checkPalindrome(str, i, j)){
+                    if(j-i+1 > maxLength){
+                        maxLength=j-i+1;
+                        start=i;
+                    }
+                }
+            }
+        }
+        StringBuilder newStr=new StringBuilder();
+        for(int i=start; i<=start+maxLength; i++){
+            newStr.append(str.charAt(i));
+        }
+        return newStr.toString();
+    }
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    
+       String str=input.nextLine();
+       String result=longPalinSubstring(str);
+       System.out.println(result);
+    }
+}
+"""
+babad
+baba
+"""
+```
+
+### 38. check a given string is palindrome or not?
+```
+import java.util.*;
+public class Main {
+    public static boolean palindromeOrNot(String str){
+        int n=str.length();
+        int start=0;
+        int end=n-1;
+        while(start < end){
+            if(str.charAt(start) != str.charAt(end)){
+                return false;
+            }
+            start++;
+            end--;
+        }
+        return true;
+    }
+        public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+    
+       String str=input.nextLine();
+       boolean result=palindromeOrNot(str);
+       System.out.println(result);
+    }
+}
+"""
+padma
+false
+
+madam
+true
+"""
+```
