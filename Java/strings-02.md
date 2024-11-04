@@ -1095,3 +1095,27 @@ Hi    padma   how  are   you
 Hi padma how are you
 """
 ```
+
+### 42. replace every element with the next greatest element (from the right side) in a given array of integers.
+There is no element next to the last element, therefore replace it with -1. 
+```
+import java.util.*;
+public class Main {
+        public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+
+           int[] arr={16,17,4,3,5,2};
+           int n=arr.length;
+           int maxFromRight=-1;
+           for(int i=n-1; i>=0; i--){
+            int current=arr[i];
+            arr[i]=maxFromRight;
+            maxFromRight=Math.max(maxFromRight, current);
+           }
+           System.out.println(Arrays.toString(arr));
+    }
+}
+"""
+[17, 5, 5, 5, 2, -1]
+"""
+```
