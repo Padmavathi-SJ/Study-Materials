@@ -1,7 +1,7 @@
 ## String problems:
 
 1. input.nextLine() ---> it will read entire line as a sigle input
-2. 
+2. input.next() --> it will read the input before a tab space only
 
 
 
