@@ -224,3 +224,36 @@ Yes 371 is Amstrong
 yes 371 is not a perfect number
 """
 ```
+
+### 9. print all perfect numbers in a given range using the function.
+```
+#include<stdio.h>
+int isPerfect(int n){
+    int sum=0;
+    for(int i=1; i<=n/2; i++){
+        if(n%i==0){
+            sum += i;
+        }
+    }
+    if(sum==n){
+        return 1;
+    }
+    return 0;
+}
+void findPerfectNum(int start, int end){
+    for(int i=start; i<=end; i++){
+        if(isPerfect(i)){
+            printf("%d ", i);
+        }
+    }
+}
+int main() {
+    int start=1;
+    int end=100;
+    findPerfectNum(start, end);
+    return 0;
+}
+"""
+6 28
+"""
+```
