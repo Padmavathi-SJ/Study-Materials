@@ -173,3 +173,54 @@ int main() {
 9
 """
 ```
+
+### 8. check Armstrong and Perfect numbers using the function.
+```
+#include<stdio.h>
+int isAmstrong(int n){
+    int orgNum=n;
+    int sum=0;
+    while(n!=0){
+        int rem=n%10;
+        sum = sum + (rem*rem*rem);
+        n /= 10;
+    }
+    if(sum == orgNum){
+        return 1;
+    }
+    return 0;
+}
+int perfectNum(int n){
+    int sum=0;
+    for(int i=1; i<=n; i++){
+        if(n%i==0){
+            sum += i;
+        }
+    }
+    if(sum==n){
+        return 1;
+    }
+    return 0;
+}
+int main() {
+    int n=371;
+    if(isAmstrong(n)){
+        printf("Yes %d is Amstrong\n", n);
+    }
+    else{
+        printf("Yes %d is not an Amstrong\n", n);
+    }
+
+    if(perfectNum(n)){
+        printf("yes %d is a perfect number\n", n);
+    }
+    else{
+        printf("yes %d is not a perfect number\n", n);
+    }
+    return 0;
+}
+"""
+Yes 371 is Amstrong
+yes 371 is not a perfect number
+"""
+```
