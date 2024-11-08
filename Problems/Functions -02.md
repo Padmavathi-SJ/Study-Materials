@@ -93,3 +93,59 @@ int main() {
 34
 """
 ```
+
+### 5. convert a decimal number to a binary number using the function.
+```
+#include<stdio.h>
+int convert(int n){
+    long binaryNum=0;
+    int f=1, reminder;
+    while(n!=0){
+        reminder = n%2;
+        binaryNum=binaryNum + reminder * f;
+        f=f*10;
+        n /= 2;
+    }
+    return binaryNum;
+}
+int main() {
+    long binaryNum;
+    int decimalNum=65;
+    binaryNum=convert(decimalNum);
+    printf("%ld", binaryNum);
+    return 0;
+}
+"""
+1000001
+"""
+```
+
+### 6. check whether a number is a prime number or not using the function.
+```
+#include<stdio.h>
+int prime(int n){
+    if(n<=1){
+        return 0;
+    }
+    for(int i=2; i<n; i++){
+        if(n%i==0){
+            return 0;
+        }
+    }
+    return 1;
+}
+int main() {
+    int n=10;
+    if(prime(n)){
+        printf("Yes");
+    }
+    else{
+        printf("No");
+    }
+
+    return 0;
+}
+"""
+No
+"""
+```
