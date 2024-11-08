@@ -149,3 +149,27 @@ int main() {
 No
 """
 ```
+
+### 7. get the largest element of an array using the function:
+```
+#include<stdio.h>
+int largestNum(int arr[], int n){
+    int max=arr[0];
+    for(int i=1; i<n; i++){
+        if(arr[i]>max){
+            max=arr[i];
+        }
+    }
+    return max;
+}
+int main() {
+    int arr[]={2,4,8,1,9,5};
+    int n=sizeof(arr)/sizeof(arr[0]);
+    int result=largestNum(arr, n);
+    printf("%d", result);
+    return 0;
+}
+"""
+9
+"""
+```
