@@ -1,5 +1,5 @@
 ### methods
-
+* All problems will be done by using functions only, if needed some other methods also used
 
 
 ### 1. find the square of any number using the function.
