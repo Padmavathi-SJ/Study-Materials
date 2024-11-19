@@ -397,7 +397,7 @@ eat
 
 ## PS LIST:
 
-### 10. Circular Prime:
+### 1. Circular Prime:
 ```
 #include<stdio.h>
 #include<stdbool.h>
@@ -448,5 +448,78 @@ int main(){
 """
 971
 Yes
+"""
+```
+
+### Find the prime anagram pairs in the given range
+```
+#include<stdio.h>
+#include<stdbool.h>
+bool isPrime(int num){
+    if(num < 2){
+        return false;
+    }
+    for(int i=2; i<=num/2; i++){
+        if(num%i==0){
+            return false;
+        }
+    }
+    return true;
+}
+void countdigits(int num, int digitCount[]){
+    while(num > 0){
+        digitCount[num % 10]++;
+        num /= 10;
+    }
+}
+bool areAnagrams(int num1, int num2){
+    int count1[10]={0};
+    int count2[10]={0};
+    countdigits(num1, count1);
+    countdigits(num2, count2);
+    
+    for(int i=0; i<10; i++){
+        if(count1[i] != count2[i]){
+            return false;
+        }
+    }
+    return true;
+    
+}
+int findAnagramPairs(int start, int end){
+    int primes[100];
+    int index=0;
+    for(int i=start; i<=end; i++){
+        if(isPrime(i)){
+            primes[index++]=i;
+        }
+    }
+    printf("Anagram pairs:\n");
+    for(int i=0; i<index; i++){
+        for(int j=i+1; j<index; j++){
+            if(areAnagrams(primes[i], primes[j])){
+                printf("%d %d\n", primes[i], primes[j]);
+            }
+        }
+    }
+    
+}
+int main(){
+    int start;
+    scanf("%d", &start);
+    int end;
+    scanf("%d", &end);
+    findAnagramPairs(start, end);
+    return 0;
+    
+}
+"""
+1 //start
+100 //end
+Anagram pairs:
+13 31
+17 71
+37 73
+79 97
 """
 ```
