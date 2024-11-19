@@ -451,7 +451,7 @@ Yes
 """
 ```
 
-### Find the prime anagram pairs in the given range
+### 2. Find the prime anagram pairs in the given range
 ```
 #include<stdio.h>
 #include<stdbool.h>
@@ -521,5 +521,39 @@ Anagram pairs:
 17 71
 37 73
 79 97
+"""
+```
+
+### 3. Sum of even numbers in an array using recursion
+```
+#include<stdio.h>
+int sumOfOdd(int arr[], int n){
+    if(n==0){
+        return 0;
+    }
+    int lastElement=arr[n-1];
+    if(lastElement % 2 == 0){
+        return lastElement+sumOfOdd(arr, n-1);
+    }
+    else{
+        return sumOfOdd(arr, n-1);
+    }
+    
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    int arr[n];
+    for(int i=0; i<n; i++){
+        scanf("%d", &arr[i]);
+    }
+    int sum = sumOfOdd(arr, n);
+    printf("%d", sum);
+    return 0;
+}
+"""
+6
+1 2 3 4 5 6
+12
 """
 ```
