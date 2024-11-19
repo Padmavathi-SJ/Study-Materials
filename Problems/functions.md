@@ -392,3 +392,61 @@ man
 eat
 """
 ```
+
+
+
+## PS LIST:
+
+### 10. Circular Prime:
+```
+#include<stdio.h>
+#include<stdbool.h>
+#include<math.h>
+bool isPrime(int num){
+    if(num<2){
+        return false;
+    }
+    for(int i=2; i<=num/2; i++){
+        if(num%i==0){
+            return false;
+        }
+    }
+    return true;
+}
+int rotateNum(int num, int len){
+    int rem=num % 10;
+    num /= 10;
+    return rem * pow(10, len-1) + num;
+}
+bool isCircularPrime(int num){
+    int len=0;
+    int temp=num;
+    while(temp > 0){
+        len++;
+        temp /= 10;
+    }
+    int rotated=num;
+    for(int i=0; i<len; i++){
+        if(!isPrime(rotated)){
+            return false;
+        }
+        rotated=rotateNum(rotated, len);
+    }
+    return true;
+}
+int main(){
+    int num;
+    scanf("%d", &num);
+    if(isCircularPrime(num)){
+        printf("Yes\n");
+    }
+    else{
+        printf("No\n");
+    }
+    return 0;
+}
+"""
+971
+Yes
+"""
+```
