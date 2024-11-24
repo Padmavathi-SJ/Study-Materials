@@ -591,3 +591,59 @@ int main(){
 9
 """
 ```
+
+### 5. replace vowels with its next vowel and consonants with next consonant in a sentence
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+#include<stdbool.h>
+char nextVowel(char ch){
+    switch(tolower(ch)) {
+        case 'a':
+        return (ch == 'a') ? 'e' : 'E';
+        case 'e':
+        return (ch == 'e') ? 'i' : 'I';
+        case 'i':
+        return (ch == 'i') ? 'o' : 'O';
+        case 'o':
+        return (ch == 'o') ? 'u' : 'U';
+        case 'u':
+        return (ch == 'u') ? 'a' : 'A';
+        default:
+            return ch;
+    }
+}
+
+bool isAlpha(char ch){
+    return (ch >= 'a' && ch<='z') || (ch>='A' && ch<='Z');
+}
+
+void replaceChar(char word[]){
+    int len=strlen(word);
+    for(int i=0; i<len; i++){
+        char ch=word[i];
+        if(isAlpha(ch)){
+        if(ch == 'a' || ch=='e' || ch=='i' || ch=='o' || ch=='u'
+           || ch =='A' || ch=='E' || ch=='I' || ch=='O' || ch=='U'){
+            word[i]=nextVowel(ch);
+        }
+        else{
+            word[i]=ch+1;
+        }
+        }
+    }
+}
+int main() {
+    char word[256];
+    fgets(word, 256, stdin);
+    word[strcspn(word, "\n")] = '\0';
+    replaceChar(word);
+    printf("%s", word);
+    return 0;
+}
+"""
+Hello World
+Iimmu Xusme
+"""
+```
