@@ -12,6 +12,7 @@ class Solution {
 ```
 
 ### 02. Find the median
+* if odd, just return the mid, if even find the average of two elements ((mid-1)+mid)/2 
 ```
 ### 01. Sum of series: n*(n+1)/2
 ```
