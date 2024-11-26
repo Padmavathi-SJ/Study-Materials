@@ -169,3 +169,38 @@
 * 3xx --> redirecting codes
 * 4xx --> client request error
 * 5xx --> internel server error
+
+### Cookies:
+* cookie is an unique string
+* stored in our browser.
+* ex: when we are visiting a website for a 1st time, the cookie will be created, from the next time itself the cookie will serach in tha database, like who am I, like
+
+### SMTP --> Simple Mail Transfer Protocol:
+* how the email is working?
+* SMTP is in the application layer protocol.
+* when we are sending an email from **yahoo.com to gmail.com** sender --> sender's SMTP server --> reciever's SMTP server --> Reciever
+* internaly it uses TCP
+* if we are sending an email from **gmail.com to gmail.com**, the SMTP sever won't use
+
+### TCP Error Handling
+
+### POP - Post Office Protocol:
+* default port no --> 110
+
+### IMAP - Internet Message Access Protocol:
+* allows to view the emails in multiple devices
+
+
+## DNS - DOMAIN NAME SYSTEM
+* DNS will map two IP Addresses.
+* it will find the IP address in the server
+* it will find the IP address in the internet and serve that application
+* mail.google.com
+* main --> sub domain
+* google --> second level domain
+* .com --> to level domain --> Root DNS server
+* Root DNS servers    :
+    1. .io
+    2. .org
+    3. .com
+
