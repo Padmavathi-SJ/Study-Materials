@@ -83,4 +83,4 @@
 ### OSI model --> OPEN SYSTEM INTERCONNECTION MODEL
 * How two or more computer communicate with each other.
 * OSI has 7 layers
-   1. Application layer
+  1. Application layer
