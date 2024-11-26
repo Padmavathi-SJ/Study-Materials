@@ -130,3 +130,42 @@
 * hardware layer
 * works done by cables
 * it will convert the electrical signal to the corresponding receiver data type.
+
+### TCP/IP model:
+* The **internet protocol shoot**
+* it is similar to OSI model
+* it has 5 layers
+    1. Application layer --> users interacts with this ex: whatsapp, browser, etc .. where--> in our devices
+    2. Trasnport layer
+    3. network layer
+    4. data link layer
+    5. physical layer
+
+### Protocols:
+
+### 1. client - server Architecture:
+*
+
+### 2. P2P --?> PEER TO PEER:
+* every single computer can turn as client and server
+
+### HTTP Protocol:
+* HTTP protocol is application layer's protocol
+* it is a stateless protocol.
+* HTTP request
+
+### www:
+* www --> world wide web --> A collection of web pages
+
+### HTTP methods:
+* GET
+* POST
+* PUT
+* DELETE
+
+### Status codes:
+* 1xx --> Infromation status codes
+* 2xx --> success codes
+* 3xx --> redirecting codes
+* 4xx --> client request error
+* 5xx --> internel server error
