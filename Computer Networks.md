@@ -199,7 +199,7 @@
 * main --> sub domain
 * google --> second level domain
 * .com --> to level domain --> Root DNS server
-* Root DNS servers    :
+* Root DNS servers:
     1. .io
     2. .org
     3. .com
