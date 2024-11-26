@@ -64,7 +64,7 @@
 * Moderm will convert tha data to "electrical signal" to send to another moderm(reciever) or some device
 
 ### TOPOLOGIES:
-* **Bus Topology* --> if one area got damaged, the entire connection will be spoiled.
+* **Bus Topology** --> if one area got damaged, the entire connection will be spoiled.
   
 * Ring Topology --> computers connected in the ring (round) format, every one can communicate with one another as one by one, like msg from 1 to 5 , it should travel from 1->2->3->4->5 like this only will communicate.
 * Here also, if one cable breaks, the entire communication will be spoiled
