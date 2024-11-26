@@ -56,3 +56,6 @@
 * LAN -> MAN -> WAN
 * Optical Fiber Cables
 * Frame relay
+
+### Moderm
+* Moderm will convert tha data to "electrical signal" to send to another moderm(reciever) or some device
