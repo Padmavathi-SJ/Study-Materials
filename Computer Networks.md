@@ -84,3 +84,9 @@
 * How two or more computer communicate with each other.
 * OSI has 7 layers
   1. Application layer
+  2. Presentation Layer
+  3. session layer
+  4. transport layer
+  5. network layer
+  6. data link layer
+  7. physical layer
