@@ -77,3 +77,10 @@
 * **Mesh topology** --> every single computer is connected with every single computer.
 * limitations --> expensive, because more cables needed to connect every one with every one.
 * scalability issues also.
+
+## Structure of Network:
+
+### OSI model --> OPEN SYSTEM INTERCONNECTION MODEL
+* How two or more computer communicate with each other.
+* OSI has 7 layers
+   1. Application layer
