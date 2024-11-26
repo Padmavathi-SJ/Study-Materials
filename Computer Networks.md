@@ -204,3 +204,7 @@
     2. .org
     3. .com
 
+
+* Transport layer protocol --> TCP & UDP
+* Application layer protocol --> HTTP
+* Network layer protocol --> IP
