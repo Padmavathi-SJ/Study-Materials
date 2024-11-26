@@ -15,6 +15,7 @@
 
 ### UDP - User Datagram protocol:
 * If we do not want to send a complete msg , but just wants to send, at the time we can use UDP protocols
+* so some data can be lost when via UDP
 * example: Video conference
 
 ### HTTP -Hyper Text Transfer Protocol:
@@ -90,3 +91,42 @@
   5. network layer
   6. data link layer
   7. physical layer
+
+### 1. Application Layer
+* It is implemented in software
+* like, to manage the application users, contains applications
+* it will send to presentation layer(down one)
+
+### 2. Presentation Layer
+* it will convert tha data(chars, numbers, words) to binary machine language( os and 1s)
+* it will send the comverted data to session layer(down one)
+
+### 3. Session layer:
+* setting up and managing the connections
+* authentication perfomed.
+* it will send the established session with next layer -> transport layer (down one)
+  
+### Transport Layer:
+* ensure the data to send to the nest layer --> network layer
+* here, TCP and UDP performs
+* it will send to network layer (down one)
+
+### Network Layer:
+* will communicate from one computer to another computer in different network locations.
+* logical addressing --> IP Address.
+* network layer will asign the IP Address to the sender and reciever
+* It will generate the IP Packets
+* also it performs routing
+* moving the data packets from source to destination
+* all routing protocols, the transportation of packets are all done by network layer.
+* it will the data packets to data link layer.
+
+### Data Link Layer
+* it will recieve the data packets from network layer
+* the data packets contains the source and destination IP address.
+* Media access control
+
+### Physical Layer:
+* hardware layer
+* works done by cables
+* it will convert the electrical signal to the corresponding receiver data type.
