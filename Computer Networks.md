@@ -57,5 +57,23 @@
 * Optical Fiber Cables
 * Frame relay
 
+### ISP - Internet Service Provider:
+* In india -> TATA (a large cable from chennai to singapore)
+
 ### Moderm
 * Moderm will convert tha data to "electrical signal" to send to another moderm(reciever) or some device
+
+### TOPOLOGIES:
+* **Bus Topology* --> if one area got damaged, the entire connection will be spoiled.
+  
+* Ring Topology --> computers connected in the ring (round) format, every one can communicate with one another as one by one, like msg from 1 to 5 , it should travel from 1->2->3->4->5 like this only will communicate.
+* Here also, if one cable breaks, the entire communication will be spoiled
+  
+* Star Topoogy --> one central device with several devices, all devices can communicate via that central device only.
+* if central device breaks, the entire communication will go down
+
+* Tree Topology --> combination of bus topology and star topology
+
+* Mesh topology --> every single computer is connected with every single computer.
+* limitations --> expensive, because more cables needed to connect every one with every one.
+* scalability issues also.
