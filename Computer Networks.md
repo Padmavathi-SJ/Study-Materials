@@ -208,3 +208,75 @@
 * Transport layer protocol --> TCP & UDP
 * Application layer protocol --> HTTP
 * Network layer protocol --> IP
+
+### Data Packet:
+* every __data packet__ will have the **source port no** and also the **destination port no**, length of data gram, checksum, and also our data.
+* total size of data packet = 2^16 - 8 (~65000)
+
+
+### UDP - User Datagram Protocol
+* here, our data may or may not be delivered
+* data may change or lost on the way
+* data may not be in order , how sender sends
+* it is a connectionless protocol
+* without making a connection between two computers, it will still transfers the data
+* UDP uses checksums(the data is in the order how the sender sends the data).
+* UDP is always faster , because it on't ensure like the comfirmation of data sends or not like.
+* Use Cases: 1. Video conferencing apps
+             2. Gaming
+
+
+### TCP - Transmission Control Protocol
+* It is a transport layer protocol
+* Application layer sends lots of raw data, and TCP segments this data, and divide into chunks, checksums.
+* It may also collect the data from network layer and divide into chunks
+* It takes care of **when data does not arrive**, **maintains the order of data using __sequence number__(seq nums are generated random nums, so hackers cannot take advantage) & __acknowledgement number__.
+* __Features__:
+   1. TCP is onnection oriented
+   2. 1st the connection have to established, then we can transfer the data
+   3. Error control
+   4. conjestion control
+   5. it is bidirectional (full duplex --> can communicate each other simultaneously)
+
+ 
+* in Transport layer, the data is in the form of  __segments__
+* in network layer, the data is in the form of __packets__
+* in data link layer , the data is in the form of __frames__
+
+
+### Router:
+* router hepls to direct the network traffics
+* every single router connected between several computers, is having its own __network address__
+* network address:
+* __Routing Table__: it will dircte the data packest to reach the destination from the source.
+* __Forwading Table__: it is a part of routing table, this also tells like instruction step by step to the data packets to reach the destination
+* routing table and forwading table are living inside ROUTER.
+* every router is a __node__
+* the link between router and devices are __edges__
+* Static Routing --> manually
+* Dynamic Routing --> automatically it will evolve
+
+### IP - Intenet Protocol
+* it is a network layer's protocol
+
+### IPV4 - IP Address Version 4
+* it will define uniqly a device/server/client or etc...
+* 32 -bit with 4 words
+* ex: 192.168.2.30: each has 8 bits(octet),8*4=32 bits
+    1. 192.168.2 --> subnet id provided by ISP
+    2. 30 --> host Id (our device Id)
+   
+
+### IPV6 - IP Address Version 6
+* 128-bits
+* 
+
+### Class of IP Addresses:
+* Class A --> 0.0.0.0 --> 127.255.255.251
+* Class B --> 128.0.0.0 --> 191.255.255.255
+* Class C --> 192.0.0.0 --> 223.255.255.251
+* Class D --> 224.0.0.0 --> 239.255.255.255
+* Class E --> 240.0.0.0 --> 255.255.255.255
+
+### Subnet mask:
+* 
