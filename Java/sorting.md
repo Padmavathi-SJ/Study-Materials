@@ -212,3 +212,39 @@ Output: 2
 Explanation: The pairs are: (5, 5) and (7, 3).
 """
 ```
+
+### 10. Alternative Sorting
+
+* Given an array arr of distinct integers. Rearrange the array in such a way that the first element is the largest and the second element is the smallest, the third element is the second largest and the fourth element is the second smallest, and so on.
+
+```
+import java.util.Arrays;
+
+public class Main{
+    public static void main(String[] args){
+        int[] arr={7,1,2,3,4,5,6};
+        Arrays.sort(arr);
+        int n=arr.length;
+        int l=n-1, s=0;
+        int[] res=new int[n];
+        int index=0;
+        while(s<=l){
+            if(index<n){
+            res[index++]=arr[l];
+            }
+            if(index<n){
+            res[index++]=arr[s];
+            }
+            s++;
+            l--;
+        }
+        for(int i=0; i<n; i++){
+            System.out.printf("%d ", res[i]);
+        }
+    }
+}
+"""
+Input: arr[] = [7, 1, 2, 3, 4, 5, 6]
+Output: [7, 1, 6, 2, 5, 3, 4]
+"""
+```
