@@ -145,4 +145,47 @@ Input: nums = [2, 4, 5, 9, 7]
 Output: 1
 Explanation: Difference between 5 and 4 is 1.
 """
+```
+
+### 7. Sort a String
+* Given a string consisting of lowercase letters, arrange all its letters in ascending order.
+```
+class Solution 
+{ 
+    String sort(String s) 
+    {
+        char[] arr=s.toCharArray();
+        Arrays.sort(arr);
+        String res=new String(arr);
+        return res;
+    }
+}
+"""
+Input:
+S = "edcab"
+Output: "abcde"
+Explanation: characters are in ascending
+order in "abcde".
+"""
+```
+
+### 8. Minimum Product of k Integers
+```
+class Solution {
+    int minProduct(int arr[], int k) {
+        Arrays.sort(arr);
+        int n=arr.length;
+        long product=1;
+        for(int i=0; i<k && i<n; i++){
+            product=(product*arr[i]) % 1000000007;
+        }
+        return (int)product;
+    }
+}
+"""
+Input: arr[] = [1, 2, 3, 4, 5] and k = 2
+Output: 2
+Explanation: We will get the minimum product after multiplying 1 and 2 that is 2. So, the answer is 2.
+"""
+```
 
