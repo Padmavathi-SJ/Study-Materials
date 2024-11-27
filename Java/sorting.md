@@ -41,3 +41,16 @@ Input: arr1[] = [1, 2, 5, 4, 0], arr2[] = [2, 4, 5, 0, 1]
 Output: true
 """
 ```
+
+### 3. Given a random array arr of numbers, please return them in ascending sorted order.
+```
+class Solution {
+    void sortArr(int[] arr) {
+        Arrays.sort(arr);
+    }
+}
+"""
+Input: arr[] = [1, 5, 3, 2]
+Output: [1, 2, 3, 5]
+"""
+```
