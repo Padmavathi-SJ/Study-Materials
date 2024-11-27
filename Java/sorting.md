@@ -102,3 +102,23 @@ Output: [7, 5, 3, 1, 2, 4, 10]
 """
 ```
 
+### 5. Maximum product of two numbers
+* Given an array arr of non-negative integers, return the maximum product of two numbers possible.
+  
+```
+class Solution {
+    public static int maxProduct(int[] arr) {
+        Arrays.sort(arr);
+        int n=arr.length;
+        int max1=arr[n-1];
+        int max2=arr[n-2];
+        return max1*max2;
+    }
+}
+"""
+Input: arr[] = [1, 4, 3, 6, 7, 0] 
+Output: 42
+Explanation: 6 and 7 have the maximum product
+"""
+```
+
