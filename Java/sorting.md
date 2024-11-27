@@ -54,3 +54,51 @@ Input: arr[] = [1, 5, 3, 2]
 Output: [1, 2, 3, 5]
 """
 ```
+
+### 4. Sort in specific order
+* Given an array arr[] of positive integers. Your task is to sort them so that the first part of the array contains odd numbers sorted in descending order, and the rest of the portion contains even numbers sorted in ascending order.
+  
+```
+class Solution {
+
+    public void sortIt(Long arr[]) {
+        int n=arr.length;
+        long[] odd=new long[n];
+        long[] even=new long[n];
+        int oddIndex=0;
+        int evenIndex=0;
+        for(int i=0; i<n; i++){
+            if(arr[i]%2!=0){
+                odd[oddIndex++]=arr[i];
+            }
+            else{
+                even[evenIndex++]=arr[i];
+            }
+        }
+        Arrays.sort(odd, 0, oddIndex);
+        Arrays.sort(even, 0, evenIndex);
+        for(int i=0; i<oddIndex/2; i++){
+            long temp=odd[i];
+            odd[i]=odd[oddIndex-1-i];
+            odd[oddIndex-1-i]=temp;
+        }
+        
+        long[] res=new long[n];
+        int index=0;
+        for(int i=0; i<oddIndex; i++){
+            res[index++]=odd[i];
+        }
+        for(int i=0; i<evenIndex; i++){
+            res[index++]=even[i];
+        }
+        for(int i=0; i<n; i++){
+            arr[i]=res[i];
+        }
+    }
+}
+"""
+Input: arr[] = [1, 2, 3, 5, 4, 7, 10]
+Output: [7, 5, 3, 1, 2, 4, 10]
+"""
+```
+
