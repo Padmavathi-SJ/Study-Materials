@@ -189,3 +189,26 @@ Explanation: We will get the minimum product after multiplying 1 and 2 that is 2
 """
 ```
 
+### 9. Count pair sum
+* Given two sorted arrays arr1 and arr2 of distinct elements. Given a value x. The problem is to count all pairs from both arrays whose sum equals x.
+```
+class Solution {
+    static int countPairs(int arr1[], int arr2[], int x) {
+        int count=0;
+        for(int i=0; i<arr1.length; i++){
+            for(int j=0; j<arr2.length; j++){
+                int sum=arr1[i]+arr2[j];
+                if(sum == x){
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+}
+"""
+Input: x = 10, arr1[] = [1, 3, 5, 7], arr2[] = [2, 3, 5, 8] 
+Output: 2
+Explanation: The pairs are: (5, 5) and (7, 3).
+"""
+```
