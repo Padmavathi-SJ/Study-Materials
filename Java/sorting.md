@@ -122,3 +122,27 @@ Explanation: 6 and 7 have the maximum product
 """
 ```
 
+### 6. Minimum difference pair
+* Given an unsorted array, find the minimum difference between any pair in given array.
+```
+class Solution
+{
+    public int minimum_difference(int[] nums)
+    {
+        int n=nums.length;
+        Arrays.sort(nums);
+        int minDiff=Integer.MAX_VALUE;
+        for(int i=1; i<n; i++){
+            int currDiff = nums[i]-nums[i-1];
+            minDiff=Math.min(minDiff, currDiff);
+        }
+        return minDiff;
+    }
+    
+}
+"""
+Input: nums = [2, 4, 5, 9, 7]
+Output: 1
+Explanation: Difference between 5 and 4 is 1.
+"""
+
