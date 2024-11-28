@@ -3,6 +3,7 @@
 * __Arrays.stream(arr).filter(i -> i<0).toArray()__; --> to filter negative elements from an array and put into our newly created array(toArray());
 * In collections to sort an array --> __Collections.sort(arr)__
 * In collections to find array length --> __arr.size()__
+* In collections convert from Ingeter type to int type --> __Arrays.stream(arr).mapToInt(Integer::intValue).toArray();__
 
 ### 1. Given an array arr of distinct elements, the task is to return an array of all elements except the two greatest elements in sorted order.
 ```
@@ -341,3 +342,67 @@ Input: arr[] = [1, 2, 3, 4, 5]
 Output: true
 """
 ```
+
+### 14. Sorting Employees based on their salaries, if same salary, sort their names by alphabetical order
+```
+class Solution {
+    public List<String> sortRecords(List<String> employee, List<Integer> salary) {
+        List<Pair> records=new ArrayList<>();
+        for(int i=0; i<employee.size(); i++){
+            records.add(new Pair(salary.get(i), employee.get(i)));
+        }
+        Collections.sort(records, (a, b) -> {
+            if(a.salary == b.salary){
+                return a.name.compareTo(b.name);
+            }
+            return Integer.compare(a.salary, b.salary);
+        });
+        
+        List<String> sortedEmployees = new ArrayList<>();
+        for(Pair record: records){
+            sortedEmployees.add(record.name);
+        }
+        return sortedEmployees;
+    }
+    static class Pair{
+        int salary;
+        String name;
+        Pair(int salary, String name){
+            this.salary = salary;
+            this.name = name;
+        }
+    }
+}
+"""
+Input: employee = ["chef", "geek"], salary = [100, 50]
+Output: ["geek", "chef"]
+Explanation: "geek" has a lower salary (50) than "chef" (100), so "geek" comes first.
+"""
+```
+
+### 15. Merge and sort
+* Given two arrays arr1 and arr2, return the merged array in ascending order containing unique elements.
+  
+```
+class Solution {
+    public int[] mergeNsort(int[] arr, int[] brr) {
+        Set<Integer> set=new HashSet<>();
+        for(int num : arr){
+            set.add(num);
+        }
+        for(int num : brr){
+            set.add(num);
+        }
+        Integer[] temp=set.toArray(new Integer[0]);
+        int[] res=Arrays.stream(temp).mapToInt(Integer::intValue).toArray();
+        Arrays.sort(res);
+        return res;
+    }
+}
+"""
+Input: arr1[] = [11, 1, 8], arr2[] = [10, 11]
+Output: [1, 8, 10, 11]
+Explanation: The ouput array after merging both the arrays and removing duplicates is [1 8, 10, 11]
+"""
+```
+
