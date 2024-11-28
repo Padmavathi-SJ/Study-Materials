@@ -406,3 +406,24 @@ Explanation: The ouput array after merging both the arrays and removing duplicat
 """
 ```
 
+### 16. Sum of alternate product
+* Given an array arr of even size consisting of positive integers. After sorting the array, find the sum of the product of i-th element from starting and i-th element from last.
+```
+class Solution {
+    public int altProduct(int[] arr) {
+        Arrays.sort(arr);
+        int sum=0;
+        int n=arr.length;
+        for(int i=0; i<n/2; i++){
+            sum += arr[i] * arr[n-1-i];
+        }
+        return sum;
+    }
+}
+"""
+Input: arr[] = [9, 2, 8, 4, 5, 7, 6, 0]
+Output: 74
+Explanation: Required sum can be obtained as 9*0 + 8*2 + 7*4 + 6*5 which is equal to 74
+"""
+```
+
