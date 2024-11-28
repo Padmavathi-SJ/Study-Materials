@@ -1,3 +1,9 @@
+### Methods:
+*  __Arrays.stream(arr)__ --> to convert the array to __stream of integers__ to allow perform operations like filter.
+* __Arrays.stream(arr).filter(i -> i<0).toArray()__; --> to filter negative elements from an array and put into our newly created array(toArray());
+* In collections to sort an array --> __Collections.sort(arr)__
+* In collections to find array length --> __arr.size()__
+
 ### 1. Given an array arr of distinct elements, the task is to return an array of all elements except the two greatest elements in sorted order.
 ```
 class Solution {
@@ -271,3 +277,28 @@ Input: arr1[] = [1, 2, 3, 4, 5], arr2[] = [3, 4, 1, 2, 5]
 Output: true
 """
 ```
+
+### 12. Mega Sale
+
+* Mr. Geek is a greedy seller. He has a stock of some laptops comprising both useful and useless laptops. Now, he wants to organize a sale to clear his stock of useless laptops. The prices of laptops are arri each consisting of positive and negative integers (-ve denoting useless laptops). In a day, he can sell almost m laptops. Mr. Geek, a greedy seller, wants to earn maximum profit from this sale and sell useless laptops. So, help him maximize his profit by selling useless laptops.
+* 
+```
+class Solution {
+    public int maxProfit(int m, int[] arr) {
+        int[] ul=Arrays.stream(arr).filter(i -> i < 0).toArray();
+        Arrays.sort(ul);
+        int profit=0;
+        for(int i=0; i<Math.min(m, ul.length); i++){
+            profit+=-ul[i];
+        }
+        return profit;
+    }
+}
+"""
+Input: m=3, arr[] = [-6, 0, 35, 4]
+Output: 6
+Explanation: Geek sells the laptops with price -6 and earns Rs. 6 as profit.
+"""
+```
+* here, Arrays.stream(arr) --> to convert the array to __stream of integers__ to allow perform operations like filter.
+* Arrays.stream(arr).filter(i -> i<0).toArray(); --> to filter negative elements from an array and put into our newly created array(toArray());
