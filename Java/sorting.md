@@ -302,3 +302,42 @@ Explanation: Geek sells the laptops with price -6 and earns Rs. 6 as profit.
 ```
 * here, Arrays.stream(arr) --> to convert the array to __stream of integers__ to allow perform operations like filter.
 * Arrays.stream(arr).filter(i -> i<0).toArray(); --> to filter negative elements from an array and put into our newly created array(toArray());
+
+### 13. Triplet Family
+* Given an array arr of integers. First sort the array then find whether three numbers are such that the sum of two elements equals the third element.
+  
+```
+class Solution {
+    public boolean findTriplet(int[] arr) {
+        Arrays.sort(arr);
+        for(int i=arr.length-1; i>=0; i--){
+            if(hasPairWithSum(arr, i)){
+                return true;
+            }
+        }
+        return false;
+    }
+    private boolean hasPairWithSum(int[] arr, int index){
+        int target=arr[index];
+        int left=0;
+        int right=index-1;
+        while(left < right){
+            int sum=arr[left]+arr[right];
+            if(sum == target){
+                return true;
+            }
+            else if(sum < target){
+                left++;
+            }
+            else{
+                right--;
+            }
+        }
+        return false;
+    }
+}
+"""
+Input: arr[] = [1, 2, 3, 4, 5]
+Output: true
+"""
+```
