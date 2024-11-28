@@ -248,3 +248,26 @@ Input: arr[] = [7, 1, 2, 3, 4, 5, 6]
 Output: [7, 1, 6, 2, 5, 3, 4]
 """
 ```
+
+### 11.The problem of identical arrays
+
+* Check whether given two arrays arr1[], arr2[] are identical or not. Two arrays are called identical arrays if they contain the same element with the same count, regardless of the order of elements.
+```
+class Solution {
+    public boolean isIdentical(List<Integer> arr1, List<Integer> arr2) {
+        if(arr1.size() != arr2.size()){
+            return false;
+        }
+        List<Integer> newArr1=new ArrayList<>(arr1);
+        List<Integer> newArr2=new ArrayList<>(arr2);
+        Collections.sort(newArr1);
+        Collections.sort(newArr2);
+        boolean res=newArr1.equals(newArr2);
+        return res;
+    }
+}
+"""
+Input: arr1[] = [1, 2, 3, 4, 5], arr2[] = [3, 4, 1, 2, 5]
+Output: true
+"""
+```
