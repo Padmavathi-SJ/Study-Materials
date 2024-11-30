@@ -489,3 +489,54 @@ Explanation: By training 1 additional soldier for the troop with 1 soldier, we g
 """
 ```
 
+### 19. Ishwar and his proposals
+* Ishwar has got proposals from N girls. Each girl gives him a rose with a number written on it where the number represents the popularity of that girl. Ishwar decides that he'll accept the proposal of the second most popular and the second least popular girl only. Can you help him finding the popularity of those girls?
+Note: The popularity of all the girls are unique.
+
+```
+class Solution
+{
+    ArrayList <Integer> acceptedProposals (int arr[], int n)
+    {
+        Arrays.sort(arr);
+        ArrayList<Integer> res=new ArrayList<>();
+        res.add(arr[n-2]); //second most
+        res.add(arr[1]); //second least
+        return res;
+    }
+}
+"""
+Input:
+N = 4
+arr[] = {1 2 3 4}
+Output: 3 2
+Explanation: 3 represents the popularity of the second most popular girl and 2 represents the popularity of second least popular girl.
+"""
+```
+
+### 20. Stable Sort and Position
+
+* Given an array arr integers that may contain duplicate elements, the index of an element of this array is given to us k (0-based indexing), the task is to find the final position of this element in the array after the stable sort is applied to the array. 
+```
+class Solution {
+    // Function to get the index of an element in a sorted array
+    public int getIndexInSortedArray(int[] arr, int k) {
+        int n=arr.length;
+        int result=0;
+        for(int i=0; i<n; i++){
+            if(arr[i] < arr[k]){
+                result++;
+            }
+            if(arr[i] == arr[k] && i<k){
+                result++;
+            }
+        }
+        return result;
+    }
+}
+"""
+Input: arr[]= [3, 4, 3, 5, 2, 3, 4, 3, 1, 5], k = 5
+Output: 4
+Explanation: Element initial index – 5 (3) After sorting array by stable sorting algorithm, we get array as shown [1(8), 2(4), 3(0), 3(2), 3(5), 3(7), 4(1), 4(6), 5(3), 5(9)] with their initial indices shown in parentheses next to them.
+"""
+```
