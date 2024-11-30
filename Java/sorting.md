@@ -450,5 +450,42 @@ Input: arr[] = [3, 12, 30, 79, 2] , k=2
 Output: [2, 12, 3, 30, 79]
 Explanation: The element at the 2nd position (12) remains at its own place while others are sorted.
 """
+```
 
+### 18. Tywin's War Strategy
+* You are given an array arr where arr[i] represents the number of soldiers in the i-th troop. You are also given an integer k. A troop is considered "lucky" if its number of soldiers is a multiple of k. To win, at least half of the troops must be lucky. Your task is to calculate the minimum number of additional soldiers that need to be trained to achieve victory.
+
+```
+class Solution {
+    public int minSoldiers(int[] arr, int k) {
+        int n=arr.length;
+        List<Integer> l=new ArrayList<>();
+        int luckyTrp=0;
+        for(int i=0; i<n; i++){
+            if(arr[i]%k==0){
+                luckyTrp++;
+            }
+            else{
+                int add1=k-(arr[i]%k);
+                l.add(add1);
+            }
+        }
+        Collections.sort(l);
+        int remainLuckyTrp = (n+1)/2;
+        if(luckyTrp >= remainLuckyTrp){
+            return 0;
+        }
+        int res=0;
+        for(int i=0; i<(remainLuckyTrp - luckyTrp); i++){
+            res += l.get(i);
+        }
+        return res;
+    }
+}
+"""
+Input: arr = [5, 6, 3, 2, 1], k = 2
+Output: 1
+Explanation: By training 1 additional soldier for the troop with 1 soldier, we get [5, 6, 3, 2, 2]. Now 3 out of 5 troops (6, 2, and 2) are multiples of 2, which is more than half.
+"""
+```
 
