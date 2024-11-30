@@ -427,3 +427,28 @@ Explanation: Required sum can be obtained as 9*0 + 8*2 + 7*4 + 6*5 which is equa
 """
 ```
 
+### 17. Strange Sort
+* Given an array arr[] of non-negative integers. Sort the array in ascending order such that the element at the Kth position in the unsorted array stays unmoved and all other elements are sorted.
+
+```
+class Solution {
+    void strangeSort(int[] arr, int k) {
+        int n=arr.length;
+        int ele=arr[k-1];
+        arr[k-1]=Integer.MAX_VALUE;
+        Arrays.sort(arr);
+        int i=n-1;
+        while(i >= k){
+            arr[i]=arr[i-1];
+            i--;
+        }
+        arr[i]=ele;
+    }
+}
+"""
+Input: arr[] = [3, 12, 30, 79, 2] , k=2
+Output: [2, 12, 3, 30, 79]
+Explanation: The element at the 2nd position (12) remains at its own place while others are sorted.
+"""
+
+
