@@ -24,4 +24,4 @@ Input: arr1[] = [11, 1, 8], arr2[] = [10, 11]
 Output: [1, 8, 10, 11]
 Explanation: The ouput array after merging both the arrays and removing duplicates is [1 8, 10, 11]
 """
-```
+``` 
