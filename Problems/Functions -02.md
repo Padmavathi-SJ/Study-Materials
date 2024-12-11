@@ -403,3 +403,35 @@ qefnewevjo
 """
 ```
 
+### 13. change frst consonant in the string to the frst vowel int the string ,scnd consonant to scnd  vowel
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+void main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    char vowels[5]={'a', 'e', 'i', 'o', 'u'};
+
+    char consonants[21] = {
+    'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 
+    'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'};
+    int index=0;
+    for(int i=0; i<strlen(str); i++){
+        str[i]=tolower(str[i]);
+        for(int j=0; j<21; j++){
+            if(str[i] == consonants[j]){
+                str[i]=vowels[index%5];
+                index++;
+                break;
+            }
+        }
+    }
+printf("%s", str);
+}
+"""
+padmavathi
+aaeiaoauai
+"""
+```
