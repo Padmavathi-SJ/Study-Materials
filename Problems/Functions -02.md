@@ -299,3 +299,69 @@ int main() {
 yes Anagrams
 """
 ```
+
+### 11. In a 2D array find, non zero sum, sum_max_row, sum_max_col, totalSum
+```
+#include<stdio.h>
+int main(){
+    int rows=3;
+    int cols=3;
+    int matrix[rows][cols];
+    for(int i=0; i<rows; i++){
+        for(int j=0; j<cols; j++){
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    int sum_max_row=0;
+    int sum_max_cols=0;
+    int sum_non_zero=0;
+    int totalSum=0;
+    
+    for(int i=0; i<rows; i++){
+        for(int j=0; j<cols; j++){
+            if(matrix[i][j] != 0){
+                sum_non_zero += matrix[i][j];
+            }
+        }
+    }
+    
+    for(int i=0; i<rows; i++){
+        int max_in_row=matrix[i][0];
+        for(int j=1; j<cols; j++){
+            if(matrix[i][j] > max_in_row){
+                max_in_row=matrix[i][j];
+            }
+        }
+        sum_max_row += max_in_row;
+    }
+    
+    for(int j=0; j<cols; j++){
+        int max_in_col=matrix[0][j];
+        for(int i=1; i<rows; i++){
+            if(matrix[i][j] > max_in_col){
+                max_in_col=matrix[i][j];
+            }
+        }
+        sum_max_cols += max_in_col;
+    }
+    
+    totalSum += sum_non_zero + sum_max_row + sum_max_cols;
+    
+    printf("Sum of non_zero: %d\n", sum_non_zero);
+    printf("Sum of sum_max_row: %d\n", sum_max_row);
+    printf("Sum of sum_max_cols: %d\n", sum_max_cols);
+    printf("Sum of totalSum: %d\n", totalSum);
+    return 0;
+    }
+"""
+1 2 34
+4 5 6
+7 8 9
+Sum of non_zero: 45
+Sum of sum_max_row: 18
+Sum of sum_max_cols: 24
+Sum of totalSum: 87
+"""
+```
+
+
