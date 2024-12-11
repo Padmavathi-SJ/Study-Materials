@@ -435,3 +435,41 @@ padmavathi
 aaeiaoauai
 """
 ```
+
+###
+```
+#include<stdio.h>
+#include<stdbool.h>
+bool isPeak(int matrix[100][100], int i, int j, int rows, int cols){
+    int left= j>0 ? matrix[i][j-1] : -1; //left
+    int right= j<cols-1 ? matrix[i][j+1]: -1; //right
+    int up= i>0 ? matrix[i-1][j] : -1; //up
+    int down= i<rows-1 ? matrix[i+1][j] : -1; //down
+    
+    return matrix[i][j] > left && matrix[i][j] > right &&
+           matrix[i][j] > up && matrix[i][j] > down;
+}
+void main(){
+    int rows=3;
+    int cols=3;
+    int matrix[rows][cols];
+    for(int i=0; i<rows; i++){
+        for(int j=0; j<cols; j++){
+            scanf("%d", &matrix[i][j]);
+        }
+    }
+    int peakElement=matrix[0][0];
+    int found=0;
+    for(int i=0; i<rows; i++){
+        for(int j=0; j<cols; j++){
+            if(isPeak(matrix, i, j, rows, cols)){
+               if(matrix[i][j] > peakElement){
+                   peakElement=matrix[i][j];
+               }
+            }
+        }
+    }
+    printf("peak element is: %d", peakElement);
+    
+}
+
