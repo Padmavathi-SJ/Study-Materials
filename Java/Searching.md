@@ -4,8 +4,9 @@
 * arr.indexOf(k) --> return index of k
 * solution.isSubset(a, b) --> 1st create an object **Solution solution = new Solution();**
 * set.contains(value) --> return index of that value
-* str.lastIndexOf('1') --> returns the index of that character from the given string
+* str.lastIndexOf('1') --> returns the last occurence of that character from the given string
 * lastIndexOf method is available for only **string** and **arrayList**
+* indexOf(value) --> returns first occurence of that value , and also available for only **strings** and **arrayList**
 
    
 ### 1. Value equal to index value 
@@ -255,5 +256,45 @@ Explanation: It has all elements between range 2-5 i.e 2,3,4,5.
 Input: n = 7, A = 2, B = 6, arr[] = {1, 4, 5, 2, 7, 8, 3}
 Output: False
 Explanation: The array does not contain 6 hence it do not contains all elements in the range 2-6, the output is No.
+"""
+```
+
+### 9. First and last occurrences of x
+
+* Given an element x and a sorted array, arr[], find the indices of first and last occurrences of the x's in the array.
+
+* Note: If the number x is not found in the array, return an array containing -1 only.
+```
+class Solution {
+    public ArrayList<Integer> firstAndLast(int x, int arr[]) {
+        // Code here
+        ArrayList<Integer> l=new ArrayList<>();
+        int first=-1;
+        int last=-1;
+        for(int i=0; i<arr.length; i++){
+            if(arr[i] == x){
+                if(first==-1){
+                    first=i;
+                }
+                last=i;
+            }
+        }
+        if(first!=-1) {
+            l.add(first);
+            l.add(last);
+        }
+        else{
+            l.add(-1);
+        }
+        return l;
+    }
+}
+"""
+Input: x = 3, arr[] = [1, 3, 3, 4]
+Output: [1, 2]
+Explanation: The first occurrence of X = 3 is at index = 1 and the last at index = 2.
+Input: x = 5, arr[] = [1, 2, 3, 4]
+Output: [-1]
+Explanation: 5 is not present, so the answer is -1.
 """
 ```
