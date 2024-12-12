@@ -4,6 +4,8 @@
 * arr.indexOf(k) --> return index of k
 * solution.isSubset(a, b) --> 1st create an object **Solution solution = new Solution();**
 * set.contains(value) --> return index of that value
+* str.lastIndexOf('1') --> returns the index of that character from the given string
+* lastIndexOf method is available for only **string** and **arrayList**
 
    
 ### 1. Value equal to index value 
@@ -203,5 +205,26 @@ Explanation: The value 16 is found in the given array at positions 3 and 4, with
 Input: k=98 , arr = [1, 22, 57, 47, 34, 18, 66]
 Output: -1
 Explanation: k = 98 isn't found in the given array.
+"""
+```
+
+### 7. Last index of One
+* Given a string s consisting of only '0's and '1's,  find the last index of the '1' present.
+
+ * Note: If '1' is not present, return "-1"
+```
+class Solution {
+    public int lastIndex(String s) {
+        int index=s.lastIndexOf('1');
+        return index!=-1 ? index : -1;
+    }
+}
+"""
+Input: s = 00001
+Output: 4
+Explanation: Last index of  1 in given string is 4.
+Input: s = 0
+Output: -1
+Explanation: Since, 1 is not present, so output is -1.
 """
 ```
