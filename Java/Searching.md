@@ -1,5 +1,11 @@
 ### Searching problems list solved from geeksforgeeks
 
+### Methods used:
+* arr.indexOf(k) --> return index of k
+* solution.isSubset(a, b) --> 1st create an object **Solution solution = new Solution();**
+* set.contains(value) --> return index of that value
+
+   
 ### 1. Value equal to index value 
 
 * Given an array arr. Your task is to find the elements whose value is equal to that of its index value ( Consider 1-based indexing ).
