@@ -95,3 +95,60 @@ Output: -1
 Explanation: The element to be searched is 6 and its not present, so we return -1.
 """
 ```
+
+### 4. Array Subset
+
+* Given two arrays: a[] and b[], where both arrays may contain duplicate elements. The task is to determine whether array b is a subset of array a. It's important to note that both arrays can be unsorted. Additionally, each occurrence of a duplicate element within an array is considered as a separate element of the set.
+```
+class Solution {
+    public boolean isSubset(int a[], int b[]) {
+        // Your code here
+        int n1=a.length;
+        int n2=b.length;
+        if(n2>n1) return false;
+        for(int i=0; i<n2; i++){
+            boolean found=false;
+            for(int j=0; j<n1; j++){
+                if(b[i] == a[j]){
+                    found=true;
+                    break;
+                }
+            }
+            if(!found){
+                return false;
+            }
+        }
+    return true;
+}
+}
+```
+```
+class Solution {
+    public boolean isSubset(int a[], int b[]) {
+Solution solution=new Solution();
+return soultion(isSubset(s, b));
+}
+}
+```
+* optimized one
+```
+class Solution {
+    public boolean isSubset(int a[], int b[]) {
+        // Your code here
+       boolean result=solution.isSubset(a, b);
+        return result;
+}
+}
+"""
+Input: a[] = [11, 7, 1, 13, 21, 3, 7, 3], b[] = [11, 3, 7, 1, 7]
+Output: Yes
+Explanation: b[] is a subset of a[]
+Input: a[] = [1, 2, 3, 4, 4, 5, 6], b[] = [1, 2, 4]
+Output: Yes
+Explanation: b[] is a subset of a[]
+Input: a[] = [10, 5, 2, 23, 19], b[] = [19, 5, 3]
+Output: No
+Explanation: b[] is not a subset of a[]
+"""
+```
+
