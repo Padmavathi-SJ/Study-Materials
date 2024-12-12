@@ -335,3 +335,83 @@ Explanation: B is initially 3. We get 3 at
 the 2nd index, hence B becomes 6.
 """
 ```
+
+### 11. Count zeros in a sorted matrix
+
+*Given a N X N binary Square Matrix where each row and column of the matrix is sorted in ascending order. Find the total number of zeros present in the matrix.
+```
+class GfG
+{
+    /*you are required to complete this method*/
+    int countZeros(int A[][], int N)
+    {
+        int zeros_count=0;
+        for(int i=0; i<N; i++){
+            for(int j=0; j<N; j++){
+                if(A[i][j] == 0){
+                    zeros_count++;
+                }
+            }
+        }
+        return zeros_count;
+    }
+}
+"""
+Input:
+N = 3
+A = {{0, 0, 0},
+     {0, 0, 1},
+     {0, 1, 1}}
+Output: 6
+Explanation: 
+The first, second and third row contains 3, 2 and 1
+zeroes respectively.
+Example 2:
+
+Input:
+N = 2
+A = {{1, 1},
+     {1, 1}}
+Output: 0
+Explanation:
+There are no zeroes in any of the rows.
+"""
+```
+
+### 12. Remove consonants from a string
+
+* Given a string S, remove all consonants and print the modified string that contains vowels only.
+```
+class Solution
+{
+    public String removeConsonants(String s)
+    {
+        StringBuilder sb=new StringBuilder();
+        for(int i=0; i<s.length(); i++){
+            if(s.charAt(i) == 'a' || s.charAt(i) == 'e' || s.charAt(i) == 'i'
+               || s.charAt(i) == 'o' || s.charAt(i) == 'u' ||
+               s.charAt(i) == 'A' || s.charAt(i) == 'E' || s.charAt(i) == 'I'
+               || s.charAt(i) == 'O' || s.charAt(i) == 'U'){
+                   sb.append(s.charAt(i));
+               }
+        }
+        return sb.length() == 0 ? "No Vowel" : sb.toString();
+    }
+    
+}
+"""
+Input
+S = "abEkipo"
+Output
+aEio
+Explanation : a, E, i, o are only vowels in the string.
+Example 2:
+
+Input
+S = "rrty"
+Output
+No Vowel
+Explanation: There are no vowels.
+"""
+```
+
