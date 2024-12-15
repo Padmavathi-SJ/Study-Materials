@@ -558,3 +558,64 @@ int main(){
 120
 """
 ```
+
+### permutation of a string
+```
+#include<stdio.h>
+#include<string.h>
+#include<math.h>
+int factorial(int n){
+    if(n==1 || n==0) return 1;
+    return n*factorial(n-1);
+}
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    int l=strlen(str);
+    int freq[100];
+    int index=0;
+    for(int i=0; i<l; i++){
+        int count=1;
+        if(str[i]!='\0'){
+        for(int j=i+1; j<l; j++){
+            if(str[i]==str[j]){
+                count++;
+            }
+        }
+        freq[index++]=count;
+        }
+    }
+    int denominator=1;
+    for(int i=0; i<index; i++){
+        denominator *= factorial(freq[i]);
+    }
+     int result=factorial(l)/denominator;
+     printf("%d", result);
+    return 0;
+}
+"""
+LEVEL
+30 // 5!/2!*2!
+"""
+```
+
+### circular permutation
+```
+#include<stdio.h>
+#include<math.h>
+int factorial(int n){
+    if (n==0 || n==1) return 1;
+    return n*factorial(n-1);
+}
+int main(){
+    int n;
+    scanf("%d",&n);
+    int result=factorial(n-1);
+    printf("%d", result);
+}
+"""
+6 //n
+120 //n-1
+"""
+```
