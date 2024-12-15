@@ -472,4 +472,65 @@ void main(){
     printf("peak element is: %d", peakElement);
     
 }
-
+"""
+1 2 3
+4 5 6
+7 8 9
+p --> Peak Element
+"""
+```
+### Check whether good number or not:
+```
+#include<stdio.h>
+#include<stdbool.h>
+#include<string.h>
+bool check(int num){
+    if(num<=1){
+        return false;
+    }
+    for(int i=2; i*i<=num; i++){
+        if(num%i==0){
+            return false;
+        }
+    }
+    return true;
+}
+int main() {
+    char num[256];
+    fgets(num, 256, stdin);
+    num[strcspn(num, "\n")]='\0';
+    int found=1;
+    for(int i=0; i<strlen(num); i++){
+        int digit=num[i]-'0';
+        if(i%2==0){
+            if(digit%2==0){
+                found=1;
+            }
+            else{
+                found=0;
+                break;
+            }
+        }
+        else {
+            if(check(digit)){
+                found=1;
+            }
+            else{
+                found=0;
+                break;
+            }
+        }
+    }
+    if(found){
+        printf("Yes\n");
+    }
+    else{
+        printf("No\n");
+    }
+    return 0;
+}
+"""
+num=2545
+Yes (good number)
+"""
+```
