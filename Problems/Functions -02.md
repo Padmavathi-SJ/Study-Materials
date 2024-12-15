@@ -534,3 +534,27 @@ num=2545
 Yes (good number)
 """
 ```
+
+### permutation
+* n!/n!-r!
+```
+#include<stdio.h>
+int factorial(int n){
+    if(n==1 || n==0) return 1;
+    return n*factorial(n-1);
+}
+int main(){
+    int n1;
+    int n2;
+    scanf("%d", &n1);
+    scanf("%d", &n2);
+    int result=factorial(n1)/factorial(n1-n2);
+    printf("%d", result);
+    return 0;
+}
+"""
+5
+4
+120
+"""
+```
