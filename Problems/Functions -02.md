@@ -921,3 +921,78 @@ god dog
 ate eat
 """
 ```
+
+### prime anagram pairs from a range
+```
+#include<stdio.h>
+#include<stdbool.h>
+#include<ctype.h>
+bool prime(int num){
+    if(num<=1) {
+        return false;
+    }
+    for(int i=2; i*i<=num; i++){
+        if(num%i==0){
+            return false;
+        }
+    }
+    return true;
+}
+void countDigits(int num, int count[]){
+    while(num!=0){
+        count[num%10]++;
+        num/=10;
+    }
+}
+bool areAnagrams(int num1, int num2){
+    int count1[10]={0};
+    int count2[10]={0};
+    countDigits(num1, count1);
+    countDigits(num2, count2);
+    for(int i=0; i<10; i++){
+        if(count1[i] != count2[i]){
+            return false;
+        }
+    }
+    return true;
+}
+void findPrimeAnagramPairs(int start, int end){
+    int primes[100];
+    int index=0;
+    for(int i=start; i<=end; i++){
+        if(prime(i)){
+            primes[index++]=i;
+        }
+    }
+    printf("Anagram Pairs: \n");
+    int found=0;
+    for(int i=0; i<index; i++){
+        for(int j=i+1; j<index; j++){
+        if(areAnagrams(primes[i], primes[j])){
+            found=1;
+            printf("%d %d\n", primes[i], primes[j]);
+        }
+    }
+    }
+    if(!found){
+        printf("No Anagram pairs found\n");
+    }
+}
+int main(){
+    int start;
+    int end;
+    scanf("%d", &start);
+    scanf("%d", &end);
+    findPrimeAnagramPairs(start, end);
+    return 0;
+}
+"""
+1
+100
+Anagram Pairs: 
+13 31
+17 71
+37 73
+79 97
+"""
+```
