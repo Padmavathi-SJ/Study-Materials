@@ -647,3 +647,52 @@ Hello World
 Iimmu Xusme
 """
 ```
+
+### Palindromic substring
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+
+bool check(char str[], int left, int right){
+    while(left<right){
+        if(str[left]!=str[right]){
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+}
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    int longestLength=0;
+    int l=strlen(str);
+    int startIndex=0;
+    for(int i=0; i<l; i++){
+       for(int j=i; j<l; j++){
+           if(check(str, i, j)){
+               int len=j-i+1;
+               if(len>longestLength){
+                   longestLength=len;
+                   startIndex=i;
+               }
+           }
+       }
+    }
+    for(int i=startIndex; i<startIndex+longestLength; i++){
+        printf("%c", str[i]);
+    }
+    printf("\n");
+    printf("%d", longestLength);
+}
+"""
+padmadammathi
+madam
+5
+"""
+```
+```
+
+### anagram pairs
