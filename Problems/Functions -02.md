@@ -1,4 +1,4 @@
-### methods
+![image](https://github.com/user-attachments/assets/7d0531de-136c-4b09-9f50-4b1636b3ea84)### methods
 * All problems will be done by using functions only, if needed some other methods also used
 
 
@@ -1160,5 +1160,54 @@ int main(){
 }
 """
 pivot index is 3
+"""
+```
+
+### Fibonacci encoding
+``` 
+#include<stdio.h>
+void fibonacciEncoding(int n){
+    int prev=1;
+    int curr=1;
+    int next=prev+curr;
+    int arr[100];
+    int index=1;
+    arr[0]=prev;
+    while(next<n){
+        arr[index++]=next;
+        prev=curr;
+        curr=next;
+        next=prev+curr;
+    }
+    int sum=0;
+    int result[100];
+    int k=0;
+    for(int i=index-1; i>=0; i--){
+        if(sum+arr[i] <= n){
+            sum += arr[i];
+            result[k++]=1;
+        }
+        else{
+            result[k++]=0;
+        }
+    }
+    int reversed[k+1];
+    int l=0;
+    for(int i=k-1; i>=0; i--){
+        reversed[l++]=result[i];
+    }
+    reversed[l++]=1;
+    for(int i=0; i<l; i++){
+        printf("%d", reversed[i]);
+    }
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    fibonacciEncoding(n);
+}
+"""
+14
+1000011
 """
 ```
