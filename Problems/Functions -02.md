@@ -1115,3 +1115,50 @@ CAB
 CBA
 """
 ```
+
+### print the pivot index of the given array
+```
+#include<stdio.h>
+#include<ctype.h>
+
+int leftArray(int nums[], int start, int end){
+    int sum=0;
+    for(int i=start; i<end; i++){
+        sum+=nums[i];
+    }
+    return sum;
+}
+int rightArray(int nums[], int start, int end){
+    int sum=0; 
+    for(int i=start; i<end; i++){
+        sum+=nums[i];
+    }
+    return sum;
+}
+void findPivotIndex(int nums[], int l){
+    int leftSum=0;
+    int rightSum=0;
+    int found=0;
+    for(int i=0; i<l; i++){
+        leftSum = leftArray(nums, 0, i);
+        rightSum = rightArray(nums, i+1, l);
+        if(leftSum == rightSum){
+            found=1;
+            printf("pivot index is: %d", i);
+            break;
+        }
+    }
+    if(!found){
+        printf("%d", -1);
+    }
+}
+int main(){
+    int nums[]={1,7,3,6,5,6};
+    int l=sizeof(nums)/sizeof(nums[0]);
+    findPivotIndex(nums, l);
+    return 0;
+}
+"""
+pivot index is 3
+"""
+```
