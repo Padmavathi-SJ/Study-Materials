@@ -1073,3 +1073,39 @@ you
 hi how padma you
 """
 ```
+
+### permutation of a string
+```
+#include<stdio.h>
+#include<string.h>
+void swap(char *a, char *b){
+    char temp=*a;
+    *a=*b;
+    *b=temp;
+}
+void generatePermutation(char *str, int i, int l){
+    if(i==l-1){
+        printf("%s\n", str);
+        return;
+    }
+    for(int j=i; j<l; j++){
+        swap(&str[i], &str[j]);
+        
+        generatePermutation(str, i+1, l);
+        
+        swap(&str[i], &str[j]);
+    }
+}
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    int l=strlen(str);
+    generatePermutation(str, 0, l);
+    return 0;
+}
+"""
+ABC
+
+"""
+```
