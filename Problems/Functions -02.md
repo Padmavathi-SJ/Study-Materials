@@ -666,3 +666,117 @@ madam //palindromic substring
 5 //length of palndromic string
 """
 ```
+
+### Palindromic substring
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+
+bool check(char str[], int left, int right){
+    while(left<right){
+        if(str[left]!=str[right]){
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+}
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    int longestLength=0;
+    int l=strlen(str);
+    int startIndex=0;
+    for(int i=0; i<l; i++){
+       for(int j=i; j<l; j++){
+           if(check(str, i, j)){
+               int len=j-i+1;
+               if(len>longestLength){
+                   longestLength=len;
+                   startIndex=i;
+               }
+           }
+       }
+    }
+    for(int i=startIndex; i<startIndex+longestLength; i++){
+        printf("%c", str[i]);
+    }
+    printf("\n");
+    printf("%d", longestLength);
+}
+"""
+padmadammathi
+madam
+5
+"""
+```
+
+### Circular Prime
+```
+#include<stdio.h>
+#include<math.h>
+#include<stdbool.h>
+bool prime(int num){
+    if(num<=1){
+        return false;
+    }
+    for(int i=2; i*i<=num; i++){
+        if(num%i==0){
+            return false;
+        }
+    }
+    return true;
+}
+int numOfDigits(int num){
+    int count=0;
+    while(num!=0){
+        count++;
+        num/=10;
+    }
+    return count;
+}
+int rotateNum(int num, int digits){
+    int rem=num%10;
+    int quo=num/10;
+    int shift=pow(10, digits-1);
+    
+    return rem*shift+quo;
+}
+bool circularPrimeHelper(int currNum, int org, int digits){
+    if(currNum == org){
+        return true;
+    }
+    if(!prime(currNum)){
+        return false;
+    }
+    int rotated=rotateNum(currNum, digits);
+    return circularPrimeHelper(rotated, org, digits);
+}
+bool circularPrime(int num){
+    if(!prime(num)){
+        return false;
+    }
+    int digits=numOfDigits(num);
+    int rotated=rotateNum(num, digits);
+    return circularPrimeHelper(rotated, num, digits);
+}
+int main(){
+    int num;
+    scanf("%d", &num);
+    if(circularPrime(num)){
+        printf("Yes\n");
+    }
+    else{
+        printf("No\n");
+    }
+    return 0;
+}
+"""
+197
+yes
+"""
+```
+### anagram pairs
