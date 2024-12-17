@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/7d0531de-136c-4b09-9f50-4b1636b3ea84)### methods
+### methods
 * All problems will be done by using functions only, if needed some other methods also used
 
 
