@@ -1107,5 +1107,11 @@ int main(){
 """
 ABC
 
+ABC
+ACB
+BAC
+BCA
+CAB
+CBA
 """
 ```
