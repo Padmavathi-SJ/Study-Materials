@@ -1211,3 +1211,69 @@ int main(){
 1000011
 """
 ```
+
+### find whether the given num is Keith Number or not?
+```
+#include<stdio.h>
+int sum(int arr[], int len, int n){
+    int total=0;
+    for(int i=n-len; i<n; i++){
+        total+=arr[i];
+    }
+    return total;
+}
+void check(int n){
+    int org=n;
+    int arr[100];
+    int l=0;
+    while(org!=0){
+        int rem=org%10;
+        arr[l++]=rem;
+        
+        org/=10;
+    }
+   int reversed[100];
+   int index=0;
+    for(int i=l-1; i>=0; i--){
+        reversed[index++]=arr[i];
+    }
+    int total=0;
+    int found=0;
+    while(total <= n){
+        if(total == n){
+            found=1;
+            break;
+        }
+        total=sum(reversed,l, index);
+        reversed[index++]=total;
+    }
+     if(found){
+        printf("Yes\n");
+    }
+    else{
+        printf("No\n");
+    }
+
+}
+void main(){
+    int n;
+    scanf("%d", &n);
+    check(n);
+}
+"""
+14
+yes
+
+15
+no
+
+197
+yes
+
+1104
+yes
+
+31331
+yes
+"""
+```
