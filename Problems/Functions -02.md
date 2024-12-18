@@ -1277,3 +1277,61 @@ yes
 yes
 """
 ```
+
+
+### print longest substring without repeating characters
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+#include<ctype.h>
+bool check(char arr[], int n){
+    if(n==1)
+    return true;
+    for(int i=0; i<n; i++){
+        for(int j=i+1; j<n; j++){
+            if(arr[i] == arr[j]){
+                return false;
+            }
+        }
+    }
+    return true;
+}
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    int l=strlen(str);
+    char arr[256];
+    int longLen=0;
+    int currLen=0;
+    int startIndex=0;
+    for(int i=0; i<l; i++){
+        for(int j=i+1; j<l; j++){
+            int index=0;
+           for(int k=i; k<=j; k++){
+                arr[index]=str[k];
+                index++;
+           }
+            if(!check(arr, index)){
+                break;
+            }
+            currLen=j-i+1;
+            if(currLen > longLen){
+                longLen = currLen;
+                startIndex=i;
+            }
+    }
+        }
+    printf("%d\n", longLen);
+    for(int i=startIndex; i<startIndex+longLen; i++){
+        printf("%c", str[i]);
+    }
+    return 0;
+}
+"""
+padmavathiama
+5 //longestSubstring length
+vathi //longest substring
+"""
+```
