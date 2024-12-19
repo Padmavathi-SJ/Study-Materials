@@ -26,3 +26,23 @@ void main(){
 1 3 5 7 9
 """
 ```
+
+### print 10 natural nums from 1
+```
+#include<stdio.h>
+void find(int n){
+   if(n<=10){
+       printf("%d ", n);
+       find(n+1);
+   }
+}
+void main(){
+    int n;
+    scanf("%d", &n);
+    find(n);
+}
+"""
+1
+1 2 3 4 5 6 7 8 9 10
+"""
+```
