@@ -1335,3 +1335,78 @@ padmavathiama
 vathi //longest substring
 """
 ```
+
+### print circular prime numbers between a given range:
+```
+#include<stdio.h>
+#include<math.h>
+#include<stdbool.h>
+bool isPrime(int n){
+    if(n<=1){
+        return false;
+    }
+    for(int i=2; i*i<=n; i++){
+        if(n%i==0){
+            return false;
+        }
+    }
+    return true;
+}
+int numOfDigits(int n){
+    int l=0;
+    while(n!=0){
+        int rem=n%10;
+        l++;
+        n/=10;
+    }
+    return l;
+}
+int rotateNum(int n, int l){
+    int rem=n%10;
+    int quo=n/10;
+    int shift=pow(10, l-1);
+    
+    return rem*shift+quo;
+}
+bool circularPrime(int currNum, int org, int l){
+    if(currNum == org){
+        return true;
+    }
+    if(!isPrime(currNum)){
+        return false;
+    }
+    int rotated=rotateNum(currNum, l);
+    
+    return circularPrime(rotated, org, l);
+    
+}
+bool isCirPrime(int n){
+   if(!isPrime(n)){
+        return false;
+    }
+    int l=numOfDigits(n);
+    int rotated=rotateNum(n, l);
+    circularPrime(rotated, n, l);
+    
+}
+void check(int start, int end){
+    for(int i=start; i<=end; i++){
+        if(isCirPrime(i)){
+            printf("%d ", i);
+        }
+    }
+}
+int main(){
+    int start;
+    scanf("%d", &start);
+    int end;
+    scanf("%d", &end);
+   check(start, end);
+return 0;
+}
+"""
+1 //start
+200 //end
+2 3 5 7 11 13 17 31 37 71 73 79 97 113 131 197 199
+"""
+```
