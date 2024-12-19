@@ -1410,3 +1410,58 @@ return 0;
 2 3 5 7 11 13 17 31 37 71 73 79 97 113 131 197 199
 """
 ```
+
+### decode string (Leetcode_394)
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+void decode(char str[], int l){
+    int nums[100];
+    int numsIndecies[100];
+    int m=0;
+    int n=0;
+    for(int i=0; i<l; i++){
+        if(str[i] >= '1' && str[i] <= '9'){
+            int num=str[i]-'0';
+            nums[m++]=num;
+            numsIndecies[n++]=i;
+        }
+    }
+    for(int i=0; i<m-1; i++){
+        char word[100];
+        int index=0;
+        for(int j=numsIndecies[i]+1; j<numsIndecies[i+1]; j++){
+            if(str[j] >= 'a' && str[j] <= 'z'){
+            word[index++]=str[j];
+            }
+        }
+        for(int k=0; k<nums[i]; k++){
+        printf("%s", word);
+        }
+    }
+    for(int i=m-1; i<m; i++){
+        char word[100];
+        int index=0;
+        for(int j=numsIndecies[i]+1; j<l; j++){
+            if(str[j] >= 'a' && str[j] <= 'z'){
+                word[index++]=str[j];
+            }
+        }
+        for(int k=0; k<nums[i]; k++){
+        printf("%s", word);
+        }
+    }
+}
+void main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    int l=strlen(str);
+    decode(str, l);
+}
+"""
+2[ab]3[bc]4[cd]2[jk]
+ababbcbcbccdcdcdcdjkjk
+"""
+```
