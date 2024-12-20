@@ -107,3 +107,26 @@ void main(){
 1 1 2 3 5 8
 """
 ```
+
+### count digits of a number
+```
+#include<stdio.h>
+int coutnDigits(int n){
+    if(n==0){
+        return 0;
+    }
+     return 1 + coutnDigits(n/10);
+ 
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    int count=coutnDigits(n);
+    printf("%d", count);
+    return 0;
+}
+"""
+5624
+4
+"""
+```
