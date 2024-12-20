@@ -73,3 +73,37 @@ void main(){
 1 2 3 4 5 6 7 8 9 10
 """
 ```
+
+### fibonacci series upto n
+```
+#include<stdio.h>
+int fib(int n){
+   if(n==0){
+       return 0;
+   }
+   else if(n==1){
+       return 1;
+   }
+   else{
+       return fib(n-1)+fib(n-2);
+   }
+}
+void main(){
+    int n;
+    scanf("%d", &n);
+    int i=1;
+    int num=0;
+    while(num < n){
+        num=fib(i);
+        if(num<n){
+        printf("%d ", num);
+        }
+        i++;
+    }
+    
+}
+"""
+10
+1 1 2 3 5 8
+"""
+```
