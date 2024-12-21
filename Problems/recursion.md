@@ -197,3 +197,26 @@ void main(){
 120
 """
 ```
+
+### print a string using recursion
+``` 
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+void printStr(char str[], int l){
+    if(l==0){
+        printf("%c ", str[l]);
+       return; 
+    }
+    printStr(str, l-1);
+    printf("%c ", str[l]);
+}
+void main(){
+    char str[256]="w3resources";
+    int l=strlen(str);
+    printStr(str, l);
+}
+"""
+w 3 r e s o u r c e s
+"""
+```
