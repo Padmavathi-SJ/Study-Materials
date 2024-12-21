@@ -152,3 +152,27 @@ int main(){
 15
 """
 ```
+
+### reverse a string using recursion
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+void reverse(char str[], int l){
+    if(l==0){
+        printf("%c ", str[l]);
+        return;
+    }
+    printf("%c ", str[l]);
+
+    reverse(str, l-1);
+}
+void main(){
+    char str[]="padma";
+    int l=strlen(str);
+    reverse(str, l);
+}
+"""
+ a m d a p
+"""
+```
