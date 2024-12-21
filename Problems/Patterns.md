@@ -109,3 +109,43 @@ void main(){
           21 22 
 """
 ```
+
+###
+```
+#include<stdio.h>
+void main(){
+    int N=4,l=1,n1=7;
+    for(int i=1; i<=N; i++){
+        for(int s=1; s<i; s++){
+            printf("  ");
+        }
+        for(int j=1; j<=(N*2)-l; j++){
+            printf("%d ", n1);
+        }
+        n1-=2;
+        l+=2;
+        printf("\n");
+    }
+    int n=2,m=0,n2=3;
+    for(int i=1; i<N; i++){
+        for(int s=1; s<=N-n; s++){
+            printf("  ");
+        }
+        n++;
+        for(int j=1; j<=N+m-1; j++){
+            printf("%d ", n2);
+        }
+        m+=2;n2+=2;
+        printf("\n");
+    }
+}
+"""
+7 7 7 7 7 7 7 
+  5 5 5 5 5 
+    3 3 3 
+      1 
+    3 3 3 
+  5 5 5 5 5 
+7 7 7 7 7 7 7 
+"""
+```
