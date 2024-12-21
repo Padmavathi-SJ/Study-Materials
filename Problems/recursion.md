@@ -176,3 +176,24 @@ void main(){
  a m d a p
 """
 ```
+
+### factorial using recursion
+```
+#include<stdio.h>
+int factorial(int n){
+    if(n==0){
+        return 1;
+    }
+    return n*factorial(n-1);
+}
+void main(){
+    int n;
+    scanf("%d", &n);
+    int fact=factorial(n);
+    printf("%d", fact);
+}
+"""
+5
+120
+"""
+```
