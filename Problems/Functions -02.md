@@ -1465,3 +1465,32 @@ void main(){
 ababbcbcbccdcdcdcdjkjk
 """
 ```
+
+### convert binary to integer
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+void convert(long binary){
+    char str[256];
+    snprintf(str, sizeof(str), "%ld", binary);
+    int num=0;
+    int arr[]={128,64,32,16,8,4,2,1};
+    int len=7;
+    for(int i=0; i<strlen(str); i++){
+        if(str[i]=='1'){
+            num+=arr[len-i];
+        }
+    }
+    printf("%d", num);
+}
+void main(){
+    long binary;
+    scanf("%ld", &binary);
+    convert(binary);
+}
+"""
+1101
+13
+"""
+```
