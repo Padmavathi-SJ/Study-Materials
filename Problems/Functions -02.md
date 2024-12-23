@@ -1952,3 +1952,80 @@ ihtavamdap 10
 agaj 4
 """
 ```
+
+### Words Starting with Vowels
+**reverse words --> seperate as vowel and non vowel words based on first character**
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include<ctype.h>
+#include<stdbool.h>
+char *reverse(char *str, int n){
+    char *temp=(char *) malloc ((100) * sizeof(char));
+    int index=0;
+    for(int i=n-1; i>=0; i--){
+        temp[index++]=str[i];
+    }
+    temp[index]='\0';
+    return temp;
+    free(temp);
+}
+bool hasVowel(char *str){
+    int l=strlen(str);
+    char c=tolower(str[0]);
+    if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+        return true;
+    }
+    return false;
+}
+void findWords(char words[][100], int n){
+    char reversed[n][100];
+    char *temp;
+    for(int i=0; i<n; i++){
+        int len=strlen(words[i]);
+        temp=reverse(words[i], len);
+        strcpy(reversed[i], temp);
+    }
+    char vowelWords[n][100];
+    int l=0;
+    char nonVowelWords[n][100];
+    int m=0;
+    for(int i=0; i<n; i++){
+        if(hasVowel(reversed[i])){
+            strcpy(vowelWords[l++], reversed[i]);
+        }
+        else{
+            strcpy(nonVowelWords[m++], reversed[i]);
+        }
+    }
+    for(int i=0; i<l; i++){
+        printf("%s ", vowelWords[i]);
+    }
+    printf("\n");
+     for(int i=0; i<m; i++){
+        printf("%s ", nonVowelWords[i]);
+    }
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    getchar();
+    char words[n][100];
+    for(int i=0; i<n; i++){
+        fgets(words[i], 100, stdin);
+        words[i][strcspn(words[i], "\n")]='\0';
+    }
+    findWords(words, n);
+}
+"""
+5
+hi
+how
+are
+you
+pa
+ih era uoy ap //vowel words
+woh //non vowel words
+"""
+```
