@@ -1494,3 +1494,69 @@ void main(){
 13
 """
 ```
+
+### string match
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+#include<stdlib.h>
+char* reverse(char *str, int n){
+    char* temp=(char *) malloc ((n+1) * sizeof(char));
+    int index=0;
+    for(int i=n-1; i>=0; i--){
+        temp[index++]=str[i];
+    }
+    temp[index]='\0';
+    return temp;
+}
+void check(char words[][100], int n){
+    char reversed[n][100];
+    char *temp;
+    for(int i=0; i<n; i++){
+        int len=strlen(words[i]);
+        temp=reverse(words[i], len);
+        strcpy(reversed[i], temp);
+        free(temp);
+    }
+    char *temp2;
+    for(int i=0; i<n; i++){
+        for(int j=i+1; j<n; j++){
+            if(strcmp(reversed[i], reversed[j]) > 0){
+                strcpy(temp2, reversed[i]);
+                strcpy(reversed[i], reversed[j]);
+                strcpy(reversed[j], temp2);
+            }
+        }
+    }
+    char descending[n][100];
+    int index=0;
+    for(int i=n-1; i>=0; i--){
+        strcpy(descending[index++], reversed[i]);
+    }
+    
+    for(int i=0; i<n; i++){
+        printf("%s - %s ", reversed[i], descending[i]);
+    }
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    getchar();
+    char words[n][100];
+    for(int i=0; i<n; i++){
+        fgets(words[i], 100, stdin);
+        words[i][strcspn(words[i], "\n")]='\0';
+    }
+    check(words, n);
+    return 0;
+}
+"""
+4
+functions
+program
+Program
+and
+dna - snoitcnuf margorP - margorp margorp - margorP snoitcnuf - dna
+"""
+```
