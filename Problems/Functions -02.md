@@ -1627,3 +1627,85 @@ padmavathi
 2
 """
 ```
+
+### Palindrome Detection and Sorting 
+### reverse words --> find palindromes --> sort palindromes in ascending --> print words
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+#include<stdlib.h>
+#include<ctype.h>
+char* reverse(char *str, int n){
+    char* temp=(char *) malloc ((n+1) * sizeof(char));
+    int index=0;
+    for(int i=n-1; i>=0; i--){
+        temp[index++]=str[i];
+    }
+    temp[index]='\0';
+    return temp;
+    free(temp);
+}
+bool isPalindrome(char str[]){
+    int l=strlen(str);
+    int left=0;
+    int right=l-1;
+    while(left < right){
+        if(str[left]!=str[right]){
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+}
+void check(char words[][100], int n){
+    char reversed[n][100];
+    char *temp;
+    for(int i=0; i<n; i++){
+        int len=strlen(words[i]);
+        temp = reverse(words[i], len);
+        strcpy(reversed[i], temp);
+    }
+    char palindromes[100][100];
+    int m=0;
+    for(int i=0; i<n; i++){
+        if(isPalindrome(reversed[i])){
+            strcpy(palindromes[m++], reversed[i]);
+        }
+    }
+    char temp2[100];
+    for(int i=0; i<m; i++){
+        for(int j=i+1; j<m; j++){
+            if(strcmp(palindromes[i], palindromes[j]) < 0){
+                strcpy(temp2, palindromes[i]);
+                strcpy(palindromes[i], palindromes[j]);
+                strcpy(palindromes[j], temp2);
+            }
+        }
+    }
+    for(int i=0; i<m; i++){
+        printf("%s ", palindromes[i]);
+    }
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    getchar();
+    char words[n][100];
+    for(int i=0; i<n; i++){
+        fgets(words[i], 100, stdin);
+        words[i][strcspn(words[i], "\n")]='\0';
+    }
+    check(words, n);
+}
+"""
+5
+racecar
+madam
+are
+hi
+asa
+racecar madam asa
+"""
+```
