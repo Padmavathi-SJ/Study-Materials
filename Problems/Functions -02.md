@@ -1,5 +1,7 @@
 ### methods
 * All problems will be done by using functions only, if needed some other methods also used
+* for storing characters in a new string in c ---> have to **allocate memory first** as --> __char *temp = (char) malloc ((lenth of the predefined string + 1) * sizeof(char));__ --> after using this temp string then free the allocated memory for temp as **free(temp)**
+* for copying in a new string no need to allocate memory, but have to define the size of the new string as **char temp[100]**
 
 
 ### 1. find the square of any number using the function.
