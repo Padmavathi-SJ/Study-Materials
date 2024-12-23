@@ -1873,7 +1873,7 @@ int main(){
 4
 padma
 akila
-jj aga
+jaga
 kavi
 agj alik amdp ivak 
 """
