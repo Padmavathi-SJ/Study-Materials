@@ -1560,3 +1560,68 @@ and
 dna - snoitcnuf margorP - margorp margorp - margorP snoitcnuf - dna
 """
 ```
+
+### **reverse word --> remove duplicates --> count vowels**
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+#include<stdlib.h>
+char* reverse(char *str){
+    int l=strlen(str);
+    char *temp=(char *) malloc((l+1) * sizeof(char));
+    int m=0;
+    for(int i=l-1; i>=0; i--){
+        temp[m++]=str[i];
+    }
+    temp[m]='\0';
+    return temp;
+    free(temp);
+}
+int countVowels(char *str){
+    int l=strlen(str);
+    int count=0;
+    for(int i=0; i<l; i++){
+        char c=tolower(str[i]);
+        if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u'){
+            count++;
+        }
+    }
+    return count;
+}
+char* removeDup(char *str){
+    char *temp;
+    int m=0;
+    int l=strlen(str);
+    for(int i=0; i<l; i++){
+        if(str[i]!='\0'){
+        for(int j=i+1; j<l; j++){
+           if(str[i]==str[j]){
+               str[j]='\0';
+           } 
+        }
+    }
+    }
+    for(int i=0; i<l; i++){
+        if(str[i]!='\0'){
+        temp[m++]=str[i];
+    }
+    }
+    return temp;
+}
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    
+    char *temp=reverse(str);
+    char *current=removeDup(temp);
+    int count=countVowels(current);
+    printf("%d", count);
+    
+}
+"""
+padmavathi
+2
+"""
+```
