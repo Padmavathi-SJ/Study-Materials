@@ -1878,3 +1878,77 @@ kavi
 agj alik amdp ivak 
 """
 ```
+
+### Longest and Shortest Word After Reversal
+**reverse words --> find longest and smallest based on their length and print those along with their lengths**
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+#include<stdlib.h>
+#include<ctype.h>
+char * reverse(char *str, int n){
+    char *temp=(char *) malloc ((100) * sizeof(char));
+    int l=0;
+    for(int i=n-1; i>=0; i--){
+        temp[l++]=str[i];
+    }
+    temp[l]='\0';
+    return temp;
+    free(temp);
+}
+void *findLong(char words[][100], int n){
+    char *longest;
+    strcpy(longest, words[0]);
+    for(int i=1; i<n; i++){
+        if(strlen(longest) < strlen(words[i])){
+            strcpy(longest, words[i]);
+        }
+    }
+    return longest;
+}
+char * findSmall(char words[][100], int n){
+    char *smallest;
+    strcpy(smallest, words[0]);
+    for(int i=1; i<n; i++){
+        if(strlen(smallest) > strlen(words[i])){
+            strcpy(smallest, words[i]);
+        }
+    }
+    return smallest;
+}
+void findWords(char words[][100], int n){
+    char reversed[n][100];
+    char *temp;
+    for(int i=0; i<n; i++){
+        int len=strlen(words[i]);
+        temp=reverse(words[i], len);
+        strcpy(reversed[i], temp);
+    }
+    
+    char *longest= findLong(reversed, n);
+    printf("%s %d\n", longest, strlen(longest));
+    char *smallest = findSmall(reversed, n);
+    printf("%s %d", smallest, strlen(smallest));
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    getchar();
+    char words[n][100];
+    for(int i=0; i<n; i++){
+        fgets(words[i], 100, stdin);
+        words[i][strcspn(words[i], "\n")]='\0';
+    }
+    findWords(words, n);
+}
+"""
+4
+akila
+padmavathi
+h jaga
+kavi
+ihtavamdap 10
+agaj 4
+"""
+```
