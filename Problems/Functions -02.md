@@ -1709,3 +1709,84 @@ asa
 racecar madam asa
 """
 ```
+
+### Anagram Grouping 
+**reverse words --> print anagram pairs from reversed words**
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+#include<stdlib.h>
+#include<stdbool.h>
+bool areAnagrams(char str1[], char str2[]){
+    int l1=strlen(str1);
+    int l2=strlen(str2);
+    if(l1!=l2){
+        return false;
+    }
+    
+    int count1[256]={0};
+    int count2[256]={0};
+    
+    for(int i=0; i<l1; i++){
+        count1[str1[i]]++;
+    }
+    for(int i=0; i<l2; i++){
+        count2[str2[i]]++;
+    }
+    
+    for(int i=0; i<256; i++){
+        if(count1[i] != count2[i]){
+            return false;
+        }
+    }
+    return true;
+}
+char* reverse(char *str, int n){
+    char* temp=(char *) malloc ((n+1) * sizeof(char));
+    int index=0;
+    for(int i=n-1; i>=0; i--){
+        temp[index++]=str[i];
+    }
+    temp[index]='\0';
+    return temp;
+    free(temp);
+}
+void groupAnagrams(char words[][100], int n){
+    char reversed[n][100];
+    char *temp;
+    for(int i=0; i<n; i++){
+        int len=strlen(words[i]);
+        temp=reverse(words[i], len);
+        strcpy(reversed[i], temp);
+    }
+    for(int i=0; i<n; i++){
+        for(int j=i+1; j<n; j++){
+            if(areAnagrams(reversed[i], reversed[j])){
+                printf("%s %s\n", reversed[i], reversed[j]);
+            }
+        }
+    }
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    getchar();
+    char words[n][100];
+    for(int i=0; i<n; i++){
+        fgets(words[i], 100, stdin);
+        words[i][strcspn(words[i], "\n")]='\0';
+    }
+    groupAnagrams(words, n);
+}
+"""
+5
+silet n
+lisen
+am
+god
+dog
+nelis nesil
+dog god
+"""
+```
