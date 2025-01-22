@@ -2068,3 +2068,79 @@ int main(){
     findWords(words, n);
 }
 ```
+
+### Ptime anagram pairs
+```
+#include<stdio.h>
+#include<stdbool.h>
+bool isPrime(int n){
+    if(n<=1){
+        return false;
+    }
+    for(int i=2; i<=n/2; i++){
+        if(n%i==0){
+            return false;
+        }
+    }
+    return true;
+}
+
+bool areAnagramPairs(int n1, int n2){
+     int count1[10];
+    int count2[10];
+    for(int i=0; i<10; i++){
+        count1[i]=i;
+    }
+    for(int i=0; i<10; i++){
+        count2[i]=i;
+    }
+    while(n1!=0){
+        int rem=n1%10;
+        count1[rem]='\0';
+        n1/=10;
+    }
+    while(n2!=0){
+        int rem=n2%10;
+        count2[rem]='\0';
+        n2/=10;
+    }
+    for(int i=0; i<10; i++){
+        if(count1[i]!=count2[i]){
+            return false;
+        }
+    }
+    return true;
+}
+
+void find(int start, int end){
+    int primes[100];
+    int l=0;
+    for(int i=start; i<=end; i++){
+        if(isPrime(i)){
+            primes[l++]=i;
+        }
+    }
+    for(int i=0; i<l; i++){
+        for(int j=i+1; j<l; j++){
+        if(areAnagramPairs(primes[i], primes[j])){
+            printf("%d %d\n", primes[i], primes[j]);
+        }
+    }
+    }
+}
+int main(){
+    int start;
+    scanf("%d", &start);
+    int end;
+    scanf("%d", &end);
+    find(start, end);
+}
+"""
+1
+100
+13 31
+17 71
+37 73
+79 97
+"""
+```
