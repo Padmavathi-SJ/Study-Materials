@@ -2352,3 +2352,39 @@ int main(){
 3
 """
 ```
+
+### change first vowel to first consonant and second vowel to second consonant and so on
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+void replace(char str[]){
+    int l=strlen(str);
+    char vowels[]={'a', 'e', 'i', 'o', 'u'};
+    char consonants[]={'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 
+                      'n', 'p', 'q', 'r', 's', 't', 'v', 'w', 'x', 'y', 'z'};
+    int index=0;
+    for(int i=0; i<l; i++){
+        str[i]=tolower(str[i]);
+        for(int j=0; j<5; j++){
+            if(str[i] == vowels[j]){
+                str[i]=consonants[index];
+                index++;
+                break;
+            }
+        }
+    }
+}
+                      
+int main(){
+    char str[100];
+    fgets(str, 100, stdin);
+    str[strcspn(str, "\n")]='\0';
+    replace(str);
+    printf("%s", str);
+}
+"""
+padmavathi
+pbdmcvdthf
+"""
+```
