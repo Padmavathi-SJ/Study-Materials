@@ -2388,3 +2388,49 @@ padmavathi
 pbdmcvdthf
 """
 ```
+
+### longest palindromic substring
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+#include<stdbool.h>
+bool isPalin(char str[], int left, int right){
+    while(left < right){
+        if(str[left] != str[right]){
+            return false;
+        }
+        left++;
+        right--;
+    }
+    return true;
+}
+void find(char str[]){
+    int l=strlen(str);
+    int maxLen=0, startIndex=0;
+    for(int i=0; i<l; i++){
+        for(int j=i+1; j<l; j++){
+            if(isPalin(str, i, j)){
+                int currLen=j-i+1;
+                if(currLen > maxLen){
+                    maxLen=currLen;
+                    startIndex=i;
+                }
+            }
+        }
+    }
+    for(int i=startIndex; i<=maxLen+startIndex-1; i++){
+        printf("%c", str[i]);
+    }
+}
+int main(){
+    char str[100];
+    fgets(str, 100, stdin);
+    str[strcspn(str, "\n")]='\0';
+    find(str);
+}
+"""
+padmamamthi
+mamam
+"""
+```
