@@ -2302,3 +2302,53 @@ god
 pamda dog very silent
 """
 ```
+
+### Find Pivot Index
+```
+#include<stdio.h>
+#include<stdbool.h>
+
+int leftArr(int arr[], int start, int end){
+    int sum=0;
+    for(int i=start; i<=end; i++){
+        sum+= arr[i];
+    }
+    return sum;
+}
+int rightArr(int arr[], int start, int end){
+    int sum=0;
+    for(int i=start; i<=end; i++){
+        sum+= arr[i];
+    }
+    return sum;
+}
+void find(int arr[], int n){
+    bool found=false;
+    for(int i=0; i<n; i++){
+        int leftSum=leftArr(arr, 0, i-1);
+        int rightSum=rightArr(arr, i+1, n-1);
+        if(leftSum == rightSum){
+            found=true;
+            printf("%d", i);
+            break;
+        }
+    }
+    if(!found){
+        printf("%d", -1);
+    }
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    int arr[n];
+    for(int i=0; i<n; i++){
+        scanf("%d", &arr[i]);
+    }
+    find(arr, n);
+}
+"""
+6
+1 7 3 6 5 6
+3
+"""
+```
