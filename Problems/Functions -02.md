@@ -2200,3 +2200,43 @@ god
 listen dog 
 """
 ```
+
+### replace vowels with its next vowel and consonants with next consonant in a sentence
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+#include<ctype.h>
+void convert(char str[]){
+    int l=strlen(str);
+    char vowels[]={'a', 'e', 'i', 'o', 'u'};
+    char consonants[]={'b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n','p', 'q', 'r', 's',
+                       't', 'v', 'w', 'x', 'y', 'z'};
+    for(int i=0; i<l; i++){
+        str[i]=tolower(str[i]);
+        for(int j=0; j<5; j++){
+            if(str[i]==vowels[j]){
+                str[i]=vowels[(j%5)+1];
+                break;
+            }
+        }
+        for(int k=0; k<21; k++){
+            if(str[i]==consonants[k]){
+                str[i]=consonants[(k%21)+1];
+                break;
+            }
+        }
+    }
+    printf("%s", str);
+}
+int main(){
+    char str[100];
+    fgets(str, 100, stdin);
+    str[strcspn(str, "\n")]='\0';
+    convert(str);
+}
+"""
+akilandeswari
+elomepfitxeso
+"""
+```
