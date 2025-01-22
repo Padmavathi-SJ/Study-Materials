@@ -2144,3 +2144,59 @@ int main(){
 79 97
 """
 ```
+
+### print the 1st anagram among the group
+```
+#include<stdio.h>
+#include<stdbool.h>
+#include<string.h>
+#include<ctype.h>
+bool areAnagrams(char str1[], char str2[]){
+    if(strlen(str1)!=strlen(str2)){
+        return false;
+    }
+    int count1[256]={0};
+    int count2[256]={0};
+    
+    for(int i=0; i<strlen(str1); i++){
+        count1[str1[i]]++;
+    }
+    
+    for(int i=0; i<strlen(str2); i++){
+        count2[str2[i]]++;
+    }
+    
+    for(int i=0; i<256; i++){
+        if(count1[i] != count2[i]){
+            return false;
+        }
+    }
+    return true;
+}
+void find(char words[][100], int n){
+    for(int i=0; i<n; i++){
+        for(int j=i+1; j<n; j++){
+            if(areAnagrams(words[i], words[j])){
+                printf("%s ", words[i]);
+            }
+        }
+    }
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    char words[n][100];
+    for(int i=0; i<n; i++){
+        scanf("%s", words[i]);
+    }
+    find(words, n);
+}
+"""
+4
+listen
+silent
+dog
+god
+listen dog 
+"""
+```
