@@ -2481,3 +2481,45 @@ padmavathi
 5 vathi
 """
 ```
+
+### Fibonacci Encoding
+```
+#include<stdio.h>
+#include<stdbool.h>
+void find(int n){
+    int fib[100];
+    int l=0;
+    int prev=0,curr=1;
+    int next=prev+curr;
+    while(next <= n){
+        fib[l++]=next;
+        prev=curr;
+        curr=next;
+        next=prev+curr;
+    }
+    int result[100];
+    int index=0,sum=0;
+    for(int i=l-1; i>=0; i--){
+        if(sum + fib[i] <= n){
+            sum += fib[i];
+            result[index++]=1;
+        }
+        else{
+            result[index++]=0;
+        }
+    }
+    for(int i=index-1; i>=0; i--){
+        printf("%d", result[i]);
+    }
+    printf("%d", 1);
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    find(n);
+}
+"""
+143
+01010101011
+"""
+```
