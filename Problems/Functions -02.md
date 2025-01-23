@@ -2523,3 +2523,40 @@ int main(){
 01010101011
 """
 ```
+
+### Fibonacci encoding reverse
+```
+#include<stdio.h>
+#include<string.h>
+void find(char str[]){
+    int l=strlen(str);
+    int fib[100];
+    int index=0;
+    int prev=0, curr=1;
+    int next=prev+curr;
+    
+    while(index<=l-1){
+        fib[index++]=next;
+        prev=curr;
+        curr=next;
+        next=prev+curr;
+    }
+    int res=0;
+    for(int i=l-2; i>=0; i--){
+        if(str[i] == '1'){
+            res += fib[i];
+        }
+    }
+    printf("%d", res);
+}
+int main(){
+    char str[100];
+    fgets(str, 100, stdin);
+    str[strcspn(str, "\n")]='\0';
+    find(str);
+}
+"""
+01010101011
+143
+"""
+```
