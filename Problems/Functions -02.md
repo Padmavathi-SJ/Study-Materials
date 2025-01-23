@@ -2434,3 +2434,50 @@ padmamamthi
 mamam
 """
 ```
+
+### Longest substring without repeating characters
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+#include<stdbool.h>
+bool isSubStr(char str[], int start, int end){
+    for(int i=start; i<=end; i++){
+        for(int j=i+1; j<=end; j++){
+            if(str[i] == str[j]){
+                return false;
+            }
+        }
+    }
+    return true;
+}
+void find(char str[]){
+    int maxLen=0;
+    int startIndex=0;
+    for(int i=0; i<strlen(str); i++){
+        for(int j=i+1; j<strlen(str); j++){
+            if(isSubStr(str, i, j)){
+                int currLen=j-i+1;
+                if(currLen > maxLen){
+                    maxLen=currLen;
+                    startIndex=i;
+                }
+            }
+        }
+    }
+    printf("%d ", maxLen);
+    for(int i=startIndex; i<=startIndex+maxLen; i++){
+        printf("%c", str[i]);
+    }
+}
+int main(){
+    char str[100];
+    fgets(str, 100, stdin);
+    str[strcspn(str, "\n")]='\0';
+    find(str);
+}
+"""
+padmavathi
+5 vathi
+"""
+```
