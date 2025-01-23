@@ -2560,3 +2560,76 @@ int main(){
 143
 """
 ```
+
+### reverse --> arrange words as 1 from ascending, 1 from descending likewise....
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+void reverse(char str[], int l){
+    int index=0;
+    char temp[100];
+    for(int i=l-1; i>=0; i--){
+        temp[index++]=str[i];
+    }
+    temp[index]='\0';
+    strcpy(str, temp);
+}
+void split(char str[]){
+    int l=strlen(str);
+    char words[100][100];
+    int index=0;
+    char *word;
+    word=strtok(str, " ");
+    while(word!=NULL){
+       strcpy(words[index++], word);
+        word=strtok(NULL, " ");
+    }
+    char reversed[100][100];
+    int r=0;
+    for(int i=0; i<index; i++){
+        reverse(words[i], strlen(words[i]));
+        strcpy(reversed[i], words[i]);
+    }
+    char descend[100][100];
+    int m=0;
+    for(int i=0; i<index; i++){
+       strcpy(descend[m++], reversed[i]);
+    }
+    //ascending array
+    for(int i=0; i<index; i++){
+        for(int j=i+1; j<index; j++){
+            if(strcmp(reversed[i], reversed[j]) > 0){
+                char temp[100];
+                strcpy(temp, reversed[i]);
+               strcpy(reversed[i], reversed[j]);
+                strcpy(reversed[j], temp);
+            }
+        }
+    }
+    //descend array
+    for(int i=0; i<m; i++){
+        for(int j=i+1; j<m; j++){
+            if(strcmp(descend[i], descend[j]) < 0){
+                char temp[100];
+                strcpy(temp, descend[i]);
+                strcpy(descend[i], descend[j]);
+                strcpy(descend[j], temp);
+            }
+        }
+    }
+    for(int i=0; i<index; i++){
+        printf("%s-%s ", reversed[i], descend[i]);
+    }
+}
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    split(str);
+}
+"""
+hi how are you
+era-woh ih-uoy uoy-ih woh-era
+"""
+```
