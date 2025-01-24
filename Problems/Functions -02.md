@@ -2922,3 +2922,31 @@ padma
 admap dmapa mapad
 """
 ```
+
+### right rotation
+```
+#include<stdio.h>
+#include<string.h>
+void find(char str[]){
+   int l=strlen(str);
+   int j=0;
+   while(j<3){
+   char last=str[l-1];
+   for(int i=l-1; i>0; i--){
+       str[i]=str[i-1];
+   }
+   str[0]=last;
+   j++;
+   }
+   printf("%s", str);
+}
+int main(){
+    char str[100];
+    scanf("%s", str);
+    find(str);
+}
+"""
+padma
+dmapa
+"""
+```
