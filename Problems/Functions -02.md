@@ -2780,3 +2780,50 @@ amdap-hi
 uoy-woh
 """
 ```
+
+### split words --> match by length (small-large, small-large, liewise...)
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+void match(char words[][100], int n){
+    int l=0;
+    int r=n-1;
+    while(l<r){
+        printf("%s-%s\n", words[l], words[r]);
+        l++;
+        r--;
+    }
+}
+void find(char str[]){
+    char words[100][100];
+    int l=0;
+    char *word=strtok(str, " ");
+    while(word != NULL){
+        strcpy(words[l++], word);
+        word=strtok(NULL, " ");
+    }
+    for(int i=0; i<l; i++){
+        for(int j=i+1; j<l; j++){
+            if(strlen(words[i]) > strlen(words[j])){
+                char temp[100];
+                strcpy(temp, words[i]);
+                strcpy(words[i], words[j]);
+                strcpy(words[j], temp);
+            }
+        }
+    }
+    match(words, l);
+}
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    find(str);
+}
+"""
+hi padmavathi class? how
+hi-padmavathi
+how-class?
+"""
+```
