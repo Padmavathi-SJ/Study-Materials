@@ -2950,3 +2950,59 @@ padma
 dmapa
 """
 ```
+
+### Minimum Window Substring
+* Problem: Find the smallest substring of s that contains all the characters of string t.
+* Example Input: s = "ADOBECODEBANC", t = "ABC"
+* Example Output: "BANC"
+```
+#include<stdio.h>
+#include<string.h>
+#include<limits.h>
+#include<stdbool.h>
+bool check(char s[], char t[], int start, int end){
+    for(int i=0; i<strlen(t); i++){
+        bool found=false;
+        for(int j=start; j<=end; j++){
+            if(t[i] == s[j]){
+                found=true;
+            }
+        }
+        if(!found){
+            return false;
+        }
+    }
+    return true;
+}
+void find(char s[], char t[]){
+  int l=strlen(s);
+  int startIndex=0;
+  int minLen=INT_MAX;
+  for(int i=0; i<l; i++){
+      for(int j=i+1; j<l; j++){
+          if(check(s, t, i, j)){
+              int currLen=j-i+1;
+              if(currLen < minLen){
+                  minLen = currLen;
+                  startIndex=i;
+              }
+          }
+      }
+  }
+  for(int i=startIndex; i<=startIndex+minLen; i++){
+      printf("%c", s[i]);
+  }
+}
+int main(){
+    char s[100];
+    scanf("%s", s);
+    char t[100];
+    scanf("%s", t);
+    find(s, t);
+}
+"""
+ADOBECODEBANC
+ABC
+BANC
+"""
+```
