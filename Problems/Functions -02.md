@@ -2715,3 +2715,68 @@ madam padma amdma
 madam - amdma
 """
 ```
+
+### split words --> reverse each word --> seperate as vowelwords & consonant words (based on 1st lettter) then match and print
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+#include<stdbool.h>
+
+void reverse(char str[]){
+    char temp[100];
+    int j=0;
+    for(int i=strlen(str)-1; i>=0; i--){
+        temp[j++]=str[i];
+    }
+    temp[j]='\0';
+    strcpy(str, temp);
+}
+bool isVowel(char str[]){
+    char ch=tolower(str[0]);
+    if(ch=='a' || ch=='e' || ch=='i' || ch=='o' || ch=='u'){
+        return true;
+    }
+    return false;
+}
+void find(char str[]){
+    char words[100][100];
+    int l=0;
+    char *word=strtok(str, " ");
+    while(word != NULL){
+        strcpy(words[l++], word);
+        word=strtok(NULL, " ");
+    }
+    char reversed[100][100];
+    for(int i=0; i<l; i++){
+       reverse(words[i]);
+        strcpy(reversed[i], words[i]);
+        
+    }
+    char vowelWords[100][100]; int v=0;
+    char consonantWords[100][100]; int c=0;
+    for(int i=0; i<l; i++){
+        if(isVowel(reversed[i])){
+            strcpy(vowelWords[v++], reversed[i]);
+        }
+        else{
+            strcpy(consonantWords[c++], reversed[i]);
+        }
+    }
+    for(int i=0; i<v; i++){
+        printf("%s-%s\n", vowelWords[i], consonantWords[i]);
+    }
+    
+}
+int main(){
+    char str[256];
+    fgets(str, 256, stdin);
+    str[strcspn(str, "\n")]='\0';
+    find(str);
+}
+"""
+padma ih how you
+amdap-hi
+uoy-woh
+"""
+```
