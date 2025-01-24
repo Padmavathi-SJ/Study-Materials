@@ -2633,3 +2633,85 @@ hi how are you
 era-woh ih-uoy uoy-ih woh-era
 """
 ```
+
+### find palindromic pairs from a string
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+#include<ctype.h>
+
+bool isPalin(char str[]){
+    int n=strlen(str);
+    int l=0,r=n-1;
+    while(l < r){
+        if(str[l] != str[r]){
+            return false;
+        }
+        l++;
+        r--;
+    }
+    return true;
+}
+bool isPair(char str1[], char str2[]){
+    if(strlen(str1) != strlen(str2)){
+        return false;
+    }
+    int count1[256]={0};
+    for(int i=0; i<strlen(str1); i++){
+        count1[str1[i]]++;
+    }
+    int count2[256]={0};
+    for(int i=0; i<strlen(str2); i++){
+        count2[str2[i]]++;
+    }
+    for(int i=0; i<256; i++){
+        if(count1[i] != count2[i]){
+            return false;
+        }
+    }
+    return true;
+}
+void findPairs(char words[][100], int l){
+    bool found=false;
+    for(int i=0; i<l; i++){
+        for(int j=i+1; j<l; j++){
+            if(isPair(words[i], words[j])){
+                found=true;
+                printf("%s - %s\n", words[i], words[j]);
+            }
+        }
+    }
+    if(!found){
+        printf("No palin pairs found!");
+    }
+}
+void find(char str[]){
+    char words[100][100];
+    int l=0;
+    char *word;
+    word=strtok(str, " ");
+    while(word != NULL){
+        strcpy(words[l++], word);
+        word=strtok(NULL, " ");
+    }
+    char palins[100][100];
+    int index=0;
+    for(int i=0; i<l; i++){
+        if(isPalin(words[i])){
+           strcpy(palins[index++], words[i]);
+        }
+    }
+    findPairs(palins, index);
+}
+int main(){
+    char str[100];
+    fgets(str, 100, stdin);
+    str[strcspn(str, "\n")]='\0';
+    find(str);
+}
+"""
+madam padma amdma
+madam - amdma
+"""
+```
