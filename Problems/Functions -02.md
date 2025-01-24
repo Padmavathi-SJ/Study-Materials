@@ -2894,3 +2894,31 @@ tan nat
 bat 
 """
 ```
+
+### left rotation 
+```
+#include<stdio.h>
+#include<string.h>
+void find(char str[]){
+    int n=strlen(str);
+    int j=0;
+    while(j<3){
+    char first=str[0];
+    for(int i=0; i<n-1; i++){
+        str[i]=str[i+1];
+    }
+    str[n-1]=first;
+    printf("%s ", str);
+    j++;
+    }
+}
+int main(){
+    char str[100];
+    scanf("%s", str);
+    find(str);
+}
+"""
+padma
+admap dmapa mapad
+"""
+```
