@@ -3006,3 +3006,53 @@ ABC
 BANC
 """
 ```
+
+### Remove Duplicate Letters
+* Problem: Remove duplicate letters from a string so that every letter appears once and the result is the smallest in lexicographical order.
+* Example Input: "cbacdcbc"
+* Example Output: "acdb"
+```
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+void find(char str[]){
+    int l=strlen(str);
+    for(int i=0; i<l; i++){
+        if(str[i]!='\0'){
+        for(int j=i+1; j<l; j++){
+            if(str[i] == str[j]){
+                str[j]='\0';
+            }
+        }
+        }
+    }
+    char new[100];
+    int m=0;
+    for(int i=0; i<l; i++){
+        if(str[i] != '\0'){
+            new[m++]=str[i];
+        }
+    }
+    new[m]='\0';
+    for(int i=0; i<m; i++){
+        for(int j=i+1; j<m; j++){
+            if(new[i] > new[j]){
+                char temp=new[i];
+                new[i]=new[j];
+                new[j]=temp;
+            }
+        }
+    }
+    printf("%s", new);
+}
+
+int main(){
+    char s[100];
+    scanf("%s", s);
+    find(s);
+}
+"""
+padmavathi
+adhimptv
+"""
+```
