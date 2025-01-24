@@ -2827,3 +2827,70 @@ hi-padmavathi
 how-class?
 """
 ```
+
+### Group Anagrams
+* Problem: Given an array of strings, group the anagrams together.
+* Example Input: ["eat", "tea", "tan", "ate", "nat", "bat"]
+* Example Output: [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+```
+#include<stdio.h>
+#include<string.h>
+#include<stdbool.h>
+#include<ctype.h>
+bool arePairs(char str1[], char str2[]){
+    if(strlen(str1) != strlen(str2)){
+        return false;
+    }
+    int count1[256]={0};
+    for(int i=0; i<strlen(str1); i++){
+        count1[str1[i]]++;
+    }
+    int count2[256]={0};
+    for(int i=0; i<strlen(str2); i++){
+        count2[str2[i]]++;
+    }
+    for(int i=0; i<256; i++){
+        if(count1[i] != count2[i]){
+            return false;
+        }
+    }
+    return true;
+}
+void find(char words[][100], int n){
+    char dummy[]="dummy";
+    for(int i=0; i<n; i++){
+        if(strcmp(words[i], dummy) != 0){
+            printf("%s ", words[i]);
+        for(int j=i+1; j<n; j++){
+            if(arePairs(words[i], words[j])){
+                printf("%s ", words[j]);
+                strcpy(words[j], dummy);
+            }
+        }
+        printf("\n");
+        }
+    }
+}
+int main(){
+    int n; scanf("%d", &n);
+    getchar();
+    char words[n][100];
+    for(int i=0; i<n; i++){
+        scanf("%s", words[i]);
+    }
+    find(words, n);
+}
+"""
+6
+eat
+tea
+tan
+ate
+nat
+bat
+//Anagram Pairs
+eat tea ate 
+tan nat 
+bat 
+"""
+```
