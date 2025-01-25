@@ -3190,3 +3190,50 @@ even //10
 odd //11
 """
 ```
+
+### multiplication of two binary integers & result in binary
+```
+#include<stdio.h>
+void find(long binary1, long binary2){
+    int num1=0, num2=0;
+    int base1=1;
+    while(binary1!=0){
+        int rem=binary1%10;
+        num1 += rem*base1;
+        base1 *= 2;
+        binary1/=10;
+    }
+    int base2=1;
+    while(binary2!=0){
+        int rem=binary2%10;
+        num2 += rem*base2;
+        base2 *= 2;
+        binary2/=10;
+    }
+    int multi=num1*num2;
+   printf("%d\n", multi);
+   int b[32];
+   int index=0;
+   while(multi!=0){
+       int rem=multi%2;
+       b[index++]=rem;
+       multi/=2;
+   }
+   for(int i=index-1; i>=0; i--){
+       printf("%d", b[i]);
+   }
+}
+int main(){
+    long binary1;
+    scanf("%ld", &binary1);
+    long binary2;
+    scanf("%ld", &binary2);
+    find(binary1, binary2);
+}
+"""
+1010 //b1
+1001  //b2
+90 //multiplication
+1011010 //result in binary
+"""
+```
