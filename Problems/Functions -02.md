@@ -3164,3 +3164,29 @@ int main(){
 10101010 //addition in binary
 """
 ```
+
+### check a binary num is odd or even
+```
+#include<stdio.h>
+void find(long b){
+    int last=b%10;
+    if(last==0){
+        printf("even");
+    }
+    else{
+        printf("odd");
+    }
+}
+int main(){
+    long b;
+    scanf("%ld", &b);
+    find(b);
+}
+"""
+1010
+even //10
+
+1011
+odd //11
+"""
+```
