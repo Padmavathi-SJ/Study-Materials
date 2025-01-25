@@ -3118,3 +3118,49 @@ int main(){
 12 //sub
 """
 ```
+
+### addition of 2 binary numbers , and result in also binary
+```
+#include<stdio.h>
+void convert(long binary1, long binary2){
+    int decimal1=0;
+    int base1=1;
+    while(binary1!=0){
+        int rem=binary1%10;
+        decimal1 += rem*base1;
+        base1 *= 2;
+        binary1/=10;
+    }
+    int decimal2=0;
+    int base2=1;
+    while(binary2!=0){
+        int rem=binary2%10;
+        decimal2 += rem*base2;
+        base2 *= 2;
+        binary2/=10;
+    }
+    int total=decimal1+decimal2;
+    int binary[32];
+    int index=0;
+    while(total!=0){
+        int rem=total%2;
+        binary[index++]=rem;
+        total/=2;
+    }
+    for(int i=index-1; i>=0; i--){
+        printf("%d", binary[i]);
+    }
+}
+int main(){
+    long binary1;
+    scanf("%ld", &binary1);
+    long binary2;
+    scanf("%ld", &binary2);
+    convert(binary1, binary2);
+}
+"""
+1010101 //binary1
+1010101 //binary2
+10101010 //addition in binary
+"""
+```
