@@ -3237,3 +3237,44 @@ int main(){
 1011010 //result in binary
 """
 ```
+
+### permutation of objects with identical objects
+```
+#include<stdio.h>
+#include<string.h>
+int factorial(int n){
+    if(n==0 || n==1) return 1;
+    return n*factorial(n-1);
+}
+int main(){
+    char str[100];
+    scanf("%s", str);
+    int freq[100];
+    int l=0;
+    int m=strlen(str);
+    for(int i=0; i<strlen(str); i++){
+        if(str[i]!='\0'){
+        int count=1;
+        for(int j=i+1; j<strlen(str); j++){
+            if(str[i] == str[j]){
+                count++;
+                str[j]='\0';
+            }
+        }
+        freq[l++]=count;
+    }
+    }
+    int numerator=factorial(m);
+    int denomi=1;
+    for(int i=0; i<l; i++){
+        denomi *= factorial(freq[i]);
+    }
+    
+  printf("%d",numerator/denomi);
+    
+}
+"""
+level
+30 //no of times of permutation of the given string
+"""
+```
