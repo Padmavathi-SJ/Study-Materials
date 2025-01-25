@@ -3056,3 +3056,28 @@ padmavathi
 adhimptv
 """
 ```
+
+### convert binary to decimal
+```
+#include<stdio.h>
+void find(long binary){
+    int decimal=0;
+    int base=1;
+    while(binary!=0){
+        int rem=binary % 10;
+        decimal += rem*base;
+        base*=2;
+        binary /= 10;
+    }
+    printf("%d", decimal);
+}
+int main(){
+    long binary;
+    scanf("%ld", &binary);
+    find(binary);
+}
+"""
+10101010 //binary
+170 //decimal
+"""
+```
