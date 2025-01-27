@@ -220,3 +220,53 @@ int main(){
 4 45 6 //minlen sub array with sum of greater than x
 """
 ```
+
+### Maximum Product Subarray
+* Problem: Find the contiguous subarray with the maximum product.
+* Example:
+* Input: [2, 3, -2, 4]
+* Output: 6 (Subarray: [2, 3])
+```
+#include<stdio.h>
+#include<limits.h>
+int product(int arr[], int s, int e){
+    int pro=1;
+    for(int i=s; i<=e; i++){
+        pro *= arr[i];
+    }
+    return pro;
+}
+void find(int arr[], int n){
+    int maxProduct=INT_MIN, si=0, ei=0;
+    for(int i=0; i<n; i++){
+        for(int j=i+1; j<n; j++){
+           int currProduct=product(arr, i, j);
+            if(currProduct > maxProduct){
+                maxProduct=currProduct;
+                si=i;
+                ei=j;
+            }
+        }
+    }
+    printf("%d\n", maxProduct);
+    for(int i=si; i<=ei; i++){
+        printf("%d ", arr[i]);
+    }
+    
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    int arr[100];
+    for(int i=0; i<n; i++){
+        scanf("%d", &arr[i]);
+    }
+    find(arr, n);
+}
+"""
+4
+10 20 0 30
+200
+10 20 
+"""
+```
