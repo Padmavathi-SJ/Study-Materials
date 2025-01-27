@@ -3278,3 +3278,72 @@ level
 30 //no of times of permutation of the given string
 """
 ```
+
+### matrx traversals
+```
+#include<stdio.h>
+int non_zero(int m[][100], int r, int c){
+    int cell=0;
+    for(int i=0; i<c; i++){
+        for(int j=0; j<c; j++){
+            if(m[i][j] != 0 && m[i][j] > 0){
+                cell++;
+            }
+        }
+    }
+    return cell;
+}
+int row_sum(int m[][100], int r, int c){
+    int max_sum=0;
+    for(int i=0; i<r; i++){
+        int row_max=m[i][0];
+        for(int j=1; j<c; j++){
+            if(m[i][j] > row_max){
+                row_max=m[i][j];
+            }
+        }
+        max_sum += row_max;
+    }
+    return max_sum;
+}
+int col_sum(int m[][100], int r, int c){
+    int max_sum=0;
+    for(int j=0; j<c; j++){
+        int col_max=m[0][j];
+        for(int i=1; i<r; i++){
+            if(m[i][j] > col_max){
+                col_max=m[i][j];
+            }
+        }
+        max_sum+=col_max;
+    }
+    return max_sum;
+}
+int area(int m[][100], int r, int c){
+    int non_zero_cell=non_zero(m, r, c);
+    int max_row_sum=row_sum(m, r, c);
+    int max_col_sum=col_sum(m, r, c);
+    return non_zero_cell+max_row_sum+max_col_sum;
+}
+int main(){
+    int r;
+    scanf("%d", &r);
+    int c;
+    scanf("%d", &c);
+    int m[100][100];
+    for(int i=0; i<r; i++){
+        for(int j=0; j<c; j++){
+            scanf("%d", &m[i][j]);
+        }
+    }
+    int sum=area(m, r, c);
+    printf("%d", sum);
+}
+"""
+3 3
+0 -1 3
+6 -5 8
+9 -1 0
+40
+"""
+```
