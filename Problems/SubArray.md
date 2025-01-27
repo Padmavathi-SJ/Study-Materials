@@ -105,3 +105,58 @@ int main(){
 2 4
 """
 ```
+  
+### Sub array with equal zeros and ones
+```
+#include<stdio.h>
+#include<stdbool.h>
+bool check(int arr[], int s, int e){
+    int zeros_count=0, ones_count=0;
+    for(int i=s; i<=e; i++){
+        if(arr[i] == 0){
+            zeros_count++;
+        }
+        else{
+            ones_count++;
+        }
+    }
+    if(zeros_count == ones_count){
+        return true;
+    }
+    return false;
+}
+void find(int arr[], int n){
+    int maxLen=0,si=0, ei=0;
+    for(int i=0; i<n; i++){
+        for(int j=i+1; j<n; j++){
+            if(check(arr, i, j)){
+                int currLen=j-i+1;
+                if(currLen > maxLen){
+                    maxLen=currLen;
+                    si=i;
+                    ei=j;
+                }
+            }
+        }
+    }
+    printf("%d\n", maxLen);
+    for(int i=si; i<=ei; i++){
+        printf("%d ", arr[i]);
+    }
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    int arr[100];
+    for(int i=0; i<n; i++){
+        scanf("%d", &arr[i]);
+    }
+    find(arr, n);
+}
+"""
+8
+0 1 1 0 1 0 1 1 
+6 //maxLen
+0 1 1 0 1 0  //subarray with equal zeros and ones
+"""
+```
