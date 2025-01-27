@@ -331,3 +331,41 @@ int main(){
 7 6 1 4
 """
 ```
+
+### Find Subarrays with Exactly K Distinct Elements
+* Problem: Count the subarrays that have exactly K distinct elements.
+* Example:
+* Input: arr = [1, 2, 1, 3, 4], K = 2
+* Output: 7
+
+```
+#include<stdio.h>
+void find(int arr[], int n, int k){
+    int count=0;
+    for(int i=0; i<n; i++){
+        for(int j=i+1; j<n; j++){
+           if(j-i+1 == k){
+               count++;
+           }
+        }
+    }
+   printf("%d", count);
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    int arr[100];
+    for(int i=0; i<n; i++){
+        scanf("%d", &arr[i]);
+    }
+    int k;
+    scanf("%d", &k);
+    find(arr, n, k);
+}
+"""
+5
+1 2 1 3 4
+2 //k
+4 //sub arrays count
+"""
+```
