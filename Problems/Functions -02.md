@@ -3347,3 +3347,95 @@ int main(){
 40
 """
 ```
+
+### matrix traversal
+```
+#include<stdio.h>
+int non_zero(int m[][100], int r, int c){
+    int cell=0;
+    for(int i=0; i<c; i++){
+        for(int j=0; j<c; j++){
+            if(m[i][j] != 0 && m[i][j] > 0){
+                cell++;
+            }
+        }
+    }
+    return cell;
+}
+int row_sum(int m[][100], int r, int c){
+    int max_sum=0;
+    for(int i=0; i<r; i++){
+        int row_max=m[i][0];
+        for(int j=1; j<c; j++){
+            if(m[i][j] > row_max){
+                row_max=m[i][j];
+            }
+        }
+        max_sum += row_max;
+    }
+    return max_sum;
+}
+int col_sum(int m[][100], int r, int c){
+    int max_sum=0;
+    for(int j=0; j<c; j++){
+        int col_max=m[0][j];
+        for(int i=1; i<r; i++){
+            if(m[i][j] > col_max){
+                col_max=m[i][j];
+            }
+        }
+        max_sum+=col_max;
+    }
+    return max_sum;
+}
+int leftSum(int m[][100], int r, int c){
+    int sum=0;
+    for(int i=0; i<r; i++){
+        for(int j=0; j<c; j++){
+            if(i==j){
+                sum+=m[i][j];
+            }
+        }
+    }
+    return sum;
+}
+int rightSum(int m[][100], int r, int c){
+    int sum=0; int i=0, j=c-1;
+    while(i<r && j>=0){
+        sum+=m[i][j];
+        i++;
+        j--;
+    }
+    return sum;
+}
+int area(int m[][100], int r, int c){
+    int non_zero_cell=non_zero(m, r, c);
+    int max_row_sum=row_sum(m, r, c);
+    int max_col_sum=col_sum(m, r, c);
+    int left_diognal=leftSum(m, r, c);
+    int right_diognal=rightSum(m, r, c);
+    return non_zero_cell + max_row_sum + max_col_sum +
+           left_diognal + right_diognal;
+}
+int main(){
+    int r;
+    scanf("%d", &r);
+    int c;
+    scanf("%d", &c);
+    int m[100][100];
+    for(int i=0; i<r; i++){
+        for(int j=0; j<c; j++){
+            scanf("%d", &m[i][j]);
+        }
+    }
+    int sum=area(m, r, c);
+    printf("%d", sum);
+}
+"""
+3 3
+1 2 3
+4 5 6
+7 8 9
+81
+"""
+```
