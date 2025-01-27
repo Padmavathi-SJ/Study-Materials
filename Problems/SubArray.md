@@ -270,3 +270,64 @@ int main(){
 10 20 
 """
 ```
+
+### Longest Subarray with Sum Divisible by K
+* Problem: Find the length of the longest subarray with a sum divisible by K.
+* Example:
+* Input: arr = [2, 7, 6, 1, 4, 5], K = 3
+* Output: 4
+```
+#include<stdio.h>
+#include<stdbool.h>
+#include<limits.h>
+bool check(int arr[], int s, int e, int k){
+    int sum=0;
+    for(int i=s; i<=e; i++){
+        sum+=arr[i];
+    }
+    if(sum%k==0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+void find(int arr[], int n, int k){
+    int maxLen=0, si=0, ei=0;
+    for(int i=0; i<n; i++){
+        for(int j=i+1; j<n; j++){
+           if(check(arr, i, j, k)){
+               int currLen=j-i+1;
+               if(currLen > maxLen){
+                   maxLen=currLen;
+                   si=i;
+                   ei=j;
+               }
+           }
+        }
+    }
+    printf("%d\n", maxLen);
+    for(int i=si; i<=ei; i++){
+        printf("%d ", arr[i]);
+    }
+    
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    int arr[100];
+    for(int i=0; i<n; i++){
+        scanf("%d", &arr[i]);
+    }
+    int k;
+    scanf("%d", &k);
+    find(arr, n, k);
+}
+"""
+6
+2 7 6 1 4 5
+3
+4
+7 6 1 4
+"""
+```
