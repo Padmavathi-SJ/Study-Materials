@@ -369,3 +369,51 @@ int main(){
 4 //sub arrays count
 """
 ```
+
+### Longest Subarray with All 1s After At Most K Flips
+* Problem: Find the longest subarray of 1s that can be obtained by flipping at most K 0s to 1s.
+* Example:
+* Input: arr = [1, 1, 0, 0, 1, 1, 0, 1], K = 2
+* Output: 6
+
+```
+#include<stdio.h>
+#include<stdbool.h>
+bool check(int arr[], int s, int e){
+    int sum=0;
+    for(int i=s; i<=e; i++){
+        sum+=arr[i];
+    }
+    if(sum==0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+void find(int arr[], int n){
+    int count=0;
+    for(int i=0; i<n; i++){
+        for(int j=i+1; j<n; j++){
+           if(check(arr,i,j)){
+               count++;
+           }
+        }
+    }
+   printf("%d", count);
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    int arr[100];
+    for(int i=0; i<n; i++){
+        scanf("%d", &arr[i]);
+    }
+    find(arr, n);
+}
+""
+7
+4 -1 -3 1 2 -2 -1
+5 //sub arrays count whse sum is equal to 0
+"""
+```
