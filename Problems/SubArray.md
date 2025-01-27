@@ -106,7 +106,7 @@ int main(){
 """
 ```
   
-### Sub array with equal zeros and ones
+### Longest Sub array with equal zeros and ones
 ```
 #include<stdio.h>
 #include<stdbool.h>
@@ -158,5 +158,65 @@ int main(){
 0 1 1 0 1 0 1 1 
 6 //maxLen
 0 1 1 0 1 0  //subarray with equal zeros and ones
+"""
+```
+
+### Smallest Subarray with a Sum Greater Than X
+* Problem: Find the length of the smallest subarray with a sum greater than a given value X.
+* Example:
+* Input: arr = [1, 4, 45, 6, 0, 19], X = 51
+* Output: 3
+```
+#include<stdio.h>
+#include<stdbool.h>
+#include<limits.h>
+bool check(int arr[], int s, int e, int x){
+    int sum=0;
+    for(int i=s; i<=e; i++){
+        sum+=arr[i];
+    }
+    if(sum > x){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+void find(int arr[], int n, int x){
+    int minLen=INT_MAX, si=0, ei=0;
+    for(int i=0; i<n; i++){
+        for(int j=i+1; j<n; j++){
+            if(check(arr, i, j, x)){
+                int currLen=j-i+1;
+                if(currLen < minLen){
+                    minLen=currLen;
+                    si=i;
+                    ei=j;
+                }
+            }
+        }
+    }
+    printf("%d\n", minLen);
+    for(int i=si; i<=ei; i++){
+        printf("%d ", arr[i]);
+    }
+}
+int main(){
+    int n;
+    scanf("%d", &n);
+    int arr[100];
+    for(int i=0; i<n; i++){
+        scanf("%d", &arr[i]);
+    }
+    int x;
+    scanf("%d", &x);
+    find(arr, n, x);
+}
+"""
+6
+1 4 45 6 0 19
+51
+3 //minLen
+4 45 6 //minlen sub array with sum of greater than x
 """
 ```
