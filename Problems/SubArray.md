@@ -370,11 +370,11 @@ int main(){
 """
 ```
 
-### Longest Subarray with All 1s After At Most K Flips
-* Problem: Find the longest subarray of 1s that can be obtained by flipping at most K 0s to 1s.
+###  Find All Subarrays with Zero Sum
+* Problem: Count the number of subarrays whose sum is equal to 0.
 * Example:
-* Input: arr = [1, 1, 0, 0, 1, 1, 0, 1], K = 2
-* Output: 6
+* Input: [4, -1, -3, 1, 2, -2, -1]
+* Output: 5
 
 ```
 #include<stdio.h>
