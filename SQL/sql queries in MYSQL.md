@@ -1,3 +1,4 @@
 ## SQL Queries in MYSQL:
 
-### Here is the list of all queries
+### JOINS
+* natural join --> will return the column(data) which matches (data and data type) in all tables mentioned and remove duplicates also.
