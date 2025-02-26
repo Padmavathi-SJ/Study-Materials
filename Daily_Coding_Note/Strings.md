@@ -10,3 +10,4 @@
 * reversing the vowels
 * remove vowels from string
 * check string
+* delete alternate characters
