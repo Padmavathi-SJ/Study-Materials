@@ -9,3 +9,4 @@
 * upper case convertion -gfg
 * reversing the vowels
 * remove vowels from string
+* check string
