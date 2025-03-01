@@ -11,3 +11,4 @@
 * remove vowels from string
 * check string
 * delete alternate characters
+* most common word
