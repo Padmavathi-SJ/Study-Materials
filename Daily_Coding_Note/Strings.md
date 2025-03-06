@@ -12,3 +12,5 @@
 * check string
 * delete alternate characters
 * most common word
+* Triangle shrinking downwards
+* Front-Back Transformation - copy
