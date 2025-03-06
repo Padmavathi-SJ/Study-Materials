@@ -14,3 +14,5 @@
 * most common word
 * Triangle shrinking downwards
 * Front-Back Transformation - copy
+* Front-Back Transformation - copy
+
