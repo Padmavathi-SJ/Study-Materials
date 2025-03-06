@@ -17,5 +17,7 @@
 * Front-Back Transformation - copy
 * reverse a String -> using StringBuilder only we can reverse a stirng
 * Most Frequent Character
+* Uncommon characters
+
 
 
