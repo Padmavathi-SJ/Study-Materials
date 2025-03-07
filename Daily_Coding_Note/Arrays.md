@@ -12,4 +12,6 @@
 * Increasing longest subArray
 * Check Arithmetic Progression
 * Sum Array Puzzle
+* Form largest number from digits
+
 
