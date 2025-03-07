@@ -15,5 +15,6 @@
 * Form largest number from digits
 * Rearrange the array
 * Product of an array
+* Find the second smallest
 
 
