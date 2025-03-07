@@ -7,4 +7,6 @@
 * Bitonic array
 * anagram
 * K sized subarray maximum
+
+* Increasing longest subArray
 * Check Arithmetic Progression
