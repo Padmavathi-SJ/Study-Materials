@@ -11,3 +11,5 @@
 ### Practice Sheet
 * Increasing longest subArray
 * Check Arithmetic Progression
+* Sum Array Puzzle
+
