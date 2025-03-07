@@ -26,6 +26,8 @@
 * Check for subsequence
 * Print first letter of every word in the string
 * Remove character
+* Anagram Palindrome
+
 
 
 
