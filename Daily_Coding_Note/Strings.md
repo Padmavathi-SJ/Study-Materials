@@ -24,6 +24,8 @@
 * Check if a string is Isogram or not
 * Sum of numbers in string
 * Check for subsequence
+* Print first letter of every word in the string
+
 
 
 
