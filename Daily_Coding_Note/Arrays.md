@@ -18,6 +18,8 @@
 * Find the second smallest
 * Replace all 0's with 5
 * Exceptionally odd
+* Quick Left Rotation
+
 
 
 
