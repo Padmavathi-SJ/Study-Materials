@@ -1,4 +1,4 @@
-## String Probelems from Leetcode & GeeksForGeeks
+## String Probelems from GeeksForGeeks
 
 
 * Check for Binary -gfg
@@ -23,6 +23,7 @@
 * Anagram of String
 * Check if a string is Isogram or not
 * Sum of numbers in string
+* Check for subsequence
 
 
 
