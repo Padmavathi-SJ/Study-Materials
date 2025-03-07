@@ -22,6 +22,8 @@
 * Remove common characters and concatenate
 * Anagram of String
 * Check if a string is Isogram or not
+* Sum of numbers in string
+
 
 
 
