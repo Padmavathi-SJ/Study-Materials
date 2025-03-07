@@ -13,5 +13,7 @@
 * Check Arithmetic Progression
 * Sum Array Puzzle
 * Form largest number from digits
+* Rearrange the array
+* Product of an array
 
 
