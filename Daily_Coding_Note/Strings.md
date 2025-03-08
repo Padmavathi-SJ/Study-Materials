@@ -44,6 +44,8 @@
 * Product is even or odd?
 * Remainder with 7
 * The Penalty Shootout
+* Check if divisible by 4
+
 
 
 
