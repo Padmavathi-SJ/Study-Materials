@@ -32,6 +32,14 @@
 ### 08-03-2025
 * Merge two strings
 * Keypad Typing
+* Good or Bad string
+* Red OR Green
+* Change the string
+* Remove consonants from a string
+
+
+
+
 
 
 
