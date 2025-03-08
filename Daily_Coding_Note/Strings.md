@@ -37,6 +37,8 @@
 * Change the string
 * Remove consonants from a string
 * Sort a String
+* String with numbers at its end
+
 
 
 
