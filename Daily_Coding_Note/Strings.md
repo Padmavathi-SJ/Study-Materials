@@ -38,7 +38,10 @@
 * Remove consonants from a string
 * Sort a String
 * String with numbers at its end
-* 
+* longest substring containing '1'
+* Sort the string in descending order
+
+
 
 
 
