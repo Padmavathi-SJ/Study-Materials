@@ -36,6 +36,7 @@
 * Red OR Green
 * Change the string
 * Remove consonants from a string
+* Sort a String
 
 
 
