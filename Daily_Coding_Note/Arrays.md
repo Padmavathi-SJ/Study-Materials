@@ -20,6 +20,12 @@
 * Exceptionally odd
 * Quick Left Rotation
 
+### 08-03-2025
+* Check Equal Arrays
+* Reverse array in groups
+
+
+
 
 
 
