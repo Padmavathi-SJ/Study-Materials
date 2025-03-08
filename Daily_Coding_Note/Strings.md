@@ -40,6 +40,10 @@
 * String with numbers at its end
 * longest substring containing '1'
 * Sort the string in descending order
+* Remove repeated digits in a given number
+* Product is even or odd?
+* Remainder with 7
+* The Penalty Shootout
 
 
 
