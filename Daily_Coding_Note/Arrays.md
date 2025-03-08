@@ -33,6 +33,8 @@
 * Binary Array Sorting
 * Third largest element
 * Count Odd and Even
+* Last index of One
+
 
 
 
