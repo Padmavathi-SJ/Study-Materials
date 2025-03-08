@@ -23,6 +23,11 @@
 ### 08-03-2025
 * Check Equal Arrays
 * Reverse array in groups
+* Array Search
+* Array Subset
+* Rotate Array by One
+
+
 
 
 
