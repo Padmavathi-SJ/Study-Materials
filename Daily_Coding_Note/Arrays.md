@@ -31,6 +31,10 @@
 * Searching in an Array
 * Rotating an Array
 * Binary Array Sorting
+* Third largest element
+* Count Odd and Even
+
+
 
 
 
