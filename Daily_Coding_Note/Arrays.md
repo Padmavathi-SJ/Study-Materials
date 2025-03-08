@@ -34,6 +34,15 @@
 * Third largest element
 * Count Odd and Even
 * Last index of One
+* Product of an Array
+* First and Second Smallests
+* Exceptionally odd
+* Quick Left Rotation
+* Ishaan Loves Chocolates
+
+
+
+
 
 
 
