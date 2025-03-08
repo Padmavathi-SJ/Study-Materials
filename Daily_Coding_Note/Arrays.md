@@ -28,6 +28,12 @@
 * Rotate Array by One
 * Immediate Smaller Element
 * At Least K Occurrences
+* Searching in an Array
+* Rotating an Array
+* Binary Array Sorting
+
+
+
 
 
 
