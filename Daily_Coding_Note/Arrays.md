@@ -52,6 +52,16 @@
 * Fighting the darkness
 * Greater on right side
 * Operating an array
+* Ceil The Floor
+* Sort in specific order
+* Maximum product of two numbers
+* Maximum Pairwise Computed Value
+* Play With OR
+
+
+
+
+
 
 
 
