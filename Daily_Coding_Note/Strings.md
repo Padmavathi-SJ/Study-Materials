@@ -54,6 +54,10 @@
 * Substrings with same first and last characters
 * Remove all characters other than alphabets
 * Length of Last word
+* Snake Case
+* Check if divisible by 11
+
+
 
 
 
