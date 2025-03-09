@@ -48,6 +48,8 @@
 
 ### 09-03-2025
 * Last index of a character in the string
+* Minimize string value
+
 
 
 
