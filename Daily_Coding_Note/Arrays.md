@@ -61,6 +61,14 @@
 * Total count
 * Count Occurrence of digit k
 * Find unique element
+* Segregate Even and Odd numbers
+* Print an array in Pendulum Arrangement
+* Maximum repeating number
+* Type of array
+
+
+
+
 
 
 
