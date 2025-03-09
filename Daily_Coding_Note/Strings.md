@@ -46,6 +46,9 @@
 * The Penalty Shootout
 * Check if divisible by 4
 
+### 09-03-2025
+* Last index of a character in the string
+
 
 
 
