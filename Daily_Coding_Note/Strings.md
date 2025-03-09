@@ -49,6 +49,15 @@
 ### 09-03-2025
 * Last index of a character in the string
 * Minimize string value
+* Encrypt the string - 1
+* Find the Number which contain the digit d
+* Substrings with same first and last characters
+* Remove all characters other than alphabets
+* Length of Last word
+
+
+
+
 
 
 
