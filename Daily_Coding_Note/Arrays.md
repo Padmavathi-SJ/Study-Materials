@@ -44,6 +44,21 @@
 * Game with nos
 * Multiply left and right array sum
 * Elements in the Range
+* Balanced Array
+* Max and Min Product from 2 Arrays
+* First 1 in a Sorted Binary Array
+* Find the fine
+* First and last occurrences of x
+* Fighting the darkness
+* Greater on right side
+* Operating an array
+
+
+
+
+
+
+
 
 
 
