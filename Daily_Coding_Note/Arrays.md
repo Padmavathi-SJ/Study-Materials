@@ -57,6 +57,13 @@
 * Maximum product of two numbers
 * Maximum Pairwise Computed Value
 * Play With OR
+* Does array represent Heap
+* Total count
+* Count Occurrence of digit k
+* Find unique element
+
+
+
 
 
 
