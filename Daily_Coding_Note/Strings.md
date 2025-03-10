@@ -63,6 +63,17 @@
 * Confused pappu
 * Duck Number
 * Compare two Large Numbers
+* Anagram Strings
+* Reverse a string with spaces intact
+* Same frequency in two halves
+* Good String
+* Magical String[Duplicate Problem]
+
+
+
+
+
+
 
 
 
