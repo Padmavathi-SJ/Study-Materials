@@ -60,6 +60,11 @@
 ### 10-03-2025
 * Rock Paper Scissors!
 * String Reversal
+* Confused pappu
+* Duck Number
+* Compare two Large Numbers
+
+
 
 
 
