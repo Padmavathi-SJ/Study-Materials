@@ -68,6 +68,12 @@
 * Same frequency in two halves
 * Good String
 * Magical String[Duplicate Problem]
+* Maximum Integer Value
+* Fake Profile
+* Perfect Square String
+
+
+
 
 
 
