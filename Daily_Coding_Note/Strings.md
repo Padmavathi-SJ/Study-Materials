@@ -73,6 +73,10 @@
 * Perfect Square String
 * Shortest direction
 
+### 17-03-2025
+* Check Binary String
+* Max-Min conversion
+
 
 
 
