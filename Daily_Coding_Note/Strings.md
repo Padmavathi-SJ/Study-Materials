@@ -79,6 +79,19 @@
 * Find Substring from last of the Given String
 * Count the characters in each word in a given sentence
 * Triangle growing downwards
+* Wrong Ball
+* The Muskteers
+* Crazy String
+* Floating point number even or odd
+* Sort the fest
+* Sum of all sub-sequences of a number
+* Message decoding
+* Extraction of secret message
+
+
+
+
+
 
 
 
