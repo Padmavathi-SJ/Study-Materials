@@ -76,6 +76,10 @@
 ### 17-03-2025
 * Check Binary String
 * Max-Min conversion
+* Find Substring from last of the Given String
+* Count the characters in each word in a given sentence
+* Triangle growing downwards
+
 
 
 
