@@ -65,6 +65,12 @@
 * Print an array in Pendulum Arrangement
 * Maximum repeating number
 * Type of array
+* Rahul lucky-unlucky
+* minimum move to front operations
+* finding-pairs
+* equalization of an array
+* make co-prime array
+* 
 
 
 
