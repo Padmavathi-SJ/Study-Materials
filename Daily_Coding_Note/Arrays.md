@@ -70,7 +70,9 @@
 * finding-pairs
 * equalization of an array
 * make co-prime array
-* 
+* Powers game
+* Learning Output
+
 
 
 
