@@ -79,31 +79,10 @@
 * Sum Triangle for given array
 * Farthest Index
 * Reading books
-* 
-class Solution {
-    public int minSoldiers(int[] arr, int k) {
-        int luckyCount=0;
-        List<Integer> list=new ArrayList<>();
-        for(int num:arr){
-            if(num%k==0){
-                luckyCount++;
-            }
-            else{
-                list.add(k-(num%k));
-            }
-        }
-        int needed=(arr.length + 1 ) / 2;
-        if(luckyCount >= needed){
-            return 0;
-        }
-        int need=0;
-        Collections.sort(list);
-        for(int i=0; i<needed-luckyCount; i++){
-            need += list.get(i);
-        }
-        return need;
-    }
-}
+* Tywin's War Strategy
+* Tracks
+* Face off Tournament
+
 
 
 
