@@ -88,6 +88,14 @@
 * Stuffs Division
 * Total distance travelled in an array
 * Minimum sum of two elements from two arrays
+* Even occurring elements
+* Elements before which no element is bigger
+* Friendly Array
+* Count Pairs Odd Xor
+
+
+
+
 
 
 
