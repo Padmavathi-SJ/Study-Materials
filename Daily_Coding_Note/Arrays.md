@@ -82,6 +82,15 @@
 * Tywin's War Strategy
 * Tracks
 * Face off Tournament
+* Strange Sort
+* Maximum weight difference
+* King's War
+* Stuffs Division
+* Total distance travelled in an array
+* Minimum sum of two elements from two arrays
+
+
+
 
 
 
