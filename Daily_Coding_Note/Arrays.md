@@ -92,6 +92,10 @@
 * Elements before which no element is bigger
 * Friendly Array
 * Count Pairs Odd Xor
+* How many pizzas ?
+* Maximum Perimeter of Triangle from array
+
+
 
 
 
