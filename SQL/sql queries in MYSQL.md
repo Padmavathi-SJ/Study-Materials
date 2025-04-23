@@ -74,3 +74,29 @@ on p.id = ep.project_id
 group by ep.employee_id
 having count(ep.project_id) > 1;
 ```
+
+```
+select e.name, d.dept_name, p.project_name, t.task_name
+from employees e
+join departments d
+on d.id = e.department_id
+join employee_projects ep
+on ep.employee_id = e.id
+join projects p 
+on p.id = ep.project_id
+join tasks t
+on t.project_id = p.id;
+```
+
+```
+select e.name, count(t.id)
+ as task_count
+ from employees e
+  join employee_projects ep
+ on ep.employee_id = e.id
+  join projects p
+ on p.id = ep.project_id
+ join tasks t
+ on t.project_id = p.id
+ group by e.id, e.name;
+```
